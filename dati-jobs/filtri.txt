@@ -1,0 +1,350 @@
+Assicurazione Zurich,Cesena,0
+L.E.V. Ristrutturazione Edili Cesena,Villa Chiaviche, Cesena,0.2553191489361702
+LEV srl Costruzioni e Ristrutturazioni,Villa Chiaviche, Cesena,0
+Agenzia Immobiliare Quadrifoglio,Cesena Città,0.05555555555555555
+Parrocchia Di Sant'Egidio Abate,Parrocchia di Sant'Egidio - Cesena,0.8163265306122449
+Cineteatro Bogart,Parrocchia di Sant'Egidio - Cesena,0.10256410256410256
+Cineteatro Bogart,Teatro Bogart,0.8333333333333334
+Bar Centrale,Bar Centrale Cesena,0.782608695652174
+Servizi Immobiliari di Valzania Alessandro,Bar Centrale Cesena,0.2127659574468085
+Centro Commerciale Montefiore,Centro Commerciale Montefiore,1
+Hairland,Centro Commerciale Montefiore,0
+Bar Montefiore,Centro Commerciale Montefiore,0.5142857142857142
+Perris Centri Ottici,Centro Commerciale Montefiore,0.3076923076923077
+Terranova,Centro Commerciale Montefiore,0.125
+Marionnaud,Centro Commerciale Montefiore,0.12121212121212122
+Goldenpoint,Centro Commerciale Montefiore,0.11764705882352941
+Colours & Beauty,Centro Commerciale Montefiore,0.05714285714285714
+Misaké,Misake Cesena,0.5333333333333333
+Radio Studio Delta,Misake Cesena,0
+Confcommercio,Misake Cesena,0
+Ricci Dr. Mauro,Vigne Cesena,0
+Monti Gelato,Monti Gelato,1
+Cesena,Treno Rimini - Bologna,0.2
+Fuoriporta Cucina e Pizza,Ristorante Fuoriporta,0.5
+Polisportiva Rumagna,Campo Da Baseball,0.06896551724137931
+Scuola Secondaria di primo grado "Via Anna Frank",BACCO Italia SMOKE Cesena di Marco Pilat,0.26229508196721313
+Scuola Media Via Anna Frank,BACCO Italia SMOKE Cesena di Marco Pilat,0.17777777777777778
+Teatro Alessandro Bonci,Teatro Verdi Cesena,0.375
+Centro Linguistico Cesena Di Fabbri Silvia,Teatro Verdi Cesena,0.35555555555555557
+Cycling Center Lab,Cycling Center Lab,1
+Scuola Secondaria di primo grado "Via Anna Frank",Scuola Media Anna Frank,0.56
+S.m.s. Via Anna Frank - C.t.p.,Scuola Media Anna Frank,0.45714285714285713
+Scuola Media Via Anna Frank,Scuola Media Anna Frank,0.9411764705882353
+Orogel Stadium "Dino Manuzzi",Stadio Manuzzi Cesena,0.5263157894736842
+Garaffoni Mauro,Barriera Centro Cesena,0.20689655172413793
+Palaippo,Barriera Centro Cesena,0
+Assocuore - Associazione cesenate,Barriera Centro Cesena,0.23255813953488372
+Solo Affitti Cesena di Berardi Carla,Barriera Centro Cesena,0.38095238095238093
+Aladdin,Multisala Aladdin,0.6
+A-R-M-E-R-I-A Cesena,Cesena City,0.4
+Aladdin,Cinema Aladdin,0.7058823529411765
+S.Egidio Catering Banqueting Wedding Corso di Cucina sana&Bio Calbi Ivan & C.,S.Egidio Catering di Ivan Calbi,0.5789473684210527
+Lasagni e Drudi di Lasagni Maria Grazia "La Casa del Regalo",S.Egidio Catering di Ivan Calbi,0.19672131147540983
+Ramilli Enrica,L'Impronta Outlet,0
+Dott. Massimo Magnani,Ospedale M Bufalini Cesena,0.11428571428571428
+Glamour Cafè,Glamour Cafè,1
+Endas Cesena,Cipria Cesena,0.5263157894736842
+Notaio Roberto Scotto Di Clemente Cesena,Cipria Cesena,0.2564102564102564
+MaxMara Cesena,Cipria Cesena,0.47619047619047616
+Psicologa Cesena - Dott.ssa Arianna Scarpellini,Cipria Cesena,0.30434782608695654
+Scentbar,Cipria Cesena,0.23529411764705882
+Giunti Al Punto,Cipria Cesena,0
+Pinalli Profumerie,Cipria Cesena,0.24
+Puntotel,Cipria Cesena,0
+THE PLACE,Cipria Cesena,0.125
+Mani Cure Di Monti Valentina,Cipria Cesena,0.13793103448275862
+AvenidaShop Gioielleria,Cipria Cesena,0.2
+Wellness Spa Cesena,Wellness SPA Cesena,1
+Hotel Casali Home,Wellness SPA Cesena,0.07692307692307693
+La Cremeria,Wellness SPA Cesena,0
+Centro Sportivo "Kick Off",Kick Off,0.4166666666666667
+Viaggi Manuzzi,Cesena in Fiera - San Giovanni,0.13333333333333333
+Space,Cesena in Fiera - San Giovanni,0.08695652173913043
+Bar Capitano,Cesena in Fiera - San Giovanni,0.07142857142857142
+Palazzo del Ridotto,Cesena in Fiera - San Giovanni,0
+Maison Lulu,Cesena in Fiera - San Giovanni,0
+Piotto,Cesena in Fiera - San Giovanni,0.08333333333333333
+Radio Studio Delta,radio studio delta,1
+Fuoriporta Cucina e Pizza,Fuori Porta Ristorante - Ristoranti E Pizzerie,0.43137254901960786
+Istituto Prof.Le Statale Per L'Industria E L'Artigianato U.Comandini,IPSIA U. Comandini,0.30303030303030304
+Farmacia Comunale Martorano,Martorano City,0.5454545454545454
+Chiosco Giardini Savelli,Cesena Giardini Savelli,0.7027027027027027
+La piadina del chiosco,Cesena Giardini Savelli,0.30303030303030304
+Scuola Materna Carducci,Cesena Giardini Savelli,0.16666666666666666
+Ideato,Cesena (Fc),0
+Pappa Reale di Collini Luca,Pappa Reale,0.6153846153846154
+Pappa Reale di Collini Luca,Pappa Reale - Cesena,0.5161290322580645
+Hotel Cappello Cesena,Pappa Reale - Cesena,0.4827586206896552
+DaGhigo,Pappa Reale - Cesena,0
+Libreria Bettini,Pappa Reale - Cesena,0.07692307692307693
+Calzature Dante,Pappa Reale - Cesena,0.16
+Alma Mater Studiorum - Università di Bologna - Dipartimento di Psicologia,Facolta` di Psicologia,0.3188405797101449
+Università di Bologna - Aula Magna Campus di Cesena,Facolta` di Psicologia,0.19607843137254902
+Start Romagna S.P.A. - Punto Bus Cesena,Facolta` di Psicologia,0.046511627906976744
+Cucina centralizzata Camst,Facolta` di Psicologia,0.05263157894736842
+Biblioteca Silvana Contento,Facolta` di Psicologia,0.10256410256410256
+Università di Bologna - Aula Magna Campus di Cesena,Università Psicologia Cesena,0.5964912280701754
+Biblioteca Silvana Contento,Università Psicologia Cesena,0.17777777777777778
+America Graffiti Diner Restaurant Cesena,Università Psicologia Cesena,0.2962962962962963
+Coordinamento Clubs Cesena A. S. D,Coordinamento Club Cesena,0.9302325581395349
+Banca Sviluppo - Filiale Cesena Fiorenzuola,Coordinamento Club Cesena,0.3076923076923077
+MondoCaffè,Coordinamento Club Cesena,0
+Pet&Green Zoodiaco Rosetti,Coordinamento Club Cesena,0.24390243902439024
+Studio Associato di progettazione Agora',Coordinamento Club Cesena,0.11764705882352941
+America Graffiti Diner Restaurant Cesena,Liceo Linguistico Statale "Ilaria Alpi" - Cesena,0.3333333333333333
+Piazza del Popolo,Piazza del Popolo,1
+DaGhigo,Piazza del Popolo,0
+Ristorante La Muccigna,Piazza del Popolo,0
+Ferrante & C.Servizi Assicurativi Sas,Piazza del Popolo,0
+Studio Legale Spinelli Avv. Stefano,Piazza del Popolo,0.10526315789473684
+Fontana Masini,Piazza del Popolo,0
+LoChalet,Piazza del Popolo,0.10526315789473684
+Busi Dr. Flavio,Piazza del Popolo,0
+Casa di Cura Privata San Lorenzino,Clinica Privata San Lorenzino,0.7555555555555555
+Robinson Pet Center - Foro Annonario di Cesena,Foro Annonario Cesena,0.6808510638297872
+Teatro Alessandro Bonci,Domingo Latino Teatro Verdi,0.2631578947368421
+Lory Capelli,Parrucchiera Lory Capelli,0.6206896551724138
+Cafe' 61,Cafè61 "La Caffetteria".,0.3333333333333333
+Palestra Corpus,Palestra Corpus,1
+Palestra FTStudio - Personal training,FTStudio Sport and Personal Training,0.7636363636363637
+Studio 524, Cesena Danze,Koryukan Cesena,0.41379310344827586
+Karate Cesena - ACSD Seishinkai,Koryukan Cesena,0.35294117647058826
+Studio 524 cesena,Koryukan Cesena,0.4166666666666667
+ACSD Seishinkai,Koryukan Cesena,0.16666666666666666
+Hotel Casali Home,Hotel Casali Home Cesena,0.8275862068965517
+Wellness Spa Cesena,Hotel Casali Home Cesena,0.3870967741935484
+La Cremeria,Hotel Casali Home Cesena,0.08
+McDonald's Cesena Cervese,McDonald's - Cesena Cervese,1
+Piadineria Il Posticino,McDonald's - Cesena Cervese,0.05263157894736842
+England Tir,McDonald's - Cesena Cervese,0.07142857142857142
+Sole Luna,Sole Luna Cesena,0.7058823529411765
+FIM-CISL Forlì-Cesena,Sole Luna Cesena,0.3448275862068966
+Gabellini Snc,Sole Luna Cesena,0
+Minghetti Dr. Marco,Sole Luna Cesena,0
+Pasticceria Romagna,Pasticceria Romagna,1
+Parrucchieri La Touche S.N.C. Di Casalboni Christian e Marco E Fioravanti Maurizio,La moda dà spettacolo,0.0547945205479452
+Ristorante La Muccigna,La moda dà spettacolo,0.06451612903225806
+Club Scacchi Cesena,Club Scacchi Cesena,1
+AudioNova Italia,Club Scacchi Cesena,0
+Ex Pescheria,Galleria Comunale D'arte Ex Pescheria,0.4864864864864865
+Cathedral,Duomo di Cesena,0
+MaxMara Cesena,Duomo di Cesena,0.47619047619047616
+Boutique Pierrot,Duomo di Cesena,0
+THE PLACE,Duomo di Cesena,0.125
+THE PLACE,Duomo di Cesena,0.125
+Bottega della Canapa - Cesena,Bottega della Canapa,0.8571428571428571
+Farmacia S. Egidio,Farmacia sant'egidio OK,0.7741935483870968
+Farmacia Sant'Egidio Ok Di Roberta Calisesi,Farmacia sant'egidio OK,0.72
+Manuzzi Pietro,Università di Bologna - Sede di Cesena,0
+Ser.In.Ar. S.C.P.A. Servizi Integrati D'Area,Università di Bologna - Sede di Cesena,0.1
+Er.Go - Azienda Regionale Per Il Diritto Agli Studi Superiori,Università di Bologna - Sede di Cesena,0.1791044776119403
+Centro Universitario Sportivo Bolognese,Università di Bologna - Sede di Cesena,0.5964912280701754
+Palazzi Fabio,Università di Bologna - Sede di Cesena,0
+Wellness Foundation,Università di Bologna - Sede di Cesena,0.0975609756097561
+Garage venezia Srl,CrossFit Cesena,0.08
+A.S.D. A.P.S. CrossFit Cesena,CrossFit Cesena,0.7058823529411765
+Albergo Venezia,CrossFit Cesena,0.08333333333333333
+Gordana's Babies,CrossFit Cesena,0.16
+Bar Bucci,BarBucci,0.9230769230769231
+Garage venezia Srl,Garage Venezia,0.9166666666666666
+Vetri Auto Cesena,Garage Venezia,0.17391304347826086
+Motorglass,Garage Venezia,0
+A.S.D. A.P.S. CrossFit Cesena,Garage Venezia,0.06060606060606061
+Vela Laboratorio Informatico di Base,Garage Venezia,0.10526315789473684
+Piadineria Il Posticino,Piadineria Il Posticino,1
+L'Elisir Del Gelato,Tagliati X il Successo Cesena,0.11764705882352941
+Poliambulatorio L'Eau,Poliambulatorio L'Eau,1
+Dott.ssa Elma Sukaj Psicologa, Psicoterapeuta e Mediatrice familiare c/o Poliambulatorio L'EAU,Poliambulatorio L'Eau,0.3956043956043956
+Dott.ssa Elma Sukaj Psicologa, Psicoterapeuta e Mediatrice familiare c/o Poliambulatorio L'EAU,Poliambulatorio L'Eau,0.3956043956043956
+Anna & Gilberto Di Veruska Giorgini Snc,Anna & Gilberto,0.5555555555555556
+Cinema Eliseo Multisala,Multisala Cinema Eliseo Cesena,0.8780487804878049
+Caffe' Barriera Cavour,Multisala Cinema Eliseo Cesena,0
+Palaippo,Multisala Cinema Eliseo Cesena,0.13333333333333333
+New Pianeta Fitness,Scottadito Cesena,0.21428571428571427
+Aqualung Centro Benessere Cesena,Aqualung Benessere & SPA,0.7142857142857143
+Agenzia Immobiliare Cesena Che Casa,Che Casa Cesena,0.5555555555555556
+Languorino,Che Casa Cesena,0
+Pneus Market Srl - Driver Center Pirelli,Che Casa Cesena,0.10810810810810811
+Caffè Zampanò,Zampanó,0.625
+Yoshiko,Yoshiko Cesena,0.7058823529411765
+Oltre BIO,Oltre BIO,1
+America Graffiti Diner Restaurant Cesena,America Graffiti,0.5909090909090909
+UniRadio Cesena,UniRadio Cesena,1
+Trashware Cesena - punto di raccolta,UniRadio Cesena,0.43243243243243246
+Sala Studio Alfa-Albatros,UniRadio Cesena,0.125
+Ex Macello,UniRadio Cesena,0.10526315789473684
+Eresult,CSC Athena - Centro Sportivo Città di Cesena,0.05714285714285714
+Cesena,Stazione di Cesena,0.5555555555555556
+Taxi Cesena,Stazione di Cesena,0.5714285714285714
+Pasticceria La Cesenate,Pasticceria La Cesenate,1
+Agenzia AXA Cesena Ghetti,Le Petit Cafè,0.15384615384615385
+Caffé del Borgo,Il Caffè Del Borgo,0.8571428571428571
+Ristorante Pizzeria TRE PAPI,IL FORO Vivi Cesena,0.06060606060606061
+Piazza del Popolo,IL FORO Vivi Cesena,0
+DaGhigo,IL FORO Vivi Cesena,0
+Ristorante La Muccigna,IL FORO Vivi Cesena,0.13793103448275862
+Ferrante & C.Servizi Assicurativi Sas,IL FORO Vivi Cesena,0.2
+Fontana Masini,IL FORO Vivi Cesena,0.17391304347826086
+University of Bologna - Department of Computer Science and Engineering,Scienze E Tecnologie Informatiche,0.2597402597402597
+Teatro Verdi,Junior TV Teatro Verdi Cesena,0.6206896551724138
+Centro Linguistico Cesena Di Fabbri Silvia,Junior TV Teatro Verdi Cesena,0.3137254901960784
+Agenzia Immobiliare Quadrifoglio,Cesena A Tavola,0.05405405405405406
+Banca Monte Dei Paschi Di Siena,Cesena A Tavola,0.13333333333333333
+Cathedral,Cesena A Tavola,0
+Università di Bologna- Biblioteca di ingegneria Biomedica, Elettronica e Telecomunicazioni,II Facoltà Di Ingegneria (Cesena),0.29473684210526313
+Associazione Studentesca Ingegneria Cesena,II Facoltà Di Ingegneria (Cesena),0.4745762711864407
+Grande Formato,II Facoltà Di Ingegneria (Cesena),0
+Power Academy Ssd.Arl,Power Academy Dance School by Chiquito,0.46511627906976744
+Magazzino Parallelo,Magazzino Parallelo,1
+Cristal Bar,Cristal Bar,1
+Ecu,Cristal Bar,0
+divino caffe,Divino caffe,1
+Lega Nerd,Lega Nerd,1
+LU® di Ricci Luca,LUr,0.16666666666666666
+Auser Cesena,Conservatorio Statale di Musica "B. Maderna" Cesena,0.3404255319148936
+Amaducci Dr. Anna Maria,Conservatorio Statale di Musica "B. Maderna" Cesena,0.14814814814814814
+Giorgi Dr. Omero,Conservatorio Statale di Musica "B. Maderna" Cesena,0.12244897959183673
+Rossi Dr. Giuseppe,Conservatorio Statale di Musica "B. Maderna" Cesena,0.11764705882352941
+Forgiarini Dr. Alberto,Conservatorio Statale di Musica "B. Maderna" Cesena,0.18181818181818182
+Conservatorio Statale Di Musica,Conservatorio Statale di Musica "B. Maderna" Cesena,0.7741935483870968
+Gianni Dr. Roberto,Conservatorio Statale di Musica "B. Maderna" Cesena,0.0784313725490196
+tissellistudioarchitetti,Conservatorio Statale di Musica "B. Maderna" Cesena,0.13114754098360656
+Dott. Michele Marcatelli,Conservatorio Statale di Musica "B. Maderna" Cesena,0.17543859649122806
+Tisselli Arch. Filippo,Conservatorio Statale di Musica "B. Maderna" Cesena,0.03636363636363636
+Bar Pasticceria Fagioli,Pasticceria Fagioli,0.9411764705882353
+Il Cucinario,Il Cucinario Osteria,0.75
+Rocca Malatestiana,Rocca In Concerto- Cesena,0.36363636363636365
+Distaccamento del Comune Di Cesena,Focacceria Sfizi di Puglia,0.22727272727272727
+Focacceria Sfizi di Puglia,Focacceria Sfizi di Puglia,1
+Ateneo Danza,Focacceria Sfizi di Puglia,0
+Assicuritalia Srl,Focacceria Sfizi di Puglia,0.18181818181818182
+Tigota',Burro e Salvia,0
+Spazio Bonsai,Scarpellini Garden Center,0
+Tecnocasa,Conad Case Finali - Supermercati E Alimentari,0.1
+New Pianeta Fitness,NewPianetafitness Cesena,0.8
+Studio Kiwi foto&video,Studio KIWI Foto&Video,1
+C.i.v.i.s. Augustus S.r.l.,Skin Finest Tattoo Shop Cesena,0.047619047619047616
+Casa di Cura Malatesta Novello Srl,Clinica Privata Malatesta Cesena,0.375
+Ristorante La Muccigna,La Muccigna,0.64
+Adamo Bettini sas di Marco Giangrandi & C.,Adamo Bettini Cartoleria Cesena,0.47058823529411764
+Boutique Pierrot,Adamo Bettini Cartoleria Cesena,0.10810810810810811
+Centro Volontari Della Sofferenza,Adamo Bettini Cartoleria Cesena,0.24
+Start Romagna S.P.A. - Punto Bus Cesena,Aula Magna Università Di Psicologia Cesena,0.3508771929824561
+Alma Mater Studiorum - Università di Bologna - Dipartimento di Psicologia,Aula Magna Università Di Psicologia Cesena,0.5542168674698795
+Cucina centralizzata Camst,Aula Magna Università Di Psicologia Cesena,0.11538461538461539
+Le Fricò Self Service,Aula Magna Università Di Psicologia Cesena,0.17777777777777778
+Qbio,QBio Cesena,0.5454545454545454
+Salone Venere,QBio Cesena,0.1111111111111111
+La Cantera,La Cantera,1
+Conad,Conad Montefiore,0.47058823529411764
+Unieuro,Conad Montefiore,0
+La Piadina 5 Stelle,Stadio Cesena,0.36363636363636365
+Marcosport Srl,Mahé Cesena,0.10526315789473684
+Ristorante Self-Service Cibus,Mahé Cesena,0.125
+ALBIZZI,Albizzi,1
+Appartamento Piazza Albizzi 4,Albizzi,0.42857142857142855
+Lugaresi Federico,Albizzi,0
+Gioc'Arte Di Mancini Paolo,Albizzi,0
+Rossi Arch. Stefano,Albizzi,0
+Rossi Group Snc Di Rossi Paolo & C.,Albizzi,0
+C'Era L'H Di Gasperini Francesco,Albizzi,0
+Profumodibiscotti,Albizzi,0.09090909090909091
+Enchanto Profumeria Naturale ed EcoBio,Albizzi,0.11428571428571428
+Lavanderia Mazzotti Di Budelacci Mirella E C Sas,Albizzi,0.05128205128205128
+Dott. Silvio San Martino,Albizzi,0
+Ritagli Di Tempo Di Molinario Susy,Albizzi,0
+Atene,Taverna Atene,0.5714285714285714
+Bar Ristorante Atene,Taverna Atene,0.32
+Malatestiana Library,Biblioteca Malatestiana,0.7027027027027027
+Bottega della Canapa - Cesena,Nico Style di Nicoletta Biasetti,0.09302325581395349
+Servizi Immobiliari di Valzania Alessandro,Nico Style di Nicoletta Biasetti,0.21428571428571427
+Masioli & Spinelli S.N.C,Nico Style di Nicoletta Biasetti,0.1
+Banca Carim - Cassa Di Risparmio Di Rimini Spa,Nico Style di Nicoletta Biasetti,0.11538461538461539
+Calzature Dante,Dante Calzature Cesena I,0.8275862068965517
+Hotel Cappello Cesena,Dante Calzature Cesena I,0.42424242424242425
+Pappa Reale di Collini Luca,Dante Calzature Cesena I,0.17142857142857143
+Pizzeria Ristorante La Rocca,Dante Calzature Cesena I,0.21052631578947367
+Pizzeria Lucullo,Lucullo Cesena,0.5
+agenzia immobiliare,Lucullo Cesena,0.07407407407407407
+Brodino,Brodino Pastificio Cesena,0.46153846153846156
+Vivì - Enoteca con Cucina,Brodino Pastificio Cesena,0.2777777777777778
+Tamla,Brodino Pastificio Cesena,0
+Tamla,TAMLA,1
+Mangio Pizza,Mangio Pizza,1
+Cathedral,Atelier del Caffè,0.2
+Rocca Malatestiana,Rocca Malatestiana Cesena Bene Comune,0.6976744186046512
+Porta Santi,La Ferramenta di Porta santi,0.5925925925925926
+Flash Computer,La Ferramenta di Porta santi,0.13333333333333333
+Pizzeria Ristorante La Rocca,Pizzeria La Rocca,0.7272727272727273
+FITNESS CLUB MONDO CUBANO a.s.d.,Mondo Cubano Cesena,0.5405405405405406
+Osteria Michiletta,Universo Vegano Cesena,0.0625
+Universo Vegano,Universo Vegano Cesena,0.8275862068965517
+Bella Bio EcoChic Cesena,Universo Vegano Cesena,0.29411764705882354
+Friking Cesena,Universo Vegano Cesena,0.35714285714285715
+Enoteca Millevoglie,Universo Vegano Cesena,0.12121212121212122
+Fontana Masini,Fontana Masini,1
+Piazza del Popolo,Fontana Masini,0
+IAT - Ufficio Turistico Cesena,Fontana Masini,0.0625
+Acqua & Farina, Pizza e Piadina,Acqua & Farina - Pizza e Piadina,0.9743589743589743
+Club Scacchi Cesena,Cesena Fitness,0.4
+AudioNova Italia,Cesena Fitness,0.08333333333333333
+Hotel Florian,Hotel Florian,1
+Hotel Florian,Hotel Florian,1
+New Alien Di Burnacci Alan,New ALIEN,0.5217391304347826
+Ex Macello,Ex macello - Cesena,0.7368421052631579
+L'Ex Cafe',Ex macello - Cesena,0.10526315789473684
+Trashware Cesena - punto di raccolta,Ex macello - Cesena,0.32432432432432434
+Sala Studio Alfa-Albatros,Ex macello - Cesena,0
+UniRadio Cesena,Ex macello - Cesena,0.4166666666666667
+Ristorante Cohiba,Ristorante Cohiba,1
+Altamarea,Ristorante Cohiba,0
+Università di Bologna - Aula Magna Campus di Cesena,Alma Mater Studiorum | Psychology (Cesena),0.3384615384615385
+Biblioteca Silvana Contento,Alma Mater Studiorum | Psychology (Cesena),0.1509433962264151
+Re di Pane,Re Di Pane,1
+Azienda Pubblica di Servizi alla Persona del Distretto Cesena Valle Savio,Re Di Pane,0.07017543859649122
+Cesena Fitness , Cesena Danze,Re Di Pane,0.16
+Marina Rinaldi S.R.L.,Re Di Pane,0.09523809523809523
+Istituto Tecnico Commerciale R. Serra,ITC Renato Serra,0.3076923076923077
+Eat Burger,EatBurger,0.9333333333333333
+Loco Café,Calabrina,0.14285714285714285
+Sensazioni Parruchieri Snc,Centro Degradè Conseil Cesena - Sensazioni  Parrucchieri snc,0.6461538461538462
+B&B Gambero Di Romagna Cesena,Centro Degradè Conseil Cesena - Sensazioni  Parrucchieri snc,0.21875
+Centro Per L'Impiego,Centro Degradè Conseil Cesena - Sensazioni  Parrucchieri snc,0.2711864406779661
+Kimeya Srl,Centro Degradè Conseil Cesena - Sensazioni  Parrucchieri snc,0
+Mr Burger,Centro Degradè Conseil Cesena - Sensazioni  Parrucchieri snc,0.04
+New Asia,New Asia Ristorante Giapponese - Ristoranti E Pizzerie,0.22727272727272727
+Rocca Malatestiana,Asilo Politico,0.07692307692307693
+Studio 524, Cesena Danze,Studio 524,0.5833333333333334
+Studio 524 cesena,Studio 524,0.7368421052631579
+Karate Cesena - ACSD Seishinkai,Studio 524,0
+Palazzo del Ridotto,Palazzo del Ridotto,1
+Bar Capitano,Palazzo del Ridotto,0
+Gattolino,Circolo Endas Gattolino,0.6153846153846154
+Teatro Verdi,Teatro "Alessandro Bonci",0.3448275862068966
+Sushi Style,Sushi style,1
+Languorino,Languorino,1
+Mascherpa Caffè,Mascherpa caffè,1
+Ristorante Pargo,Il Pargo,0.4444444444444444
+EnAIP Forli'- Cesena ( sede di Piazzetta ),Cooking Passion - la Scuola di Cucina,0.0784313725490196
+Church of Servants,Cooking Passion - la Scuola di Cucina,0
+Pizzeria da asporto Luka's Pizza Cesena,Luka's Pizza,0.4864864864864865
+IAT - Ufficio Turistico Cesena,Comune Di Cesena,0.375
+Comune di Cesena,Comune Di Cesena,1
+Misaké,Dinner show,0
+Valentini,Arredamenti Valentini,0.6153846153846154
+Hotel Alexander,HOTEL ALEXANDER Cesena,0.8275862068965517
+Avis Comunale Cesena,Arena San Biagio Cesena,0.3870967741935484
+Teatro Comandini,Arena San Biagio Cesena,0.06896551724137931
+Salone Gabriella,Arena San Biagio Cesena,0.06896551724137931
+Ass.I.Pro.V. Assoc. Interprov.Promozione Volontariato,Arena San Biagio Cesena,0.0967741935483871
+ASSIPROV,Arena San Biagio Cesena,0
+Mr. Lucky Tatoo,Mr. Lucky Tattoo,0.9523809523809523
+Voglia Di Gelato,fashion team s.a.s di brighi elisa &c,0.17142857142857143
+Mastrobirraio,Mastro Birraio Cesena,0.7857142857142857
+Il Cucinario,Mastro Birraio Cesena,0.16
+ALBIZZI,Osteria Cenè,0
+Next,Next Shop,0.6666666666666666
+Intimissimi,Next Shop,0
+United Colors of Benetton,Next Shop,0.08333333333333333
+Tezenis,Next Shop,0

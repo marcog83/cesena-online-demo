@@ -1,0 +1,25 @@
+<div class="listing main">
+    <div class="main-content">
+        {{#if oggiEventi}}
+            <section class="section">
+                <h1 class="title">Oggi in programma</h1>
+                {{#each oggiEventi}}
+                    <div class="inline-block">
+                        {{> include/eventi/thumbnail-evento-tpl }}
+                    </div>
+                {{/each}}
+            </section>
+        {{/if}}
+        {{#if altriEventi}}
+            <section class="section">
+                <h1 class="title">Altri eventi in programmazione</h1>
+                {{#each altriEventi}}
+                    <div class="inline-block">
+                        {{> include/eventi/thumbnail-evento-tpl }}
+                    </div>
+                {{/each}}
+            </section>
+        {{/if}}
+    </div>
+
+</div>

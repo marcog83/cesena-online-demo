@@ -1,0 +1,87 @@
+[
+  {
+    "days_list": [
+      {
+        "day": 1476316800000,
+        "fascie": [
+          "21:00"
+        ]
+      },
+      {
+        "day": 1476403200000,
+        "fascie": [
+          "21:00"
+        ]
+      },
+      {
+        "day": 1476489600000,
+        "fascie": [
+          "21:00"
+        ]
+      },
+      {
+        "day": 1476576000000,
+        "fascie": [
+          "18:40",
+          "21:00"
+        ]
+      },
+      {
+        "day": 1476662400000,
+        "fascie": []
+      },
+      {
+        "day": 1476748800000,
+        "fascie": [
+          "21:00"
+        ]
+      },
+      {
+        "day": 1476835200000,
+        "fascie": [
+          "21:00"
+        ]
+      }
+    ],
+    "title": "L'estate addosso",
+    "detail": "http://www.cinemastra.it/87-programmazione/seconda-visione/228-l-estate-addosso.html",
+    "orari": [
+      {
+        "data": "13 Ottobre",
+        "ziua": "Giovedì",
+        "ora": "21:00"
+      },
+      {
+        "data": "14 Ottobre",
+        "ziua": "Venerdì",
+        "ora": "21:00"
+      },
+      {
+        "data": "15 Ottobre",
+        "ziua": "Sabato",
+        "ora": "21:00"
+      },
+      {
+        "data": "16 Ottobre",
+        "ziua": "Domenica",
+        "ora": "18:40 - 21:00"
+      },
+      {
+        "data": "17 Ottobre",
+        "ziua": "Lunedì",
+        "ora": "RIPOSO"
+      },
+      {
+        "data": "18 Ottobre",
+        "ziua": "Martedì",
+        "ora": "21:00"
+      },
+      {
+        "data": "19 Ottobre",
+        "ziua": "Mercoledì",
+        "ora": "21:00"
+      }
+    ],
+    "id": "L'estate addosso"
+  }
+]

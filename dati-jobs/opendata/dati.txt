@@ -1,0 +1,10 @@
+creare un layer per ogni linea dell' ATR, partendo dal PDF
+cinema
+teatri
+piste ciclabili https://fusiontables.google.com/DataSource?docid=1Bl42IqknH9WzwtWw9z6Z3GQHAZ2BthetFarNv2GW#map:id=3
+
+per i films chiamare imdb per rating, plot ecc
+https://www.omdbapi.com/
+via ftp
+ftp://ftp.fu-berlin.de/pub/misc/movies/database/
+

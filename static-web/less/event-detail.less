@@ -1,0 +1,48 @@
+@import "_base";
+@import "events/events-thumbnail";
+
+.event-details{
+  &__image{
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    margin-bottom: 50px;
+    background-color: #ccc;
+  }
+  &__name{
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__place-name{
+    margin-bottom: 50px;
+    color: #7679c6;
+  }
+  &__info-CNT{
+    border-top: 1px solid #b7b7b7;
+    border-bottom: 1px solid #b7b7b7;
+    margin: 20px 0;
+    padding: 8px 0;
+    width: 70%;
+  }
+  &__event-date{
+    p {
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+  &__address{}
+  &__tickets{
+    margin-top: 15px;
+  }
+  &__description{
+    width: 70%;
+    margin-bottom: 70px;
+    line-height: 1.4;
+    a{
+      font-weight: 600;
+    }
+  }
+}

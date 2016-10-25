@@ -1,0 +1,38 @@
+[
+  {
+    "title": "PETS - VITA DA ANIMALI",
+    "detail": "http://www.cinemaeliseo.it/scheda.php?id=1856",
+    "orari": "Orario: 16:30 - 17:30 - 18:30 - 20:30 - 22:30",
+    "id": "1856"
+  },
+  {
+    "title": "LA VERITA´ STA IN CIELO",
+    "detail": "http://www.cinemaeliseo.it/scheda.php?id=1857",
+    "orari": "Orario: 18:15 - 20:30 - 22:30",
+    "id": "1857"
+  },
+  {
+    "title": "CAFE` SOCIETY",
+    "detail": "http://www.cinemaeliseo.it/scheda.php?id=1850",
+    "orari": "Orario: 18:30 - 20:30 - 22:30",
+    "id": "1850"
+  },
+  {
+    "title": "BRIDGET JONES´S BABY",
+    "detail": "http://www.cinemaeliseo.it/scheda.php?id=1847",
+    "orari": "Orario: 20:30 - 22:40",
+    "id": "1847"
+  },
+  {
+    "title": "BIANCONERI-JUVENTUS STORY",
+    "detail": "http://www.cinemaeliseo.it/scheda.php?id=1773",
+    "orari": "Orario: 16:30",
+    "id": "1773"
+  },
+  {
+    "title": "ALLA RICERCA DI DORY",
+    "detail": "http://www.cinemaeliseo.it/scheda.php?id=1829",
+    "orari": "Orario: 16:30",
+    "id": "1829"
+  }
+]

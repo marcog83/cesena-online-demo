@@ -1,0 +1,51 @@
+<div class="event-details">
+    <div class="event-details__image" style="background-image: url('{{image}}')">
+
+    </div>
+    <div class="main-content">
+        <h1 class="event-details__name">{{name}}</h1>
+
+        <div itemprop="sponsor" itemscope itemtype="http://schema.org/Place">
+            <a href="/places/detail/{{place._id}}" class="place" itemprop="url">
+                <p class="event-details__place-name" itemprop="name">{{place.name}}</p>
+            </a>
+        </div>
+        <div class="event-details__info-CNT">
+            <div class="event-details__event-date">
+                {{#if start_time}}
+                    <p class="start-date" itemprop="startDate" content="{{start_time}}">
+                        <i class="material-icons event-icon">event</i>
+                        <span>{{formatDate start_time "short"}}</span>
+                    </p>
+                {{/if}}
+                {{#if end_time}}
+                    <p class="end-date" itemprop="endDate" content="{{end_time}}">
+                        <i class="material-icons event-icon">event</i>
+                        <span>{{formatDate end_time "short"}}</span>
+                    </p>
+                {{/if}}
+            </div>
+            <div class="event-details__address" itemprop="location" itemscope itemtype="http://schema.org/Place">
+                <meta itemprop="name" content="{{place.name}}"/>
+                <p itemprop="address">{{place.location.street}}</p>
+        <span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+            <meta itemprop="latitude" content="{{place.location.latitude}}"/>
+            <meta itemprop="longitude" content="{{place.location.longitude}}"/>
+        </span>
+            </div>
+            {{#if ticket_uri}}
+                <div class="event-details__tickets">
+                    <a href="{{ticket_uri}}" target="_blank">
+                        <p class="ticket-label">
+                            <i class="material-icons">credit_card</i>
+                            <span>COMPRA ORA</span>
+                        </p>
+                    </a>
+                </div>
+            {{/if}}
+        </div>
+
+
+        <p class="event-details__description" itemprop="description">{{{description}}}</p>
+    </div>
+</div>

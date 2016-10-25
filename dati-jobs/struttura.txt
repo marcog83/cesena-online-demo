@@ -1,0 +1,83 @@
+Eventi
+ - lista degli eventi 
+	- dettaglio dell'evento
+		- riferimento al place che lo promuove
+ 
+Cinema
+ - tutti i film in proiezione
+	(se si clicca la sala, si va alla pagina del cinema con una vetrina del film selezionato e tutti gli orari di proiezione)
+	- dettaglio del film 
+		- dati da IMDB con voto
+		- cover da ???
+		- trailer da ???
+ - scopri le sale
+	- dettaglio della sala
+	
+		- info e bio
+		- i film in proiezione per quella sala
+		- posts e foto da FB / instagram
+
+Teatri 
+ - tutti gli spettacoli in programma  
+    -> carisport http://www.teatro.it/spettacoli/nuovo_teatro_carisport/cartellone_1752
+	-> bogart GRUPPO SU FB https://www.facebook.com/groups/104337556271472/
+ - scopri le sale
+	- dettaglio del teatro
+		-> carisport foto da FB place 115967401804774
+		- info e bio
+		- gli spettacoli in programmazione
+		- posts e foto da FB / instagram
+
+Musica
+ - lista di concerti
+	- dettaglio del gruppo musicale che suona ???
+		
+Arte e Cultura
+ - tutti gli eventi culturali generici
+ 
+Sport e fitness
+ - eventi sportivi in programma
+	- dettaglio dell'evento
+ - lista associazioni sportive
+	- dettaglio dell'associazione
+ - percorsi fitness 
+ - piste ciclabili
+
+
+ 
+Canali
+ - Negozi
+	- dettaglio del negozio
+		- descrizione e categoria
+		- contatti, orari
+		- posts
+		- immagini
+		
+ - Viaggiare
+	- piste ciclabili
+	- percorsi ATR
+	- hotel
+	- b&b
+ - Food
+	- lista dei posti relativi al cibo
+ - Locali 
+	- locali 
+	- discoteche
+	- bar
+	- pub
+ 
+ - Salute
+	- farmacie
+	- strutture sanitarie
+ - Negozi
+	- lista delle attività commerciali
+		- dettaglio del place
+ - Scuole ed Università
+	- lista delle università e delle superiori
+	- eventi correlati
+ - Tech
+ 
+Cesena
+ - Storia
+ - Luoghi di interesse
+ - Cesena di una volta

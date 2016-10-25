@@ -1,0 +1,183 @@
+[
+  {
+    "days_list": [
+      {
+        "day": 1476921600000,
+        "fascie": [
+          "21:00"
+        ]
+      },
+      {
+        "day": 1477008000000,
+        "fascie": [
+          "21:00"
+        ]
+      },
+      {
+        "day": 1477094400000,
+        "fascie": [
+          "20:30",
+          "22:30"
+        ]
+      },
+      {
+        "day": 1477180800000,
+        "fascie": [
+          "16:30",
+          "18:40",
+          "21:00"
+        ]
+      },
+      {
+        "day": 1477267200000,
+        "fascie": [
+          "21:00"
+        ]
+      },
+      {
+        "day": 1477353600000,
+        "fascie": []
+      },
+      {
+        "day": 1477440000000,
+        "fascie": [
+          "17:00",
+          "21:00"
+        ]
+      }
+    ],
+    "title": "Neruda",
+    "programmazione": "Dal 21.10.16 al 26.10.16",
+    "orari": [
+      "giovedì 20 ottobre ore 21.00",
+      "venerdì 21 ottobre ore: 21.00",
+      "sabato 22 ottobre ore: 20.30-22.30",
+      "domenica 23 ottobre ore: 16.30-18.40-21.00",
+      "lunedì 24 ottobre ore: 21.00",
+      "martedì 25 ottobre ore:Riposo",
+      "mercoledì 26 ottobre ore: 17.00-21.00"
+    ],
+    "detail": "http://www.comune.cesena.fc.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/29974",
+    "id": "29974",
+    "sala": "Sala Verde"
+  },
+  {
+    "days_list": [
+      {
+        "day": 1476316800000,
+        "fascie": [
+          "21:00"
+        ]
+      },
+      {
+        "day": 1476403200000,
+        "fascie": [
+          "21:00"
+        ]
+      },
+      {
+        "day": 1476489600000,
+        "fascie": [
+          "20:30",
+          "22:30"
+        ]
+      },
+      {
+        "day": 1476576000000,
+        "fascie": [
+          "16:30",
+          "18:30",
+          "21:00"
+        ]
+      },
+      {
+        "day": 1476662400000,
+        "fascie": [
+          "21:00"
+        ]
+      },
+      {
+        "day": 1476748800000,
+        "fascie": []
+      },
+      {
+        "day": 1476835200000,
+        "fascie": [
+          "17:00",
+          "21:00"
+        ]
+      }
+    ],
+    "title": "Quando hai 17 anni",
+    "programmazione": "Dal 12.10.16 al 19.10.16",
+    "orari": [
+      "giovedì 13 ottobre ore: 21.00 ",
+      "venerdì 14 ottobre ore: 21.00",
+      "sabato 15 ottobre ore: 20.30-22.30",
+      "domenica 16 ottobre ore: 16.30-18.30-21.00",
+      "lunedì 17 ottobre ore: 21.00",
+      "martedì 18 ottobre ore: Riposo",
+      "mercoledì 19 ottobre ore: 17.00-21.00"
+    ],
+    "detail": "http://www.comune.cesena.fc.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/29908",
+    "id": "29908",
+    "sala": "Sala Rossa"
+  },
+  {
+    "days_list": [
+      {
+        "day": 1477008000000,
+        "fascie": [
+          "21:00"
+        ]
+      },
+      {
+        "day": 1477094400000,
+        "fascie": [
+          "20:30",
+          "22:30"
+        ]
+      },
+      {
+        "day": 1477180800000,
+        "fascie": [
+          "16:30",
+          "18:40",
+          "21:00"
+        ]
+      },
+      {
+        "day": 1477267200000,
+        "fascie": []
+      },
+      {
+        "day": 1477353600000,
+        "fascie": [
+          "15:30",
+          "21:00"
+        ]
+      },
+      {
+        "day": 1477440000000,
+        "fascie": [
+          "17:00",
+          "21:00"
+        ]
+      }
+    ],
+    "title": "Io, Daniel Blake",
+    "programmazione": "Dal 21.10.16 al 26.10.16",
+    "orari": [
+      "venerdì 21 ottobre ore: 21.00 ",
+      ".O sottotitolata",
+      "sabato 22 ottobre ore: 20.30-22.30",
+      "domenica 23 ottobre ore: 16.30-18.40-21.00",
+      "lunedì 24 ottobre ore: Riposo",
+      "martedì 25 ottobre ore: 15:30-21.00",
+      "mercoledì 26 ottobre ore: 17.00-21.00"
+    ],
+    "detail": "http://www.comune.cesena.fc.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/30148",
+    "id": "30148",
+    "sala": "Sala Rossa"
+  }
+]

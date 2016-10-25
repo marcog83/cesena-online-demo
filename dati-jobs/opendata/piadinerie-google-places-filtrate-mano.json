@@ -1,0 +1,2608 @@
+[{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via serra renato, 1, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_30",
+		"gid": 1,
+		"objectid": 30,
+		"localita_": "SAN BARTOLO",
+		"via": "VIA SERRA RENATO",
+		"civico": 1,
+		"telefono": "",
+		"titolare": "CEDIOLI MARINA",
+		"lettera": "A",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1413981541496,
+		"longitudine": 12.2482164468557
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.14140669999999,
+				"lng": 12.248221
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.14151005000001,
+					"lng": 12.24829585
+				},
+				"southwest": {
+					"lat": 44.14137224999999,
+					"lng": 12.24819605
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+		"id": "1c2064d821c5ac98bac492de5bcbc005499ccce2",
+		"name": "Il Chiosco di Maria",
+		"opening_hours": {
+			"open_now": false,
+			"weekday_text": []
+		},
+		"photos": [{
+			"height": 1638,
+			"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/101945662154959369345/photos\">Federico Gnudi</a>"],
+			"photo_reference": "CoQBdwAAAH85Gzyz4Msm2lqGB-b0-2oklHTq4rDKUiIrEAPgTwlb3UpQ8H7YXbpiG5EbSAYGCC0qEROSDxYZEo283UqT6E65xnXCVj4ydE7wnDKdQvihURUotSmtWCa5qr1AwPJb3kG1zG0igmU1SnCmKhQ1l07MGYLFqRwPLndHoQRjN6y5EhAWYg7Ld8XpO0bxKw6sBarsGhQimaq6i--hnOUJaz6lGHtiY6AVAA",
+			"width": 2105
+		}],
+		"place_id": "ChIJgeG5j86kLBMRxTs9VG4xwTk",
+		"reference": "CnRmAAAARncMlcvRpcst0iVxE3CgypWwim8N76D5U96xMTu6juXLxUtbqIDOAzPzmtBId3EU0_KwLiAF7x1D96MfI-X1xehlJPxfI0kNsd49hhfdg5PezcCsRwhpeMie6f_QuxQd1JNCsVXAv1VNxF6UbBmBsBIQZHgbn_F1piIe5L3mX7aqIBoUn2LLGV4IZY9oQs9z-VFY3CvEwS0",
+		"scope": "GOOGLE",
+		"types": ["grocery_or_supermarket",
+		"food",
+		"store",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "a,, Via Renato Serra, 1, Cesena",
+		"__percent": 0.43478260869565216
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via mariana, 4460, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_31",
+		"gid": 2,
+		"objectid": 31,
+		"localita_": "CALABRINA",
+		"via": "VIA MARIANA",
+		"civico": 4460,
+		"telefono": 547692034,
+		"titolare": "GRIFFI MARTA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1826920612905,
+		"longitudine": 12.2981849371225
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.1823582,
+				"lng": 12.2985945
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.18253699999999,
+					"lng": 12.29881214999999
+				},
+				"southwest": {
+					"lat": 44.1822986,
+					"lng": 12.29852195
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+		"id": "7d087cd57e41e603cf6eb4fddcf9bf1a8dedc8b5",
+		"name": "Piadina di Calabrina",
+		"opening_hours": {
+			"open_now": true,
+			"weekday_text": []
+		},
+		"photos": [{
+			"height": 1836,
+			"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/110091175213015529214/photos\">Massimiliano Burioli</a>"],
+			"photo_reference": "CoQBdwAAAE8XUuGFcU-F8VPFxgBnJPMBP67q5BPxZmFaG_RFAT4v1SNC68v1CiuqpGAno6vqx5k2gxzYtE9pg7K3KeqykYH32e1dGIqfGVA28T8W8OgWVAOCXEax_SaD0eAiyY4QXbtzkScIfvL6SxyTjOdXL-WiYRUHdX4B_5uPblPJE3hHEhBfHltQ7WCzcJRTtHDALTS5GhR2UEAWyN-IzruX6GVSPSvZi6FqTw",
+			"width": 3264
+		}],
+		"place_id": "ChIJ3UNn7IC6LBMRcWHjlD9yb5g",
+		"reference": "CnRoAAAAz0MUUsLCBY7K3Pja2SBYzLufoe5JD9XxubE0MCmVOtEQsrcmP7cGZQQnx3JKEwkrObA-iG92tVEfAAFdpd5OiWHEZLEnxiVl2Q066HcoiGSLdapMyEUplTi6rXWm14CVLLYTJJmIFcSez29pLZzPZxIQYv32-1dU-dFbsls3QzrlYhoUxFWp1BWIMZVszbjBzX1GEKttxGU",
+		"scope": "GOOGLE",
+		"types": ["restaurant",
+		"food",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Via Dobbiaco, 50, Cesena",
+		"__percent": 1
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "viale matteotti giacomo, 401, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_32",
+		"gid": 3,
+		"objectid": 32,
+		"localita_": "IPPODROMO",
+		"via": "VLE MATTEOTTI GIACOMO",
+		"civico": 401,
+		"telefono": "",
+		"titolare": "CHIOSCO MATTEOTTI DI LUCA MALVISI E C. S.N.C.",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1406234712569,
+		"longitudine": 12.2296828105275
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.14064709999999,
+				"lng": 12.2297151
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.1407416,
+					"lng": 12.2297553
+				},
+				"southwest": {
+					"lat": 44.14061559999998,
+					"lng": 12.2297017
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+		"id": "eb326db6a1c8684fdf33ef849e1c0b9ff135d56e",
+		"name": "Il Chiosco Matteotti",
+		"opening_hours": {
+			"open_now": true,
+			"weekday_text": []
+		},
+		"place_id": "ChIJkdRaN-qkLBMRYRD1ff-luDc",
+		"reference": "CnRnAAAAItanUK9TCSDmoceps3rCabGSwLGjFWgLvX41Hf2l9RxhkLMGE9jn41Gr3vuqUrfIMkagLSqELxQrSY9KmKENNoFETeED0meCGOp9RGANIzUL_u3sgaPYFwUSlwJV8BpqLRceqR7nvbZsUjX54QuTrRIQvCV2d_IbglAJ4GRFZ4NMLhoUHXLNnH1834g2eNTTnUyHoIKgM4E",
+		"scope": "GOOGLE",
+		"types": ["grocery_or_supermarket",
+		"food",
+		"store",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Via G. Matteotti, 401, Cesena",
+		"__percent": 0.6222222222222222
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via zamboni guelfo, 15, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_33",
+		"gid": 4,
+		"objectid": 33,
+		"localita_": "SAN VITTORE",
+		"via": "VIA ZAMBONI GUELFO",
+		"civico": 15,
+		"telefono": 3405771814,
+		"titolare": "QUATTRO MORI DI VERONESE SERENA  & C. SAS",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1113744076799,
+		"longitudine": 12.2002169643932
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.111269,
+				"lng": 12.200274
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+		"id": "f94cc79a7da2dbcd4c5573d87eb313babd1b0696",
+		"name": "Chiosco Piadina Quattro Mori sas",
+		"opening_hours": {
+			"open_now": false,
+			"weekday_text": []
+		},
+		"photos": [{
+			"height": 1153,
+			"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/117061415513871938604/photos\">Chiosco Piadina Quattro Mori sas</a>"],
+			"photo_reference": "CoQBdwAAADCXVxx7lSek2Mg0RImIiApJxQO4a4hgNVfM8atAkKjlVEticcdZc__rrF2y-G-DA2Ob-fiWt_AcHY7TGqhkZukOwjm8RqOucuaIJOXr11TIU-B5XXL98bbVMsiNQ-eKAEhWjv7KzPhVkQxTYT26XVJK93wK8flius5C9xRLXlCYEhAd9s7B0FkTDLzEgskgvfcoGhSqZbvwDgY7Vx6Neg50_cGv71hNsQ",
+			"width": 1154
+		}],
+		"place_id": "ChIJvUZTPpujLBMRwSS2b_uetOE",
+		"reference": "CoQBdAAAAFDuP1HStW1mAyFmLaXCbgIAlKI0EzuzuY5T1vqsv6TME9b4knT1SPf6ZiWUsIZfJMSarTvzroLJTE_-0_ec4lFpX3JaqvJoz-9FAEUmUsJZyGIYHs042Cq5xYH-5ALK8KYzYd-mM86tlGwh60ZAIEht-uxw6dy23Ovg22jGvzCxEhDWDVHEZffUWZpIcNMgim9RGhSjeQ-C5hjp_Y3mOPV_DpA_WuMF_A",
+		"scope": "GOOGLE",
+		"types": ["restaurant",
+		"food",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Via Guelfo Zamboni, 15, San Vittore",
+		"__percent": 0.5416666666666666
+	}
+},
+{
+	"facebook": {
+		"category_list": [{
+			"id": "150108431712141",
+			"name": "Grocery Store"
+		}],
+		"about": "Chiosco di piadina e crescioni , possibilita di mangiare all'aperto . Si effettuano anche ordini su prenotazione",
+		"name": "Chiosco da Rita",
+		"location": {
+			"city": "Cesena",
+			"country": "Italy",
+			"latitude": 44.14074,
+			"longitude": 12.28875,
+			"street": "Via cesenatico 1777",
+			"zip": "47521"
+		},
+		"cover": {
+			"cover_id": "649797838494140",
+			"offset_x": 0,
+			"offset_y": 50,
+			"source": "https://scontent.xx.fbcdn.net/v/t1.0-9/1935413_649797838494140_6079967451669357840_n.jpg?oh=37519148030b358f1c6db2ff9a3f0062&oe=58A780C1",
+			"id": "649797838494140"
+		},
+		"description": "Orari\n\nLunedì chiuso\nMartedì alla domenica 15.30 alle 20.30",
+		"id": "263467903793804"
+	},
+	"opendata": {
+		"full_address": "via cesenatico, 1777, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_34",
+		"gid": 5,
+		"objectid": 34,
+		"localita_": "PONTE PIETRA",
+		"via": "VIA CESENATICO",
+		"civico": 1777,
+		"telefono": "",
+		"titolare": "LA PORTA RITA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1406906248987,
+		"longitudine": 12.2887110180863
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via chiesa s.egidio, 31, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_35",
+		"gid": 6,
+		"objectid": 35,
+		"localita_": "SANT'EGIDIO",
+		"via": "VIA CHIESA S.EGIDIO",
+		"civico": 31,
+		"telefono": "",
+		"titolare": "MICCOLI  DANIELA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1540016285517,
+		"longitudine": 12.2630651886994
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.1539746,
+				"lng": 12.2631066
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.15410900000001,
+					"lng": 12.2632779
+				},
+				"southwest": {
+					"lat": 44.15392979999999,
+					"lng": 12.2630495
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+		"id": "41bd8577339d3fea9d6a52823e2fe0d96fc7e382",
+		"name": "Daniela Piadina",
+		"opening_hours": {
+			"open_now": false,
+			"weekday_text": []
+		},
+		"place_id": "ChIJQTLrU9a6LBMR1nNVTUxH0Dk",
+		"reference": "CnRiAAAAi5hCeDDTdaVgr9liIdqDtdkN9bqtt8fEag5dznSO9AqbmAmqUJ_tNRg3ELMmnYk0Jnx7xzoiq5YgUqJjwDXMfTRbrD-BSCfnnymWw8onLJ6AUt5w6JNhDk3Q2OatR6Uqr3lH2LeuFyJtPKipuhAhEBIQimfAZjg36pe48tVm89p3SBoUxPWMXOt4Epbkha2WIutSCLxNL4c",
+		"scope": "GOOGLE",
+		"types": ["restaurant",
+		"food",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Via Chiesa di Sant'Egidio, 31, Cesena",
+		"__percent": 0.5
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via toscana, 265, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_36",
+		"gid": 7,
+		"objectid": 36,
+		"localita_": "STADIO",
+		"via": "VIA TOSCANA",
+		"civico": 265,
+		"telefono": 3479708788,
+		"titolare": "NDREGJONI ADRIANO",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1398963722602,
+		"longitudine": 12.2603473783736
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.1398882,
+				"lng": 12.2603295
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.13991705,
+					"lng": 12.26038545
+				},
+				"southwest": {
+					"lat": 44.13980164999999,
+					"lng": 12.26016165
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+		"id": "5465ae918b736edbbbc420096ac8a24ad5a7b95e",
+		"name": "La Piadina 5 Stelle",
+		"opening_hours": {
+			"open_now": true,
+			"weekday_text": []
+		},
+		"place_id": "ChIJrxet2TO7LBMR5unjU-qsz8s",
+		"reference": "CnRnAAAAVFic-g_mIzbC47IY_HGse6ep4K6tw0XthiWSXbgUL9PHj-porz7VSwl9AtHn0OTvreHHsUFWJ7Cu3_QJ-nnXcIQxH872QqGDSNmODRG9jXGyP87LXbf2-Pa2kJ-nR-hZjRBl4tYYFfSUsAzroJb1VBIQ6rNH_9wGK47-VLFM9DBcbhoUfziwuyh4DkFzRihK6hJ7Q1YBgpA",
+		"scope": "GOOGLE",
+		"types": ["grocery_or_supermarket",
+		"food",
+		"store",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Via Toscana, 265, Cesena",
+		"__percent": 1
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via malanotte, 180, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_37",
+		"gid": 8,
+		"objectid": 37,
+		"localita_": "CALISESE",
+		"via": "VIA MALANOTTE",
+		"civico": 180,
+		"telefono": "",
+		"titolare": "GUIDI MAURIZIO",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1010044875977,
+		"longitudine": 12.3039981083278
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {
+		"category_list": [{
+			"id": "188334264523313",
+			"name": "Deli"
+		},
+		{
+			"id": "139433292785470",
+			"name": "Caterer"
+		}],
+		"about": "Chiosco di Piadina a Cesena",
+		"name": "Chiosco Piadina Il Passatore",
+		"location": {
+			"city": "Cesena",
+			"country": "Italy",
+			"latitude": 44.151394539513,
+			"longitude": 12.251396616921,
+			"street": "Via Madonna Dello Schioppo",
+			"zip": "47521"
+		},
+		"cover": {
+			"cover_id": "1003232676462696",
+			"offset_x": 0,
+			"offset_y": 76,
+			"source": "https://scontent.xx.fbcdn.net/t31.0-8/s720x720/13925896_1003232676462696_4411672427172890090_o.jpg",
+			"id": "1003232676462696"
+		},
+		"description": "Produzione Piadina, Crescioni e Rotoli",
+		"id": "393309304121706"
+	},
+	"opendata": {
+		"full_address": "via madonna dello schioppo, 710, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_38",
+		"gid": 9,
+		"objectid": 38,
+		"localita_": "VIGNE",
+		"via": "VIA MADONNA DELLO SCHIOPPO",
+		"civico": 710,
+		"telefono": "",
+		"titolare": "CELLINI FABRIZIO",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1513160480493,
+		"longitudine": 12.2515849308301
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {
+		"category_list": [{
+			"id": "165679780146824",
+			"name": "Food & Restaurant"
+		}],
+		"name": "E'tulir",
+		"location": {
+			"city": "Cesena",
+			"country": "Italy",
+			"latitude": 44.15690065,
+			"longitude": 12.33455524,
+			"street": "Via 18 Agosto 1944, 460, Cesena FC",
+			"zip": "47521"
+		},
+		"id": "133514733503320"
+	},
+	"opendata": {
+		"full_address": "via 18 agosto 1944, 490, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_39",
+		"gid": 10,
+		"objectid": 39,
+		"localita_": "MACERONE",
+		"via": "VIA 18 AGOSTO 1944",
+		"civico": 490,
+		"telefono": "",
+		"titolare": "RICCI FRANCESCO",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1568882790122,
+		"longitudine": 12.3345252354725
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via fausto coppi, 650, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_40",
+		"gid": 11,
+		"objectid": 40,
+		"localita_": "IPPODROMO",
+		"via": "VIA FAUSTO COPPI",
+		"civico": 650,
+		"telefono": "",
+		"titolare": "MOVIDA SNC DI TRASCHITTI VITO & C.",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1502940888921,
+		"longitudine": 12.2269422652171
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.150305,
+				"lng": 12.2269623
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.15040895,
+					"lng": 12.22708840000001
+				},
+				"southwest": {
+					"lat": 44.15027035,
+					"lng": 12.226584
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+		"id": "ab2e4a6b3689856f9df1add1062383437d39a3be",
+		"name": "Movida",
+		"opening_hours": {
+			"open_now": true,
+			"weekday_text": []
+		},
+		"place_id": "ChIJZ5y7vOakLBMR7qeKSa0nVeU",
+		"reference": "CmRaAAAA_IDqS7lQ_1V-Rqq8RvMGbZbqxiiDEwXVaMxvYw07Ljl49lKrJSSnartVnNU0mEgABQMz5teFd8I06ToMxnby-UfPqbzwShRbk1b6_srfFHeY6euvb5YFEg4OpOnskXptEhA3vB3mRqKRk5NuPJgf84lqGhSDQc2PECbhMeK7tHLOr-eQ14m9lQ",
+		"scope": "GOOGLE",
+		"types": ["restaurant",
+		"food",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Via Fausto Coppi, 650, Cesena",
+		"__percent": 1
+	}
+},
+{
+	"facebook": {
+		"category_list": [{
+			"id": "188296324525457",
+			"name": "Sandwich Shop"
+		},
+		{
+			"id": "132069576863996",
+			"name": "Take Out Restaurant"
+		}],
+		"about": "Vip Piada Cesena non è una semplice piadineria, da noi puoi gustare la piadina tradizionale cucinata sulla pietra. Piadina alla Canapa, Vegana, Crescioni",
+		"name": "Vip piada - Cesena - La vera Piadina Romagnola",
+		"location": {
+			"city": "Cesena",
+			"country": "Italy",
+			"latitude": 44.1439499,
+			"longitude": 12.23738,
+			"street": "Via Italo Calvino 37",
+			"zip": "47522"
+		},
+		"cover": {
+			"cover_id": "1118047341589086",
+			"offset_x": 81,
+			"offset_y": 0,
+			"source": "https://scontent.xx.fbcdn.net/t31.0-8/s720x720/13580538_1118047341589086_8253766971736883809_o.jpg",
+			"id": "1118047341589086"
+		},
+		"id": "826545977405892"
+	},
+	"opendata": {
+		"full_address": "via calvino italo, 37, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_41",
+		"gid": 12,
+		"objectid": 41,
+		"localita_": "EX ZUCCHERIFICIO",
+		"via": "VIA CALVINO ITALO",
+		"civico": 37,
+		"telefono": "",
+		"titolare": "IL CHIOSCHETTO DI GARDELLI STEFANIA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1439045475374,
+		"longitudine": 12.2373832173547
+	},
+	"google": {}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via ascari alberto, 70, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_42",
+		"gid": 13,
+		"objectid": 42,
+		"localita_": "VIGNE",
+		"via": "VIA ASCARI ALBERTO",
+		"civico": 70,
+		"telefono": "",
+		"titolare": "LA PIDA DALLA FRANCY DI FELLINI FRANCESCA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1562366354662,
+		"longitudine": 12.2413230716805
+	},
+	"google": {}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via fiorenzuola, 1250, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_43",
+		"gid": 14,
+		"objectid": 43,
+		"localita_": "CASE FINALI",
+		"via": "VIA FIORENZUOLA",
+		"civico": 1250,
+		"telefono": "",
+		"titolare": "E CHIUSCHET DI DANESI CHIARA & PLACUCCI ALBERTO",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1316528126148,
+		"longitudine": 12.2677555310875
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.1316747,
+				"lng": 12.2678309
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.1317989,
+					"lng": 12.2679044
+				},
+				"southwest": {
+					"lat": 44.1316333,
+					"lng": 12.2678064
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+		"id": "0c4a1341c8aa2ba5e7bb442eeed4ec1ce49e5a71",
+		"name": "E Chiuschet",
+		"place_id": "ChIJFQ5a60e7LBMRRgGonCzZ0e4",
+		"reference": "CmRfAAAAbK50vAKv7cAWya2jlswoxHvNYb-DAh-fQ0yKpR04YNP2LA5BKNDZc_1VehttzShe5rhYWFVVDHfc9hMp8Yy4NgAfJGx500uDQou-T97FIKP9J_D-tTM8Pm2ptow4P1QaEhB8WQzq76EX3mrdtwk7f_2KGhRqTsgc70HEjgnQ1VKw-wTTdRY3Bw",
+		"scope": "GOOGLE",
+		"types": ["restaurant",
+		"food",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Via Fiorenzuola, 1250, Cesena",
+		"__percent": 0.4
+	}
+},
+{
+	"facebook": {
+		"category_list": [{
+			"id": "188334264523313",
+			"name": "Deli"
+		}],
+		"about": "Piadineria e gastronomia 100% Romagnola nel rispetto della tradizione. ",
+		"name": "Lafatapiada",
+		"location": {
+			"city": "Cesena",
+			"country": "Italy",
+			"latitude": 44.14254,
+			"longitude": 12.2708101,
+			"street": "via G. Ambrosoli 280",
+			"zip": "47521"
+		},
+		"cover": {
+			"cover_id": "1680006488880379",
+			"offset_x": 0,
+			"offset_y": 34,
+			"source": "https://scontent.xx.fbcdn.net/t31.0-8/s720x720/12191349_1680006488880379_1529510981561702973_o.jpg",
+			"id": "1680006488880379"
+		},
+		"description": "Magie e riti di Romagna, pìda sanzvèis e us màgna!",
+		"id": "1677165569164471"
+	},
+	"opendata": {
+		"full_address": "via ambrosoli giorgio, 280, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_44",
+		"gid": 15,
+		"objectid": 44,
+		"localita_": "CASE FRINI",
+		"via": "VIA AMBROSOLI GIORGIO",
+		"civico": 280,
+		"telefono": 3454656855,
+		"titolare": "FATA PIADA DI ZANOTTI DANIELE",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1424900107313,
+		"longitudine": 12.2708107769741
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via gallo, 797, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_45",
+		"gid": 16,
+		"objectid": 45,
+		"localita_": "GALLO",
+		"via": "VIA GALLO",
+		"civico": 797,
+		"telefono": 3299306761,
+		"titolare": "CHIOSCOMANIA DI FABBRI FRANCESCA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.0588548075415,
+		"longitudine": 12.1808823098186
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "piazzale berlinguer enrico, 130, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_46",
+		"gid": 17,
+		"objectid": 46,
+		"localita_": "SANT'EGIDIO",
+		"via": "PLE BERLINGUER ENRICO",
+		"civico": 130,
+		"telefono": 3383585111,
+		"titolare": "LA PIADINA DI SIMONA & MARTELLI GABRIELE SNC",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1505785853455,
+		"longitudine": 12.2599896432002
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.1506371,
+				"lng": 12.2599898
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.15070825,
+					"lng": 12.2600726
+				},
+				"southwest": {
+					"lat": 44.15061164999999,
+					"lng": 12.2599602
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+		"id": "3cdf4cdeb15f22c1ccccd4283538cb6471a902f7",
+		"name": "La Piadina di Simona e Martelli Gabriele",
+		"opening_hours": {
+			"open_now": false,
+			"weekday_text": []
+		},
+		"place_id": "ChIJIQGfJSq7LBMR07Q_Gr7SnB8",
+		"reference": "CoQBewAAAPzPY-gzXpFLf667f_BmLXu4R-C5owzznvss0muZaVyjyHz4LDohNlxbY_uvKBX_q_U1WVC-6J3VGdVr1DylN4BVCcECutjByGoWXVrybzeHv1buChMv_-NqfTk07WROuoaSaxutSkOAvgBAcsVuiZraYsKcH7XRBcPpE5cTx7vPEhBZU-m8hNy9l4gTX1m6MLyKGhRSRsw6DEwiZB2VckdDJtY-8z1mLg",
+		"scope": "GOOGLE",
+		"types": ["grocery_or_supermarket",
+		"food",
+		"store",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Piazzale Enrico Berlinguer, 130, Cesena",
+		"__percent": 0.9642857142857143
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "piazza san pietro in solfrino, 3, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_47",
+		"gid": 18,
+		"objectid": 47,
+		"localita_": "BORELLO",
+		"via": "PZA SAN PIETRO IN SOLFRINO",
+		"civico": 3,
+		"telefono": "",
+		"titolare": "FACCIANI MELANIA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.0535023613532,
+		"longitudine": 12.1784745498911
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via padre giovanni genocchi, 485, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_48",
+		"gid": 19,
+		"objectid": 48,
+		"localita_": "PONTE ABBADESSE",
+		"via": "VIA PADRE GIOVANNI GENOCCHI",
+		"civico": 485,
+		"telefono": 547380574,
+		"titolare": "ZANELLI TIZIANA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1265860621074,
+		"longitudine": 12.244666522106
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook":{ },
+	"opendata": {
+		"full_address": "via emilia levante, 4227, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_49",
+		"gid": 20,
+		"objectid": 49,
+		"localita_": "CASE MISSIROLI",
+		"via": "VIA EMILIA LEVANTE",
+		"civico": 4227,
+		"telefono": 54758195,
+		"titolare": "PIADINA DELLA TALA DI BERNABINI GINO",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1109430150004,
+		"longitudine": 12.3149733724384
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": { },
+	"opendata": {
+		"full_address": "via romea, 2760, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_50",
+		"gid": 21,
+		"objectid": 50,
+		"localita_": "BORGO PAGLIA",
+		"via": "VIA ROMEA",
+		"civico": 2760,
+		"telefono": 3495546093,
+		"titolare": "BABBI BARBARA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1208826906121,
+		"longitudine": 12.2095021811494
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {
+		"category_list": [{
+			"id": "144362285623268",
+			"name": "Food Stand"
+		}],
+		"name": "Piadineria Il Posticino",
+		"location": {
+			"city": "Cesena",
+			"country": "Italy",
+			"latitude": 44.169316673164,
+			"longitude": 12.282408141994,
+			"street": "via Cervese 3723",
+			"zip": "47521"
+		},
+		"id": "109539235800182"
+	},
+	"opendata": {
+		"full_address": "via cervese, 3723, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_51",
+		"gid": 22,
+		"objectid": 51,
+		"localita_": "VILLA CHIAVICHE",
+		"via": "VIA CERVESE",
+		"civico": 3723,
+		"telefono": "",
+		"titolare": "IL POSTICINO SNC DI GIUNCHI SARA C.",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1694123840705,
+		"longitudine": 12.2821916369148
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.1693977,
+				"lng": 12.2822157
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.16946065,
+					"lng": 12.2823837
+				},
+				"southwest": {
+					"lat": 44.16920884999999,
+					"lng": 12.2821597
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+		"id": "12002512ec55138b423d69a5b2b5acb90ad70542",
+		"name": "Piadineria Il Posticino",
+		"opening_hours": {
+			"open_now": true,
+			"weekday_text": []
+		},
+		"photos": [{
+			"height": 2160,
+			"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/117633546063728121234/photos\">Mattia D&#39;altri O Darderi</a>"],
+			"photo_reference": "CoQBdwAAAGCKdptM2aEgASTnd43dKG4jJFII-8yQ4c-Tvdwq8xX4abM5o9ZJpPIvnH_ZuVRfLp_Y13LpCWH--8gaOPaUoycbi-nkSdHyWDfzPYgCiO2iKTvtNvKqyX2uacY8X3xOILl7cg3fDKI1k6jcLlSbqTguflbNeXVRPaVZai0texUfEhD3KlAa29TF2L34Oa13cKimGhRhbWA5Di0tpFZq60ikhQlKpaeWjw",
+			"width": 3840
+		}],
+		"place_id": "ChIJ5VCWvJS6LBMRs8SCq7WlL3g",
+		"rating": 4.4,
+		"reference": "CnRqAAAAEuSFjSPfNjdzuWSjYbW3-imrsUZMmmv3sMJRg0reE9vmihLWdFPxI38fAvUqgzTRD_hbuCp_7EWMCIkDDwCPVb3LdAH2CWoRChydK1xQkcdW0Sd0GlnP1ja9hrqV5Bts6fcXqyt3tmp2fx68VwBMlBIQo-BnR2FBJebhl1VvSyai8BoUcraM31Ts-BcPfWx94TdQkVJp1xo",
+		"scope": "GOOGLE",
+		"types": ["bar",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Via Cervese, 3723, Cesena",
+		"__percent": 0.5
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via ravennate, 2045, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_52",
+		"gid": 23,
+		"objectid": 52,
+		"localita_": "MARTORANO",
+		"via": "VIA RAVENNATE",
+		"civico": 2045,
+		"telefono": "",
+		"titolare": "BURATTI PATRIZIA E BURATTI MONICA SNC",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1659968236252,
+		"longitudine": 12.2432461164343
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via melona, 8414, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_53",
+		"gid": 24,
+		"objectid": 53,
+		"localita_": "PIOPPA",
+		"via": "VIA MELONA",
+		"civico": 8414,
+		"telefono": 3356029257,
+		"titolare": "LA PIADINA DI NADIA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1927187596538,
+		"longitudine": 12.3451788205955
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via albertini annibale, 48, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_54",
+		"gid": 25,
+		"objectid": 54,
+		"localita_": "CENTRO",
+		"via": "VIA ALBERTINI ANNIBALE",
+		"civico": 48,
+		"telefono": 3332906832,
+		"titolare": "L'ANTICA PIADINA DELLA VALDOCA SNC DI MEDRI MELIS",
+		"lettera": "",
+		"tipologia": "",
+		"latitudine": 44.1381331020016,
+		"longitudine": 12.2473828760803
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.1380777,
+				"lng": 12.2473863
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.13818704999998,
+					"lng": 12.2474964
+				},
+				"southwest": {
+					"lat": 44.13804125,
+					"lng": 12.2473496
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+		"id": "27704a9e3827e3e2bea6ac7a1bf9b591f93e46ad",
+		"name": "L'Antica Piadina della Valdoca",
+		"opening_hours": {
+			"open_now": false,
+			"weekday_text": []
+		},
+		"place_id": "ChIJj-KbE8mkLBMREcJrLAN3DQA",
+		"reference": "CnRwAAAATP6tpm6piglKAfEfUPkAhwxibVGqGehD08zHwMkeRbs2u3GaF853w4lMpPlamKlixYtVLW4DXSd4Tv0rf8re1yvOVlpHEOAu1KJBJ1JFOYyJa9AXvXUUGyTUBHU8N7Bp_oszOmiBUIjSTcwrKlwHSBIQ0kTRxyCb7huAk5rx7GK6gRoUsp4ay1Q2ABENRtmD83qgLtira6I",
+		"scope": "GOOGLE",
+		"types": ["restaurant",
+		"food",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Contrada Albertini, 48, Cesena",
+		"__percent": 0.8070175438596491
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via cervese, 385, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_55",
+		"gid": 26,
+		"objectid": 55,
+		"localita_": "VIGNE",
+		"via": "VIA CERVESE",
+		"civico": 385,
+		"telefono": 3358043676,
+		"titolare": "LA PIDA S.N.C. DI GARATTONI SILVIA & C.",
+		"lettera": "",
+		"tipologia": "",
+		"latitudine": 44.1480084257186,
+		"longitudine": 12.2556656157099
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {
+		"category_list": [{
+			"id": "144362285623268",
+			"name": "Food Stand"
+		}],
+		"name": "Il Chiosco Della Pierina",
+		"location": {
+			"city": "Cesena",
+			"country": "Italy",
+			"latitude": 44.171234252815,
+			"longitude": 12.284605059712,
+			"zip": "47521"
+		},
+		"id": "164009380472247"
+	},
+	"opendata": {
+		"full_address": "via cervese, 3927, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_56",
+		"gid": 27,
+		"objectid": 56,
+		"localita_": "VILLA CALABRA",
+		"via": "VIA CERVESE",
+		"civico": 3927,
+		"telefono": "",
+		"titolare": "IL CHIOSCO PIADINA DI NOVELLI PIERINA",
+		"lettera": "",
+		"tipologia": "",
+		"latitudine": 44.1712853293352,
+		"longitudine": 12.2845250466257
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.17116719999999,
+				"lng": 12.2845344
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.1711997,
+					"lng": 12.28461479999999
+				},
+				"southwest": {
+					"lat": 44.17112010000001,
+					"lng": 12.2844788
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+		"id": "c41ad83e468547ef16f1a6305be3f7f0747feeba",
+		"name": "Il Chiosco Della Pierina",
+		"opening_hours": {
+			"open_now": false,
+			"weekday_text": []
+		},
+		"photos": [{
+			"height": 1440,
+			"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/115003484371008903624/photos\">Andrea Vigano</a>"],
+			"photo_reference": "CoQBdwAAAJ8KqaHvkgHxf2xNK1ECZVBZpyWlB_WUC6_sjMs6WHdfGj-CiOy79jaKkoONTbSfhQYhsSrHO99or5IB3tuIYebCD6bcBZ9i8LGhBbwAPSqWFj23AubGAlKZDOvFqDjH2Rym_ocvkkam3rLU12l03RQtR2jGUUr2WOepHtaZUUJ4EhA80PYsyCujBi-7RRvVB0f7GhRFJ3S3TVPVZxnYQzVa1tfaMN_UOw",
+			"width": 2560
+		}],
+		"place_id": "ChIJo4-cmZO6LBMRGngFMN89FGo",
+		"reference": "CnRrAAAA8c6pXxnFTGdFnqVNZq3N8CV417hDw87MY2ZdSpnilpAY7xWRaL4XHmbWDrGgD75Wd1q1f0ET20L8jsElTVv9YPfrZltiS7MF_VYJiAoDZ5IuHa3G_r0---jIsYQhnKmHgoUiQm27RyTC8wFRQsdKAxIQZCarmaEaEENyBzDjn51kFRoUllOFxrlPCrpkVI6kB71hUAZPiis",
+		"scope": "GOOGLE",
+		"types": ["restaurant",
+		"food",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Via Cervese, 3911, Cesena",
+		"__percent": 0.6976744186046512
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "ravennate, 4120, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_57",
+		"gid": 28,
+		"objectid": 57,
+		"localita_": "RONTA",
+		"via": "RAVENNATE",
+		"civico": 4120,
+		"telefono": "",
+		"titolare": "GALASSI DELIA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1828860273164,
+		"longitudine": 12.2430086436447
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.182936,
+				"lng": 12.2427523
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.18294095,
+					"lng": 12.242815
+				},
+				"southwest": {
+					"lat": 44.18293435,
+					"lng": 12.2425642
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+		"id": "d4456862727d6b1eeb0b5b86930436fc8467d960",
+		"name": "e chiuschet dla delia",
+		"opening_hours": {
+			"open_now": true,
+			"weekday_text": []
+		},
+		"photos": [{
+			"height": 1200,
+			"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/105275197732749882036/photos\">babara malmesi</a>"],
+			"photo_reference": "CoQBcwAAANRSbBrEKNP3catKPh54v03EhJ19bZefDXOpakywOug1cDP4a4mkMja5TX7D_M7hayy6fSErGvdJl67nf8HjUNlIXYDpDyp6kFOMAU52mS2dQub_6p-YS6cDjAVOLNplf54xLKGWB4_rRIsWsdvedTswJQmEAc20qunRVI_b9UcmEhBYZkUxwzUVMJi82bh6takmGhTER0c7swjBnF7yo2dKBTh_WVHuyQ",
+			"width": 1600
+		}],
+		"place_id": "ChIJdVS7pVqlLBMROtquhklMUCA",
+		"reference": "CnRoAAAA7JCn0QghobkyxlwnHnXZdeW-Fg2TTbLWxx0nKWsuZZd_cCEK55CfgTmjDmSHotDjcvLnkzFfMj6XuKLI2up43TkExM0I8U0yo766VDrjovRcSNtMCQex9on2P1aMJObsreWz-tAU0_7LyMm8vwikMRIQGp7hCtEa0YO_aceX1fDk5xoU9kDv5aHM794fRB7Osck6DzDIvxE",
+		"scope": "GOOGLE",
+		"types": ["grocery_or_supermarket",
+		"food",
+		"store",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Via Ravennate, 4120, Ronta di Cesena",
+		"__percent": 0.4166666666666667
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via canonico lugaresi, 330, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_58",
+		"gid": 29,
+		"objectid": 58,
+		"localita_": "PONTE VECCHIO",
+		"via": "VIA CANONICO LUGARESI",
+		"civico": 330,
+		"telefono": 3315443447,
+		"titolare": "TOTA PIDA S.N.C. DI BUDA GIACOMO E NASOLINI ERICA",
+		"lettera": "",
+		"tipologia": "",
+		"latitudine": 44.1341317632584,
+		"longitudine": 12.2355770425147
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {
+		"category_list": [{
+			"id": "1578263382424714",
+			"name": "Place to Eat/Drink"
+		}],
+		"name": "Chiosco La Caveja",
+		"location": {
+			"city": "Cesena",
+			"country": "Italy",
+			"latitude": 44.1372904,
+			"longitude": 12.2391387,
+			"street": "San Domenico",
+			"zip": "47521"
+		},
+		"id": "235361533294754"
+	},
+	"opendata": {
+		"full_address": "viale mazzoni jacopo, 34, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_1",
+		"gid": 30,
+		"objectid": 1,
+		"localita_": "SAN DOMENICO",
+		"via": "VLE MAZZONI JACOPO",
+		"civico": 34,
+		"telefono": 3408222275,
+		"titolare": "LA CAVEJA SAS DI POLLINI SARA & C.",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1372513683879,
+		"longitudine": 12.2391035589203
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {
+		
+	},
+	"opendata": {
+		"full_address": "via castiglione, 33, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_2",
+		"gid": 31,
+		"objectid": 2,
+		"localita_": "SAN CARLO",
+		"via": "VIA CASTIGLIONE",
+		"civico": 33,
+		"telefono": 547663605,
+		"titolare": "GUIDAZZI MARINA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.0888013568943,
+		"longitudine": 12.1927993650178
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.0886592,
+				"lng": 12.1928565
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.08880949999999,
+					"lng": 12.1928958
+				},
+				"southwest": {
+					"lat": 44.0886091,
+					"lng": 12.1928434
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+		"id": "567252ade3d3f6c2d3453ddc22a10829d27d6ac7",
+		"name": "Circolo Endas G. Mazzini",
+		"photos": [{
+			"height": 3120,
+			"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/101945662154959369345/photos\">Federico Gnudi</a>"],
+			"photo_reference": "CoQBdwAAAOKf5cmf6wzsOSvvFkYXXEsJiGjq2H4qujvuHXGosdFC5TnNFsKvCnMq20IkN9xnh1nIfFi8G4zF7A7B-czjWHWvHuwK82L__nv5WsEXASxHa8WFU0aP1pT1qPo9KflAM2-qnFnEwCA_bP4QqH7A3QGYhXhUvqpCe-TNtnU69WLEEhAcevEde0bbUTv2PgmnawnAGhQ4Q00rDeg1jLm_EobjZkjXZPwmBg",
+			"width": 4160
+		}],
+		"place_id": "ChIJUQcA8LOjLBMRJa6dzHQux20",
+		"reference": "CnRrAAAAVBcaQ8TDfpo0_s9YmeVEW-5WjJ65SZnGSdDuGnos6jSvQLx1052S8Nu_Kfb41Uh1zg1RGiv5Ebth-QzBhwkx4Y3ULSDiCJeCc267zfiFpmzFjFY1y64GPL2irVYNMeoGBFBM60a0KdmCEfhj15k3eBIQhpwnKihbjKATru37jHihahoU5EnHwws72A1V5sAA_zrGespoPcY",
+		"scope": "GOOGLE",
+		"types": ["bar",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Via Castiglione, 36, Cesena",
+		"__percent": 0.41379310344827586
+	}
+},
+{
+	"facebook": {
+		"category_list": [{
+			"id": "150108431712141",
+			"name": "Grocery Store"
+		},
+		{
+			"id": "273819889375819",
+			"name": "Restaurant"
+		}],
+		"name": "Chiosco del Savio - Piadina",
+		"location": {
+			"city": "Cesena",
+			"country": "Italy",
+			"latitude": 44.13818,
+			"longitude": 12.2367,
+			"street": "Via IX Febbraio, 41",
+			"zip": "47521"
+		},
+		"cover": {
+			"cover_id": "969084643200399",
+			"offset_x": 0,
+			"offset_y": 43,
+			"source": "https://scontent.xx.fbcdn.net/v/t1.0-9/s720x720/13921115_969084643200399_1860252438151112493_n.jpg?oh=59b25b233be4d1ca61c696547191da6d&oe=5867C3C3",
+			"id": "969084643200399"
+		},
+		"id": "339112042864332"
+	},
+	"opendata": {
+		"full_address": "via ix febbraio, 41, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_3",
+		"gid": 32,
+		"objectid": 3,
+		"localita_": "SAN DOMENICO",
+		"via": "VIA IX FEBBRAIO",
+		"civico": 41,
+		"telefono": 3485674165,
+		"titolare": "CHIOSCO DEL SAVIO DI BALDACCI PAOLO",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1381286996003,
+		"longitudine": 12.2366747802366
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.1381167,
+				"lng": 12.2366721
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.13832024999999,
+					"lng": 12.23677035
+				},
+				"southwest": {
+					"lat": 44.13804885,
+					"lng": 12.23663935
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+		"id": "3547de052d1a049c3a4fba0ea8ceb349ed5fec52",
+		"name": "Chiosco del Savio",
+		"opening_hours": {
+			"open_now": true,
+			"weekday_text": []
+		},
+		"place_id": "ChIJH1TQ28CkLBMRbj7dbApISNo",
+		"reference": "CnRlAAAAVXk_Ed8HTUq2tSerobGn_pc4bmdzzpbbEt3aKVbOfLR1XD24FQT7jzJA_IoCLEMbuvpqihetdOM_dZDH4SSgOZRi8pP80kfZv8gyGBHZ3rxXMRFbmFnUXi_3d5-y1cBIv1p2CRtvEXfv3a4b0rJzCBIQyCQrzrNqx7r5C5KXnDTCoRoULNql5rutodUqvm2vLJX-6Ttezsk",
+		"scope": "GOOGLE",
+		"types": ["restaurant",
+		"food",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Via IX Febbraio, 41, Cesena",
+		"__percent": 0.6666666666666666
+	}
+},
+{
+	"facebook": {
+		 
+	},
+	"opendata": {
+		"full_address": "via dismano, 4830, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_4",
+		"gid": 33,
+		"objectid": 4,
+		"localita_": "PIEVESESTINA",
+		"via": "VIA DISMANO",
+		"civico": 4830,
+		"telefono": 3338703263,
+		"titolare": "CELLINI MARIA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1883719347166,
+		"longitudine": 12.2178929812989
+	},
+	"google": {
+		 
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via montaletto, 3035, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_5",
+		"gid": 34,
+		"objectid": 5,
+		"localita_": "SAN GIORGIO",
+		"via": "VIA MONTALETTO",
+		"civico": 3035,
+		"telefono": "",
+		"titolare": "LA PIADINA DI GIANLUCA DI MUCCIOLI GIANLUCA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1945435523544,
+		"longitudine": 12.2803522987678
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via farini luigi carlo, 31, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_6",
+		"gid": 35,
+		"objectid": 6,
+		"localita_": "SAN ROCCO",
+		"via": "VIA FARINI LUIGI CARLO",
+		"civico": 31,
+		"telefono": 3394835166,
+		"titolare": "IL CHIOSCO DEL PONTE VECCHIO SNC DI MARINI SABRINA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1341352115809,
+		"longitudine": 12.2324208409298
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.1341657,
+				"lng": 12.2325944
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.13424765,
+					"lng": 12.2325949
+				},
+				"southwest": {
+					"lat": 44.13412184999999,
+					"lng": 12.2325941
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+		"id": "33ed6b72b09065bec6603b90ae31983cae17e45c",
+		"name": "Edicola Del Ponte Vecchio Di Molinari Gianni Gianni",
+		"place_id": "ChIJNe9dLb6kLBMRbblNUZacdfs",
+		"reference": "CpQBiAAAAGor7aLNPX3ufm2SgbR1X7WHQLF7JZBj_yjVLuOTeb69oOS1hecI58rEGyMW6Kq8cIZRojNRQpx_81W90Pi56sScin2UgBq0htPSil_Oy5xOjKoqV5ZTpQFWBQx6JCLIBUbBY6bDYfJ72lib_Hp01id2feaKmeuibyozzPVmPVI7FOys2D1_OVeHrjT_LVTR1BIQN5FKhOyrr9iOQdGWQ3brcxoU5g30YWlGdwXInzS-IS6iYABj65E",
+		"scope": "GOOGLE",
+		"types": ["point_of_interest",
+		"establishment"],
+		"vicinity": "Via Luigi Carlo Farini, 23, Cesena",
+		"__percent": 0.5507246376811594
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via osoppo, 20, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_7",
+		"gid": 36,
+		"objectid": 7,
+		"localita_": "VILLA CHIAVICHE",
+		"via": "VIA OSOPPO",
+		"civico": 20,
+		"telefono": 547380761,
+		"titolare": "BROCCOLI NORMA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1605073529673,
+		"longitudine": 12.2721183970579
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.1607589,
+				"lng": 12.2722727
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.16110375,
+					"lng": 12.2724114
+				},
+				"southwest": {
+					"lat": 44.16064394999999,
+					"lng": 12.2718566
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+		"id": "e71e1a59dd2eee4a50e36885425e680d2fa008d4",
+		"name": "Ristorante Nuovo Secolo",
+		"place_id": "ChIJlRo7V8O6LBMRpTjQ-x15VUU",
+		"reference": "CnRqAAAAW-5SnDyguFrLicgrwLVOvmZPjd0OfS0Hkr_E52G4ryoY1xdZ2kfpCCOStJnEy3IUEj43M-7eG6zgBxr3kXSjKMMGWb42RtmciKjCjkQztO69iUT6nyQaw3MZZ-WIPRkr5cnmGLJfoZ2uDQLyBNIFZhIQFkkE5R55h7LQ09OheMzJXxoUCNnyqmfbRkGNz4VxvbtBYPaMzNI",
+		"scope": "GOOGLE",
+		"types": ["restaurant",
+		"food",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Via Cervese, 2388, Cesena",
+		"__percent": 1
+	}
+},
+{
+	"facebook": {
+		"category_list": [{
+			"id": "2500",
+			"name": "Local Business"
+		}],
+		"about": "La Piadina non è altro che \"il pane rude di Roma e il pane nazionale dei Romagnoli\". G.Pascoli",
+		"name": "La regina della piadina",
+		"location": {
+			"city": "Cesena",
+			"country": "Italy",
+			"latitude": 44.14534,
+			"longitude": 12.22109,
+			"street": "via Sanremo 35",
+			"zip": "47522"
+		},
+		"cover": {
+			"cover_id": "475789352494182",
+			"offset_x": 58,
+			"offset_y": 0,
+			"source": "https://scontent.xx.fbcdn.net/t31.0-8/s720x720/920466_475789352494182_1696504885_o.jpg",
+			"id": "475789352494182"
+		},
+		"id": "263039720435814"
+	},
+	"opendata": {
+		"full_address": "via san remo, 35, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_8",
+		"gid": 37,
+		"objectid": 8,
+		"localita_": "TORRE DEL MORO",
+		"via": "VIA SAN REMO",
+		"civico": 35,
+		"telefono": "",
+		"titolare": "CASADEI MARIA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.145308180421,
+		"longitudine": 12.2210592211119
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.1451908,
+				"lng": 12.2211099
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.14519175,
+					"lng": 12.22122735
+				},
+				"southwest": {
+					"lat": 44.14519034999999,
+					"lng": 12.22105195
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+		"id": "ade19e589f541d1a4cd57f266d4409f7546def21",
+		"name": "La Regina Della Piadina",
+		"opening_hours": {
+			"open_now": false,
+			"weekday_text": []
+		},
+		"photos": [{
+			"height": 576,
+			"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/104332025408176579728/photos\">Elisa Lugaresi</a>"],
+			"photo_reference": "CoQBdwAAAD0hwNJ5gjrF0j1u6X43Ctm7WSCyYRTl9lrqYkd9OU-q1knqBY2t_075PiOlKFLC5DxLkvXyF-vYi-bMRJtWJjtfvlzPxyKSryGDy1bCi1vNwiCrO1Li9DUxZV5gAiCnQDBkLskj5qcZOKWzEH4YN_EApt4IOfxTrOHOGQXWLhYNEhDF5isY5BbbyF_lt6B5FwJ7GhSqzF_kXaLGqvORJj_iDMmPDPn39Q",
+			"width": 1968
+		}],
+		"place_id": "ChIJE_zr0e-kLBMRsSPMJwiSetU",
+		"reference": "CnRrAAAAOnInJwkyyhaHMpgkAbrIqGt-LgNS2yNNgK7WMdU7st8TKPGbl6PEPPrvMCjRuPZLH-qNBjQPs5XRWmNFPQLggspYcyZamhsbbDTm7STnmq5pFSBTQPyu-GdwQmMdl1E2Q2m7iGbb3g8tXNirQ8j6mRIQDmxGmb_Fb6Y2F3qATJP3aRoUHoYcrirKcCtjX5G0CHpTz3zb0VI",
+		"scope": "GOOGLE",
+		"types": ["restaurant",
+		"food",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Via San Remo, 35, Cesena",
+		"__percent": 1
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via del mare, 401, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_9",
+		"gid": 38,
+		"objectid": 9,
+		"localita_": "STADIO",
+		"via": "VIA DEL MARE",
+		"civico": 401,
+		"telefono": 3356540373,
+		"titolare": "CANARECCI ARIANNA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1393388194725,
+		"longitudine": 12.2626427180898
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "viale oberdan guglielmo, 413, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_10",
+		"gid": 39,
+		"objectid": 10,
+		"localita_": "FIORITA",
+		"via": "VLE OBERDAN GUGLIELMO",
+		"civico": 413,
+		"telefono": 547610332,
+		"titolare": "PISCAGLIA ETTORE",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1404672882491,
+		"longitudine": 12.2537447860891
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.14046039999999,
+				"lng": 12.2537876
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.14050024999997,
+					"lng": 12.2538145
+				},
+				"southwest": {
+					"lat": 44.14034085000001,
+					"lng": 12.2537069
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+		"id": "bac7956e8351ce8375dfaef6807330dd1ac31d53",
+		"name": "Piscaglia Ettore",
+		"place_id": "ChIJW50I6MykLBMRD-PesPo_Q4g",
+		"reference": "CnRkAAAA01zl8sz4li1WsvAUip-EvqWrRJlKTuTmNVGZQZ9GFiXqI6bjED11UdiwK4TzKe4ppYpoe236rRJVm3kvfXxx2uwDTHLh4xTpv5O4x7y08ai4aIKijSsW-g5ThlfI7myPHCNdSXjlYvKnM5pC1Fgi0hIQD5HbH9p7CpvFJykSonxGwRoUt9tfwzbrZOyROYdFWz-h89rM--I",
+		"scope": "GOOGLE",
+		"types": ["grocery_or_supermarket",
+		"food",
+		"store",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Viale Guglielmo Oberdan, Cesena",
+		"__percent": 1
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via f.lli spazzoli, 300, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_11",
+		"gid": 40,
+		"objectid": 11,
+		"localita_": "STADIO",
+		"via": "VIA F.LLI SPAZZOLI",
+		"civico": 300,
+		"telefono": 547304322,
+		"titolare": "BRIGHI DAVIDE",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1368128944091,
+		"longitudine": 12.2643120756113
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.1368184,
+				"lng": 12.2643801
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.13684079999999,
+					"lng": 12.26447175
+				},
+				"southwest": {
+					"lat": 44.136788,
+					"lng": 12.26431235
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+		"id": "08f27b088f2f3058a0399622ff1a2b780ec25c5a",
+		"name": "Brighi Davide",
+		"place_id": "ChIJlU43PDe7LBMRVgc_Xp7U0iE",
+		"reference": "CmRgAAAAyTGZ9j4ijyL7qBeHwqaYYMOvJK3y8fTTzsHxsHRVN-e3KnG5Vt5obO1RAm3F1F9IvOsynJmixMRLRt4xoDYNsLyxnbWbgA7cPfLEGx0oI0JX8VNJTf46Jy5EFqUwR0IUEhCVz2ZHSPHHe_KbDepwFE12GhSO9IaSA5bfGPEgkJ6WJDlD8r9opw",
+		"scope": "GOOGLE",
+		"types": ["point_of_interest",
+		"establishment"],
+		"vicinity": "Via Fratelli Spazzoli, 300, Cesena",
+		"__percent": 1
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via sostegni luigi, 13, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_12",
+		"gid": 41,
+		"objectid": 12,
+		"localita_": "CENTRO",
+		"via": "VIA SOSTEGNI LUIGI",
+		"civico": 13,
+		"telefono": "",
+		"titolare": "MARIANI PRIMA",
+		"lettera": "BIS",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.135581600716,
+		"longitudine": 12.2485714353021
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via lambruschini raffaello, 190, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_13",
+		"gid": 42,
+		"objectid": 13,
+		"localita_": "CASE FINALI",
+		"via": "VIA LAMBRUSCHINI RAFFAELLO",
+		"civico": 190,
+		"telefono": 547304323,
+		"titolare": "ACQUA, FARINA E ... DI BURNACCI DENIS",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1329543622302,
+		"longitudine": 12.2710396168153
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.13302419999999,
+				"lng": 12.2710573
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.13315005,
+					"lng": 12.27106514999999
+				},
+				"southwest": {
+					"lat": 44.13298225,
+					"lng": 12.27103375
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+		"id": "389c4623b12a413be9f8699fa8b6c7a9ef1abbc4",
+		"name": "Acqua - Farina E... Di Burnacci Denis",
+		"place_id": "ChIJsRYTCT-7LBMRKHIkb6KlCxM",
+		"reference": "CoQBeAAAADOpgzml_LwXB7Ojd3hI4bonhqgMXd_tdtKbvoWZiKiXvPmL4YS48q8r2cKaUCea5HhuGgMzF2mWTQrOmM5Bj-xz8bkMEGTUTUb8_hyMwgfilezrBp-pttWHQ1XeLYOUd9xslJmJwa14Icb3qLHScRGlTSKv8xbhUWpd8s-MXTXrEhCRtC-k18gBBW-5hMgJiJ7aGhSjZTC2cwWUcsAdFdEoSjl9b9d8wQ",
+		"scope": "GOOGLE",
+		"types": ["restaurant",
+		"food",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Via Lambruschini",
+		"__percent": 0.9583333333333334
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via belletti giuseppe, 13, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_14",
+		"gid": 43,
+		"objectid": 14,
+		"localita_": "SAN ROCCO",
+		"via": "VIA BELLETTI GIUSEPPE",
+		"civico": 13,
+		"telefono": 547314461,
+		"titolare": "CECCARONI GIUSEPPINA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1327374845999,
+		"longitudine": 12.2294458987059
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.1325034,
+				"lng": 12.2299804
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.13251794999999,
+					"lng": 12.23005055
+				},
+				"southwest": {
+					"lat": 44.13249855,
+					"lng": 12.22976995
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+		"id": "db765a688594ee38c08dbdb95c01fbcfb1b92274",
+		"name": "Up Trainer Bike",
+		"place_id": "ChIJ4Q3Q25WkLBMRI1CW91u1Pss",
+		"reference": "CnRjAAAArQ_rLtr1WA_IEma53Xz6bF1hZQ2CCE4Z5viVJzLLjaZpazDnIyInFSnhIvBFkg8TzJqmrvjL97q-ngOYjK-6LU1smaC3fx2_H7Yf9Do9ObVIBh_VJxEXmioMahUre5eMZNdlBznAJKnTPxYcHKbTihIQNY1tRqPxmHCzN3MzCT1qpxoUscg3IVDFZV8AMCBMZXpwO1AGAlg",
+		"scope": "GOOGLE",
+		"types": ["point_of_interest",
+		"establishment"],
+		"vicinity": "Via Savio, 917, Cesena",
+		"__percent": 1
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via settecrociari, 6451, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_15",
+		"gid": 44,
+		"objectid": 15,
+		"localita_": "SAN VITTORE",
+		"via": "VIA SETTECROCIARI",
+		"civico": 6451,
+		"telefono": "",
+		"titolare": "LA PIADINA DI SAN VITTORE DAL 1963 DI CEREDI PAOLA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1061867702365,
+		"longitudine": 12.1956772618179
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.10607359999999,
+				"lng": 12.1958854
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.1061431,
+					"lng": 12.1958929
+				},
+				"southwest": {
+					"lat": 44.1060175,
+					"lng": 12.1958793
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+		"id": "7faf714594adab923dc867d827c6ebf3315c76c1",
+		"name": "Piadineria San Vittore",
+		"photos": [{
+			"height": 2560,
+			"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/107743770896356198049/photos\">Claudio Pozzi</a>"],
+			"photo_reference": "CoQBdwAAAEIgngMoGfVfKlBtl18PpmfZ3l6fifKvdA5E6l9PtHEnt7-PzWaEB1ZHk9zylrjQIco5PRku3NMMmxB-m3IPhlyVOHYGb_kkMDwlcS98jYXg4Pvf1slHXkY3sm7VaAOWad0KgBhFG-5pWlXK0YvuVhG-ONzkx6CP3sHNb2ZT0ck-EhD8wjM3yRVoUFdqD03ISQiCGhSB0AiDivm9y572vRGfPv15whNkeA",
+			"width": 1440
+		}],
+		"place_id": "ChIJX9NqEpejLBMRtZnNGMEXXLY",
+		"reference": "CnRqAAAAY822XNbcbRma2r1f19w-CLi_a5fG4Am__0-EEFV5-n3loZUv5fbKQDdMd9_TfHM4n0wCOIpg0qC71aV6zAAyea3WGhRvES94zrM2nIEkj0Ocjs-_CQe-EVbRfH8GRLMbTiITb2zpUEY_9ZBRzb4KhBIQ6xXG5p5w6IRI0Fy4XhY-SRoUcXGhxB9AZquAqkkiF3r4qBmAqmQ",
+		"scope": "GOOGLE",
+		"types": ["restaurant",
+		"food",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Via Settecrociari, 6407, Cesena",
+		"__percent": 0.5833333333333334
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "piazza fabbri edoardo, 15, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_16",
+		"gid": 45,
+		"objectid": 16,
+		"localita_": "CENTRO",
+		"via": "PZA FABBRI EDOARDO",
+		"civico": 15,
+		"telefono": 54728163,
+		"titolare": "PAVIRANI MARIA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1383689225828,
+		"longitudine": 12.243511332501
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.13845179999999,
+				"lng": 12.2433023
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+		"id": "cea31fabf67dd92170da9fd80d74e92eab48fb26",
+		"name": "Pavirani Maria",
+		"place_id": "ChIJQw8ZncikLBMR5X1QAFWivRc",
+		"reference": "CnRhAAAA-PXo2TpuV-DT55WVGmjQAsliLb9Zy7BS9rrgMyThmSTFRbnMMs3yCqp7TDdXREmSX0a0yNEOdfrWx_9I6GU50kddlpE83qWjxwmO1C5rswA5Ec88NuobmKMmYjfMs71SrcxR15Al_4PmgCEqYTXYRRIQ3EU_uh4-KK9jjhankrceJhoUOTuOGM4U4Zb0coiLjTckFQ4Xk0g",
+		"scope": "GOOGLE",
+		"types": ["grocery_or_supermarket",
+		"food",
+		"store",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Piazza Edoardo Fabbri, 5, Cesena",
+		"__percent": 1
+	}
+},
+{
+	"facebook": {
+		"category_list": [{
+			"id": "150108431712141",
+			"name": "Grocery Store"
+		}],
+		"name": "Da Cristina la piadina",
+		"location": {
+			"city": "Cesena",
+			"country": "Italy",
+			"latitude": 44.19218,
+			"longitude": 12.2415,
+			"street": "Via Ronta, 480",
+			"zip": "47522"
+		},
+		"cover": {
+			"cover_id": "1020085974719702",
+			"offset_x": 0,
+			"offset_y": 50,
+			"source": "https://scontent.xx.fbcdn.net/v/t1.0-9/12508917_1020085974719702_89279344824894354_n.jpg?oh=0cce508e103c1450788ed59072f93e13&oe=58673D7B",
+			"id": "1020085974719702"
+		},
+		"id": "184231184971856"
+	},
+	"opendata": {
+		"full_address": "via ronta, 480, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_17",
+		"gid": 46,
+		"objectid": 17,
+		"localita_": "RONTA",
+		"via": "VIA RONTA",
+		"civico": 480,
+		"telefono": 3402211418,
+		"titolare": "TASSINARI SINA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1920966223085,
+		"longitudine": 12.2414822593383
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {
+		"category_list": [{
+			"id": "188334264523313",
+			"name": "Deli"
+		}],
+		"about": "Piadineria situata sulla via Emilia di Cesena propone una vasta gamma di prodotti di ottima qualità ai prezzi più modici di tutta Cesena.  ",
+		"name": "La mia Piadina Acqua e Farina - Federico,Lorenzo",
+		"location": {
+			"city": "Cesena",
+			"country": "Italy",
+			"latitude": 44.13779,
+			"longitude": 12.26082,
+			"street": "viale guglielmo marconi 300",
+			"zip": "47521"
+		},
+		"cover": {
+			"cover_id": "1676734952574848",
+			"offset_x": 0,
+			"offset_y": 12,
+			"source": "https://scontent.xx.fbcdn.net/v/t1.0-0/p180x540/12717928_1676734952574848_8942534938045321027_n.jpg?oh=0246d4f2076968961f0c36c93c3d7bc1&oe=58600967",
+			"id": "1676734952574848"
+		},
+		"description": "La mia piadina acqua e farina di Lorenzo e Federico e sulla vecchia via Emilia, a pochi passi dal centro di Cesena (viale Mar­coni 300). Molti portano le piadine a casa. «Le mettiamo sottovuoto»  «la mostra piadina non ha niente a che vedere con quella industriale protetta dall’Igp. E perfino gli stra­nieri riconoscono la diffe­renza e cercano l’artigiana­lità». Aperto 20 anni fa, il chiosco è riuscito ad ade­guarsi perfettamente a tem­pi e tendenze: propone an­che piadine all’olio d’oliva, vegetarian o vegan friendly, usa farine certificate bio di farro o kamut. Ma la vera specialità è la piadina dolce. da un  un’antica tradizione delle colline romagnole. «Un im­pasto di farina, uovo, lievi­to, anice, burro e zucchero cotto molto lentamente sul­la piastra: Come si far­cisce? Mele, marmellata, ma anche salame. Anche se quest’ultimo abbinamento non ha ancora incontrato il favore dei clienti.",
+		"id": "1676727712575572"
+	},
+	"opendata": {
+		"full_address": "viale marconi guglielmo, 300, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_18",
+		"gid": 47,
+		"objectid": 18,
+		"localita_": "OSPEDALE",
+		"via": "VLE MARCONI GUGLIELMO",
+		"civico": 300,
+		"telefono": 547645275,
+		"titolare": "RICCI DONATELLA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1377866671353,
+		"longitudine": 12.2607907335525
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.137788,
+				"lng": 12.260772
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.13788385,
+					"lng": 12.26083605
+				},
+				"southwest": {
+					"lat": 44.13775605,
+					"lng": 12.26075065
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+		"id": "c80ed4c49b1e201d55d78ca614bafb9ab6fce80b",
+		"name": "La Mia Piadina acqua e farina Di Bardi e Cangini s.n.c",
+		"photos": [{
+			"height": 373,
+			"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/103502023950265512890/photos\">La Mia Piadina acqua e farina Di Bardi e Cangini s.n.c</a>"],
+			"photo_reference": "CoQBcwAAALHILd6am67OezidJSIGbhcsikND0c2FOWE3ywX5bz02ovLVGH46tMO9aQWRALxO-W9I42XFdCh-dTICCAWGNshKPYN7aHZiOB7ATZOfbUH99lNnyX1k3xK6qmQVul0HuCxJHirpvikCtfns6vOZ2wFndPt__RGmZpV7xgCEKU1YEhBlfjNVbLiDNxsyPgXNio3mGhTpdl8ch9VUxckasmD8ARpca1CB5g",
+			"width": 373
+		}],
+		"place_id": "ChIJuf0YqTa7LBMR2Givnr9o1JE",
+		"reference": "CpQBiwAAADUcs_hdYtAB9wUUxvUVnufr7v6vQE3jrYa_qEPDQFFwkHGCvV7Kbgu34SMBpE4X-vRpbBv2Kl-GuvJV2_0uK-xGnIvplgsXGxIxMxDheNACi1hyqVoc4RlgMls9bB8zPKLfQ1hCx_VAqZuvsUdlvzenK8RnGqm9kOWnDMosqxRvac2iAqnE4xehCU14Sd0TyRIQ1exyAckRYzVNaHts9pTp-BoUY9SvQTRuQp_rV15TebvifT6AiEs",
+		"scope": "GOOGLE",
+		"types": ["food",
+		"store",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Viale Guglielmo Marconi, 300, Cesena",
+		"__percent": 1
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via farini luigi carlo, 541, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_19",
+		"gid": 48,
+		"objectid": 19,
+		"localita_": "SAN ROCCO",
+		"via": "VIA FARINI LUIGI CARLO",
+		"civico": 541,
+		"telefono": 547347131,
+		"titolare": "FAEDI EMMA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1380097245871,
+		"longitudine": 12.2298151831289
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.1381369,
+				"lng": 12.2297888
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.13815940000001,
+					"lng": 12.2298506
+				},
+				"southwest": {
+					"lat": 44.1381294,
+					"lng": 12.2296034
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+		"id": "c8e7bee44fdad2d08af2f5b22cbaed1885ca769c",
+		"name": "Tabaccheria L'Amalia Di Gaspari Manuela",
+		"place_id": "ChIJ7YEpwI-kLBMR5u8ysP09m1g",
+		"reference": "CoQBegAAAJbiNnwWRYHfL_3SlPQW1QtttxVbgRbNQkXIghPIdvshliil2bZ0LAU5W18o0ltQMy043vhzyL_qlRCvLCorG-CAKIeMCFjypLOQJLlvQqY3rpqSLUt0fCGenyi19QQzmW1Sj4ACJ0DAQESNRcMtRYYMaszaplF1iO7Xh5RCaldmEhDyyTd__5_C0Fzi5RGqYGipGhRXVrHCChbZ0fjJlrxaPnR86Dtykw",
+		"scope": "GOOGLE",
+		"types": ["store",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Via Savio, 311, Cesena",
+		"__percent": 1
+	}
+},
+{
+	"facebook":{},
+	"opendata": {
+		"full_address": "viale finali gaspare, 5, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_20",
+		"gid": 49,
+		"objectid": 20,
+		"localita_": "CENTRO",
+		"via": "VLE FINALI GASPARE",
+		"civico": 5,
+		"telefono": "",
+		"titolare": "MUCCIOLI STEFANO & C. SNC",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.140414841718,
+		"longitudine": 12.2453680725268
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.1404587,
+				"lng": 12.2453379
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.14086225,
+					"lng": 12.2469498
+				},
+				"southwest": {
+					"lat": 44.13924805000001,
+					"lng": 12.2448006
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+		"id": "fd721a7488f15373dcdc7c1f4cb681e8bb462c1e",
+		"name": "La Piadina di Stefano e Mascia",
+		"opening_hours": {
+			"open_now": false,
+			"weekday_text": []
+		},
+		"place_id": "ChIJjURlKsmkLBMREc7J-v202zI",
+		"rating": 4.4,
+		"reference": "CoQBcQAAAIeiqO-TxGA8vS0mhykZAALvthSy61CKONagMQcFh8yy7yh9JOPGkL-hevHeC3eTTrGbI33LosNiTXrVrKNYxf6acjrT96pHsRf5k46RRKQyWpUQMjONlToWoNU4E-ruzcXFrlXQEXe3Uhf_qaVF1mDCxl4kXOYc2gUjNAwr5kstEhCqZyKaQzI92aXxhF4EhmmOGhS38VOrk-qPVvIS_9DiQHsefKUB7Q",
+		"scope": "GOOGLE",
+		"types": ["restaurant",
+		"food",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Viale Gaspare Finali, 5, Cesena",
+		"__percent": 0.4
+	}
+},
+{
+	"facebook": {
+		"category_list": [{
+			"id": "150108431712141",
+			"name": "Grocery Store"
+		},
+		{
+			"id": "193831710644458",
+			"name": "Italian Restaurant"
+		}],
+		"about": "LUN     16.30 - 21.00\nMART  CHIUSO\nMERC  CHIUSO\nGIOV   16.30 - 21.00\nVEN     16.30 - 21.00\nSAB     16.30 - 21.00\nDOM    16.30 - 21.00",
+		"name": "Piadina E Fantasia",
+		"location": {
+			"city": "Cesena",
+			"country": "Italy",
+			"latitude": 44.13368,
+			"longitude": 12.22477,
+			"street": "Via Pistoia 13",
+			"zip": "47522"
+		},
+		"cover": {
+			"cover_id": "1638730466389336",
+			"offset_x": 0,
+			"offset_y": 48,
+			"source": "https://scontent.xx.fbcdn.net/v/t1.0-9/s720x720/12191487_1638730466389336_2574744093844317748_n.jpg?oh=bc3ac3d7b9a0b85505764aa8da47c445&oe=5867C09B",
+			"id": "1638730466389336"
+		},
+		"id": "1638730079722708"
+	},
+	"opendata": {
+		"full_address": "via pistoia, 13, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_21",
+		"gid": 50,
+		"objectid": 21,
+		"localita_": "SAN MAURO",
+		"via": "VIA PISTOIA",
+		"civico": 13,
+		"telefono": 547324553,
+		"titolare": "PIADINA E FANTASIA DI MAGNANI ANTONELLA & C. SNC",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1336216675872,
+		"longitudine": 12.2247499070188
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via tommasini mario, 21, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_22",
+		"gid": 51,
+		"objectid": 22,
+		"localita_": "VIGNE",
+		"via": "VIA TOMMASINI MARIO",
+		"civico": 21,
+		"telefono": 547631113,
+		"titolare": "IL CRESCIONE DI LUCCHI PIERANGELO & C. SNC",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1484892587849,
+		"longitudine": 12.2495106170921
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {
+		"category_list": [{
+			"id": "273819889375819",
+			"name": "Restaurant"
+		}],
+		"about": "Una nuova realtà a Cesena /  cucina street food gourmet / concept & design laviniastyle.com",
+		"name": "Sasaràl / piada e cucina",
+		"location": {
+			"city": "Cesena",
+			"country": "Italy",
+			"latitude": 44.137665250556,
+			"longitude": 12.249157267778,
+			"street": "Via Eugenio  Mura Valzania 24",
+			"zip": "47521"
+		},
+		"cover": {
+			"cover_id": "734016493350535",
+			"offset_x": 0,
+			"offset_y": 76,
+			"source": "https://scontent.xx.fbcdn.net/v/t1.0-9/s720x720/10387676_734016493350535_1173638970769253440_n.jpg?oh=de81305c298cbb934bff2339bfda6db8&oe=58619FD3",
+			"id": "734016493350535"
+		},
+		"description": "La nostra filosofia di cucina è la semplicità e la freschezza delle materie prime, legate al territorio.\nOgni prodotto utilizzato viene scelto per la sua assoluta qualità, stagionalità e provenienza artigianale.\n",
+		"id": "729794353772749"
+	},
+	"opendata": {
+		"full_address": "giardino savelli giancarlo, 10, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_23",
+		"gid": 52,
+		"objectid": 23,
+		"localita_": "CENTRO",
+		"via": "GNO SAVELLI GIANCARLO",
+		"civico": 10,
+		"telefono": 3495143818,
+		"titolare": "LA PIADINA DEL CHIOSCO SNC DI RICCI,ZAVALLONI,GIUN",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1373505955188,
+		"longitudine": 12.2492077476941
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.1373736,
+				"lng": 12.2494038
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.13771755,
+					"lng": 12.24967845
+				},
+				"southwest": {
+					"lat": 44.13725894999999,
+					"lng": 12.24931225
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+		"id": "fe317cc8f19f94dab93d2b17a6b3f981370807ee",
+		"name": "La piadina del chiosco",
+		"opening_hours": {
+			"open_now": true,
+			"weekday_text": []
+		},
+		"photos": [{
+			"height": 4208,
+			"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/110275351789121769589/photos\">Mattia Illuminati</a>"],
+			"photo_reference": "CoQBdwAAAPTZk-IamdIyoOBN4sMX1CSbUVnIVLhQa41KCK1Wl9hgYlo6ugmiwDm6qTf6jQ5wTQ7t8ngR7seFQdEp5VyFnYWF_nQF99i-DPimo9CDxq6kEV5_Ns4SGF7e6TtvlEFVXXdnNmWRJbrLERvqbdw5Tm7mDYJRGggzsXawUkm1oKltEhAwKT30NltpuRENXSRIumKKGhTNzstM0_v4Agbq65P98-qvCKjXkg",
+			"width": 2368
+		}],
+		"place_id": "ChIJGXMaLsmkLBMRfrC6S6zNR_4",
+		"rating": 4.1,
+		"reference": "CnRqAAAAzL6Db5tktzcpryGiwxmaaaSNAs0BACdbxU4UZwhKBdG8uTCsI8NYpomY3DjdJfqrkDnTutA-u-n2jXSBMmSOCgjGlpAWE6686-QARnuhA_X21EnOqzYMsWLZIyYzw4RCO3Q-DLdFtVcNXHepBPygnBIQUD1_8HeXFAkg630cHapl7xoUv93Pcq0qnGpcS-6fyOcS9O15NF0",
+		"scope": "GOOGLE",
+		"types": ["restaurant",
+		"food",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Viale Giosuè Carducci, 10, Cesena",
+		"__percent": 0.5769230769230769
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via viareggio, 213, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_24",
+		"gid": 53,
+		"objectid": 24,
+		"localita_": "SAN MAURO",
+		"via": "VIA VIAREGGIO",
+		"civico": 213,
+		"telefono": "",
+		"titolare": "AL.MA SAS DI MATTEO PINCIO & C.",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1315233693455,
+		"longitudine": 12.2195084675127
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {
+		"category_list": [{
+			"id": "150108431712141",
+			"name": "Grocery Store"
+		},
+		{
+			"id": "180256082015845",
+			"name": "Pizza Place"
+		}],
+		"about": "Piadineria, pizza d'asporto, stuzzicheria!",
+		"name": "Acqua & Farina - Pizza e Piadina",
+		"location": {
+			"city": "Cesena",
+			"country": "Italy",
+			"latitude": 44.15539,
+			"longitude": 12.25991,
+			"street": "via Cerchia di Sant'Egidio, 2365 (a fianco delle torri)",
+			"zip": "47521"
+		},
+		"cover": {
+			"cover_id": "873528456015193",
+			"offset_x": 0,
+			"offset_y": 42,
+			"source": "https://scontent.xx.fbcdn.net/t31.0-8/s720x720/10628646_873528456015193_8042319098230957270_o.jpg",
+			"id": "873528456015193"
+		},
+		"description": "Disponibili TANTE GOLOSITA' per le VOSTRE FESTE!\n\nChiamateci al numero 349 31 73 638 per preparare RINFRESCHI DI LAUREA, BATTESIMI, COMPLEANNI e tante altre ricorrenze, anche al di fuori dell'orario di apertura!\n\nMENU' 2014 NELLA PAGINA PRINCIPALE.....\n\n\n",
+		"id": "394389953929048"
+	},
+	"opendata": {
+		"full_address": "via cerchia di s.egidio, 2365, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_25",
+		"gid": 54,
+		"objectid": 25,
+		"localita_": "SANT'EGIDIO",
+		"via": "VIA CERCHIA DI S.EGIDIO",
+		"civico": 2365,
+		"telefono": 3493173638,
+		"titolare": "MONTANARI ANDREA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1553288995788,
+		"longitudine": 12.2599205262036
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.15531790000001,
+				"lng": 12.2599094
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.15537815000001,
+					"lng": 12.25993295
+				},
+				"southwest": {
+					"lat": 44.15513715,
+					"lng": 12.25990155
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+		"id": "09e959b50b3da13ae3ffca7e041491f8d5f76a3d",
+		"name": "Acqua & Farina, Pizza e Piadina",
+		"opening_hours": {
+			"open_now": true,
+			"weekday_text": []
+		},
+		"photos": [{
+			"height": 1920,
+			"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/116200599112816704269/photos\">Mauro Lucchi</a>"],
+			"photo_reference": "CoQBdwAAAANYWNjv3UBs5r4XpuAQE3mw8iM10XFTBPosGNdFvk8bwqXtBE2YBq86R1gU_7-SjG4H1YH22e-SilQvMVL7kY9yR-Xy8HuqwM_KyO5MvO0eK4utUeyUcxGlrSCQ-XYPQEHZ0mDM0pOPVLeqQs09SwyY_WcjnbCSqkmFBxS9VryPEhCFXz3TjVpjQUpUWA5CAs0kGhQjuNsAfM2810MEu0KAb2cYOGITvg",
+			"width": 2560
+		}],
+		"place_id": "ChIJrfBrJdS6LBMRSyzAS82Bf4g",
+		"rating": 4.4,
+		"reference": "CoQBcwAAAOpmluRsClRCl_TKN2fdMEGtNJ2hjDRGiSXSlsNe2Saz3CAaTxjIxB95DxvYxiodO74BfuG4pl2xuGW3W6LWoXCQwBu0F2661C17vV7UKhIu_HnUluhOxvtwqtrrqLjcr7Qmg8R77LfylLUvDqI7CvUCeNFfhTNOZf49EWeLfbj4EhCFo_Ild5qjZksY8KDOUkmHGhQxwuFTUSTKm8jqC28NilIqNis9bw",
+		"scope": "GOOGLE",
+		"types": ["restaurant",
+		"food",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Sant'Egidio, Italy, Via Cerchia di Sant'Egidio, 2315, Cesena",
+		"__percent": 1
+	}
+},
+{
+	"facebook": {
+		"category_list": [{
+			"id": "192803624072087",
+			"name": "Fast Food Restaurant"
+		}],
+		"about": "Chiosco Piadina al Volo a San Mauro in Valle di Cesena, \nUFFICIALMENTE APERTI!\nSABATO 16 LUGLIO INAUGURAZIONE!!!",
+		"name": "Piadina al Volo",
+		"location": {
+			"city": "Cesena",
+			"country": "Italy",
+			"latitude": 44.13521,
+			"longitude": 12.22702,
+			"street": "Via Versilia, 190",
+			"zip": "47522"
+		},
+		"id": "1638968726328018"
+	},
+	"opendata": {
+		"full_address": "via versilia, 190, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_26",
+		"gid": 55,
+		"objectid": 26,
+		"localita_": "SAN MAURO",
+		"via": "VIA VERSILIA",
+		"civico": 190,
+		"telefono": 3409884794,
+		"titolare": "GIORGI LORETTA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1351644623155,
+		"longitudine": 12.2270176473089
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {
+		"category_list": [{
+			"id": "2500",
+			"name": "Local Business"
+		}],
+		"name": "Micamat",
+		"location": {
+			"city": "Cesena",
+			"country": "Italy",
+			"latitude": 44.143851540239,
+			"longitude": 12.228911558504,
+			"zip": "47522"
+		},
+		"id": "202934459750648"
+	},
+	"opendata": {
+		"full_address": "piazzale ambrosini dario, 27, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_27",
+		"gid": 56,
+		"objectid": 27,
+		"localita_": "IPPODROMO",
+		"via": "PLE AMBROSINI DARIO",
+		"civico": 27,
+		"telefono": "",
+		"titolare": "GIULIANINI MICHELA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1438006763645,
+		"longitudine": 12.2286660672815
+	},
+	"google": {
+		"geometry": {
+			"location": {
+				"lat": 44.14373490000001,
+				"lng": 12.2289332
+			},
+			"viewport": {
+				"northeast": {
+					"lat": 44.14374235,
+					"lng": 12.2292911
+				},
+				"southwest": {
+					"lat": 44.14372734999999,
+					"lng": 12.2278595
+				}
+			}
+		},
+		"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+		"id": "b1a7dc4b4ac99ca941b0fd7c1a0690ebbf10de38",
+		"name": "Micamat Piadineria",
+		"opening_hours": {
+			"open_now": true,
+			"weekday_text": []
+		},
+		"photos": [{
+			"height": 4032,
+			"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/101963964697313304309/photos\">Mattia Zonta</a>"],
+			"photo_reference": "CoQBdwAAAEd9jtpylCesz3DvhcsvjZ90YFukjT43pUbs7-wIMzTjqjxp1ZVMCAmn12GszITgW0x7-wiJ5tpjWm3Vu5OW_donaflZqUnb_kKravqAzsfprH6HFsWHSivGgHpk6gxLfA7wxZQgi33m2Yznms_eUhuwTF6p-SuabTguQmIGin5YEhAcESnhZse_nJpdPQZJS6nVGhSbkgd_cVp_R8Dt0CB-eJYpD4RSgQ",
+			"width": 3024
+		}],
+		"place_id": "ChIJrztcAemkLBMR6Fjyhv2A8PE",
+		"rating": 4.6,
+		"reference": "CnRmAAAARbAJ1TGu4af3PSgGxfZKwLVTkYLUEvYV2TI0NReNmR95DEhRYrX0pIOx86uHgYtbs1Cv5YX2oBcPzkuBXyljPZaLEvNnuouT8qEBVlDdpnI7C0BWGp8sXVq9CwKFtlEACJy8e3sviLFtjMKsFkSrFRIQsNIfr8WbW_u6ysSYMpWVIhoU21sGLuvaMVlm2lJI7PCCdXKfCDs",
+		"scope": "GOOGLE",
+		"types": ["restaurant",
+		"food",
+		"point_of_interest",
+		"establishment"],
+		"vicinity": "Piazzale Dario Ambrosini, 27, Cesena",
+		"__percent": 1
+	}
+},
+{
+	"facebook": {
+		"category_list": [{
+			"id": "273819889375819",
+			"name": "Restaurant"
+		}],
+		"name": "Chiosco piadina \"IL Chiosco DI Laura\"",
+		"location": {
+			"city": "Cesena",
+			"country": "Italy",
+			"latitude": 44.1915512,
+			"longitude": 12.2145205,
+			"street": "P.le Rosa Luxemburg 190",
+			"zip": "47522"
+		},
+		"cover": {
+			"cover_id": "949350111753593",
+			"offset_x": 0,
+			"offset_y": 50,
+			"source": "https://scontent.xx.fbcdn.net/v/t1.0-9/s720x720/8081_949350111753593_6624274221058340550_n.jpg?oh=9827aa7146c462c5a0f266c6e01af924&oe=58A63B8A",
+			"id": "949350111753593"
+		},
+		"description": "..oltre alle classiche e gustosissime piadine,piadipizze,rotoli,crescioni, panini,pizza al piatto e pizza al taglio,il chiosco vi offre,a tutti gli orari,primi piatti fatti in casa e una vasta scelta di secondi piatti di carne con contorni!!",
+		"id": "948821858473085"
+	},
+	"opendata": {
+		"full_address": "piazzale luxemburg rosa, 190, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_28",
+		"gid": 57,
+		"objectid": 28,
+		"localita_": "PIEVESESTINA",
+		"via": "PLE LUXEMBURG ROSA",
+		"civico": 190,
+		"telefono": "",
+		"titolare": "BISCAGLIA LAURA",
+		"lettera": "",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1915452642979,
+		"longitudine": 12.2145139195563
+	},
+	"google": {
+		
+	}
+},
+{
+	"facebook": {},
+	"opendata": {
+		"full_address": "via mulini, 20, 47522 Cesena FC",
+		"tags": ["piadineria"],
+		"id": "piadineria_29",
+		"gid": 58,
+		"objectid": 29,
+		"localita_": "SAN BARTOLO",
+		"via": "VIA MULINI",
+		"civico": 20,
+		"telefono": 3358395965,
+		"titolare": "PIADINA AL QUADRATO DI GIORGIA MAZZI",
+		"lettera": "F",
+		"tipologia": "CHIOSCO",
+		"latitudine": 44.1424107874362,
+		"longitudine": 12.2393053880771
+	},
+	"google": {
+		
+	}
+}]

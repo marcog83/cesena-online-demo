@@ -1,0 +1,167 @@
+[
+  {
+    "omdb": {
+      "Title": "Inferno",
+      "Year": "2016",
+      "Rated": "PG-13",
+      "Released": "28 Oct 2016",
+      "Runtime": "121 min",
+      "Genre": "Action, Crime, Drama",
+      "Director": "Ron Howard",
+      "Writer": "Dan Brown (based on the novel by), David Koepp (screenplay)",
+      "Actors": "Ben Foster, Tom Hanks, Sidse Babett Knudsen, Felicity Jones",
+      "Plot": "Academy Award® winner Ron Howard returns to direct the latest bestseller in Dan Brown's (Da Vinci Code) billion-dollar Robert Langdon series, Inferno, which finds the famous symbologist (again played by Tom Hanks) on a trail of clues tied to the great Dante himself. When Langdon wakes up in an Italian hospital with amnesia, he teams up with Sienna Brooks (Felicity Jones), a doctor he hopes will help him recover his memories. Together, they race across Europe and against the clock to stop a madman from unleashing a global virus that would wipe out half of the world's population.",
+      "Language": "English",
+      "Country": "USA, Japan, Turkey, Hungary",
+      "Awards": "N/A",
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUzNTE2NTkzMV5BMl5BanBnXkFtZTgwMDAzOTUyMDI@._V1_SX300.jpg",
+      "Metascore": "N/A",
+      "imdbRating": "7.1",
+      "imdbVotes": "359",
+      "imdbID": "tt3062096",
+      "Type": "movie",
+      "Response": "True"
+    },
+    "details": {
+      "poster_path": "/mTCoquJ9wxSUqR0vlTV3ZCFvrlB.jpg",
+      "adult": false,
+      "overview": "Il famoso simbolista Robert Langdon questa volta è sulle tracce di una serie di indizi legati al grande poeta Dante. Quando si risveglia in un ospedale italiano colpito da amnesia, si affida al medico Sienna Brooks per recuperare i suoi ricordi. In una corsa contro il tempo che ha per sfondo tutta l’Europa, cercheranno di prevenire le azioni di un folle che ha intenzione di scatenare una piaga strettamente connessa con l'Inferno di Dante Alighieri.",
+      "release_date": "2016-10-13",
+      "genre_ids": [
+        28,
+        80,
+        9648,
+        53
+      ],
+      "id": 207932,
+      "original_title": "Inferno",
+      "original_language": "en",
+      "title": "Inferno",
+      "backdrop_path": "/mL1hZ8Z7L1Px8tIzalnYKKdhUqo.jpg",
+      "popularity": 22.237158,
+      "vote_count": 140,
+      "video": false,
+      "vote_average": 5.05
+    },
+    "days_list": [
+      {
+        "day": 1476748800000,
+        "fascie": [
+          "20:30",
+          "22:40"
+        ]
+      }
+    ],
+    "title": "INFERNO",
+    "detail": "http://www.cinemaeliseo.it/scheda.php?id=1861",
+    "orari": "Orario: 20:30 - 22:40",
+    "id": "1861"
+  },
+  {
+    "omdb": {
+      "Response": "False",
+      "Error": "Movie not found!"
+    },
+    "details": {
+      "poster_path": "/bop2OQLaIVFzrGUFYEfxDHQBZKL.jpg",
+      "adult": false,
+      "overview": "Lucia e Maria si conoscono da sempre. Due amiche che più diverse non si può. Lucia ha chiuso col genere maschile, Maria invece non riesce proprio a farne a meno. Una sera nel suo letto capita (finalmente!) l'Uomo perfetto. Bello, sensibile, appassionato, maturo. Il mattino però porta con sé incredibili sorprese e tra equivoci, grandi bugie e piccoli abbandoni Lucia e Maria si prenderanno una bella vacanza da sé stesse. Forse quel ragazzo incontrato per caso è davvero l'Uomo che tutte cercano perché con le sue semplici teorie riesce a fare la vera radiografia delle loro vite, a buttare all'aria abitudini e falsi miti e a rivoluzionare ogni desiderio e ogni certezza.",
+      "release_date": "2016-10-13",
+      "genre_ids": [],
+      "id": 418726,
+      "original_title": "Qualcosa di nuovo",
+      "original_language": "it",
+      "title": "Qualcosa di nuovo",
+      "backdrop_path": "/knGgcvje45DdERWxts9w5LtABZ.jpg",
+      "popularity": 1.07689,
+      "vote_count": 0,
+      "video": false,
+      "vote_average": 0
+    },
+    "days_list": [
+      {
+        "day": 1476748800000,
+        "fascie": [
+          "20:30",
+          "22:30"
+        ]
+      }
+    ],
+    "title": "QUALCOSA DI NUOVO",
+    "detail": "http://www.cinemaeliseo.it/scheda.php?id=1859",
+    "orari": "Orario: 20:30 - 22:30",
+    "id": "1859"
+  },
+  {
+    "days_list": [
+      {
+        "day": 1476748800000,
+        "fascie": [
+          "20:30"
+        ]
+      }
+    ],
+    "title": "IL RACCONTO D'INVERNO ",
+    "detail": "http://www.cinemaeliseo.it/scheda.php?id=1793",
+    "orari": "Orario: 20:30",
+    "id": "1793"
+  },
+  {
+    "omdb": {
+      "Title": "The Secret Life of Pets",
+      "Year": "2016",
+      "Rated": "PG",
+      "Released": "08 Jul 2016",
+      "Runtime": "87 min",
+      "Genre": "Animation, Adventure, Comedy",
+      "Director": "Yarrow Cheney, Chris Renaud",
+      "Writer": "Cinco Paul, Ken Daurio, Brian Lynch, Simon Rich (additional characters created by)",
+      "Actors": "Louis C.K., Eric Stonestreet, Kevin Hart, Jenny Slate",
+      "Plot": "The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.",
+      "Language": "English",
+      "Country": "Japan, USA",
+      "Awards": "N/A",
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjIzMzA1OTkzNV5BMl5BanBnXkFtZTgwODE3MjM4NzE@._V1_SX300.jpg",
+      "Metascore": "61",
+      "imdbRating": "6.7",
+      "imdbVotes": "52,218",
+      "imdbID": "tt2709768",
+      "Type": "movie",
+      "Response": "True"
+    },
+    "details": {
+      "poster_path": "/5WrUttEJ2nohwCtaoxHLNacxth7.jpg",
+      "adult": false,
+      "overview": "Gli eventi del film avvengono a New York City. Max, un terrier, vive una vita felice con la sua padrona Katie. Ma un giorno, Katie porta a casa Duke, un altro cane e fra i due nasce una rivalità, che dovranno però mettere da parte quando dovranno fermare un coniglio adorabile dal nome di Nervosetto (Snowball nell'originale) e il suo gruppo di animali abbandonati che lanciano vendetta sugli animali domestici e i loro padroni. Nel frattempo, Gidget, un'amica e vicina di Max e tutti i vicini del terrier fanno squadra per trovarlo dopo che lui e Duke perdono la via di casa.",
+      "release_date": "2016-06-24",
+      "genre_ids": [
+        12,
+        16,
+        35,
+        10751
+      ],
+      "id": 328111,
+      "original_title": "The Secret Life of Pets",
+      "original_language": "en",
+      "title": "Pets - Vita da animali",
+      "backdrop_path": "/up1Fn4u0EvgeWbQuRDVzOrIy2oP.jpg",
+      "popularity": 8.251565,
+      "vote_count": 850,
+      "video": false,
+      "vote_average": 5.89
+    },
+    "days_list": [
+      {
+        "day": 1476748800000,
+        "fascie": [
+          "20:30",
+          "22:30"
+        ]
+      }
+    ],
+    "title": "PETS - VITA DA ANIMALI",
+    "detail": "http://www.cinemaeliseo.it/scheda.php?id=1856",
+    "orari": "Orario: 20:30 - 22:30",
+    "id": "1856"
+  }
+]

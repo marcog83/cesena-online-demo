@@ -1,0 +1,16 @@
+{
+  "name": "cesena-online",
+  "version": "0.0.1",
+  "homepage": "https://github.com/marcog83/cesena-online-demo",
+  "authors": [
+    "marcog83 <marcogobbi0@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

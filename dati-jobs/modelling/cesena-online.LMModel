@@ -1,0 +1,364 @@
+<LMModel Align="68" DisplayFlags="0" LineColor="#000000" FillStyle="none" LineWidth="1" FontUnderline="0" FillColor="#ffffff" LineStyle="Solid" FontColor="#000000" FontPointSize="8" BackgroundColor="#ffffff" FontBold="0" BackgroundImagePlacement="0" FontItalic="0" ModificationDate="2016-10-15T13:57:23" TextFlag="2048" CreationDate="2016-10-15T13:38:36" BackgroundType="0" FontStrikeOut="0" Name="cesena-online" BackgroundStyle="none" Version="2.2" NextOID="58" FontFamily="MS Shell Dlg" >
+ <LMEntityNormal width="195" x="420" TextField="2" Align="68" y="406" LineColor="#000000" FillStyle="Solid" LineWidth="1" Generate="1" FontUnderline="0" FillColor="#9932cc" LineStyle="Solid" FontColor="#000000" FontPointSize="8" OID="1" height="147" DefaultsLoaded="1" FontBold="0" FontItalic="0" TextFlag="2048" FontStrikeOut="0" Name="place" NextOID="18" FontFamily="MS Shell Dlg" >
+  <sink x="0.128205" y="0.0136054" OID="13" />
+  <sink x="0.0307692" y="0.346939" OID="14" />
+  <sink x="0.420513" y="0.802721" OID="17" />
+  <sink x="0.0205128" y="0.931973" OID="16" />
+  <sink x="0.835897" y="0.857143" OID="15" />
+  <LMAttribute OID="4" Identifier="1" >
+   <Uses Class="LMDataItem" Path="2" Name="id_facebook" />
+  </LMAttribute>
+  <LMAttribute OID="5" >
+   <Uses Class="LMDataItem" Path="3" Name="id_google" />
+  </LMAttribute>
+  <LMAttribute OID="6" Identifier="1" >
+   <Uses Class="LMDataItem" Path="4" Name="id_opendata" />
+  </LMAttribute>
+  <LMAttribute OID="7" Mandatory="1" >
+   <Uses Class="LMDataItem" Path="5" Name="name" />
+  </LMAttribute>
+  <LMAttribute OID="8" Mandatory="1" >
+   <Uses Class="LMDataItem" Path="6" Name="latitude" />
+  </LMAttribute>
+  <LMAttribute OID="9" Mandatory="1" >
+   <Uses Class="LMDataItem" Path="7" Name="longitude" />
+  </LMAttribute>
+  <LMIdentifier Primary="1" OID="10" Name="id" />
+ </LMEntityNormal>
+ <LMEntityNormal width="211" x="111" TextField="2" Align="68" y="321" LineColor="#000000" FillStyle="Solid" LineWidth="1" Generate="1" FontUnderline="0" FillColor="#9932cc" LineStyle="Solid" FontColor="#000000" FontPointSize="8" OID="13" height="143" DefaultsLoaded="1" FontBold="0" FontItalic="0" TextFlag="2048" FontStrikeOut="0" Name="opendata-place" NextOID="7" FontFamily="MS Shell Dlg" >
+  <sink x="0.952607" y="0.937063" OID="6" />
+  <LMAttribute OID="2" Mandatory="1" >
+   <Uses Class="LMDataItem" Path="6" Name="latitude" />
+  </LMAttribute>
+  <LMAttribute OID="3" Mandatory="1" >
+   <Uses Class="LMDataItem" Path="7" Name="longitude" />
+  </LMAttribute>
+  <LMAttribute OID="4" Mandatory="1" >
+   <Uses Class="LMDataItem" Path="9" Name="name" />
+  </LMAttribute>
+  <LMIdentifier Primary="1" OID="5" Name="id" />
+ </LMEntityNormal>
+ <LMRelationship BeginCardinality="1,1" BeginOrdinality="1" TextField="2" Align="68" LineColor="#000000" FillStyle="Solid" LineWidth="1" EndArrowDirection="1072693248" EndArrowFlags="4" Generate="1" EndArrowType="3" FontUnderline="0" FillColor="#ffffff" LineStyle="Solid" FontColor="#000000" FontPointSize="8" OID="14" BeginArrowDirection="0" DefaultsLoaded="1" BeginArrowType="3" FontBold="0" Dominant="0" FontItalic="0" EndTruncate="1" TextFlag="2048" FontStrikeOut="0" Name="place-to-opendata" EndCardinality="1,1" BeginTruncate="1" EndRole="id" BeginRole="id_opendata" BeginArrowFlags="2" NextOID="6" FontFamily="MS Shell Dlg" >
+  <point x="426" y="457" OID="1" SinkObjectOID="1" SinkOID="14" />
+  <point x="312" y="455" OID="2" SinkObjectOID="13" SinkOID="6" />
+  <TextHandle x="0.649573" y="13" OID="3" />
+  <BeginRoleHandle x="-74" y="-26" OID="4" />
+  <EndRoleHandle x="21" y="14" OID="5" />
+ </LMRelationship>
+ <LMEntityNormal width="265" x="413" TextField="2" Align="68" y="180" LineColor="#000000" FillStyle="Solid" LineWidth="1" Generate="1" FontUnderline="0" FillColor="#9932cc" LineStyle="Solid" FontColor="#000000" FontPointSize="8" OID="15" height="129" DefaultsLoaded="1" FontBold="0" FontItalic="0" TextFlag="2048" FontStrikeOut="0" Name="facebook-place" NextOID="7" FontFamily="MS Shell Dlg" >
+  <sink x="0.116981" y="0.875969" OID="6" />
+  <LMAttribute OID="2" Mandatory="1" >
+   <Uses Class="LMDataItem" Path="11" Name="latitude" />
+  </LMAttribute>
+  <LMAttribute OID="3" Mandatory="1" >
+   <Uses Class="LMDataItem" Path="10" Name="longitude" />
+  </LMAttribute>
+  <LMAttribute OID="4" Mandatory="1" >
+   <Uses Class="LMDataItem" Path="9" Name="name" />
+  </LMAttribute>
+  <LMIdentifier Primary="1" OID="5" Name="id" />
+ </LMEntityNormal>
+ <LMEntityNormal width="265" x="108" TextField="2" Align="68" y="623" LineColor="#000000" FillStyle="Solid" LineWidth="1" Generate="1" FontUnderline="0" FillColor="#9932cc" LineStyle="Solid" FontColor="#000000" FontPointSize="8" OID="16" height="129" DefaultsLoaded="1" FontBold="0" FontItalic="0" TextFlag="2048" FontStrikeOut="0" Name="google-place" NextOID="8" FontFamily="MS Shell Dlg" >
+  <sink x="0.94717" y="0.0542636" OID="7" />
+  <LMAttribute OID="2" Mandatory="1" >
+   <Uses Class="LMDataItem" Path="11" Name="latitude" />
+  </LMAttribute>
+  <LMAttribute OID="3" Mandatory="1" >
+   <Uses Class="LMDataItem" Path="10" Name="longitude" />
+  </LMAttribute>
+  <LMAttribute OID="4" Mandatory="1" >
+   <Uses Class="LMDataItem" Path="9" Name="name" />
+  </LMAttribute>
+  <LMIdentifier Primary="1" OID="5" Name="place_id" />
+ </LMEntityNormal>
+ <LMRelationship BeginCardinality="1,1" BeginOrdinality="1" TextField="2" Align="68" LineColor="#000000" FillStyle="Solid" LineWidth="1" EndArrowDirection="1072693248" EndArrowFlags="4" Generate="1" EndArrowType="3" FontUnderline="0" FillColor="#ffffff" LineStyle="Solid" FontColor="#000000" FontPointSize="8" OID="17" BeginArrowDirection="0" DefaultsLoaded="1" BeginArrowType="3" FontBold="0" Dominant="0" FontItalic="0" EndTruncate="1" TextFlag="2048" FontStrikeOut="0" Name="place-to-facebook" EndCardinality="1,1" BeginTruncate="1" EndRole="id" BeginRole="id_facebook" BeginArrowFlags="0" NextOID="6" FontFamily="MS Shell Dlg" >
+  <point x="445" y="408" OID="1" SinkObjectOID="1" SinkOID="13" />
+  <point x="444" y="293" OID="2" SinkObjectOID="15" SinkOID="6" />
+  <TextHandle x="0.45" y="0.5" OID="3" />
+  <BeginRoleHandle x="11" y="-24" OID="4" />
+  <EndRoleHandle x="-13" y="33" OID="5" />
+ </LMRelationship>
+ <LMRelationship BeginCardinality="1,1" BeginOrdinality="1" TextField="2" Align="68" LineColor="#000000" FillStyle="Solid" LineWidth="1" EndArrowDirection="1072693248" EndArrowFlags="4" Generate="1" EndArrowType="3" FontUnderline="0" FillColor="#ffffff" LineStyle="Solid" FontColor="#000000" FontPointSize="8" OID="18" BeginArrowDirection="0" DefaultsLoaded="1" BeginArrowType="3" FontBold="0" Dominant="0" FontItalic="0" EndTruncate="1" TextFlag="2048" FontStrikeOut="0" Name="place-to-google" EndCardinality="1,1" BeginTruncate="1" EndRole="place_id" BeginRole="id_google" BeginArrowFlags="0" NextOID="6" FontFamily="MS Shell Dlg" >
+  <point x="424" y="543" OID="1" SinkObjectOID="1" SinkOID="16" />
+  <point x="359" y="630" OID="2" SinkObjectOID="16" SinkOID="7" />
+  <TextHandle x="1.18149" y="0.484615" OID="3" />
+  <BeginRoleHandle x="-80" y="9" OID="4" />
+  <EndRoleHandle x="35" y="-29" OID="5" />
+ </LMRelationship>
+ <LMEntityNormal width="197" x="709" TextField="2" Align="68" y="455" LineColor="#000000" FillStyle="Solid" LineWidth="1" Generate="1" FontUnderline="0" FillColor="#9932cc" LineStyle="Solid" FontColor="#000000" FontPointSize="8" OID="19" height="91" DefaultsLoaded="1" FontBold="0" FontItalic="0" TextFlag="2048" FontStrikeOut="0" Name="movie" NextOID="6" FontFamily="MS Shell Dlg" >
+  <sink x="0.279188" y="0.835165" OID="1" />
+  <LMAttribute OID="3" Mandatory="1" >
+   <Uses Class="LMDataItem" Path="20" Name="title" />
+  </LMAttribute>
+  <LMAttribute OID="4" Mandatory="1" >
+   <Uses Class="LMDataItem" Path="21" Name="aka_ita" />
+  </LMAttribute>
+  <LMIdentifier Primary="1" OID="5" Name="id" />
+ </LMEntityNormal>
+ <LMEntityNormal width="240" x="630" TextField="2" Align="68" y="678" LineColor="#000000" FillStyle="Solid" LineWidth="1" Generate="1" FontUnderline="0" FillColor="#9932cc" LineStyle="Solid" FontColor="#000000" FontPointSize="8" OID="22" height="133" DefaultsLoaded="1" FontBold="0" FontItalic="0" TextFlag="2048" FontStrikeOut="0" Name="movie-programmazione-cinema" NextOID="6" FontFamily="MS Shell Dlg" >
+  <sink x="0.5625" y="0.172932" OID="1" />
+  <sink x="0.275" y="0.285714" OID="2" />
+  <LMAttribute OID="3" Mandatory="1" >
+   <Uses Class="LMDataItem" Path="23" Name="id_cinema" />
+  </LMAttribute>
+  <LMAttribute OID="4" Mandatory="1" >
+   <Uses Class="LMDataItem" Path="24" Name="id_movie" />
+  </LMAttribute>
+  <LMAttribute OID="5" >
+   <Uses Class="LMDataItem" Path="25" Name="orari" />
+  </LMAttribute>
+ </LMEntityNormal>
+ <LMEntityNormal width="205" x="44" TextField="2" Align="68" y="1417" LineColor="#000000" FillStyle="Solid" LineWidth="1" Generate="1" FontUnderline="0" FillColor="#9932cc" LineStyle="Solid" FontColor="#000000" FontPointSize="8" OID="26" height="144" DefaultsLoaded="1" FontBold="0" FontItalic="0" TextFlag="2048" FontStrikeOut="0" Name="runtastic-route-type" NextOID="4" FontFamily="MS Shell Dlg" >
+  <sink x="0.556098" y="0.4375" OID="1" />
+  <LMAttribute OID="2" Mandatory="1" >
+   <Uses Class="LMDataItem" Path="29" Name="label" />
+  </LMAttribute>
+  <LMIdentifier Primary="1" OID="3" Name="id" />
+ </LMEntityNormal>
+ <LMRelationship BeginCardinality="1,1" BeginOrdinality="1" TextField="2" Align="68" LineColor="#000000" FillStyle="Solid" LineWidth="1" EndArrowDirection="1072693248" EndArrowFlags="0" Generate="1" EndArrowType="3" FontUnderline="0" FillColor="#ffffff" LineStyle="Solid" FontColor="#000000" FontPointSize="8" OID="27" BeginArrowDirection="0" DefaultsLoaded="1" BeginArrowType="3" FontBold="0" EndOrdinality="1" Dominant="1" FontItalic="0" EndTruncate="1" TextFlag="2048" FontStrikeOut="0" Name="place-cinema-to-programmazione" EndCardinality="1,1" BeginTruncate="1" EndRole="id_cinema" BeginRole="id" BeginArrowFlags="0" NextOID="6" FontFamily="MS Shell Dlg" >
+  <point x="583" y="532" OID="1" SinkObjectOID="1" SinkOID="15" />
+  <point x="696" y="716" OID="2" SinkObjectOID="22" SinkOID="2" />
+  <TextHandle x="0.45" y="0.5" OID="3" />
+  <BeginRoleHandle x="13" y="38" OID="4" />
+  <EndRoleHandle x="-51" y="-64" OID="5" />
+ </LMRelationship>
+ <LMRelationship BeginCardinality="1,1" BeginOrdinality="1" TextField="2" Align="68" LineColor="#000000" FillStyle="Solid" LineWidth="1" EndArrowDirection="1072693248" EndArrowFlags="0" Generate="1" EndArrowType="3" FontUnderline="0" FillColor="#ffffff" LineStyle="Solid" FontColor="#000000" FontPointSize="8" OID="28" BeginArrowDirection="0" DefaultsLoaded="1" BeginArrowType="3" FontBold="0" EndOrdinality="1" Dominant="1" FontItalic="0" EndTruncate="1" TextFlag="2048" FontStrikeOut="0" Name="movie-to-programmazione" EndCardinality="1,1" BeginTruncate="1" EndRole="id_movie" BeginRole="id" BeginArrowFlags="0" NextOID="6" FontFamily="MS Shell Dlg" >
+  <point x="764" y="531" OID="1" SinkObjectOID="19" SinkOID="1" />
+  <point x="765" y="701" OID="2" SinkObjectOID="22" SinkOID="1" />
+  <TextHandle x="0.45" y="0.5" OID="3" />
+  <BeginRoleHandle x="-11" y="34" OID="4" />
+  <EndRoleHandle x="41" y="-53" OID="5" />
+ </LMRelationship>
+ <LMEntityNormal width="247" x="394" TextField="2" Align="68" y="1325" LineColor="#000000" FillStyle="Solid" LineWidth="1" Generate="1" FontUnderline="0" FillColor="#9932cc" LineStyle="Solid" FontColor="#000000" FontPointSize="8" OID="31" height="317" DefaultsLoaded="1" FontBold="0" FontItalic="0" TextFlag="2048" FontStrikeOut="0" Name="runtastic-route" NextOID="19" FontFamily="MS Shell Dlg" >
+  <sink x="0.224066" y="0.491803" OID="1" />
+  <LMAttribute OID="3" >
+   <Uses Class="LMDataItem" Path="11" Name="latitude" />
+  </LMAttribute>
+  <LMAttribute OID="4" >
+   <Uses Class="LMDataItem" Path="10" Name="longitude" />
+  </LMAttribute>
+  <LMAttribute OID="5" >
+   <Uses Class="LMDataItem" Path="5" Name="name" />
+  </LMAttribute>
+  <LMAttribute OID="6" >
+   <Uses Class="LMDataItem" Path="32" Name="end_latitude" />
+  </LMAttribute>
+  <LMAttribute OID="7" >
+   <Uses Class="LMDataItem" Path="33" Name="end_longitude" />
+  </LMAttribute>
+  <LMAttribute OID="8" >
+   <Uses Class="LMDataItem" Path="34" Name="encoded_trace" />
+  </LMAttribute>
+  <LMAttribute OID="9" >
+   <Uses Class="LMDataItem" Path="35" Name="slug" />
+  </LMAttribute>
+  <LMAttribute OID="10" >
+   <Uses Class="LMDataItem" Path="36" Name="elevation_gain" />
+  </LMAttribute>
+  <LMAttribute OID="11" >
+   <Uses Class="LMDataItem" Path="37" Name="elevation_loss" />
+  </LMAttribute>
+  <LMAttribute OID="12" >
+   <Uses Class="LMDataItem" Path="38" Name="sport_type_id" />
+  </LMAttribute>
+  <LMAttribute OID="13" >
+   <Uses Class="LMDataItem" Path="39" Name="distance" />
+  </LMAttribute>
+  <LMAttribute OID="14" >
+   <Uses Class="LMDataItem" Path="40" Name="rating" />
+  </LMAttribute>
+  <LMAttribute OID="15" >
+   <Uses Class="LMDataItem" Path="41" Name="ratings_count" />
+  </LMAttribute>
+  <LMAttribute OID="16" >
+   <Uses Class="LMDataItem" Path="42" Name="rating_histogram_data" />
+  </LMAttribute>
+  <LMAttribute OID="17" >
+   <Uses Class="LMDataItem" Path="43" Name="score" />
+  </LMAttribute>
+  <LMIdentifier Primary="1" OID="18" Name="id" />
+ </LMEntityNormal>
+ <LMRelationship BeginCardinality="1,1" BeginOrdinality="1" TextField="2" Align="68" LineColor="#000000" FillStyle="Solid" LineWidth="1" EndArrowDirection="1072693248" EndArrowFlags="0" Generate="1" EndArrowType="3" FontUnderline="0" FillColor="#ffffff" LineStyle="Solid" FontColor="#000000" FontPointSize="8" OID="44" BeginArrowDirection="0" DefaultsLoaded="1" BeginArrowType="3" FontBold="0" EndOrdinality="1" Dominant="0" FontItalic="0" EndTruncate="1" TextFlag="2048" FontStrikeOut="0" Name="route-to-route_type" EndCardinality="1,1" BeginTruncate="1" EndRole="id" BeginRole="sport_type_id" BeginArrowFlags="0" NextOID="6" FontFamily="MS Shell Dlg" >
+  <point x="449" y="1480" OID="1" SinkObjectOID="31" SinkOID="1" />
+  <point x="158" y="1480" OID="2" SinkObjectOID="26" SinkOID="1" />
+  <TextHandle x="0.45" y="0.5" OID="3" />
+  <BeginRoleHandle x="-132" y="17" OID="4" />
+  <EndRoleHandle x="104" y="-6" OID="5" />
+ </LMRelationship>
+ <LMEntityNormal width="241" x="29" TextField="2" Align="68" y="912" LineColor="#000000" FillStyle="Solid" LineWidth="1" Generate="1" FontUnderline="0" FillColor="#9932cc" LineStyle="Solid" FontColor="#000000" FontPointSize="8" OID="45" height="177" DefaultsLoaded="1" FontBold="0" FontItalic="0" TextFlag="2048" FontStrikeOut="0" Name="Event" NextOID="9" FontFamily="MS Shell Dlg" >
+  <sink x="0.59751" y="0.129944" OID="1" />
+  <LMAttribute OID="2" Mandatory="1" >
+   <Uses Class="LMDataItem" Path="46" Name="id_place" />
+  </LMAttribute>
+  <LMAttribute OID="3" >
+   <Uses Class="LMDataItem" Path="47" Name="description" />
+  </LMAttribute>
+  <LMAttribute OID="4" >
+   <Uses Class="LMDataItem" Path="49" Name="start_time" />
+  </LMAttribute>
+  <LMAttribute OID="5" >
+   <Uses Class="LMDataItem" Path="48" Name="end_time" />
+  </LMAttribute>
+  <LMAttribute OID="6" >
+   <Uses Class="LMDataItem" Path="5" Name="name" />
+  </LMAttribute>
+  <LMAttribute OID="7" >
+   <Uses Class="LMDataItem" Path="50" Name="cover_image" />
+  </LMAttribute>
+  <LMIdentifier Primary="1" OID="8" Name="id" />
+ </LMEntityNormal>
+ <LMEntityNormal width="194" x="280" TextField="2" Align="68" y="802" LineColor="#000000" FillStyle="Solid" LineWidth="1" Generate="1" FontUnderline="0" FillColor="#9932cc" LineStyle="Solid" FontColor="#000000" FontPointSize="8" OID="54" height="79" DefaultsLoaded="1" FontBold="0" FontItalic="0" TextFlag="2048" FontStrikeOut="0" Name="events-by-place" NextOID="5" FontFamily="MS Shell Dlg" >
+  <sink x="0.705584" y="0.194118" OID="2" />
+  <sink x="0.0253807" y="0.441176" OID="1" />
+  <LMAttribute OID="3" >
+   <Uses Class="LMDataItem" Path="55" Name="id_event" />
+  </LMAttribute>
+  <LMAttribute OID="4" >
+   <Uses Class="LMDataItem" Path="46" Name="id_place" />
+  </LMAttribute>
+ </LMEntityNormal>
+ <LMRelationship BeginCardinality="1,1" BeginOrdinality="1" TextField="2" Align="68" LineColor="#000000" FillStyle="Solid" LineWidth="1" EndArrowDirection="1072693248" EndArrowFlags="1" Generate="1" EndArrowType="3" FontUnderline="0" FillColor="#ffffff" LineStyle="Solid" FontColor="#000000" FontPointSize="8" OID="56" BeginArrowDirection="0" DefaultsLoaded="1" BeginArrowType="3" FontBold="0" EndOrdinality="1" Dominant="1" FontItalic="0" EndTruncate="1" TextFlag="2048" FontStrikeOut="0" Name="event-to-place" EndCardinality="1,n" BeginTruncate="1" EndRole="id" BeginRole="id_place" BeginArrowFlags="0" NextOID="6" FontFamily="MS Shell Dlg" >
+  <point x="416" y="817" OID="1" SinkObjectOID="54" SinkOID="2" />
+  <point x="502" y="524" OID="2" SinkObjectOID="1" SinkOID="17" />
+  <TextHandle x="0.45" y="0.5" OID="3" />
+  <BeginRoleHandle x="-35" y="-72" OID="4" />
+  <EndRoleHandle x="-8" y="64" OID="5" />
+ </LMRelationship>
+ <LMRelationship BeginCardinality="0,n" TextField="2" Align="68" LineColor="#000000" FillStyle="Solid" LineWidth="1" EndArrowDirection="1072693248" EndArrowFlags="1" Generate="1" EndArrowType="3" FontUnderline="0" FillColor="#ffffff" LineStyle="Solid" FontColor="#000000" FontPointSize="8" OID="57" BeginArrowDirection="0" DefaultsLoaded="1" BeginArrowType="3" FontBold="0" EndOrdinality="1" FontItalic="0" EndTruncate="1" TextFlag="2048" FontStrikeOut="0" Name="event-to-event" EndCardinality="1,n" BeginTruncate="1" EndRole="id" BeginRole="id_event" BeginArrowFlags="5" NextOID="6" FontFamily="MS Shell Dlg" >
+  <point x="284" y="836" OID="1" SinkObjectOID="54" SinkOID="1" />
+  <point x="173" y="935" OID="2" SinkObjectOID="45" SinkOID="1" />
+  <TextHandle x="0.45" y="0.5" OID="3" />
+  <BeginRoleHandle x="-60" y="4" OID="4" />
+  <EndRoleHandle x="1" y="-56" OID="5" />
+ </LMRelationship>
+ <Validation>
+  <Rule Name="Model name missing" Value="Error" />
+  <Rule Name="Model comment missing" Value="Warning" />
+  <Rule Name="Model description missing" Value="Information" />
+  <Rule Name="Model author missing" Value="Warning" />
+  <Rule Name="Rule name missing" Value="Error" />
+  <Rule Name="Rule code missing" Value="Warning" />
+  <Rule Name="Rule comment missing" Value="Warning" />
+  <Rule Name="Rule description missing" Value="Information" />
+  <Rule Name="Rule name duplicate" Value="Error" />
+  <Rule Name="Rule code duplicate" Value="Error" />
+  <Rule Name="Rule not used" Value="Warning" />
+  <Rule Name="Domain name missing" Value="Error" />
+  <Rule Name="Domain code missing" Value="Warning" />
+  <Rule Name="Domain comment missing" Value="Warning" />
+  <Rule Name="Domain description missing" Value="Information" />
+  <Rule Name="Domain name duplicate" Value="Error" />
+  <Rule Name="Domain code duplicate" Value="Error" />
+  <Rule Name="Domain type missing" Value="Error" />
+  <Rule Name="Domain type unknown" Value="Error" />
+  <Rule Name="Domain not used" Value="Warning" />
+  <Rule Name="Data Item name missing" Value="Error" />
+  <Rule Name="Data Item code missing" Value="Warning" />
+  <Rule Name="Data Item comment missing" Value="Warning" />
+  <Rule Name="Data Item description missing" Value="Information" />
+  <Rule Name="Data Item name duplicate" Value="Error" />
+  <Rule Name="Data Item code duplicate" Value="Error" />
+  <Rule Name="Data Item type missing" Value="Error" />
+  <Rule Name="Data Item type unknown" Value="Error" />
+  <Rule Name="Data Item not used" Value="Warning" />
+  <Rule Name="Entity name missing" Value="Error" />
+  <Rule Name="Entity code missing" Value="Warning" />
+  <Rule Name="Entity comment missing" Value="Warning" />
+  <Rule Name="Entity description missing" Value="Information" />
+  <Rule Name="Entity name duplicate" Value="Error" />
+  <Rule Name="Entity code duplicate" Value="Error" />
+  <Rule Name="Entity attribute missing" Value="Error" />
+  <Rule Name="Entity primary identifier missing" Value="Warning" />
+  <Rule Name="Association name missing" Value="Error" />
+  <Rule Name="Association code missing" Value="Warning" />
+  <Rule Name="Association comment missing" Value="Warning" />
+  <Rule Name="Association description missing" Value="Information" />
+  <Rule Name="Association name duplicate" Value="Error" />
+  <Rule Name="Association code duplicate" Value="Error" />
+  <Rule Name="Association link missing" Value="Error" />
+  <Rule Name="Inheritance name missing" Value="Error" />
+  <Rule Name="Inheritance code missing" Value="Warning" />
+  <Rule Name="Inheritance comment missing" Value="Warning" />
+  <Rule Name="Inheritance description missing" Value="Information" />
+  <Rule Name="Inheritance name duplicate" Value="Warning" />
+  <Rule Name="Inheritance code duplicate" Value="Warning" />
+  <Rule Name="Inheritance link missing" Value="Error" />
+  <Rule Name="Relationship name missing" Value="Error" />
+  <Rule Name="Relationship code missing" Value="Warning" />
+  <Rule Name="Relationship comment missing" Value="Warning" />
+  <Rule Name="Relationship description missing" Value="Information" />
+  <Rule Name="Relationship name duplicate" Value="Warning" />
+  <Rule Name="Relationship code duplicate" Value="Warning" />
+  <Rule Name="Relationship child entity missing" Value="Error" />
+  <Rule Name="Relationship parent entity missing" Value="Error" />
+  <Rule Name="Association Link name missing" Value="Error" />
+  <Rule Name="Association Link code missing" Value="Warning" />
+  <Rule Name="Association Link comment missing" Value="Warning" />
+  <Rule Name="Association Link description missing" Value="Information" />
+  <Rule Name="Association Link name duplicate" Value="Warning" />
+  <Rule Name="Association Link code duplicate" Value="Warning" />
+  <Rule Name="Association Link entity missing" Value="Error" />
+  <Rule Name="Association Link association missing" Value="Error" />
+  <Rule Name="Inheritance Link name missing" Value="" />
+  <Rule Name="Inheritance Link code missing" Value="" />
+  <Rule Name="Inheritance Link comment missing" Value="" />
+  <Rule Name="Inheritance Link description missing" Value="" />
+  <Rule Name="Inheritance Link name duplicate" Value="" />
+  <Rule Name="Inheritance Link code duplicate" Value="" />
+  <Rule Name="Inheritance Link entity missing" Value="Error" />
+  <Rule Name="Inheritance Link inheritance missing" Value="Error" />
+  <Rule Name="Attribute name missing" Value="Error" />
+  <Rule Name="Attribute code missing" Value="Warning" />
+  <Rule Name="Attribute comment missing" Value="Warning" />
+  <Rule Name="Attribute description missing" Value="Information" />
+  <Rule Name="Attribute is indentifier but not mandatory" Value="Error" />
+  <Rule Name="Attribute name duplicate" Value="Error" />
+  <Rule Name="Attribute code duplicate" Value="Error" />
+  <Rule Name="Identifier name missing" Value="Error" />
+  <Rule Name="Identifier code missing" Value="Warning" />
+  <Rule Name="Identifier comment missing" Value="Warning" />
+  <Rule Name="Identifier description missing" Value="Information" />
+  <Rule Name="Identifier name duplicate" Value="Error" />
+  <Rule Name="Identifier code duplicate" Value="Error" />
+  <Rule Name="Identifier attribute missing" Value="Error" />
+ </Validation>
+ <LMDataItem Length="255" OID="2" Name="id_facebook" />
+ <LMDataItem Length="255" OID="3" Name="id_google" />
+ <LMDataItem Length="255" OID="4" Name="id_opendata" />
+ <LMDataItem Length="255" DataType="CHAR" OID="5" Name="name" />
+ <LMDataItem DataType="DECIMAL" OID="6" Name="latitude" />
+ <LMDataItem DataType="DECIMAL" OID="7" Name="longitude" />
+ <LMDataItem OID="8" Name="id" />
+ <LMDataItem Length="255" DataType="CHAR" OID="9" Name="name" />
+ <LMDataItem DataType="DECIMAL" OID="10" Name="longitude" />
+ <LMDataItem DataType="DECIMAL" OID="11" Name="latitude" />
+ <LMDataItem Length="255" OID="12" Name="id" />
+ <LMDataItem DataType="LONG VARCHAR" OID="20" Name="title" />
+ <LMDataItem DataType="LONG VARCHAR" OID="21" Name="aka_ita" />
+ <LMDataItem OID="23" Name="id_cinema" />
+ <LMDataItem OID="24" Name="id_movie" />
+ <LMDataItem DataType="LONG VARCHAR" OID="25" Name="orari" />
+ <LMDataItem DataType="LONGWVARCHAR" OID="29" Name="label" />
+ <LMDataItem OID="30" />
+ <LMDataItem DataType="DECIMAL" OID="32" Name="end_latitude" />
+ <LMDataItem DataType="DECIMAL" OID="33" Name="end_longitude" />
+ <LMDataItem DataType="LONG VARCHAR" OID="34" Name="encoded_trace" />
+ <LMDataItem OID="35" Name="slug" />
+ <LMDataItem DataType="NUMERIC" OID="36" Name="elevation_gain" />
+ <LMDataItem DataType="NUMERIC" OID="37" Name="elevation_loss" />
+ <LMDataItem OID="38" Name="sport_type_id" />
+ <LMDataItem DataType="NUMERIC" OID="39" Name="distance" />
+ <LMDataItem DataType="CHAR" OID="40" Name="rating" />
+ <LMDataItem DataType="NUMERIC" OID="41" Name="ratings_count" />
+ <LMDataItem OID="42" Name="rating_histogram_data" />
+ <LMDataItem DataType="NUMBER" OID="43" Name="score" />
+ <LMDataItem OID="46" Name="id_place" />
+ <LMDataItem DataType="LONG VARCHAR" OID="47" Name="description" />
+ <LMDataItem DataType="DATE" OID="48" Name="end_time" />
+ <LMDataItem DataType="DATE" OID="49" Name="start_time" />
+ <LMDataItem DataType="LONG VARCHAR" OID="50" Name="cover_image" />
+ <LMDataItem OID="51" Name="events" />
+ <LMDataItem OID="52" Name="photos" />
+ <LMDataItem OID="53" Name="posts" />
+ <LMDataItem OID="55" Name="id_event" />
+</LMModel>

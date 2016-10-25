@@ -1,0 +1,41 @@
+<div class="info-CTR">
+
+    <div class="info-CNT">
+        <div class="place-name">
+            <svg class="category-ico">
+                <use xlink:href="#"></use>
+            </svg>
+            <p class="name" itemprop="name">{{name}}</p>
+        </div>
+        <div class="address" itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+
+            <meta itemprop="latitude" content="{{geo.lat}}"/>
+            <meta itemprop="longitude" content="{{geo.lng}}"/>
+        </span>
+            <p itemprop="address">{{address}}</p>
+        </div>
+        <div class="description" itemprop="description">{{{description}}}</div>
+    </div>
+    <div class="social-info">
+        <ul>
+            <li class="social-item">
+                <div class="social">
+                    <i class="material-icons">star</i>
+                    <span class="count">{{rating}}</span>
+                </div>
+            </li>
+            <li class="social-item">
+                <div class="social">
+                   <i class="material-icons">comment</i>
+                    <span class="count">7</span>
+                </div>
+            </li>
+            <li class="social-item">
+                <div class="social">
+                    <i class="material-icons">collections</i>
+                    <span class="count">7</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

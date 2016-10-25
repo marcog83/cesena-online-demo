@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {{{stylesheet}}}
+</head>
+<body>
+<div class="header-CTR">
+    {{> include/menu/topbar}}
+</div>
+<div class="body-CTR">
+    <div class="left-sidebar-CTR">
+        {{> include/menu/left-sidebar}}
+    </div>
+    <div class="body-CNT">
+        {{{body}}}
+    </div>
+
+</div>
+<div class="footer-CTR">
+    <footer>footer</footer>
+</div>
+{{> include/trash-script}}
+</body>
+</html>

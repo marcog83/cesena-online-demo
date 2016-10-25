@@ -1,0 +1,17 @@
+<div class="listing main">
+    <div class="main-content">
+        <section class="section places-del-giorno">
+            <h1 class="title">Posti in evidenza</h1>
+        {{#each places}}
+            <div class="inline-block">
+                {{> include/places/place-thumbnail-tpl }}
+            </div>
+        {{/each}}
+            </section>
+    </div>
+    {{#if categories}}
+        <div class="right-sidebar-CTR">
+            {{> include/menu/right-sidebar}}
+        </div>
+    {{/if}}
+</div>

@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "page": "1",
+    "per_page": 10,
+    "total_count": 182
+  },
+  "routes": [
+    {
+      "id": 25293926414564378271228814481,
+      "latitude": 44.1262817382812,
+      "longitude": 12.2436428070068,
+      "end_latitude": 44.1258354187012,
+      "end_longitude": 12.2437763214111,
+      "encoded_trace": "glilGwiviAKBkAcCOyEAiEaBuCkCkAkCu@uCq@?cE|@yDfAwChCZtBvAN{DIcEL{DrC@dCBlC{@~BwB|BoBfB{ClBkCtCoAlC[zCv@bDaA|CG~Bp@GtEDxEn@xEK|EiBxCgA~CRbFJ`FoAxDZrEpBhChApD}@vDoBb@mBn@_Cb@qCeA{BNcC~@}EmAsCc@}CK}Ci@??",
+      "name": "Giro dei Gessi",
+      "slug": "giro-dei-gessi",
+      "elevation_gain": 75,
+      "elevation_loss": 75,
+      "sport_type_id": "1",
+      "distance": 4408,
+      "rating": 4.0,
+      "ratings_count": 4,
+      "rating_histogram_data": {
+        "5": 2,
+        "2": 1,
+        "4": 1
+      },
+      "score": 35
+    },
+    {
+      "id": 25163842363433208073318159836,
+      "latitude": 44.1352806091309,
+      "longitude": 12.2633714675903,
+      "end_latitude": 44.1347503662109,
+      "end_longitude": 12.262020111084,
+      "encoded_trace": "odklGaeziA??xRyTpRkT|]lGrU|O}GzH{GnCgEfEpBlOlEhNOpIiL~U~F`WbKrS}DnM~CbSsCjPyFtDmB~E|IfKxIiFdVnEn\\tRtLdFxI`CvJFfI`@~ErEpHfZzMvUjKzObCzNuYkCoY}Ym`@_LiQ?gUpJcAXzWsHiL_e@mYqU_UsFcXoGi[mJyP}NgQaK~@c]~FoQs@yc@p@sj@xJkN??",
+      "name": "colline cesenati 1 - via gessi-aquarola-via gessi",
+      "slug": "colline-cesenati-1-via-gessi-aquarola-via-gessi",
+      "elevation_gain": 352,
+      "elevation_loss": 351,
+      "sport_type_id": "4",
+      "distance": 19415,
+      "rating": 3.0,
+      "ratings_count": 1,
+      "rating_histogram_data": {
+        "3": 1
+      },
+      "score": 33
+    },
+    {
+      "id": 25222723326265149552645417574,
+      "latitude": 44.0973827478089,
+      "longitude": 12.3260486125946,
+      "end_latitude": 44.09946,
+      "end_longitude": 12.33154,
+      "encoded_trace": "swclGwlfjA??~D}B`ShGjPn@fSiE|@eN{HqZhAePtAyWzDuLlBsLnLeFpQfc@j@jR|@xDm_@wa@nHhUzJrSfIj@fLdOzLzMrNjOpH`SjFu@pDr@xNpJlVyJwMeg@uGiQgHuP_AgO`DeQjG}]cHgRxKaQ_KgE{Q_A}L{Iv@zYyDta@{GjHoIqFwKfNuMcYoGfLcNeXiGhQkVlEuKfJkHxa@mXh^_DdAa@F",
+      "name": "Scollinando Longiano su sterrato",
+      "slug": "scollinando-longiano-su-sterrato",
+      "elevation_gain": 569,
+      "elevation_loss": 571,
+      "sport_type_id": "4",
+      "distance": 19594,
+      "rating": 4.5,
+      "ratings_count": 2,
+      "rating_histogram_data": {
+        "4": 1,
+        "5": 1
+      },
+      "score": 30
+    },
+    {
+      "id": 25440710493232535023233833330,
+      "latitude": 44.1192016601562,
+      "longitude": 12.2414798736572,
+      "end_latitude": 44.11924,
+      "end_longitude": 12.2412899999999,
+      "encoded_trace": "_`hlGe|uiAGHsFqAyEoBuFiCcHcAmG]yEaCAiJqCaG}FgBaDeDrBiH|CmBlCjAJ{GTyF`E@~EsA|D{CjDaFtEsEpFAvGk@`HZbFw@vCw@bC~DrDdFbBvGj@pH|@bJnDdEjEk@|Co@~D~CbEhEzElG|EvAhFrAjDpGzCbCaB|I{E\\}ArGuEvAE~IqG|GsQaAqYgLgTeL",
+      "name": "Gessi grandi",
+      "slug": "gessi-grandi-1",
+      "elevation_gain": 141,
+      "elevation_loss": 141,
+      "sport_type_id": "1",
+      "distance": 7798,
+      "rating": 4.0,
+      "ratings_count": 1,
+      "rating_histogram_data": {
+        "4": 1
+      },
+      "score": 30
+    },
+    {
+      "id": 25431797340090767820955319040,
+      "latitude": 44.1354052861165,
+      "longitude": 12.2242668271065,
+      "end_latitude": 44.13534,
+      "end_longitude": 12.22427,
+      "encoded_trace": "geklGspriAAAuIf@yBG}@YeA{@iC{DmB}CyBmDi@sAl@qGwAqE}BAsEp@kAh@w@f@?|BNbGa@^GRIFOGuFnBCf@GNKF[CIGkEdByCaPgGq@v@tTwKiErD_VTgN`J{Ejd@uIzg@dPwAfHm@jEMb@C`@FLNfPPpMIFGJ_AX",
+      "name": "Giro Ippodromo ",
+      "slug": "giro-ippodromo",
+      "elevation_gain": 19,
+      "elevation_loss": 19,
+      "sport_type_id": "1",
+      "distance": 5766,
+      "rating": 3.0,
+      "ratings_count": 1,
+      "rating_histogram_data": {
+        "3": 1
+      },
+      "score": 26
+    },
+    {
+      "id": 25345446233854121357137296171,
+      "latitude": 44.0999565124512,
+      "longitude": 12.3296127319336,
+      "end_latitude": 44.0999565124512,
+      "end_longitude": 12.3296127319336,
+      "encoded_trace": "ugdlGacgjATDN}Dt@aE_@{Dy@iEg@aEVeCvBaAbC]bCc@V{DNqDl@cDxBk@~@_D|@{Ct@yBxBc@`C^nC`BvBh@nBv@|AtBxAfF|@lD|A~AvBa@hA{BpAM@xCq@hDa@nD_@rDkBdCwArCu@hCy@hDgA~BeBjByAzA{CTyB_BeBZoCmBiDcAiCy@uBbAs@pCTnEyBNsBSsAmCMF",
+      "name": "Budrio - Balignano - Budrio",
+      "slug": "budrio-balignano-budrio",
+      "elevation_gain": 79,
+      "elevation_loss": 79,
+      "sport_type_id": "1",
+      "distance": 3919,
+      "rating": 4.0,
+      "ratings_count": 1,
+      "rating_histogram_data": {
+        "4": 1
+      },
+      "score": 21
+    },
+    {
+      "id": 24940635782463886574374358712,
+      "latitude": 44.1395299494407,
+      "longitude": 12.235930982742275,
+      "end_latitude": 44.13953,
+      "end_longitude": 12.23599999999999,
+      "encoded_trace": "__llGqytiACCZTpDx@rBcPn@rDPP~GaCuBuCmBcCi@oEzB{LPa@LQ|CF|A^TCl@gBPUnA[Gu@Gb@KHq@QJc@I_AWuBSmCFoL@mR_EsJ_GyDoAjBFPGZ`@~B^bLs@pCmLhRsFnGm@hAq@nDTlGXTjA\\fHQbAClA|@z@nBb@Lz@dCXfJyGvGo@jFAF",
+      "name": "Giro delle Mura di Cesena",
+      "slug": "giro-delle-mura-di-cesena",
+      "elevation_gain": 33,
+      "elevation_loss": 32,
+      "sport_type_id": "1",
+      "distance": 4654,
+      "rating": 3.0,
+      "ratings_count": 1,
+      "rating_histogram_data": {
+        "3": 1
+      },
+      "score": 20
+    },
+    {
+      "id": 25045414930562780217588441361,
+      "latitude": 44.1345267144737,
+      "longitude": 12.2268479962951,
+      "end_latitude": 44.13447,
+      "end_longitude": 12.22687,
+      "encoded_trace": "w_klGw`siAAExD_RwAw^K_A@}HgEgLpGk@`C^~@BtAcFlC{AkDoEf@oA^}BnGb@bCe@x@[nFw@f\\]bTdHlSbH`WxNtQfFhNx@tIlHtDjMtGpE~FfD`HpDwBxHa@bFaNgEm`@qAcUiKcLiJwRmKcMNqIpF{Q}VaCuGiRa@oMuAkEwFg@hEwAKgHa@u@jFxDfP@~@|Az^mD~Q",
+      "name": "casa - abbadesse - garampa - casa",
+      "slug": "casa-abbadesse-garampa-casa",
+      "elevation_gain": 243,
+      "elevation_loss": 243,
+      "sport_type_id": "1",
+      "distance": 11608,
+      "rating": 5.0,
+      "ratings_count": 1,
+      "rating_histogram_data": {
+        "5": 1
+      },
+      "score": 19
+    },
+    {
+      "id": 33970287954544218049910122,
+      "latitude": 44.13924074602225,
+      "longitude": 12.240078449249268,
+      "end_latitude": 44.13922,
+      "end_longitude": 12.24017,
+      "encoded_trace": "g}klGmsuiABShLca@Tgj@}Amb@jOwUrQ{b@zC}LdKuPjr@uFja@|IvHtLbOpPzI`PtGjApGhChDjFtMrEdCjIxLfVlChS~KdQvRlCnIsDaDlL_VnYm@hEoPkOQvAgOuBkPwBiU_PkO_D{JuUuHiRcIuC{E`Q[fNcBhTcAdIbErGgJjSoZ}Iw^pB_Bl@{CYaJRuKkDoJhAaCnEq@rL{Ik@",
+      "name": "San Tomaso Saiano Gessi",
+      "slug": "san-tomaso-saiano-gessi",
+      "elevation_gain": 290,
+      "elevation_loss": 289,
+      "sport_type_id": "3",
+      "distance": 16962,
+      "rating": 3.0,
+      "ratings_count": 1,
+      "rating_histogram_data": {
+        "3": 1
+      },
+      "score": 16
+    },
+    {
+      "id": 79213301743451835929072354885,
+      "latitude": 44.1334114074707,
+      "longitude": 12.235486030578613,
+      "end_latitude": 44.133270263671875,
+      "end_longitude": 12.235124588012695,
+      "encoded_trace": "yxjlGwvtiAE?gHcOvE{EhDkNpNsFfNoBrNo@jM`BtItDzNtE|JfEfNnIlLzGzMfAnKmBdCaKdFuEvCuDhBoAxD{JqGqHuJ}G}JsHwI}HqJ`AqE_LiAyL}EmLuH{HqFpDuHs@{JXmKrFyH`JmJzAuJaAwHiIqHrDyC_EeJuHY|Jd@jH]jNv@bNrElGLbPp@rIgCfTaGjEhG~Jr@xE",
+      "name": "gessi grandi",
+      "slug": "gessi-grandi-5",
+      "elevation_gain": 237,
+      "elevation_loss": 239,
+      "sport_type_id": "1",
+      "distance": 11423,
+      "rating": null,
+      "ratings_count": 0,
+      "rating_histogram_data": {},
+      "score": 15
+    }
+  ]
+}

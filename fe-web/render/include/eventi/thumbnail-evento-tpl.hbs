@@ -1,0 +1,39 @@
+<div class="event-thumbnail" itemscope itemtype="http://schema.org/Event">
+    <a href="/events/{{_id}}" itemprop="url">
+        <div class="event-thumbnail__image" style="background-image: url('{{image}}')">
+            <meta content="{{image}}" itemprop="image"/>
+        </div>
+        <h1 class="event-thumbnail__title" itemprop="name">{{name}}</h1>
+    </a>
+
+    <div itemprop="sponsor" itemscope itemtype="http://schema.org/Place">
+        <a href="/places/detail/{{place._id}}" class="place" itemprop="url">
+            <p class="event-thumbnail__place-name" itemprop="name">{{place.name}}</p>
+        </a>
+    </div>
+    <div class="event-thumbnail__info-CNT">
+        <div class="event-thumbnail__event-date">
+            {{#if start_time}}
+                <p class="start-date" itemprop="startDate" content="{{start_time}}">
+                    <i class="material-icons event-icon">event</i>
+                    <span>{{formatDate start_time "short"}}</span>
+                </p>
+            {{/if}}
+            {{#if end_time}}
+            <p class="end-date" itemprop="endDate" content="{{end_time}}">
+                <i class="material-icons event-icon">event</i>
+                <span>{{formatDate end_time "short"}}</span>
+
+            {{/if}}
+        </div>
+        <div class="event-thumbnail__address" itemprop="location" itemscope itemtype="http://schema.org/Place">
+            <meta itemprop="name" content="{{place.name}}"/>
+            <p itemprop="address">{{place.location.street}}</p>
+        <span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+            <meta itemprop="latitude" content="{{place.location.latitude}}"/>
+            <meta itemprop="longitude" content="{{place.location.longitude}}"/>
+        </span>
+        </div>
+    </div>
+    <p class="event-thumbnail__description" itemprop="description">{{description}}</p>
+</div>

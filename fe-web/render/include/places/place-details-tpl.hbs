@@ -1,0 +1,76 @@
+<div class="place-details" itemscope itemtype="http://schema.org/LocalBusiness">
+    <meta itemprop="url" content="{{url}}"/>
+    <div class="image" style="background-image: url('{{image}}')">
+        <meta itemprop="photo" content="{{image}}"/>
+    </div>
+    <div class="main-content">
+        {{> include/places/place-info }}
+        <div class="other-info">
+            {{#if mission}}
+                <p class="bio">{{bio}}</p>
+            {{/if}}
+
+            {{#if general_info}}
+                <p class="general-info">{{general_info}}</p>
+            {{/if}}
+            {{#if mission}}
+                <p class="mission">{{mission}}</p>
+            {{/if}}
+
+
+        </div>
+        <div class="contacts">
+            <ul class="fb-website">
+                {{#if facebook_page}}
+                    <li class="contact facebook">
+                        <a href="{{facebook_page}}">
+                            <i class="material-icons">facebook</i>
+                        </a>
+                    </li>
+                {{/if}}
+                {{#if website}}
+                    <li class="contact site">
+                        <a href="{{website}}" itemprop="sameAs" content="{{url}}">
+                            <i class="material-icons">web</i>
+                            <span>vai al sito</span>
+                        </a>
+                    </li>
+                {{/if}}
+                {{#if email}}
+                    <li class="contact email">
+                        <a href="mailto:{{email}}">
+                            <i class="material-icons">email</i>
+                            <span itemprop="email">{{email}}</span>
+                        </a>
+                    </li>
+                {{/if}}
+                {{#if telephone}}
+                    <li class="contact phone">
+                        <a href="tel:{{telephone}}">
+                            <i class="material-icons">phone</i>
+                            <span itemprop="telephone" content="{{telephone}}">{{telephone}}</span></a>
+                    </li>
+                {{/if}}
+
+            </ul>
+        </div>
+        {{#if openingHours}}
+            <div class="opening_hours">
+                <ul>
+                    {{#each openingHours}}
+                        <li itemprop="openingHours" content="{{.}}">
+                            <p>{{.}}</p>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
+        <div class="map-CTR">
+            <meta itemprop="hasMap" content="{{mapUrl}}"/>
+
+            <div id="map" class="map"></div>
+
+        </div>
+    </div>
+
+</div>

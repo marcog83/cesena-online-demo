@@ -1,0 +1,61 @@
+<div class="home main">
+    <div class="main-content">
+        {{#if eventiEvidenza}}
+            <section class="section eventi-evidenza">
+                <h1 class="title">Eventi in evidenza</h1>
+
+                <div class="eventi-evidenza-CNT">
+                    {{#each eventiEvidenza}}
+                        <div class="inline-block">
+                            {{> include/eventi/thumbnail-evento-tpl }}
+                        </div>
+                    {{/each}}
+                </div>
+            </section>
+        {{/if}}
+
+        {{#if oggiCinema}}
+            <section class="section oggi-cinema">
+                <h1 class="title">Oggi al cinema</h1>
+
+                <div class="oggi-cinema-CNT">
+                    {{#each oggiCinema}}
+                        <div class="inline-block">
+                            {{> include/eventi/thumbnail-evento-tpl }}
+                        </div>
+
+                    {{/each}}
+                </div>
+            </section>
+        {{/if}}
+        {{#if placesEvidenza}}
+            <section class="section places-del-giorno">
+                <h1 class="title">Posti in evidenza</h1>
+
+                <div class="oggi-cinema-CNT">
+                    {{#each placesEvidenza}}
+                        <div class="inline-block">
+                            {{> include/places/place-thumbnail-tpl }}
+                        </div>
+                    {{/each}}
+                </div>
+            </section>
+        {{/if}}
+        {{#if photos}}
+            <section class="section photo-evidenza">
+                <h1 class="title">Ultime foto</h1>
+
+                <div class="photo-evidenza-CNT">
+                    {{#each photos}}
+                        <div class="inline-block">
+                            {{> include/photos/photo-thumbnail-tpl }}
+                        </div>
+                    {{/each}}
+                </div>
+            </section>
+        {{/if}}
+
+    </div>
+
+
+</div>

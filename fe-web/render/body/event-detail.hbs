@@ -1,0 +1,18 @@
+<div class="event-detail main">
+    {{> include/eventi/event-details-tpl}}
+    <div class="main-content">
+        {{#if eventiCorrelati}}
+            <section class="section eventi-evidenza">
+                <h1 class="title">Eventi correlati</h1>
+
+                <div class="eventi-correlati-CNT">
+                    {{#each eventiCorrelati}}
+                        <div class="inline-block">
+                            {{> include/eventi/thumbnail-evento-tpl }}
+                        </div>
+                    {{/each}}
+                </div>
+            </section>
+        {{/if}}
+    </div>
+</div>

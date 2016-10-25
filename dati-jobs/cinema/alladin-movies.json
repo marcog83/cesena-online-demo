@@ -1,0 +1,536 @@
+[
+  {
+    "omdb": {
+      "Title": "Inferno",
+      "Year": "2016",
+      "Rated": "PG-13",
+      "Released": "28 Oct 2016",
+      "Runtime": "121 min",
+      "Genre": "Action, Crime, Drama",
+      "Director": "Ron Howard",
+      "Writer": "Dan Brown (based on the novel by), David Koepp (screenplay)",
+      "Actors": "Ben Foster, Tom Hanks, Sidse Babett Knudsen, Felicity Jones",
+      "Plot": "Academy Award® winner Ron Howard returns to direct the latest bestseller in Dan Brown's (Da Vinci Code) billion-dollar Robert Langdon series, Inferno, which finds the famous symbologist (again played by Tom Hanks) on a trail of clues tied to the great Dante himself. When Langdon wakes up in an Italian hospital with amnesia, he teams up with Sienna Brooks (Felicity Jones), a doctor he hopes will help him recover his memories. Together, they race across Europe and against the clock to stop a madman from unleashing a global virus that would wipe out half of the world's population.",
+      "Language": "English",
+      "Country": "USA, Japan, Turkey, Hungary",
+      "Awards": "N/A",
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUzNTE2NTkzMV5BMl5BanBnXkFtZTgwMDAzOTUyMDI@._V1_SX300.jpg",
+      "Metascore": "N/A",
+      "imdbRating": "7.1",
+      "imdbVotes": "359",
+      "imdbID": "tt3062096",
+      "Type": "movie",
+      "Response": "True"
+    },
+    "details": {
+      "poster_path": "/mTCoquJ9wxSUqR0vlTV3ZCFvrlB.jpg",
+      "adult": false,
+      "overview": "Il famoso simbolista Robert Langdon questa volta è sulle tracce di una serie di indizi legati al grande poeta Dante. Quando si risveglia in un ospedale italiano colpito da amnesia, si affida al medico Sienna Brooks per recuperare i suoi ricordi. In una corsa contro il tempo che ha per sfondo tutta l’Europa, cercheranno di prevenire le azioni di un folle che ha intenzione di scatenare una piaga strettamente connessa con l'Inferno di Dante Alighieri.",
+      "release_date": "2016-10-13",
+      "genre_ids": [
+        28,
+        80,
+        9648,
+        53
+      ],
+      "id": 207932,
+      "original_title": "Inferno",
+      "original_language": "en",
+      "title": "Inferno",
+      "backdrop_path": "/mL1hZ8Z7L1Px8tIzalnYKKdhUqo.jpg",
+      "popularity": 21.563027,
+      "vote_count": 151,
+      "video": false,
+      "vote_average": 5.1
+    },
+    "days_list": [
+      {
+        "day": "2016-10-12T22:00:00.000Z",
+        "fascie": [
+          "20:30",
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-13T22:00:00.000Z",
+        "fascie": [
+          "20:30",
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-14T22:00:00.000Z",
+        "fascie": []
+      },
+      {
+        "day": "2016-10-15T22:00:00.000Z",
+        "fascie": [
+          "15:30",
+          "20:30",
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-16T22:00:00.000Z",
+        "fascie": [
+          "20:30",
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-17T22:00:00.000Z",
+        "fascie": [
+          "20:30",
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-18T22:00:00.000Z",
+        "fascie": [
+          "20:30",
+          "22:40"
+        ]
+      }
+    ],
+    "title": "Inferno",
+    "detail": "http://www.incinema.it/default.asp?Context=D&Film_Id=1174",
+    "orari": {
+      "programmazione": "Programmazione dal 13.10.2016 al 19.10.2016",
+      "date": "Feriali  20:30 - 22:40Festivi  15:30  - 20:30 - 22.40"
+    },
+    "id": "1174"
+  },
+  {
+    "omdb": {
+      "Response": "False",
+      "Error": "Movie not found!"
+    },
+    "details": {
+      "poster_path": "/t0Y9QHxhIplFfBPowUr4HgaS4nD.jpg",
+      "adult": false,
+      "overview": "Andrea un trentenne imbranato e timido, sogna di diventare un importante procuratore sportivo, intanto è impiegato nello studio del celebre agente di campioni Gianni Porini. Quando il suo capo gli chiede una sera di fare da babysitter al pestifero figlio Remo, Andrea, che quel giorno festeggia il compleanno, accetta, non immaginando che gli amici Aldo e Mario abbiano in mente per lui un party scatenato, video filmato minuto per minuto. La mattina dopo Porini trova la casa devastata e di Andrea e Remo non c'è traccia.",
+      "release_date": "2016-10-19",
+      "genre_ids": [],
+      "id": 419372,
+      "original_title": "I Babysitter",
+      "original_language": "it",
+      "title": "I Babysitter",
+      "backdrop_path": "/yGZ7rKM5nmTTGcrLtq6fP2AjzOw.jpg",
+      "popularity": 1.002735,
+      "vote_count": 0,
+      "video": false,
+      "vote_average": 0
+    },
+    "days_list": [
+      {
+        "day": "2016-10-12T22:00:00.000Z",
+        "fascie": [
+          "20:30",
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-13T22:00:00.000Z",
+        "fascie": [
+          "20:30",
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-14T22:00:00.000Z",
+        "fascie": [
+          "17:30",
+          "20:30",
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-15T22:00:00.000Z",
+        "fascie": [
+          "15:00",
+          "18:00",
+          "20:30",
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-16T22:00:00.000Z",
+        "fascie": [
+          "20:30",
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-17T22:00:00.000Z",
+        "fascie": [
+          "20:30",
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-18T22:00:00.000Z",
+        "fascie": [
+          "20:30",
+          "22:40"
+        ]
+      }
+    ],
+    "title": "I Babysitter",
+    "detail": "http://www.incinema.it/default.asp?Context=D&Film_Id=1179",
+    "orari": {
+      "programmazione": "Programmazione dal 13.10.2016 al 19.10.2016",
+      "date": "Feriali  20:30 - 22:40Sabato  17:30 - 20:30 - 22:40Festivi  15:00 - 18:00 - 20:30 - 22:40"
+    },
+    "id": "1179"
+  },
+  {
+    "omdb": {
+      "Title": "Mine",
+      "Year": "2016",
+      "Rated": "N/A",
+      "Released": "06 Oct 2016",
+      "Runtime": "106 min",
+      "Genre": "Thriller",
+      "Director": "Fabio Guaglione, Fabio Resinaro",
+      "Writer": "Fabio Guaglione (screenplay), Fabio Resinaro (screenplay)",
+      "Actors": "Armie Hammer, Annabelle Wallis, Juliet Aubrey, Tom Cullen",
+      "Plot": "After a failed assassination attempt, a soldier finds himself stranded in the desert. Exposed to the elements, he must survive the dangers of the desert and battle the psychological and physical toll of the treacherous conditions.",
+      "Language": "English",
+      "Country": "USA, Spain, Italy",
+      "Awards": "N/A",
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BODNkMGIyYTYtZmNmNi00MTI2LTk2NmYtYmYwMzJlMjc2NmI0XkEyXkFqcGdeQXVyNDkzMTAwMDM@._V1_SX300.jpg",
+      "Metascore": "N/A",
+      "imdbRating": "7.3",
+      "imdbVotes": "122",
+      "imdbID": "tt3707104",
+      "Type": "movie",
+      "Response": "True"
+    },
+    "details": {
+      "poster_path": "/2jXb0YaxLmSozdTWfNVo4LgacCi.jpg",
+      "adult": false,
+      "overview": "Un soldato (Armie Hammer) sta tornando al campo base dopo una missione, ma inavvertitamente poggia il piede su una mina antiuomo. Non può più muoversi, altrimenti salterà in aria. In attesa di soccorsi per due giorni e due notti, dovrà sopravvivere non solo ai pericoli del deserto ma anche alla terribile pressione psicologica della tutt'altro che semplice situazione.",
+      "release_date": "2016-10-06",
+      "genre_ids": [
+        53
+      ],
+      "id": 345009,
+      "original_title": "Mine",
+      "original_language": "en",
+      "title": "Mine",
+      "backdrop_path": "/dEJryRu1avfAiRF2jZ90Iq14TPP.jpg",
+      "popularity": 1.659236,
+      "vote_count": 11,
+      "video": false,
+      "vote_average": 7.46
+    },
+    "days_list": [
+      {
+        "day": "2016-10-12T22:00:00.000Z",
+        "fascie": [
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-13T22:00:00.000Z",
+        "fascie": [
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-14T22:00:00.000Z",
+        "fascie": [
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-15T22:00:00.000Z",
+        "fascie": [
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-16T22:00:00.000Z",
+        "fascie": [
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-17T22:00:00.000Z",
+        "fascie": [
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-18T22:00:00.000Z",
+        "fascie": [
+          "22:40"
+        ]
+      }
+    ],
+    "title": "MINE",
+    "detail": "http://www.incinema.it/default.asp?Context=D&Film_Id=1181",
+    "orari": {
+      "programmazione": "Programmazione dal 13.10.2016 al 19.10.2016",
+      "date": "Feriali  22:40Sabato  22:40Festivi  22:40"
+    },
+    "id": "1181"
+  },
+  {
+    "omdb": {
+      "Title": "The Secret Life of Pets",
+      "Year": "2016",
+      "Rated": "PG",
+      "Released": "08 Jul 2016",
+      "Runtime": "87 min",
+      "Genre": "Animation, Adventure, Comedy",
+      "Director": "Yarrow Cheney, Chris Renaud",
+      "Writer": "Cinco Paul, Ken Daurio, Brian Lynch, Simon Rich (additional characters created by)",
+      "Actors": "Louis C.K., Eric Stonestreet, Kevin Hart, Jenny Slate",
+      "Plot": "The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.",
+      "Language": "English",
+      "Country": "Japan, USA",
+      "Awards": "N/A",
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjIzMzA1OTkzNV5BMl5BanBnXkFtZTgwODE3MjM4NzE@._V1_SX300.jpg",
+      "Metascore": "61",
+      "imdbRating": "6.7",
+      "imdbVotes": "52,218",
+      "imdbID": "tt2709768",
+      "Type": "movie",
+      "Response": "True"
+    },
+    "details": {
+      "poster_path": "/5WrUttEJ2nohwCtaoxHLNacxth7.jpg",
+      "adult": false,
+      "overview": "Gli eventi del film avvengono a New York City. Max, un terrier, vive una vita felice con la sua padrona Katie. Ma un giorno, Katie porta a casa Duke, un altro cane e fra i due nasce una rivalità, che dovranno però mettere da parte quando dovranno fermare un coniglio adorabile dal nome di Nervosetto (Snowball nell'originale) e il suo gruppo di animali abbandonati che lanciano vendetta sugli animali domestici e i loro padroni. Nel frattempo, Gidget, un'amica e vicina di Max e tutti i vicini del terrier fanno squadra per trovarlo dopo che lui e Duke perdono la via di casa.",
+      "release_date": "2016-06-24",
+      "genre_ids": [
+        12,
+        16,
+        35,
+        10751
+      ],
+      "id": 328111,
+      "original_title": "The Secret Life of Pets",
+      "original_language": "en",
+      "title": "Pets - Vita da animali",
+      "backdrop_path": "/up1Fn4u0EvgeWbQuRDVzOrIy2oP.jpg",
+      "popularity": 6.27497,
+      "vote_count": 877,
+      "video": false,
+      "vote_average": 5.91
+    },
+    "days_list": [
+      {
+        "day": "2016-10-12T22:00:00.000Z",
+        "fascie": [
+          "18:00",
+          "20:30",
+          "22:40",
+          "20:30",
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-13T22:00:00.000Z",
+        "fascie": [
+          "18:00",
+          "20:30",
+          "22:40",
+          "20:30",
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-14T22:00:00.000Z",
+        "fascie": [
+          "16:30",
+          "18:30",
+          "20:30",
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-15T22:00:00.000Z",
+        "fascie": [
+          "15:00",
+          "16:45",
+          "18:30",
+          "20:30",
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-16T22:00:00.000Z",
+        "fascie": [
+          "18:00",
+          "20:30",
+          "22:40",
+          "20:30",
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-17T22:00:00.000Z",
+        "fascie": [
+          "18:00",
+          "20:30",
+          "22:40",
+          "20:30",
+          "22:40"
+        ]
+      },
+      {
+        "day": "2016-10-18T22:00:00.000Z",
+        "fascie": [
+          "18:00",
+          "20:30",
+          "22:40",
+          "20:30",
+          "22:40"
+        ]
+      }
+    ],
+    "title": "Pets - vita da animali",
+    "detail": "http://www.incinema.it/default.asp?Context=D&Film_Id=1173",
+    "orari": {
+      "programmazione": "Programmazione dal 13.10.2016 al 19.10.2016",
+      "date": "Feriali  gioved� 18:00 - 20.30 - 22:40. Venerd� 20:30 - 22.40Sabato  16:30 - 18:30 - 20:30 - 22:40Festivi  15:00 - 16:45 - 18:30 - 20:30 - 22:40"
+    },
+    "id": "1173"
+  },
+  {
+    "days_list": [
+      {
+        "day": "2016-10-12T22:00:00.000Z",
+        "fascie": [
+          "18:00"
+        ]
+      },
+      {
+        "day": "2016-10-13T22:00:00.000Z",
+        "fascie": [
+          "18:00"
+        ]
+      },
+      {
+        "day": "2016-10-14T22:00:00.000Z",
+        "fascie": [
+          "18:30"
+        ]
+      },
+      {
+        "day": "2016-10-15T22:00:00.000Z",
+        "fascie": []
+      },
+      {
+        "day": "2016-10-16T22:00:00.000Z",
+        "fascie": [
+          "18:00"
+        ]
+      },
+      {
+        "day": "2016-10-17T22:00:00.000Z",
+        "fascie": [
+          "18:00"
+        ]
+      },
+      {
+        "day": "2016-10-18T22:00:00.000Z",
+        "fascie": [
+          "18:00"
+        ]
+      }
+    ],
+    "title": "Il Missionario - la  preghiera come unica arma",
+    "detail": "http://www.incinema.it/default.asp?Context=D&Film_Id=1177",
+    "orari": {
+      "programmazione": "Programmazione dal 13.10.2016 al 19.10.2016",
+      "date": "Feriali  gioved� 20  ore 18:00Sabato  18:30"
+    },
+    "id": "1177"
+  },
+  {
+    "omdb": {
+      "Title": "Finding Dory",
+      "Year": "2016",
+      "Rated": "PG",
+      "Released": "17 Jun 2016",
+      "Runtime": "97 min",
+      "Genre": "Animation, Adventure, Comedy",
+      "Director": "Andrew Stanton, Angus MacLane",
+      "Writer": "Andrew Stanton (original story by), Andrew Stanton (screenplay), Victoria Strouse (screenplay), Bob Peterson (additional screenplay material by), Angus MacLane (additional story material by)",
+      "Actors": "Ellen DeGeneres, Albert Brooks, Ed O'Neill, Kaitlin Olson",
+      "Plot": "The friendly but forgetful blue tang fish begins a search for her long-lost parents, and everyone learns a few things about the real meaning of family along the way.",
+      "Language": "English, Indonesian",
+      "Country": "USA",
+      "Awards": "2 wins.",
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzg4MjM2NDQ4MV5BMl5BanBnXkFtZTgwMzk3MTgyODE@._V1_SX300.jpg",
+      "Metascore": "77",
+      "imdbRating": "7.7",
+      "imdbVotes": "70,541",
+      "imdbID": "tt2277860",
+      "Type": "movie",
+      "Response": "True"
+    },
+    "details": {
+      "poster_path": "/flTY47K0e4leTlTqixRdXK8BAe2.jpg",
+      "adult": false,
+      "overview": "Nel film Disney•Pixar Alla Ricerca di Dory, la più amata e smemorata pesciolina azzurra Dory ritrova i suoi amici Nemo e Marlin e insieme a loro cercherà di fare luce sul proprio passato. Cosa riesce a ricordare? Chi sono i suoi genitori? E dove ha imparato il balenese?",
+      "release_date": "2016-06-16",
+      "genre_ids": [
+        12,
+        16,
+        35
+      ],
+      "id": 127380,
+      "original_title": "Finding Dory",
+      "original_language": "en",
+      "title": "Alla ricerca di Dory",
+      "backdrop_path": "/iWRKYHTFlsrxQtfQqFOQyceL83P.jpg",
+      "popularity": 6.839733,
+      "vote_count": 1026,
+      "video": false,
+      "vote_average": 6.71
+    },
+    "days_list": [
+      {
+        "day": "2016-10-12T22:00:00.000Z",
+        "fascie": []
+      },
+      {
+        "day": "2016-10-13T22:00:00.000Z",
+        "fascie": []
+      },
+      {
+        "day": "2016-10-14T22:00:00.000Z",
+        "fascie": [
+          "16:30"
+        ]
+      },
+      {
+        "day": "2016-10-15T22:00:00.000Z",
+        "fascie": []
+      },
+      {
+        "day": "2016-10-16T22:00:00.000Z",
+        "fascie": []
+      },
+      {
+        "day": "2016-10-17T22:00:00.000Z",
+        "fascie": []
+      },
+      {
+        "day": "2016-10-18T22:00:00.000Z",
+        "fascie": []
+      }
+    ],
+    "title": "Alla ricerca di Dory",
+    "detail": "http://www.incinema.it/default.asp?Context=D&Film_Id=1164",
+    "orari": {
+      "programmazione": "Programmazione dal 13.10.2016 al 19.10.2016",
+      "date": "Sabato  16:30Festivi  16:30"
+    },
+    "id": "1164"
+  }
+]

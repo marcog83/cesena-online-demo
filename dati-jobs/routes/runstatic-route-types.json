@@ -1,0 +1,58 @@
+[
+  {
+    "label": "Tutti i Tipi di Sport",
+    "key": "Tutti i Tipi di Sport"
+  },
+  {
+    "label": "Corsa",
+    "key": "1"
+  },
+  {
+    "label": "Camminata nordica",
+    "key": "2"
+  },
+  {
+    "label": "Ciclismo",
+    "key": "3"
+  },
+  {
+    "label": "Mountain Bike",
+    "key": "4"
+  },
+  {
+    "label": "Pattinaggio",
+    "key": "6"
+  },
+  {
+    "label": "Escursione",
+    "key": "7"
+  },
+  {
+    "label": "Sci di fondo",
+    "key": "8"
+  },
+  {
+    "label": "Sci",
+    "key": "9"
+  },
+  {
+    "label": "Snowboard",
+    "key": "10"
+  },
+  {
+    "label": "Nuoto",
+    "key": "18"
+  },
+  {
+    "label": "Ciclismo su strada",
+    "key": "22"
+  },
+  {
+    "label": "Veleggiare",
+    "key": "29"
+  },
+  {
+    "label": "Sci fuori pista",
+    "key": "53"
+  }
+]

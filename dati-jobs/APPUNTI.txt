@@ -1,0 +1,21 @@
+MOVIES
+da imdb trovi i films con titolo in italiano
+dai titoli originali si recuperano i dettagli del films
+
+---------------------------------------
+
+MOVIES-NELLE-SALE
+scrape dei siti per i film in programmazione
+trovati gli orari  associare i film in programmazione con quelli nella tabella MOVIES.
+
+id_movie
+orari_programmazione
+id_sala
+
+Utilizzo 
+
+getMoviesBySala(id_sala) // []
+getMoviesByOrari(da,a) // []
+
+---------------------------------------
+
