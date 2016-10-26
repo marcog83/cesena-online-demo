@@ -3,6 +3,7 @@ exports.RUNTASTIC_ROUTE_TYPES = 'runtastic-route-types';
 exports.MOVIES_TITLE_AKA = 'movies-title-aka';
 exports.INSTAGRAM_PHOTOS = 'instagram-photos';
 exports.MY_PLACES = 'my-places';
+exports.OPENDATA_PLACES = 'opendata-places';
 exports.FACEBOOK_PLACES = 'facebook-places';
 exports.GOOGLE_PLACES = 'google-places';
 exports.MY_EVENTS = 'my-events';
