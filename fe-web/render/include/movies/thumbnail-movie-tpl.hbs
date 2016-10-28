@@ -1,0 +1,48 @@
+<div class="movie-thumbnail">
+    <figure class="image">
+        <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{poster_path}}">
+    </figure>
+    <div class="info-CTR">
+        <div class="info">
+            <div class="info-CNT">
+                <h1 class="title">{{title}}</h1>
+
+                <p class="original-title">{{original_title}}</p>
+
+                <p class="general-info">
+                    <span>{{Rated}}</span>
+                    <span>{{Runtime}}</span>
+                    <span>{{Genre}}</span>
+                </p>
+
+                <p class="description">{{overview}}</p>
+            </div>
+
+{{#if cinemas}}
+            <div class="cinemas-CTR">
+                <p class="label">cinema</p>
+                <ul>
+                    {{#each cinemas}}
+                        <li class="cinema">
+                            <a href="/places/detail/{{place._id}}">
+                                <p>{{place.cinema}}</p>
+                            </a>
+                            <ul>
+                                {{#each days_list.0.fascie}}
+                                    <li>{{.}}</li>
+                                {{/each}}
+
+                            </ul>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+{{/if}}
+        </div>
+
+    </div>
+
+
+
+
+</div>

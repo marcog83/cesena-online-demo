@@ -1,0 +1,161 @@
+<div class="place-cinema-detail main">
+    <div class="place-details" itemscope itemtype="http://schema.org/LocalBusiness">
+        <meta itemprop="url" content="{{url}}"/>
+        <div class="image" style="background-image: url('{{image}}')">
+            <meta itemprop="photo" content="{{image}}"/>
+        </div>
+        <div class="main-content name-address">
+            <div class="info-CNT">
+                <div class="place-name">
+                    <svg class="category-ico">
+                        <use xlink:href="#"></use>
+                    </svg>
+                    <p class="name" itemprop="name">{{name}}</p>
+                </div>
+                <div class="address" itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+
+                    <meta itemprop="latitude" content="{{geo.lat}}"/>
+                    <meta itemprop="longitude" content="{{geo.lng}}"/>
+                    </span>
+                    <p itemprop="address">{{address}}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="menu-CTR">
+        <nav class="menu">
+            <ul>
+                <li class="menu-item">
+                    <a href="#" id="panoramica-item">PANORAMICA</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" id="info-item">info</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="tabs">
+        <div class="tab cinema-tab " id="panoramica">
+            {{> include/places/place-cinema-detail-tpl }}
+        </div>
+        <div class="tab place-detail-tab place-details" id="info">
+            <div class="place-details" itemscope itemtype="http://schema.org/LocalBusiness">
+
+                <div class="main-content">
+                    <div class="info-CTR">
+                        <div class="info-CNT">
+
+                            <div class="description" itemprop="description">{{{description}}}</div>
+                        </div>
+                    </div>
+                    <div class="other-info">
+                        {{#if mission}}
+                            <p class="bio">{{bio}}</p>
+                        {{/if}}
+
+                        {{#if general_info}}
+                            <p class="general-info">{{general_info}}</p>
+                        {{/if}}
+                        {{#if mission}}
+                            <p class="mission">{{mission}}</p>
+                        {{/if}}
+
+
+                    </div>
+                    <div class="contacts">
+                        <ul class="fb-website">
+                            {{#if facebook_page}}
+                                <li class="contact facebook">
+                                    <a href="{{facebook_page}}">
+                                        <i class="material-icons">facebook</i>
+                                    </a>
+                                </li>
+                            {{/if}}
+                            {{#if website}}
+                                <li class="contact site">
+                                    <a href="{{website}}" itemprop="sameAs" content="{{url}}">
+                                        <i class="material-icons">web</i>
+                                        <span>vai al sito</span>
+                                    </a>
+                                </li>
+                            {{/if}}
+                            {{#if email}}
+                                <li class="contact email">
+                                    <a href="mailto:{{email}}">
+                                        <i class="material-icons">email</i>
+                                        <span itemprop="email">{{email}}</span>
+                                    </a>
+                                </li>
+                            {{/if}}
+                            {{#if telephone}}
+                                <li class="contact phone">
+                                    <a href="tel:{{telephone}}">
+                                        <i class="material-icons">phone</i>
+                                        <span itemprop="telephone" content="{{telephone}}">{{telephone}}</span></a>
+                                </li>
+                            {{/if}}
+
+                        </ul>
+                    </div>
+                    {{#if openingHours}}
+                        <div class="opening_hours">
+                            <ul>
+                                {{#each openingHours}}
+                                    <li itemprop="openingHours" content="{{.}}">
+                                        <p>{{.}}</p>
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    {{/if}}
+                    <div class="map-CTR">
+                        <meta itemprop="hasMap" content="{{mapUrl}}"/>
+
+                        <div id="map" class="map"></div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        {{#if eventiEvidenza}}
+            <section class="section eventi-evidenza">
+                <h1 class="title">Eventi in evidenza</h1>
+
+                <div class="eventi-evidenza-CNT">
+                    {{#each eventiEvidenza}}
+                        <div class="inline-block">
+                            {{> include/eventi/thumbnail-evento-tpl }}
+                        </div>
+                    {{/each}}
+                </div>
+            </section>
+        {{/if}}
+        {{#if photos}}
+            <section class="section photo-evidenza">
+                <h1 class="title">Ultime foto</h1>
+
+                <div class="photo-evidenza-CNT">
+                    {{#each photos}}
+                        <div class="inline-block">
+                            {{> include/photos/photo-thumbnail-tpl }}
+                        </div>
+                    {{/each}}
+                </div>
+            </section>
+        {{/if}}
+        {{#if otherPhotos}}
+            <section class="other-photos">
+                {{#each otherPhotos}}
+                    <div class="other-photo">
+                        {{> include/photos/photo-thumbnail-tpl }}
+                    </div>
+                {{/each}}
+            </section>
+        {{/if}}
+    </div>
+</div>

@@ -1,0 +1,79 @@
+@import "place-detail";
+@import "movies/_movie-thumbnail";
+.place-cinema-detail {
+  .place-details{
+    position:relative;
+    margin-bottom: 0;
+    .image{
+      margin:0;
+    }
+    .name-address{
+      position: absolute;
+      left: 0;
+      color: #fff;
+      bottom: 40px;
+      .address{
+        margin:0;
+      }
+    }
+  }
+  .menu{
+    padding: 0 40px;
+    border-bottom: 1px solid #b7b7b7;
+    .menu-item {
+      display: inline-block;
+      text-transform: uppercase;
+      a{
+        padding:10px;
+        display: inline-block;
+      }
+    }
+  }
+  .tabs{
+    margin-top: 40px;
+  }
+  .movies {
+    font-size: 0;
+  }
+  .fascie{
+    .title{
+      font-size: 22px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .orari{
+      margin: 20px 0;
+      border-bottom: 1px solid #b7b7b7;
+      .orario {
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px 20px 10px 0;
+      }
+    }
+    li {
+      display: inline-block;
+      vertical-align: top;
+      padding: 10px 20px 10px 0;
+    }
+  }
+}
+.movie-fascie{
+  display: table;
+  width: 100%;
+  h1{
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .cell{
+    font-size: 14px;
+
+    display: table-cell;
+    &:first-child{
+      width:30%;
+    }
+  }
+  .fascia-cell{
+
+  }
+
+}

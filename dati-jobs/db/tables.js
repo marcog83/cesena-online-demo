@@ -15,3 +15,4 @@ exports.MY_POSTS_RELATIONS  = 'my-posts-relations';
 exports.OMDB_MOVIE  = 'omdb-movie';
 exports.THEMOVIEDB_MOVIE  = 'themoviedb-movie';
 exports.MOVIES_ORARI  = 'movies-orari';
+exports.MOVIES_ORARI  = 'movies-orari';

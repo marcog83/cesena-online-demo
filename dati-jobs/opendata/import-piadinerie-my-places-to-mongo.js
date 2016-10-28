@@ -6,23 +6,33 @@
 
 
 var fs = require("fs");
+var R = require("ramda");
+
 var MongoClient = require('mongodb').MongoClient;
 
 var url = 'mongodb://localhost:27017/cesena-sociale';
 
-Promise.resolve(JSON.parse(fs.readFileSync("piadinerie-details.json")))
+Promise.resolve(JSON.parse(fs.readFileSync("piadinerie-google-places-filtrate-mano.json")))
     .then(places=>places
 
-        .map(place=>({
-            name: place.opendata.titolare
-            , location: {
-                lng: place.opendata.longitudine
-                , lat: place.opendata.latitudine
+        .map(place=>{
+            var name=R.view(R.lensPath(["google","name"]), place)
+                || R.view(R.lensPath(["facebook","name"]), place)
+                || place.opendata.titolare;
+
+            var location= {
+                lng: R.view(R.lensPath(["google","geometry","location","lng"]), place) || R.view(R.lensPath(["facebook","location","longitude"]), place) ||place.opendata.longitudine
+                , lat: R.view(R.lensPath(["google","geometry","location","lat"]), place) || R.view(R.lensPath(["facebook","location","latitude"]), place) ||place.opendata.latitudine
+                };
+
+            return {
+                name: name
+                , location
+                , id_opendata: place.opendata.id
+                , id_facebook: R.view(R.lensPath(["facebook","id"]), place)
+                , id_google:R.view(R.lensPath(["google","place_id"]), place)
             }
-            , id_opendata: place.opendata.objectid
-            , id_facebook: null
-            , id_google: place.google ? place.google.place_id : null
-        })))
+        }))
     .then(function (places) {
 
         return new Promise(function (resolve, reject) {
@@ -32,7 +42,7 @@ Promise.resolve(JSON.parse(fs.readFileSync("piadinerie-details.json")))
                 var col = db.collection('my-places');
 
                 var promises = places.map(place=> {
-                    return col.findOneAndUpdate({id_opendata: place.id_opendata}, place, {upsert: true})
+                    return col.findOneAndUpdate({id_opendata: place.id_opendata}, {$set:place}, {upsert: true})
 
                 });
                 resolve(Promise.all(promises).then(_=> {

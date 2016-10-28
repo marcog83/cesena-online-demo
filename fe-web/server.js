@@ -1,5 +1,7 @@
 var express = require('express'),
     places = require('./places');
+var movies = require("./movies");
+var placeDetail = require("./filters/place-detail/place-detail");
 var exphbs = require("express-handlebars");
 var path = require("path");
 var R = require("ramda");
@@ -126,36 +128,9 @@ app.get("/events/:id", function (req, res) {
 });
 
 
-
-
-
 app.get('/places/detail/:id', function (req, res) {
     var id = req.params.id;
-    Promise.all([
-        places.eventiByPlace({start_time: new Date(), limit: 3, id_place: id})
-        , places.photosById(id)
-        , places.findById(id)
-    ])
-        .then(([eventiEvidenza,photos,detail])=> {
-
-
-
-            res.render('place-detail', Object.assign({
-                helpers: {
-                    stylesheet: function () {
-                        return "<link rel='stylesheet' href='/static/css/place-detail.css'/>"
-                    }
-                }
-                , eventiEvidenza
-                , photos
-                , data: {intl: intl}
-
-            }, detail));
-        }).catch(e=> {
-            console.error(e);
-            res.status(404)        // HTTP status 404: NotFound
-                .send(e.message);
-        })
+    placeDetail.details(id,res);
 });
 app.get('/', function (req, res) {
     Promise.all([
@@ -182,6 +157,18 @@ app.get('/', function (req, res) {
             .send(e.message);
     })
 
+});
+app.get("/movies", function (req, res) {
+    movies.getMovies().then(movies=> {
+        res.render("movies-listing", {
+            helpers: {
+                stylesheet: function () {
+                    return "<link rel='stylesheet' href='/static/css/movies-listing.css'/>"
+                }
+            }
+            , movies
+        })
+    })
 });
 app.set('port', (process.env.PORT || 5000));
 

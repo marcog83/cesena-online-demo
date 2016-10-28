@@ -1,0 +1,16 @@
+<div class="listing main">
+    <div class="main-content">
+        {{#if movies}}
+            <section class="section">
+                <h1 class="title">Oggi in programma</h1>
+                {{#each movies}}
+                    <div class="thumbnail-movie-CTR">
+                        {{> include/movies/thumbnail-movie-tpl }}
+                    </div>
+                {{/each}}
+            </section>
+        {{/if}}
+
+    </div>
+
+</div>

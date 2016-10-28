@@ -1,0 +1,42 @@
+<div class="cinema-detail">
+<div class="main-content">
+
+    <div class="fascie">
+        <h1 class="title">oggi in programmazione</h1>
+        <ul class="orari">
+            {{#each cinema.fascie}}
+                <li class="orario">
+                    {{.}}
+                </li>
+            {{/each}}
+        </ul>
+        <div class="movies">
+
+            {{#each cinema.moviesPerFascie}}
+                <div class="inline-block vertical" data-fascie="{{fascie}}">
+                    {{> include/movies/thumbnail-movie-tpl }}
+                </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="fascie-settimana">
+        <h1 class="title">questa settimana in programmazione</h1>
+        <ul class="orari">
+            {{#each cinema.week_days}}
+                <li class="orario" data-timestamp="{{timestamp}}">
+                    {{formatDate date day="numeric" month="numeric"}}
+                </li>
+            {{/each}}
+        </ul>
+        <div class="movies">
+            {{#each cinema.week_movies}}
+                <div class="movie-fascie-CTR" data-timestamp="{{timestamp}}">
+                    {{> include/movies/thumbnail-movie-fascie-tpl }}
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+</div>

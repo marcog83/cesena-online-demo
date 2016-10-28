@@ -54,13 +54,13 @@ Promise.all([
             var promises1 = response.filter(movie=>movie.details)
                 .map(movie=>movie.details)
                 .map(themovie=> {
-                    return themoviedb.findOneAndUpdate({id: themovie.id}, themovie, {upsert: true})
+                    return themoviedb.findOneAndUpdate({id: themovie.id}, {$set:themovie}, {upsert: true})
                         .then(_=>console.log("themoviedb: ", themovie.title))
                 });
             var promises2 = response.filter(movie=>movie.omdb && movie.omdb.Response != "False")
                 .map(movie=>movie.omdb )
                 .map(omdb_movie=> {
-                    return omdb.findOneAndUpdate({imdbID: omdb_movie.imdbID}, omdb_movie, {upsert: true})
+                    return omdb.findOneAndUpdate({imdbID: omdb_movie.imdbID}, {$set:omdb_movie}, {upsert: true})
                         .then(_=>console.log("omdb: ", omdb_movie.Title))
                 });
             return Promise.all(promises1.concat(promises2))
@@ -71,12 +71,13 @@ Promise.all([
     .then(response=> {
         return response.map(movie=> {
             return {
-                omdbID: (movie.omdb && movie.omdb.imdbID)|| null
-                , themoviedb: (movie.details && movie.details.id)|| null
+                id_imdb: (movie.omdb && movie.omdb.imdbID)|| null
+                , id_themoviedb: (movie.details && movie.details.id)|| null
                 , days_list: movie.days_list
                 , detail_url: movie.detail
                 , id: movie.id || movie.title
                 , place: movie.place
+
             }
         })
     })
@@ -86,7 +87,7 @@ Promise.all([
             .then(connection.collection.bind(connection, Tables.MOVIES_ORARI))
             .then(coll=> {
                 var promises = response.map(movie=> {
-                    return coll.findOneAndUpdate({id: movie.id}, movie, {upsert: true})
+                    return coll.findOneAndUpdate({id: movie.id}, {$set:movie}, {upsert: true})
                 });
                 return Promise.all(promises);
             })

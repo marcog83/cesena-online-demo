@@ -12,17 +12,17 @@ var url = 'mongodb://localhost:27017/cesena-sociale';
 
 Promise.resolve(JSON.parse(fs.readFileSync("piadinerie-google-places-filtrate-mano.json")))
     .then(places=>places
-        .filter(place=>place.google)
-        .map(place=>place.google))
+        .filter(place=>place.facebook)
+        .map(place=>place.facebook))
     .then(function (places) {
 
         return new Promise(function (resolve, reject) {
 
             MongoClient.connect(url, function (err, db) {
                 // Get the collection
-                var col=db.collection('google-places');
+                var col=db.collection('facebook-places');
                 var promises = places.map(place=> {
-                    return col.findOneAndUpdate({place_id:place.place_id},{$set:place},{upsert:true})
+                    return col.findOneAndUpdate({id:place.id},{$set:place},{upsert:true})
 
                 });
                 resolve(Promise.all(promises).then(_=> {

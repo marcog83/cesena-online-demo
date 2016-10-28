@@ -1,57 +1,29 @@
 let {Converter} = require("csvtojson");
 let fs = require("fs");
-var MongoClient = require('mongodb').MongoClient;
+let fromCSV = require("./convert-to-json");
+var Connection = require("../db/db-connection").Connection;
+const Tables = require("../db/tables");
+const R = require("ramda");
+var connection = new Connection();
 
-var url = 'mongodb://localhost:27017/cesena-sociale';
-
-function getJSON(name) {
-    return new Promise(resolve=> {
-        var converter = new Converter({delimiter: ";"});
-
-//end_parsed will be emitted once parsing finished
-        converter.on("end_parsed", function (jsonArray) {
-            resolve(jsonArray); //here is your result jsonarray
-        });
-
-//read from file
-        fs.createReadStream(`./${name}.csv`).pipe(converter);
-    }).then(jsonArray=> {
-        jsonArray = jsonArray.map(item=> {
-            return Object.keys(item)
-                .filter(key=>!["field19", "point_x", "point_y"].includes(key.toLowerCase()))
-                .reduce((prev, key)=> {
-                    prev[key.toLowerCase()] = item[key];
-                    return prev
-                }, {})
-        });
-        return new Promise(resolve=> {
-            MongoClient.connect(url, function (err, db) {
-                // Get the collection
-                var col = db.collection(name);
-                col.insertMany(jsonArray).then(function (r) {
-                    if (jsonArray.length == r.insertedCount) {
-                        resolve(true)
-                    } else {
-                        reject("non tutti insert")
-                    }
-                    // Finish up test
-                    db.close();
-                });
-            });
-        })
-
-
-    })
-}
-
-
+// ,getJSON("farmacie")
+// ,getJSON("piadinerie")
+// ,getJSON("luoghi-notevoli")
+// ,getJSON("teatri")
+// ,getJSON("cinema")
 
 Promise.all([
-      getJSON("strutture-sanitarie")
-    // ,getJSON("farmacie")
-    // ,getJSON("piadinerie")
-    // ,getJSON("luoghi-notevoli")
-    // ,getJSON("teatri")
-    // ,getJSON("cinema")
-]).then(_=>process.exit(0))
-    .catch(console.log.bind(console));
+    fromCSV.getJSON("cinema").then(R.map(cinema=> {
+        return Object.assign({tags: ["cinema"]}, cinema, {id: "cinema_" + cinema.id});
+    }))
+    , connection.connect().then(connection.collection.bind(connection, Tables.OPENDATA_PLACES))
+
+]).then(([cinemas,coll])=> {
+    var ps = cinemas.map(cinema=> {
+        return coll.findOneAndUpdate({id: cinema.id}, {$set: cinema}, {upsert: true});
+    });
+    return Promise.all(ps);
+})
+    .then(R.tap(_=>connection.db.close()))
+    .then(_=>process.exit(0))
+    .catch(R.tap(_=>connection.db.close()));

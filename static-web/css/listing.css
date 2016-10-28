@@ -165,6 +165,15 @@ a {
 .inline-block:nth-of-type(3n) {
   margin-right: 0;
 }
+.inline-block.vertical {
+  width: 23.2%;
+}
+.inline-block.vertical:nth-of-type(3n) {
+  margin-right: 2.3%;
+}
+.inline-block.vertical:nth-of-type(4n) {
+  margin-right: 0;
+}
 .main {
   box-sizing: border-box;
 }
