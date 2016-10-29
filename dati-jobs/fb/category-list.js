@@ -3572,4 +3572,6 @@ var categories = [
     }];
 module.exports = categories;
 
- 
+ console.log(categories.reduce((prev,cat)=>{
+     return prev.concat(`"${cat.name}":a=>{\nreturn\n},\n`)
+ },"var map={").concat("}"));

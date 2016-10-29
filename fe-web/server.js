@@ -24,9 +24,12 @@ const intl = {
 
 var getCategories = R.compose(
     R.map(category=> {
-        return Object.assign({query: encodeURIComponent(category.name)}, category);
+        return {
+            query: encodeURIComponent(category)
+            , name: category
+        }
     }),
-    R.uniqBy(R.prop("id")),
+    R.uniq,
     R.filter(R.identity),
     R.flatten,
     R.map(place=> {
@@ -80,7 +83,7 @@ app.get("/events", function (req, res) {
     Promise.all([
 
         places.eventi({start_time: new Date(), limit: 3})
-        , places.eventi({start_time: d, limit: 3 * 9})
+        , places.eventi({start_time: d, limit: 3 * 30})
 
     ]).then(([oggiEventi,altriEventi])=> {
         res.render('events-listing', {
@@ -103,9 +106,9 @@ app.get("/events/:id", function (req, res) {
     var id = req.params.id;
 
     places.findEventById(id).then(eventDetail=> {
-        return places.findMyPlaceByFacebookId(eventDetail.place.id || eventDetail.place)
+        return places.findMyPlaceByFacebookId((eventDetail.owner && eventDetail.owner.id) || eventDetail.place)
             .then(my_place=> {
-                return places.eventiByPlace({start_time: new Date(), limit: 3, id_place: my_place.id})
+                return places.eventiByPlace({start_time: new Date(), limit: 3, id_place: my_place._id})
             })
             .then(eventiCorrelati=> {
                 return [eventDetail, eventiCorrelati]
@@ -130,7 +133,7 @@ app.get("/events/:id", function (req, res) {
 
 app.get('/places/detail/:id', function (req, res) {
     var id = req.params.id;
-    placeDetail.details(id,res);
+    placeDetail.details(id, res);
 });
 app.get('/', function (req, res) {
     Promise.all([

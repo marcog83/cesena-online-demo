@@ -14,7 +14,7 @@ var connection = new Connection();
 
 Promise.all([
     fromCSV.getJSON("cinema").then(R.map(cinema=> {
-        return Object.assign({tags: ["cinema"]}, cinema, {id: "cinema_" + cinema.id});
+        return Object.assign({tags: ["cinema"]}, cinema, {id: "cinema_" + cinema.id,name:cinema.nome});
     }))
     , connection.connect().then(connection.collection.bind(connection, Tables.OPENDATA_PLACES))
 

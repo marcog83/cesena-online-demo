@@ -5,7 +5,7 @@ let R = require("ramda");
 let ObjectId = require('mongodb').ObjectId;
 var KEY = "AIzaSyA2awqLXHWlJuyI5mLY2du4NcuA7OYgpus";
 let urlRegex = require("url-regex");
-let hoursHelper = require("./opening_hours-helper");
+//let hoursHelper = require("./opening_hours-helper");
 let textFormatter = require("./text-formatter");
 var normalizeUrl = require('normalize-url');
 function eliminaEccezioni(id) {
@@ -16,7 +16,7 @@ function eliminaEccezioni(id) {
         , food: noop
         , locali: function (place) {
             return R.find((cate)=> {
-                return !cate.name.match(/Public|Gastropub|Publisher/gmi)
+                return !cate.match(/Public|Gastropub|Publisher/gmi)
             }, place.category_list)
         }
         , tech: noop
@@ -31,49 +31,13 @@ function eliminaEccezioni(id) {
     return R.filter(fn)
 }
 
-function getOtherPhotos(detail) {
-    return (R.view(R.lensPath(["photos"]), detail) || []).map(googleImage=> {
-        var image_url = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=${googleImage.width}&maxheight=${googleImage.height}&photoreference=${googleImage.photo_reference}&key=${KEY}`.trim();
-        return {
-            image: image_url
-            , description: ""
-            , rating: null
-            , comments: null
-        }
-    })
-}
 
-function mapDetailPlace({my_place, google, facebook}) {
-    var googleImage = (R.view(R.lensPath(["photos"]), google) || [])[0];
-    var otherPhotos = getOtherPhotos(google);
-    if (googleImage) {
-        var image_url = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=${googleImage.width}&maxheight=${googleImage.height}&photoreference=${googleImage.photo_reference}&key=${KEY}`.trim()
-    }
-    return {
-        address: R.view(R.lensPath(["formatted_address"]), google) || R.view(R.lensPath(["location", "street"]), facebook),
-        name: R.view(R.lensPath(["name"]), google) || R.view(R.lensPath(["name"]), facebook),
-        openingHours: R.view(R.lensPath(["opening_hours", "weekday_text"]), google) || hoursHelper.fbHours(R.view(R.lensPath(["hours"]), facebook)) ,
-        rating: R.view(R.lensPath(["rating"]), google),
-        telephone: R.view(R.lensPath(["international_phone_number"]), google),
-        image: R.view(R.lensPath(["cover", "source"]), facebook) || image_url || "/static/img/placeholder-cover.jpg",
-        place_id: R.view(R.lensPath(["place_id"]), google),
-        geo: my_place.location,
-        id: my_place._id,
-        id_facebook: my_place.id_facebook,
-        id_google: my_place.id_google,
-        id_opendata: my_place.id_opendata,
-        description: formatDescription(facebook.description || ""),
-        bio: facebook.bio,
-        category_list: facebook.category_list,
-        mission: facebook.mission,
-        general_info: facebook.general_info,
-        website: R.view(R.lensPath(["website"]), google) || R.view(R.lensPath(["website"]), facebook) || (facebook && `https://www.facebook.com/${facebook.id}`),
-        mapUrl: R.view(R.lensPath(["url"]), google),
-        email: R.view(R.lensPath(["emails"]), facebook),
-        url: `/places/detail/${my_place._id}`,
-        facebook_page: facebook && `https://www.facebook.com/${facebook.id}`
-        ,otherPhotos
-    }
+
+function mapDetailPlace(my_place) {
+
+    return Object.assign({},my_place,{
+        description: formatDescription(my_place.description || "")
+    })
 }
 exports.findByChannel = function (id, options = {limit: 12}) {
     var connection = new Connection();
@@ -95,46 +59,17 @@ exports.findByChannel = function (id, options = {limit: 12}) {
     return connection.connect()
 
         .then(db=> {
-            var fb_places = db.collection(Tables.FACEBOOK_PLACES);
+
             var my_places = db.collection(Tables.MY_PLACES);
-            var google_places = db.collection(Tables.GOOGLE_PLACES);
+
             var _regexp=REG_EXP[id]||new RegExp(id,"gi");
-            return Promise.all([
-                my_places.find().toArray()
-                , fb_places.find({category_list: {$elemMatch: {name: _regexp}}}, {
-                    _id: 0,
-
-                    events: 0,
-                    photos: 0,
-                    posts: 0
-                }).limit(options.limit).toArray().then(eliminaEccezioni(id))
-                , google_places.find({}, {
-                    _id: 0,
-
-                    address_components: 0,
-                    adr_address: 0,
-                    geometry: 0
-                    , reference: 0
-                    , reviews: 0
-                }).toArray()
-            ])
+            return my_places.find({category_list: _regexp})
+                .limit(options.limit)
+                .toArray()
+                .then(eliminaEccezioni(id))
         })
         .then(R.tap(_=>connection.db.close()))
-        .then(([my_places,fb_places,google_places])=> {
-            return fb_places.map(fb_place=> {
-                var my_place = R.find(place=>place.id_facebook == fb_place.id, my_places);
-                if (my_place) {
-                    var google_place = R.find(g_place=>g_place.place_id == my_place.id_google, google_places);
 
-                }
-                return {
-                    my_place: my_place || {},
-                    facebook: fb_place || {},
-                    google: google_place || {}
-                }
-            })
-
-        })
         .then(places=> {
             return places.map(mapDetailPlace)
         })
@@ -163,7 +98,7 @@ var getEvents = function ({start_time, end_time, limit}) {
             return event.start_time.getTime()
         })
         , R.map(event=> {
-            return mapEvent(new Date(event.start_time), new Date(event.end_time))(event);
+            return mapEvent(new Date(event.start_time), event.end_time?new Date(event.end_time):new Date(event.start_time))(event);
         })
         , R.filter(filterDate)
     );
@@ -234,29 +169,7 @@ exports.eventiByPlace = ({start_time, end_time, limit,id_place})=> {
 };
 
 
-function getMyPlaceDetails(connection){
-   return function(my_place){
-       var fb_places = connection.db.collection(Tables.FACEBOOK_PLACES);
-       var google_places = connection.db.collection(Tables.GOOGLE_PLACES);
-       var promises = [];
-       if (my_place.id_facebook) {
-           promises.push(fb_places.findOne({id: my_place.id_facebook}))
-       }
-       if (my_place.id_google) {
-           promises.push(google_places.findOne({place_id: my_place.id_google}))
-       }
-       if (!promises.length) {
-           promises = [Promise.resolve([{}, {}])]
-       }
-       return Promise.all(promises).then(([fb_place,google_place])=> {
-           return {
-               my_place: my_place,
-               facebook: fb_place || {},
-               google: google_place || {}
-           }
-       }).catch(R.tap(_=>connection.db.close()))
-   }
-}
+
 
 exports.findById = id=> {
     var connection = new Connection();
@@ -266,7 +179,7 @@ exports.findById = id=> {
             return coll.findOne({_id: ObjectId(id)});
         })
 
-        .then(getMyPlaceDetails(connection))
+
         .then(R.tap(_=>connection.db.close()))
         .then(mapDetailPlace)
         .catch(R.tap(_=>connection.db.close()))
@@ -279,8 +192,6 @@ exports.findMyPlaceByFacebookId = id_facebook=> {
         .then(coll=> {
             return coll.findOne({id_facebook});
         })
-
-        .then(getMyPlaceDetails(connection))
         .then(R.tap(_=>connection.db.close()))
         .then(mapDetailPlace)
         .catch(R.tap(_=>connection.db.close()))
@@ -309,8 +220,8 @@ var formatEventPlace = R.curryN(2, function (my_place, event) {
         place = {
             name: my_place.name,
             location: {
-                latitude: my_place.location.lat
-                , longitude: my_place.location.lng
+                latitude: my_place.geo.lat
+                , longitude: my_place.geo.lng
             },
             id: my_place.id_facebook
 
