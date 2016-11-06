@@ -3,34 +3,30 @@ const Tables = require("./db/tables");
 const R = require("ramda");
 const fs = require("fs");
 const stringSimilarity = require('string-similarity');
+const scorePlaces = require('./score-places').scorePlaces;
 const hoursHelper = require("../fe-web/opening_hours-helper");
-var trovaAttraversoNome = R.curryN(2, function (place, places) {
-    var placeFound = R.find(mp=> {
-        return stringSimilarity.compareTwoStrings(mp.name, place.name) >= .85;
-    }, places);
-    return placeFound ? placeFound.id : null
-});
-var transformaID = (function (a, transformer) {
-    return function (b) {
-        if (b) {
-            return transformer(a, b)
-        }
-        return b
-    }
-});
+const Categories=require("./categories");
+var KEY = "AIzaSyA2awqLXHWlJuyI5mLY2du4NcuA7OYgpus";
 
-var findOtherFn = function (a, callback) {
-    return function () {
-        return callback(a);
-    }
-};
+function remove_common(str){
+    return str
+        //.replace(/cesena/gi,"")
+        .replace(/teatro/gi,"")
+        .replace(/cinema|CineTeatro|Multisala/gi,"")
+        .replace(/Ristorante/gi,"")
+
+}
+ 
 
 
 function getCategories(facebook, google, opendata) {
     var fb = (R.view(R.lensPath(["category_list"]), facebook) || []).map(cat=>cat.name);
     var goog = (R.view(R.lensPath(["types"]), google) || []);
     var open = (R.view(R.lensPath(["tags"]), opendata) || []);
-    return fb.concat(goog).concat(open);
+
+
+
+    return(fb.concat(goog).concat(open));
 }
 function getOtherPhotos(detail) {
     return (R.view(R.lensPath(["photos"]), detail) || []).map(googleImage=> {
@@ -50,6 +46,7 @@ connection.connect()
     .then(db=> {
         var fbColl = db.collection(Tables.FACEBOOK_PLACES);
         var googColl = db.collection(Tables.GOOGLE_PLACES);
+        //var myColl = db.collection(Tables.MY_PLACES);
         var myColl = db.collection(Tables.MY_PLACES);
         var openColl = db.collection(Tables.OPENDATA_PLACES);
 
@@ -68,104 +65,73 @@ connection.connect()
         ])
     })
     .then(([fbPlaces,googlePlaces,myPlaces,opendata])=> {
-        var mapFunction = function (predicato, fn_to_find) {
-            return a=> {
-                let b = R.find(predicato(a), myPlaces);
+        var TRESHOLD=0.75;
+        function trovaByName(name, places) {
+            var place_found = R.find(place=> {
 
-                if (b) {
-                    return b;
-                } else {
-                    return fn_to_find(a)(myPlaces);
+                    var percent=stringSimilarity.compareTwoStrings(remove_common(name)
+                        ,remove_common(place.name));
 
-                }
-            }
-        };
-        var fb = {
-            transformer: function (a, b) {
-                b.id_facebook = a.id;
-                return b;
-            }
-            , others: function (a) {
+                    //percent >= TRESHOLD && console.log(name," => ", place.name,percent);
+                    return percent >= TRESHOLD;
+                    /*
+                    var percent = stringSimilarity.compareTwoStrings(name, place.name);
+                    return percent > TRESHOLD;*/
+                }, places) || {};
+            return place_found;
+        }
+        var fbResults = fbPlaces.map(fb_place=> {
+            var my_place = R.find(my=>my.id_facebook == fb_place.id, myPlaces);
+            if (my_place) {
                 return {
-                    id_facebook: a.id
-                    , id_google: trovaAttraversoNome(a, googlePlaces)
-                    , id_opendata: trovaAttraversoNome(a, opendata)
+                    id_facebook: my_place.id_facebook
+                    , id_google: my_place.id_google
+                    , id_opendata: my_place.id_opendata
                 }
-            }
-            , predicate: function (a) {
-                return function (place) {
-                    return a.id == place.id_facebook;
-                }
-            }
-        };
-
-        var goog = {
-            transformer: function (a, b) {
-                return Object.assign(b, {id_google: a.id});
-
-            }
-            , others: function (a) {
+            } else {
                 return {
-                    id_facebook: trovaAttraversoNome(a, fbPlaces)
-                    , id_google: a.id
-                    , id_opendata: trovaAttraversoNome(a, opendata)
+                    id_facebook: fb_place.id
+                    , id_google: trovaByName(fb_place.name, googlePlaces).id
+                    , id_opendata: trovaByName(fb_place.name, opendata).id
                 }
             }
-            , predicate: function (a) {
-                return function (place) {
-                    return a.id == place.id_google;
-                }
-            }
-        };
-        var open = {
-            transformer: function (a, b) {
-                return Object.assign(b, {id_opendata: a.id});
+        });
 
-            }
-            , others: function (a) {
+        var googleResults = googlePlaces.map(goog_place=> {
+            var my_place = R.find(my=>my.id_google == goog_place.id, myPlaces);
+            if (my_place) {
                 return {
-                    id_facebook: trovaAttraversoNome(a, fbPlaces)
-                    , id_google: trovaAttraversoNome(a, googlePlaces)
-                    , id_opendata: a.id
+                    id_facebook: my_place.id_facebook
+                    , id_google: my_place.id_google
+                    , id_opendata: my_place.id_opendata
+                }
+            } else {
+                return {
+                    id_facebook: trovaByName(goog_place.name, fbPlaces).id
+                    , id_google: goog_place.id
+                    , id_opendata: trovaByName(goog_place.name, opendata).id
                 }
             }
-            , predicate: function (a) {
-                return function (place) {
-                    return a.id == place.id_google;
+        });
+        var openResults = opendata.map(open_place=> {
+            var my_place = R.find(my=>my.id_opendata == open_place.id, myPlaces);
+            if (my_place) {
+                return {
+                    id_facebook: my_place.id_facebook
+                    , id_google: my_place.id_google
+                    , id_opendata: my_place.id_opendata
+                }
+            } else {
+                return {
+
+                    id_facebook: trovaByName(open_place.name, fbPlaces).id
+                    , id_google: trovaByName(open_place.name, googlePlaces).id
+                    , id_opendata: open_place.id
                 }
             }
-        };
+        });
 
-        var find_fb = function (a) {
-            return R.compose(
-                findOtherFn(a, fb.others)
-                , transformaID(a, fb.transformer)
-                , trovaAttraversoNome(a)
-            );
-        };
-
-        var find_goog = function (a) {
-            return R.compose(
-                findOtherFn(a, goog.others)
-                , transformaID(a, goog.transformer)
-                , trovaAttraversoNome(a)
-            );
-        };
-
-        var find_open = function (a) {
-            return R.compose(
-                findOtherFn(a, open.others)
-                , transformaID(a, open.transformer)
-                , trovaAttraversoNome(a)
-            );
-        };
-        var results_fb = R.map(mapFunction(fb.predicate, find_fb), fbPlaces);
-        var results_goog = R.map(mapFunction(fb.predicate, find_goog), googlePlaces);
-        var results_open = R.map(mapFunction(fb.predicate, find_open), opendata);
-        var newMyPlaces = R.compose(
-            R.uniq()
-            , R.flatten
-        )([results_fb, results_goog, results_open]);
+        var newMyPlaces = R.uniq(fbResults.concat(googleResults).concat(openResults));
         return newMyPlaces
 
     })
@@ -183,7 +149,7 @@ connection.connect()
             } else {
                 facebook = Promise.resolve({});
             }
-            if (place.google) {
+            if (place.id_google) {
                 google = goog_coll.findOne({place_id: place.id_google})
             } else {
                 google = Promise.resolve({})
@@ -203,7 +169,7 @@ connection.connect()
                 var googleImage = (R.view(R.lensPath(["photos"]), google) || [])[0];
                 var otherPhotos = getOtherPhotos(google);
                 if (googleImage) {
-                    var image_url = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=${googleImage.width}&maxheight=${googleImage.height}&photoreference=${googleImage.photo_reference}&key=${KEY}`.trim()
+                    var image_url = "";//`https://maps.googleapis.com/maps/api/place/photo?maxwidth=${googleImage.width}&maxheight=${googleImage.height}&photoreference=${googleImage.photo_reference}&key=${KEY}`.trim()
                 }
 
                 var geo = {
@@ -219,6 +185,10 @@ connection.connect()
                     || R.view(R.lensPath(["description"]), opendata)
                     || "";
 
+
+                //todo da eliminare quando ho trovato le categorie giuste
+                var raw__categories=getCategories(facebook, google, opendata);
+
                 var result = {
                     address: R.view(R.lensPath(["formatted_address"]), google)
                     || R.view(R.lensPath(["location", "street"]), facebook)
@@ -233,7 +203,7 @@ connection.connect()
                     telephone: R.view(R.lensPath(["international_phone_number"]), google)
                     || R.view(R.lensPath(["telefono"]), opendata),
                     image: R.view(R.lensPath(["cover", "source"]), facebook)
-                    || image_url || "/static/img/placeholder-cover.jpg",
+                    || image_url || "",
                     place_id: R.view(R.lensPath(["place_id"]), google),
                     geo,
 
@@ -242,7 +212,8 @@ connection.connect()
                     id_opendata: place.id_opendata,
                     description,
                     bio: R.view(R.lensPath(["bio"]), facebook),
-                    category_list: getCategories(facebook, google, opendata),
+                    raw__categories,
+                    category_list:  Categories.map(raw__categories),
                     mission: R.view(R.lensPath(["mission"]), facebook),
                     general_info: R.view(R.lensPath(["general_info"]), facebook),
                     website: R.view(R.lensPath(["website"]), google)
@@ -253,7 +224,7 @@ connection.connect()
                     || R.view(R.lensPath(["email"]), google)
                     || R.view(R.lensPath(["email"]), opendata),
 
-                    facebook_page: facebook && `https://www.facebook.com/${facebook.id}`
+                    facebook_page: facebook && facebook.id && `https://www.facebook.com/${facebook.id}`
                     , otherPhotos
                 };
 
@@ -263,13 +234,11 @@ connection.connect()
         return Promise.all(ps);
     })
     .then(my_new_places=> {
-        var myPlaces2Coll = connection.db.collection("my-places-2");
+        var myPlaces2Coll = connection.db.collection(Tables.MY_PLACES_2);
         fs.writeFileSync("my-new-places.json", JSON.stringify(my_new_places));
         return  myPlaces2Coll.insertMany(my_new_places);
-
-
-
     })
+    .then(scorePlaces)
     .then(_=> {
         connection.db.close();
         console.log("done");

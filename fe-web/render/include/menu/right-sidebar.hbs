@@ -1,9 +1,11 @@
 <aside class="right-sidebar">
     <nav class="common-menu categories">
-        <h1 class="title">categories</h1>
+        <h1 class="title">CATEGORIA: </h1>
+        <h2><a href="/places/{{main_category.query}}"><p>{{main_category.label}}</p></a></h2>
+        <h3 class="subtitle">filters</h3>
         <ul class="menu">
             {{#each categories}}
-                <li class="menu-item">
+                <li class="menu-item {{active}}">
                     <a href="/places/{{query}}">
                         <p><span>{{name}}</span></p>
                     </a>

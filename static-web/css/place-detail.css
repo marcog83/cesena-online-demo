@@ -259,6 +259,12 @@ svg {
   background-repeat: no-repeat;
   background-color: #ccc;
 }
+.place-thumbnail:hover .place-name {
+  color: #6e70b8;
+}
+.place-thumbnail:hover .description {
+  color: #000000;
+}
 .place-thumbnail .name {
   font-size: 18px;
   text-transform: uppercase;
@@ -270,6 +276,7 @@ svg {
   max-height: 7em;
   overflow: hidden;
   line-height: 1.4;
+  transition: color 0.2s ease-out;
 }
 .place-thumbnail .address {
   font-size: 14px;
@@ -277,6 +284,7 @@ svg {
 .place-thumbnail .place-name {
   margin-top: 12px;
   color: #7679c6;
+  transition: color 0.2s ease-out;
 }
 .info-CTR .social-info {
   padding-top: 10px;
@@ -388,7 +396,7 @@ svg {
 }
 .place-details .image {
   width: 100%;
-  height: 350px;
+  height: 420px;
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -434,6 +442,12 @@ svg {
 .place-details .map {
   width: 100%;
   height: 250px;
+}
+.place-details .other-info {
+  margin: 35px 0;
+}
+.place-details .map-CTR {
+  margin: 35px 0;
 }
 .section .title {
   font-size: 22px;

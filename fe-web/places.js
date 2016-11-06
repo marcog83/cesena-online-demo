@@ -2,6 +2,7 @@ let Connection = require("../dati-jobs/db/db-connection").Connection;
 let Tables = require("../dati-jobs/db/tables");
 let rules = require("../dati-jobs/fb/find-categories");
 let R = require("ramda");
+let getPlaceholder = require("./get-placeholder");
 let ObjectId = require('mongodb').ObjectId;
 var KEY = "AIzaSyA2awqLXHWlJuyI5mLY2du4NcuA7OYgpus";
 let urlRegex = require("url-regex");
@@ -37,33 +38,21 @@ function mapDetailPlace(my_place) {
 
     return Object.assign({},my_place,{
         description: formatDescription(my_place.description || "")
+        ,image:my_place.image||getPlaceholder(my_place)
     })
 }
-exports.findByChannel = function (id, options = {limit: 12}) {
+exports.findByChannel = function (id, options = {limit: 12,filters:[]}) {
     var connection = new Connection();
-    var REG_EXP = {
-        benessere: rules.BENESSERE
-        , viaggiare: rules.BUSISNESS
-        , busisness: rules.BUSISNESS
-        , food: rules.FOOD
-        , locali: rules.LOCALI
-        , tech: rules.TECH
-        , music: rules.MUSICA
-        , health: rules.SALUTE
-        , architecture: rules.ARCHITETTURA
-        , arts: rules.ARTS
-        , "movie-theater": rules.TEATRI_CINEMA
-        , sports: rules.SPORTS
 
-    };
     return connection.connect()
 
         .then(db=> {
 
-            var my_places = db.collection(Tables.MY_PLACES);
+            var my_places = db.collection(Tables.MY_PLACES_2);
 
-            var _regexp=REG_EXP[id]||new RegExp(id,"gi");
-            return my_places.find({category_list: _regexp})
+            var _regexp=new RegExp(id,"gi");
+            return my_places.find({category_list:{$all: options.filters.concat([_regexp])} })
+                .sort({score:-1})
                 .limit(options.limit)
                 .toArray()
                 .then(eliminaEccezioni(id))
@@ -105,7 +94,8 @@ var getEvents = function ({start_time, end_time, limit}) {
     return ([my_places,my_events])=> {
         var newEvents = reducer(my_events);
         newEvents = newEvents.map(event=> {
-            var place_id = event.place.id || event.place;
+            var place_id = (event.owner && event.owner.id) || event.place && event.place.id || event.place;
+           // var place_id = event.place.id || event.place;
             var my_place = R.find(place=>place.id_facebook == place_id, my_places);
 
             var place = formatEventPlace(my_place, event);
@@ -122,7 +112,7 @@ exports.eventi = ({start_time, end_time, limit})=> {
     return connection.connect()
         //.then(connection.collection.bind(connection, Tables.MY_EVENTS))
         .then(db=> {
-            var myPlaces = db.collection(Tables.MY_PLACES);
+            var myPlaces = db.collection(Tables.MY_PLACES_2);
             var myEvents = db.collection(Tables.MY_EVENTS);
 
             return Promise.all([
@@ -139,7 +129,7 @@ exports.eventiByPlace = ({start_time, end_time, limit,id_place})=> {
     return connection.connect()
         //.then(connection.collection.bind(connection, Tables.MY_EVENTS))
         .then(db=> {
-            var myPlaces = db.collection(Tables.MY_PLACES);
+            var myPlaces = db.collection(Tables.MY_PLACES_2);
             var myEvents = db.collection(Tables.MY_EVENTS);
             return myPlaces.findOne({_id: ObjectId(id_place)}).then(my_place=> {
                 return myEvents.find({
@@ -174,7 +164,7 @@ exports.eventiByPlace = ({start_time, end_time, limit,id_place})=> {
 exports.findById = id=> {
     var connection = new Connection();
     return connection.connect()
-        .then(connection.collection.bind(connection, Tables.MY_PLACES))
+        .then(connection.collection.bind(connection, Tables.MY_PLACES_2))
         .then(coll=> {
             return coll.findOne({_id: ObjectId(id)});
         })
@@ -188,7 +178,7 @@ exports.findById = id=> {
 exports.findMyPlaceByFacebookId = id_facebook=> {
     var connection = new Connection();
     return connection.connect()
-        .then(connection.collection.bind(connection, Tables.MY_PLACES))
+        .then(connection.collection.bind(connection, Tables.MY_PLACES_2))
         .then(coll=> {
             return coll.findOne({id_facebook});
         })
@@ -238,7 +228,7 @@ var formatEventPlace = R.curryN(2, function (my_place, event) {
 exports.photosById = id=> {
     var connection = new Connection();
     return connection.connect()
-        .then(connection.collection.bind(connection, Tables.MY_PLACES))
+        .then(connection.collection.bind(connection, Tables.MY_PLACES_2))
         .then(coll=> {
             return coll.findOne({_id: ObjectId(id)});
         })
@@ -278,7 +268,7 @@ exports.findEventById = id=> {
         .then(connection.collection.bind(connection, Tables.MY_EVENTS))
         .then(coll=> coll.findOne({_id: ObjectId(id)}))
         .then(event=> {
-            var myPlaceColl = connection.db.collection(Tables.MY_PLACES);
+            var myPlaceColl = connection.db.collection(Tables.MY_PLACES_2);
             var id = event.place.id || event.place;
             return myPlaceColl.findOne({id_facebook: id}).then(my_place=> {
                 var description = formatDescription(event.description);

@@ -29,5 +29,8 @@
   "description": "",
   "engines": {
     "node": "6.2.0"
+  },
+  "devDependencies": {
+    "x-ray": "^2.3.1"
   }
 }

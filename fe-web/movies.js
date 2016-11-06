@@ -44,7 +44,7 @@ exports.getMovies = ()=> {
         .then(db=> {
             var movieColl = db.collection(Tables.MOVIES_ORARI);
             var omdbColl = db.collection(Tables.OMDB_MOVIE);
-            var my_places = db.collection(Tables.MY_PLACES);
+            var my_places = db.collection(Tables.MY_PLACES_2);
             var moviedbColl = db.collection(Tables.THEMOVIEDB_MOVIE);
             return movieColl.find().toArray()
                 .then(movies=> {
@@ -77,7 +77,7 @@ exports.geMoviesById = id_facebook=> {
             var movieColl = db.collection(Tables.MOVIES_ORARI);
             var omdbColl = db.collection(Tables.OMDB_MOVIE);
             var moviedbColl = db.collection(Tables.THEMOVIEDB_MOVIE);
-            var my_places = db.collection(Tables.MY_PLACES);
+            var my_places = db.collection(Tables.MY_PLACES_2);
             return movieColl.find({"place.id_facebook": id_facebook}).toArray()
                 .then(getDetails(omdbColl, moviedbColl,my_places))
                 .then(R.tap(_=>connection.db.close()))

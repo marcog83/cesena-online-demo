@@ -251,18 +251,39 @@ svg {
   right: 0;
   width: 223px;
   height: 100vh;
-  padding: 80px 20px;
+  padding: 80px 20px 80px 0;
   box-sizing: border-box;
   overflow: hidden;
 }
 .right-sidebar .common-menu .title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-size: 12px;
+  margin-bottom: 0;
   text-transform: uppercase;
+  line-height: 1;
+}
+.right-sidebar .common-menu h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+}
+.right-sidebar .common-menu .subtitle {
+  margin: 40px 0 10px;
+  text-transform: uppercase;
+  font-size: 16px;
 }
 .right-sidebar .common-menu .menu .menu-item {
-  padding: 8px 0;
+  padding: 8px 20px;
+  margin: 1px 0 0;
+}
+.right-sidebar .common-menu .menu .menu-item.active,
+.right-sidebar .common-menu .menu .menu-item:hover {
+  background: #c0c0c0;
+  transition: background 0.2s ease-out;
+}
+.right-sidebar .common-menu .menu .menu-item.active p,
+.right-sidebar .common-menu .menu .menu-item:hover p {
+  color: white;
+  transition: color 0.2s ease-out;
 }
 .right-sidebar .common-menu .menu .menu-item p {
   line-height: 1.4;
@@ -281,6 +302,12 @@ svg {
   background-repeat: no-repeat;
   background-color: #ccc;
 }
+.place-thumbnail:hover .place-name {
+  color: #6e70b8;
+}
+.place-thumbnail:hover .description {
+  color: #000000;
+}
 .place-thumbnail .name {
   font-size: 18px;
   text-transform: uppercase;
@@ -292,6 +319,7 @@ svg {
   max-height: 7em;
   overflow: hidden;
   line-height: 1.4;
+  transition: color 0.2s ease-out;
 }
 .place-thumbnail .address {
   font-size: 14px;
@@ -299,6 +327,7 @@ svg {
 .place-thumbnail .place-name {
   margin-top: 12px;
   color: #7679c6;
+  transition: color 0.2s ease-out;
 }
 .info-CTR .social-info {
   padding-top: 10px;

@@ -5,22 +5,44 @@
   width: 223px;
   height: 100vh;
   //background: #f7f7f7;
-  padding: 80px 20px;
+  padding: 80px 20px 80px 0;
   box-sizing: border-box;
   overflow: hidden;
   //overflow-y: auto;
 }
+
 .right-sidebar {
   .common-menu {
     .title {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 10px;
+      font-size: 12px;
+      margin-bottom: 0;
       text-transform: uppercase;
+      line-height: 1;
     }
+    h2 {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .subtitle {
+      margin: 40px 0 10px;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+
     .menu {
       .menu-item {
-        padding: 8px 0;
+        padding: 8px 20px;
+        margin: 1px 0 0;
+        &.active,
+        &:hover{
+          background: #c0c0c0;
+          transition:background .2s ease-out;
+          p {
+            color: white;
+            transition:color .2s ease-out;
+          }
+        }
         p {
           line-height: 1.4;
         }

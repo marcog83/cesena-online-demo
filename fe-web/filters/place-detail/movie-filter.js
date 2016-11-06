@@ -1,6 +1,8 @@
 const places = require('../../places');
 const movies = require('../../movies');
-const R=require("ramda");
+const Connection=require("../../../dati-jobs/db/db-connection").Connection;
+const Tables=require("../../../dati-jobs/db/tables");
+const R = require("ramda");
 const intl = {
     "locales": "en-US",
     "formats": {
@@ -13,16 +15,7 @@ const intl = {
         }
     }
 };
-const CINEMA_IDS = [
-    "57fc09b018150f08acef847a"//bogart
-    , "58029e86d64257bb790b13f3"//alladin
-    , "57fc09b018150f08acef847f"//alladin 2
-    , "57fc09b018150f08acef8589"//sanbiagio
-    , "57fc09b018150f08acef84ee"//eliseo
-    , "5802a8d8d64257bb790b1593"//victor
-    , "5802a8d8d64257bb790b1592"//astra
 
-];
 function render(id, res) {
     return Promise.all([
         places.eventiByPlace({start_time: new Date(), limit: 3, id_place: id})
@@ -76,8 +69,8 @@ function render(id, res) {
                         var hasFascie = day.fascie && day.fascie.length;
                         if (hasFascie) {
                             var timestamp = new Date(day.day).getTime();
-                            var currentFascie=day.fascie;
-                            return Object.assign({timestamp,currentFascie}, movie);
+                            var currentFascie = day.fascie;
+                            return Object.assign({timestamp, currentFascie}, movie);
                         }
                     });
 
@@ -117,9 +110,19 @@ function render(id, res) {
         })
 }
 function match(id) {
-    return new Promise(resolve=> {
-        resolve(CINEMA_IDS.includes(id));
-    });
+    var connection = new Connection();
+    return connection.connect()
+        .then(db=> {
+            var placesColl = db.collection(Tables.MY_PLACES_2);
+            return placesColl.find({category_list: "cinema"}, {_id:1}).toArray()
+                .then(cinemas=> {
+                    cinemas = cinemas.map(cinema=>cinema._id.toString());
+                    return cinemas.includes(id);
+                })
+                .then(R.tap(_=>connection.db.close()))
+                .catch(R.tap(_=>connection.db.close()))
+        });
+
 
 }
 module.exports = {

@@ -15,6 +15,14 @@
     background-repeat: no-repeat;
     background-color: #ccc;
   }
+  &:hover{
+    .place-name{
+      color: #6e70b8;
+    }
+    .description{
+      color: #000000;
+    }
+  }
   .name {
     font-size: 18px;
     text-transform: uppercase;
@@ -26,6 +34,7 @@
     max-height: 7em;
     overflow: hidden;
     line-height: 1.4;
+    transition: color .2s ease-out;
   }
   .address {
     font-size: 14px;
@@ -33,6 +42,7 @@
   .place-name {
     margin-top: 12px;
     color: #7679c6;
+    transition: color .2s ease-out;
   }
 }
 .info-CTR{

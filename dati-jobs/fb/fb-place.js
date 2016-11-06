@@ -7,13 +7,13 @@ var FB = require('fb');
 // var categories = require('./category-list');
 var instagram = require('../instagram');
 var fs = require("fs");
-
+FB.options({version: 'v2.8'});
 
 function getAccessToken() {
     return new Promise(function (resolve, reject) {
         FB.api('oauth/access_token', {
-            client_id: '889152471205018',
-            client_secret: '8a57908b9d5cb304a2478944381cf8b3',
+            client_id: '214654845382404',
+            client_secret: '55d81ea2021bd08d24ab9b6e619638dd',
             grant_type: 'client_credentials'
         }, function (res) {
 
@@ -39,11 +39,11 @@ function getPlaces() {
     return new Promise(function (resolve, reject) {
 
         FB.api('search', {
-            center: "44.1571,12.265",
+            center: "44.139551,12.246472",
             type: "place",
-            distance: 15000,
-            limit: 5000,
-            fields: [ 'about', 'name', 'location',"description","category","category_list" , "bio"]
+            distance: 10000,
+            limit: 1500,
+            fields: [ 'about', 'name', 'location', "cover","bio","description","category_list"]
         }, function (res) {
             if (!res || res.error) {
                 reject(!res ? 'error occurred' : res.error);
