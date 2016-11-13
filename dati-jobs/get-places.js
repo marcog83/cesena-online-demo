@@ -11,41 +11,7 @@ var _ = require('lodash');
 var R = require('ramda');
 const File=require("./files_name");
 
-function addGoogleToPlaces(places) {
 
-    var connection = new Connection();
-    return connection.connect()
-        .then(_=>Tables.MY_PLACES)
-        .then(connection.collection.bind(connection))
-        .then(col=> {
-            return col.find().toArray();
-        })
-        .then(my_places=> {
-
-            var noMappedFB_places = places.filter(fb_place=> {
-                var my_place = R.find(myPlace=>myPlace.id_facebook == fb_place.id, my_places);
-                return !my_place || (my_place && !my_place.id_google);
-            })
-            return noMappedFB_places
-        })
-        .then(places=> {
-            return Promise.all(places.map(function (place, i) {
-                return new Promise(function (resolve, reject) {
-                    setTimeout(function () {
-                        google.getPlace(place).then(results=>({
-                            fb: place
-                            , google: results
-                        })).then(function (response) {
-                            resolve(response);
-                        })
-                    }, i * 2000);
-                })
-                // .then(R.tap(response=>console.log(i,": length:",response.google.length)))
-            }))
-        })
-
-
-}
 function writeJSONFile(filename) {
     return function (fb_places) {
         return fs.writeFile(filename, JSON.stringify(fb_places)).then(_=>filename);
@@ -56,212 +22,6 @@ function readJSONFile(filename) {
 }
 
 
-function getMyPlaces() {
-    return Promise.all([
-        readJSONFile(File.FB_PLACES_JSON)
-        , readJSONFile(File.FB_AND_GOOGLE_PLACES_FILTERED_JSON)
-    ]).then(([fb_places,fb_google_filtered])=> {
-        return fb_places.map(p=> {
-            var _f = _.find(fb_google_filtered, i=>i.fb.id == p.id);
-            var id_google = _f ? _f.google.place_id : null;
-            return {
-                name: p.name
-                , location: {
-                    lat: p.location.latitude
-                    , lng: p.location.longitude
-                }
-                , id_facebook: p.id
-                , id_google: id_google
-                , id_opendata: null
-            }
-        })
-    })
-}
-
-
-function updatePlaces({from_file}) {
-    var promise;
-    if (from_file) {
-        promise = Promise.resolve(File.MY_PLACES_JSON);
-    } else {
-        //da fb aggiungere google
-        promise = FB.getPlaces()
-            .then(writeJSONFile(File.FB_PLACES_JSON))
-            .then(readJSONFile)
-            .then(addGoogleToPlaces)
-            .then(writeJSONFile(File.FB_AND_GOOGLE_PLACES_JSON))
-            .then(readJSONFile)
-            .then(findSimilarityGoogleFB)
-            .then(writeJSONFile(File.FB_AND_GOOGLE_PLACES_FILTERED_JSON))
-            .then(getMyPlaces)
-            .then(writeJSONFile(File.MY_PLACES_JSON))
-    }
-
-    return promise.then(updateMyPlaces)
-    // .then(places=> {
-    //     var connection = new Connection();
-    //     connection.connect()
-    //         .then(_=>Tables.MY_PLACES)
-    //         .then(connection.collection.bind(connection))
-    //         .then(col=> {
-    //             var fromFB_GOOGLE = Promise.all(places.map(place=> {
-    //
-    //                 return col.findOneAndUpdate({
-    //                     $or: [
-    //                         {
-    //                             $and: [
-    //                                 {id_facebook: {$ne: null}},
-    //                                 {id_facebook: place.id_facebook}
-    //                             ]
-    //                         }
-    //                         , {
-    //                             $and: [
-    //                                 {id_google: {$ne: null}},
-    //                                 {id_google: place.id_google}
-    //                             ]
-    //                         }
-    //                     ]
-    //                 }, place, {upsert: true}).then(function (r) {
-    //
-    //                     if (!r.lastErrorObject.updatedExisting) {
-    //                         return place;
-    //                     } else {
-    //                         return null;
-    //                     }
-    //
-    //
-    //                 }).catch(R.tap(e=> console.log("update failed:", e)))
-    //             }));
-    //
-    //             return fromFB_GOOGLE
-    //
-    //         })
-    //         .then(R.tap(_=> connection.db.close()))
-    //         .then(R.filter(R.identity))
-    //         .then(writeJSONFile(NEW_PLACES_ADDED_JSON))
-    //         .catch(R.tap(e=> console.log("update failed:", e)))
-    // });
-}
-function updateMyPlaces() {
-    return readJSONFile(File.MY_PLACES_JSON).then(places=> {
-        var connection = new Connection();
-        return connection.connect()
-            .then(_=>Tables.MY_PLACES)
-            .then(connection.collection.bind(connection))
-            .then(col=> {
-                var fromFB_GOOGLE = Promise.all(places.map(place=> {
-
-                    return col.findOneAndUpdate({
-                        $or: [
-                            {
-                                $and: [
-                                    {id_facebook: {$ne: null}},
-                                    {id_facebook: place.id_facebook}
-                                ]
-                            }
-                            , {
-                                $and: [
-                                    {id_google: {$ne: null}},
-                                    {id_google: place.id_google}
-                                ]
-                            }
-                        ]
-                    }, {$set: place}, {upsert: true, returnNewDocument: true}).then(function (r) {
-
-                        if (!r.lastErrorObject.updatedExisting) {
-                            return place;
-                        } else {
-                            return null;
-                        }
-
-
-                    }).catch(R.tap(e=> console.log("update failed:", e)))
-                }));
-
-                return fromFB_GOOGLE
-
-            })
-            .then(R.tap(_=> connection.db.close()))
-            .then(R.filter(R.identity))
-            .then(writeJSONFile(File.NEW_PLACES_ADDED_JSON))
-            .catch(R.tap(e=> console.log("update failed:", e)))
-    });
-}
-
-
-function updateFromOpendata({from_file}) {
-    //$or: [ { quantity: { $lt: 20 } }, { price: 10 } ]
-
-    var promise;
-    if (from_file) {
-        promise = Promise.resolve(File.OPEN_DATA_JSON);
-    } else {
-
-        promise = getOpenData().then(writeJSONFile(File.OPEN_DATA_JSON))
-    }
-    return promise.then(readJSONFile)
-        .then(response=> {
-            return response.map(place=> {
-                var name = place.facebook.name || place.google.name || place.opendata.nome || place.opendata.titolare
-                var location = {
-                    latitude: (place.google.geometry && place.google.geometry.location.lat)
-                    || (place.facebook.location && place.facebook.location.latitude)
-                    || place.opendata.latitudine
-                    , longitude: (place.google.geometry && place.google.geometry.location.lng)
-                    || (place.facebook.location && place.facebook.location.longitude)
-                    || place.opendata.longitudine
-                };
-                return {
-                    name
-                    , location
-                    , id_facebook: place.facebook.id || null
-                    , id_google: place.google.place_id || null
-                    , id_opendata: place.opendata.id || null
-                }
-            })
-        })
-        .then(places=> {
-            var connection = new Connection();
-            connection.connect()
-                .then(_=>Tables.MY_PLACES)
-                .then(connection.collection.bind(connection))
-                .then(col=> {
-                    return Promise.all(places.map(place=> {
-                        return col.findOneAndUpdate({
-                            $or: [
-                                {
-                                    $and: [
-                                        {id_facebook: place.id_facebook},
-                                        {id_facebook: {$ne: null}}]
-                                },
-                                {
-                                    $and: [
-                                        {id_google: place.id_google},
-                                        {id_google: {$ne: null}}]
-                                },
-                                {
-                                    $and: [
-                                        {id_opendata: place.id_opendata},
-                                        {id_opendata: {$ne: null}}]
-                                }
-                            ]
-                        }, place, {upsert: true})
-                            .then(R.tap(e=> console.log("update failed:", e)))
-                            .catch(R.tap(e=> console.log("update failed:", e)))
-                    }));
-                })
-                .then(function (response) {
-                    connection.db.close();
-                    //process.exit(0);
-                }).catch(e=> {
-                    console.log("from_OPENDATA_FB_GOOGLE update failed:", e);
-                    connection.db.close();
-                    //process.exit(1);
-                    return e;
-                })
-        });
-
-}
 
 function getFacebookDetails({from_file=true}) {
     var promise;
@@ -421,24 +181,9 @@ function getGoogleDetails() {
                 .then(connection.collection.bind(connection))
                 .then(col=> {
 
-                    // return col.insertMany(details).then(function (r) {
-                    //     if (details.length == r.insertedCount) {
-                    //         return true;
-                    //     } else {
-                    //         throw false;
-                    //     }
-                    //     // Finish up test
-                    //
-                    // });
                     return Promise.all(details.map(place=> {
                         return col.findOneAndUpdate({place_id: place.place_id}, {$set: place}, {upsert: true});
-                        // .then(function (r) {
-                        //     console.log(r);
-                        //     return r;
-                        // }).catch(e=> {
-                        //     console.log("update failed:", e);
-                        //     return e;
-                        // })
+
                     }));
 
 
@@ -460,70 +205,30 @@ function getGoogleDetails() {
         })
 }
 function updateInstagram() {
-    // return readJSONFile("old/instagram.json")
-//    var connection=new Connection();
-//return connection.connect()
-//    .then(connection.collection.bind(connection,Tables.FACEBOOK_PLACES))
-//    .then(coll=>coll.find().toArray())
-//    .then(R.tap(_=>connection.db.close()))
-//    .then(geInstagram)
-//    .then(writeJSONFile(INSTAGRAM_PHOTOS_JSON))
-//    .then(readJSONFile);
-
-
-    return readJSONFile(File.INSTAGRAM_PHOTOS_JSON).then(instagram_photos=> {
+     return readJSONFile(File.INSTAGRAM_PHOTOS_JSON).then(instagram_photos=> {
         var connection = new Connection();
         return connection.connect()
             .then(connection.collection.bind(connection, Tables.INSTAGRAM_PHOTOS))
             .then(coll=> {
-                return coll.insertMany(instagram_photos);
-                //return Promise.all(instagram_photos.map(photos=> {
-                //    return coll.findOneAndUpdate({id: photos.id}, {$set: photos}, {upsert: true})
-                //
-                //}));
-            }).then(function (response) {
+                return Promise.all(instagram_photos.map(photos=> {
+                   return coll.findOneAndUpdate({id: photos.id}, {$set: photos}, {upsert: true})
 
+                }));
+            }).then(function (response) {
                 connection.db.close();
                 return response;
-                //process.exit(0);
             }).catch(e=> {
                 console.log("instagram inseert failed:", e);
                 connection.db.close();
-                //process.exit(1);
                 return e;
             })
     })
 }
 
-//updateFromOpendata({from_file: true});
 
 
-// getFacebookPosts({from_file: true});
-// getFacebookPhotos({from_file: true});
-
-
-/*updatePlaces({from_file: false})
- .then(getFacebookDetails)*/
-// getFacebookDetails().then(_=>getFacebookEvents({from_file: true}))
-//     .then(_=>getFacebookEventsRelations({from_file: true}))
-//     .then(_=> process.exit(0))
-//     .catch(_=> console.log("errore!!!",_),process.exit(1));
-
-//getFacebookDetails()
-/**/
-// updateMyPlaces()
-//     .then(_=>{
-//         console.log("FATTO!!")
-//          process.exit(0);
-//     })
-//     .catch(_=> {
-//         console.log("errore!!!", _); process.exit(1);
-//     });
-
-//getFacebookDetails({from_file: true})
-//getFacebookEvents({from_file: true})
 function importFBPlaces(){
-    readJSONFile(FB_PLACES_JSON)
+    return readJSONFile(File.FB_PLACES_JSON)
         .then(fb_places=> {
             var connection = new Connection();
             return connection.connect()
@@ -543,15 +248,17 @@ function importFBPlaces(){
         })
         .then(_=> {
             console.log("FATTO!!");
-            process.exit(0);
+            // process.exit(0);
         })
         .catch(_=> {
             console.log("errore!!!", _);
-            process.exit(1);
+            // process.exit(1);
         });
 }
 
+//
 FB.getPlaces().then(writeJSONFile(File.FB_PLACES_JSON))
+    .then(importFBPlaces)
     .then(_=> {
         console.log("FATTO!!");
         process.exit(0);
@@ -560,3 +267,5 @@ FB.getPlaces().then(writeJSONFile(File.FB_PLACES_JSON))
         console.log("errore!!!", _);
         process.exit(1);
     });
+
+// importFBPlaces()

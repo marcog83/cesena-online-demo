@@ -12,9 +12,7 @@ function remove_common(str){
 function trovaByName(places,{name}) {
     var place_found = R.find(place=> {
 
-          //  var _name=clj_fuzzy.phonetics.mra_codex(remove_common(name));
-           // var _place_name=clj_fuzzy.phonetics.mra_codex(remove_common(place.name));
-          //  var percent=clj_fuzzy.metrics.dice(_name, _place_name);
+
             //
              var percent=clj_fuzzy.metrics.dice(remove_common(name), remove_common(place.name));
 
