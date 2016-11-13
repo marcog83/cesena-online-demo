@@ -181,6 +181,7 @@ connection.connect()
                     || R.view(R.lensPath(["email"]), opendata),
                     facebook_page: reduced_facebook && reduced_facebook.id && `https://www.facebook.com/${reduced_facebook.id}`
                     , otherPhotos
+                    ,permanently_closed: R.view(R.lensPath(["permanently_closed"]), google)
                 };
 
                 return result
@@ -190,6 +191,9 @@ connection.connect()
     })
     //
     .then(my_new_places=> {
+        my_new_places=R.filter(place=>{
+            return !place.permanently_closed
+        },my_new_places);
         var myPlaces2Coll = connection.db.collection(Tables.MY_PLACES_2);
         // fs.writeFileSync("my-new-places.json", JSON.stringify(my_new_places));
         return myPlaces2Coll.insertMany(my_new_places);

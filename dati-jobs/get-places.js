@@ -268,4 +268,3 @@ FB.getPlaces().then(writeJSONFile(File.FB_PLACES_JSON))
         process.exit(1);
     });
 
-// importFBPlaces()
