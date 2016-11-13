@@ -11,10 +11,20 @@ var connection = new Connection();
 // ,getJSON("luoghi-notevoli")
 // ,getJSON("teatri")
 // ,getJSON("cinema")
-
+function normalizza_address(address){
+    return address
+        .toLowerCase()
+        .replace(/vle/, "viale")
+        .replace(/ple/, "piazzale")
+        .replace(/pza/, "piazza")
+        .replace(/gno/, "giardino")
+}
 Promise.all([
     fromCSV.getJSON("cinema").then(R.map(cinema=> {
-        return Object.assign({tags: ["cinema"]}, cinema, {id: "cinema_" + cinema.id,name:cinema.nome});
+        return Object.assign({tags: ["cinema"]}, cinema, {
+            full_address:normalizza_address(cinema.indirizzo),
+            id: "cinema_" + cinema.id,name:cinema.nome
+        });
     }))
     , connection.connect().then(connection.collection.bind(connection, Tables.OPENDATA_PLACES))
 

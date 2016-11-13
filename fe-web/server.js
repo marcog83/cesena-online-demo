@@ -126,7 +126,7 @@ app.get('/places/detail/:id', function (req, res) {
 app.get('/', function (req, res) {
     Promise.all([places.eventi({
         start_time: new Date(), limit: 3
-    }), places.findByChannel("locali", {limit: 3 * 3}), places.photosHighlight({limit: 3 * 3})]).then(([eventiEvidenza,placesEvidenza,photos])=> {
+    }), places.findByChannel("bar", {limit: 3 * 3,filters:[]}), places.photosHighlight({limit: 3 * 3})]).then(([eventiEvidenza,placesEvidenza,photos])=> {
         res.render('homepage', {
             helpers: {
                 stylesheet: function () {

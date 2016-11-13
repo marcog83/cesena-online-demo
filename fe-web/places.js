@@ -233,9 +233,9 @@ exports.photosById = id=> {
             return coll.findOne({_id: ObjectId(id)});
         })
         .then(my_place=> {
-            if (!my_place.id_facebook)return {};
+            if (!my_place.id_facebook || !my_place.id_facebook.length)return {};
             var coll = connection.db.collection(Tables.INSTAGRAM_PHOTOS);
-            return coll.findOne({id_facebook: my_place.id_facebook})
+            return coll.findOne({id_facebook: {$in:my_place.id_facebook}})
                 .then(instagram=>instagram.instagram_photos);
         })
         .then(R.map(mapInstagramPhoto))

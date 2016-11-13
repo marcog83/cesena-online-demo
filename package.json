@@ -31,6 +31,8 @@
     "node": "6.2.0"
   },
   "devDependencies": {
+    "clj-fuzzy": "^0.3.3",
+    "geolib": "^2.0.22",
     "x-ray": "^2.3.1"
   }
 }

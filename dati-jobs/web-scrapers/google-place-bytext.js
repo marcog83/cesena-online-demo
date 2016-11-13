@@ -86,7 +86,7 @@ Promise.resolve(JSON.parse(fs.readFileSync("imprese-google-2.json")))
                     console.log("over_query_limit",place.place.name);
                     promise=  Promise.resolve(place);
                 }else{
-                    if(place.google.results){
+                    if(place.google.results && place.google.status!="OVER_QUERY_LIMIT"){
                         console.log("ha risultati",place.place.name);
                         promise = Promise.resolve(place);
                     }else{

@@ -6,34 +6,30 @@
 
 
 var fs = require("fs");
-var MongoClient = require('mongodb').MongoClient;
+var R = require("ramda");
+var Connection = require("../db/db-connection").Connection;
+var Tables=require("../db/tables");
+var File=require("../files_name");
+const xf=R.compose(
+    R.filter(place=>place.google.place_id)
+    ,R.map(place=>place.google)
+);
 
-var url = 'mongodb://localhost:27017/cesena-sociale';
-
-Promise.resolve(JSON.parse(fs.readFileSync("piadinerie-google-places-filtrate-mano.json")))
-    .then(places=>places
-        .filter(place=>place.google)
-        .map(place=>place.google))
-    .then(function (places) {
-
-        return new Promise(function (resolve, reject) {
-
-            MongoClient.connect(url, function (err, db) {
-                // Get the collection
-                var col=db.collection('google-places');
+Promise.resolve(JSON.parse(fs.readFileSync(File.PIADINERIE_GOOGLE_OPENDATA_HAND_FILTERED)))
+    .then(R.into([],xf))
+    .then( places =>{
+        var connection=new Connection();
+        return connection.connect()
+            .then(connection.collection.bind(connection,Tables.GOOGLE_PLACES))
+            .then(coll=>{
                 var promises = places.map(place=> {
-                    return col.findOneAndUpdate({place_id:place.place_id},{$set:place},{upsert:true})
-
+                    return coll.findOneAndUpdate({place_id:place.place_id},{$set:place},{upsert:true})
                 });
-                resolve(Promise.all(promises).then(_=> {
-                    db.close();
-                }).catch(_=> {
-                    db.close();
-                }));
-            });
-             
+                return Promise.all(promises);
+            })
+            .then(R.tap(_=>connection.db.close()))
+            .catch(R.tap(_=>connection.db.close()))
 
-        });
     })
     .then(function (e) {
         console.log("OK");
@@ -41,5 +37,5 @@ Promise.resolve(JSON.parse(fs.readFileSync("piadinerie-google-places-filtrate-ma
     }, function (e) {
         console.log("KO", e);
         process.exit(1);
-    })
+    });
 

@@ -9,7 +9,7 @@ var Connection = require("./db/db-connection").Connection;
 var Tables = require("./db/tables");
 var _ = require('lodash');
 var R = require('ramda');
-
+const File=require("./files_name");
 
 function addGoogleToPlaces(places) {
 
@@ -55,19 +55,11 @@ function readJSONFile(filename) {
     return Promise.resolve(JSON.parse(fs.readFileSync(filename)));
 }
 
-const FB_PLACES_JSON = "fb_places.json";
-const FACEBOOK_DETAILS_JSON = "fb_details_places.json";
-const FB_AND_GOOGLE_PLACES_FILTERED_JSON = "fb-and-google-places-filtered.json";
-const FB_AND_GOOGLE_PLACES_JSON = "fb-and-google-places.json";
-const MY_PLACES_JSON = "my-places.json";
-const NEW_PLACES_ADDED_JSON = "new-my-places.json";
-const OPEN_DATA_JSON = "opendata-places.json";
-const GOOGLE_DETAILS_JSON = "google-details-places.json";
-const INSTAGRAM_PHOTOS_JSON = "instagram-photos-slow.json";
+
 function getMyPlaces() {
     return Promise.all([
-        readJSONFile(FB_PLACES_JSON)
-        , readJSONFile(FB_AND_GOOGLE_PLACES_FILTERED_JSON)
+        readJSONFile(File.FB_PLACES_JSON)
+        , readJSONFile(File.FB_AND_GOOGLE_PLACES_FILTERED_JSON)
     ]).then(([fb_places,fb_google_filtered])=> {
         return fb_places.map(p=> {
             var _f = _.find(fb_google_filtered, i=>i.fb.id == p.id);
@@ -90,19 +82,19 @@ function getMyPlaces() {
 function updatePlaces({from_file}) {
     var promise;
     if (from_file) {
-        promise = Promise.resolve(MY_PLACES_JSON);
+        promise = Promise.resolve(File.MY_PLACES_JSON);
     } else {
         //da fb aggiungere google
         promise = FB.getPlaces()
-            .then(writeJSONFile(FB_PLACES_JSON))
+            .then(writeJSONFile(File.FB_PLACES_JSON))
             .then(readJSONFile)
             .then(addGoogleToPlaces)
-            .then(writeJSONFile(FB_AND_GOOGLE_PLACES_JSON))
+            .then(writeJSONFile(File.FB_AND_GOOGLE_PLACES_JSON))
             .then(readJSONFile)
             .then(findSimilarityGoogleFB)
-            .then(writeJSONFile(FB_AND_GOOGLE_PLACES_FILTERED_JSON))
+            .then(writeJSONFile(File.FB_AND_GOOGLE_PLACES_FILTERED_JSON))
             .then(getMyPlaces)
-            .then(writeJSONFile(MY_PLACES_JSON))
+            .then(writeJSONFile(File.MY_PLACES_JSON))
     }
 
     return promise.then(updateMyPlaces)
@@ -151,7 +143,7 @@ function updatePlaces({from_file}) {
     // });
 }
 function updateMyPlaces() {
-    return readJSONFile(MY_PLACES_JSON).then(places=> {
+    return readJSONFile(File.MY_PLACES_JSON).then(places=> {
         var connection = new Connection();
         return connection.connect()
             .then(_=>Tables.MY_PLACES)
@@ -191,7 +183,7 @@ function updateMyPlaces() {
             })
             .then(R.tap(_=> connection.db.close()))
             .then(R.filter(R.identity))
-            .then(writeJSONFile(NEW_PLACES_ADDED_JSON))
+            .then(writeJSONFile(File.NEW_PLACES_ADDED_JSON))
             .catch(R.tap(e=> console.log("update failed:", e)))
     });
 }
@@ -202,10 +194,10 @@ function updateFromOpendata({from_file}) {
 
     var promise;
     if (from_file) {
-        promise = Promise.resolve(OPEN_DATA_JSON);
+        promise = Promise.resolve(File.OPEN_DATA_JSON);
     } else {
 
-        promise = getOpenData().then(writeJSONFile(OPEN_DATA_JSON))
+        promise = getOpenData().then(writeJSONFile(File.OPEN_DATA_JSON))
     }
     return promise.then(readJSONFile)
         .then(response=> {
@@ -274,7 +266,7 @@ function updateFromOpendata({from_file}) {
 function getFacebookDetails({from_file=true}) {
     var promise;
     if (!from_file) {
-        promise = readJSONFile(MY_PLACES_JSON)
+        promise = readJSONFile(File.MY_PLACES_JSON)
             .then(R.filter(place=>place.id_facebook))
             .then(places=> {
                 return Promise.all(places
@@ -295,9 +287,9 @@ function getFacebookDetails({from_file=true}) {
                     }))
             })
             .then(R.filter(R.identity))
-            .then(writeJSONFile(FACEBOOK_DETAILS_JSON))
+            .then(writeJSONFile(File.FACEBOOK_DETAILS_JSON))
     } else {
-        promise = Promise.resolve(FACEBOOK_DETAILS_JSON);
+        promise = Promise.resolve(File.FACEBOOK_DETAILS_JSON);
     }
 
     return promise.then(readJSONFile)
@@ -415,12 +407,12 @@ function getFacebookEventsRelations({from_file}) {
 
 }
 function getGoogleDetails() {
-    return readJSONFile(MY_PLACES_JSON)
+    return readJSONFile(File.MY_PLACES_JSON)
         .then(R.filter(place=>place.id_google))
         // .then(places=>places.slice(0, 1))
         .then(google.getDetails)
         .then(R.filter(R.identity))
-        .then(writeJSONFile(GOOGLE_DETAILS_JSON))
+        .then(writeJSONFile(File.GOOGLE_DETAILS_JSON))
         .then(readJSONFile)
         .then(details=> {
             var connection = new Connection();
@@ -439,7 +431,7 @@ function getGoogleDetails() {
                     //
                     // });
                     return Promise.all(details.map(place=> {
-                        return col.findOneAndUpdate({place_id: place.place_id}, {$set: place}, {upsert: true})
+                        return col.findOneAndUpdate({place_id: place.place_id}, {$set: place}, {upsert: true});
                         // .then(function (r) {
                         //     console.log(r);
                         //     return r;
@@ -479,12 +471,12 @@ function updateInstagram() {
 //    .then(readJSONFile);
 
 
-    return readJSONFile(INSTAGRAM_PHOTOS_JSON).then(instagram_photos=> {
+    return readJSONFile(File.INSTAGRAM_PHOTOS_JSON).then(instagram_photos=> {
         var connection = new Connection();
         return connection.connect()
             .then(connection.collection.bind(connection, Tables.INSTAGRAM_PHOTOS))
             .then(coll=> {
-                return coll.insertMany(instagram_photos)
+                return coll.insertMany(instagram_photos);
                 //return Promise.all(instagram_photos.map(photos=> {
                 //    return coll.findOneAndUpdate({id: photos.id}, {$set: photos}, {upsert: true})
                 //
@@ -559,7 +551,7 @@ function importFBPlaces(){
         });
 }
 
-FB.getPlaces().then(writeJSONFile(FB_PLACES_JSON))
+FB.getPlaces().then(writeJSONFile(File.FB_PLACES_JSON))
     .then(_=> {
         console.log("FATTO!!");
         process.exit(0);
