@@ -1,11 +1,19 @@
-<header>
-    <div class="hamburger-menu"></div>
-    <a href="/">
-        <i class="material-icons">home</i>
-    </a>
-    <!--<div class="search-bar">-->
-        <!--<input type="text" placeholder="type to search...">-->
-    <!--</div>-->
+<header class="topbar">
+    <div class="table-CTR">
+        <div class="table-cell">
+            <div class="hamburger-menu"></div>
+        </div>
+        <div class="table-cell homepage">
+            <a href="/">
+                <i class="material-icons">home</i>
+            </a>
+        </div>
+        <div class="table-cell search">
+            <div class="search-toolbar-CTR">
+                {{> include/search-toolbar/search-toolbar }}
+            </div>
+        </div>
+    </div>
     <div class="filters-button"></div>
     <div class="map-button"></div>
 </header>

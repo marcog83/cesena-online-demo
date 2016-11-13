@@ -144,7 +144,7 @@ a {
   background: white;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
 }
 .body-CTR {
   display: flex;
@@ -225,6 +225,67 @@ a {
 }
 .left-sidebar .common-menu .menu .menu-item p i {
   margin-right: 15px;
+}
+.topbar .table-CTR {
+  display: table;
+  width: 100%;
+}
+.topbar .table-cell {
+  display: table-cell;
+}
+.topbar .table-cell.homepage {
+  width: 212px;
+}
+.topbar .table-cell.search {
+  margin-left: 22px;
+}
+.search-toolbar {
+  position: relative;
+}
+.search-toolbar .search-input {
+  padding: 8px;
+  width: 400px;
+  box-sizing: border-box;
+}
+.autocomplete-CTR {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  border: 1px solid silver;
+  min-width: 400px;
+  box-sizing: border-box;
+}
+.autocomplete-CTR .autocomplete-results {
+  background: white;
+  padding: 10px 0;
+}
+.autocomplete-CTR .autocomplete-results .label {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 14px;
+  text-transform: uppercase;
+  color: gray;
+  margin: 20px 0 0;
+}
+.autocomplete-CTR .places-results {
+  margin: 5px 0px 15px;
+}
+.autocomplete-CTR .place-results-thumbnail {
+  padding: 7px 14px;
+  transition: background 0.2s ease-out;
+}
+.autocomplete-CTR .place-results-thumbnail p {
+  transition: color 0.2s ease-out;
+}
+.autocomplete-CTR .place-results-thumbnail:hover {
+  background: silver;
+}
+.autocomplete-CTR .place-results-thumbnail:hover p {
+  color: white;
+}
+.autocomplete-CTR .separator {
+  display: block;
+  border-bottom: 1px solid silver;
 }
 svg {
   display: none;

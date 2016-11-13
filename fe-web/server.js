@@ -1,14 +1,16 @@
 var express = require('express'), places = require('./places');
 var movies = require("./movies");
+let search = require("./search");
 var placeDetail = require("./filters/place-detail/place-detail");
 var exphbs = require("express-handlebars");
 var path = require("path");
 var R = require("ramda");
 var qs = require("qs");
+var bodyParser = require('body-parser');
 var Handlebars = require("handlebars");
 var HandlebarsIntl = require('handlebars-intl');
 HandlebarsIntl.registerWith(Handlebars);
-var KEY = "AIzaSyA2awqLXHWlJuyI5mLY2du4NcuA7OYgpus";
+
 const intl = {
     "locales": "en-US", "formats": {
         "date": {
@@ -18,29 +20,34 @@ const intl = {
         }
     }
 };
+Handlebars.registerHelper('raw-helper', function(options) {
+    return options.fn();
+});
+
 var getCategories = function (id, filters, categories) {
     return R.compose(
-
         R.sortBy(R.compose(R.toLower, R.prop('name')))
-        ,R.filter(category=>category.name!=id)
-        ,R.map(category=> {
-        var _filters = [];
-        if (filters.includes(category)) {
-            _filters = R.without([category], filters);
-        } else {
-            if (id != category)
-                _filters = R.uniq(filters.concat(category));
-        }
-        var prefix = _filters.length ? "?" : "";
-        var query_string = encodeURIComponent(id) + prefix + qs.stringify({filters: _filters}, {indices: false});
-        var active = [id].concat(filters).includes(category) ? "active" : "";
-        return {
-            active, query: query_string, name: category
-        }
-    }), R.uniq, R.filter(R.identity), R.flatten, R.map(place=> {
-        return place.category_list
-    }))(categories)
+        , R.filter(category=>category.name != id)
+        , R.map(category=> {
+            var _filters = [];
+            if (filters.includes(category)) {
+                _filters = R.without([category], filters);
+            } else {
+                if (id != category)
+                    _filters = R.uniq(filters.concat(category));
+            }
+            var prefix = _filters.length ? "?" : "";
+            var query_string = encodeURIComponent(id) + prefix + qs.stringify({filters: _filters}, {indices: false});
+            var active = [id].concat(filters).includes(category) ? "active" : "";
+            return {
+                active, query: query_string, name: category
+            }
+        }), R.uniq, R.filter(R.identity), R.flatten, R.map(place=> {
+            return place.category_list
+        }))(categories)
 };
+
+
 var app = express();
 app.use('/static', express.static(__dirname + '/../static-web'));
 // Register `hbs` as our view engine using its bound `engine()` function.
@@ -50,8 +57,13 @@ app.engine('.hbs', exphbs({
     // with the client-side of the app (see below).
     , partialsDir: "render"
 }));
+
 app.set('views', 'render/body/');
 app.set('view engine', '.hbs');
+//
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({extended: true})); // for parsing application/x-www-form-urlencoded
+//
 app.get('/places/:id', function (req, res) {
     var id = decodeURIComponent(req.params.id);
     var filters = [];
@@ -126,7 +138,10 @@ app.get('/places/detail/:id', function (req, res) {
 app.get('/', function (req, res) {
     Promise.all([places.eventi({
         start_time: new Date(), limit: 3
-    }), places.findByChannel("bar", {limit: 3 * 3,filters:[]}), places.photosHighlight({limit: 3 * 3})]).then(([eventiEvidenza,placesEvidenza,photos])=> {
+    }), places.findByChannel("bar", {
+        limit: 3 * 3,
+        filters: []
+    }), places.photosHighlight({limit: 3 * 3})]).then(([eventiEvidenza,placesEvidenza,photos])=> {
         res.render('homepage', {
             helpers: {
                 stylesheet: function () {
@@ -150,6 +165,15 @@ app.get("/movies", function (req, res) {
             }, movies
         })
     })
+});
+
+
+app.post("/search", function (req, res) {
+    search.search(req.body.query).then(response=> {
+        res.json(response);
+    });
+    console.log(req.body);
+
 });
 app.set('port', (process.env.PORT || 5000));
 app.listen(app.get('port'));

@@ -12,5 +12,14 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "robojs": "~3.4.1",
+    "most": "~1.1.0",
+    "requirejs": "~2.3.2",
+    "handlebars": "~4.0.5",
+    "qs": "~0.4.6",
+    "fetch": "~1.0.0",
+    "ramda": "~0.22.1"
+  }
 }
