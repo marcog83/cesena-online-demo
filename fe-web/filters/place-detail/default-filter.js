@@ -28,6 +28,7 @@ function render(id, res) {
                 }
                 , eventiEvidenza
                 , photos
+                , page_id:id
                 , data: {intl: intl}
 
             }, detail));

@@ -7,7 +7,7 @@ const scorePlaces = require('./score-places').scorePlaces;
 const hoursHelper = require("../fe-web/opening_hours-helper");
 const Categories = require("./categories");
 var KEY = "AIzaSyA2awqLXHWlJuyI5mLY2du4NcuA7OYgpus";
-
+const geolib = require('geolib');
 
 function getCategories(facebook, google, opendata) {
     var fb = (R.view(R.lensPath(["category_list"]), facebook) || []).map(cat=>cat.name);
@@ -69,50 +69,57 @@ connection.connect()
             }
         })(openPlaces);
         //
-        return R.uniq(fbResults.concat(googleResults).concat(openResults));
-    })
-    .then(my_new_places=> {
+
         var fb_coll = connection.db.collection(Tables.FACEBOOK_PLACES),
             goog_coll = connection.db.collection(Tables.GOOGLE_PLACES),
 
             open_coll = connection.db.collection(Tables.OPENDATA_PLACES);
-        var ps = my_new_places.map(place=> {
 
-            var facebook;
-            var google;
-            var opendata;
+        return Promise.all([
+                Promise.resolve(R.uniq(fbResults.concat(googleResults).concat(openResults)))
+                , fb_coll.find().toArray()
+                , goog_coll.find().toArray()
+                , open_coll.find().toArray()
+
+            ]
+        )
+
+            ;
+    })
+    .then(([my_new_places,fbPlaces,googlePlaces,openPlaces])=> {
+
+        var ps = R.map(place=> {
+
+            var facebook = [];
+            var google = [];
+            var opendata = [];
 
             if (place.id_facebook) {
-                facebook = fb_coll.find({id: {$in: place.id_facebook}}).toArray()
-            } else {
-                facebook = Promise.resolve([]);
+                facebook = R.filter(p=>place.id_facebook.includes(p.id), fbPlaces);
+                //fb_coll.find({id: {$in: place.id_facebook}}).toArray()
             }
             if (place.id_google) {
-                google = goog_coll.find({place_id: {$in: place.id_google}}).toArray();
-            } else {
-                google = Promise.resolve([])
+                google = R.filter(p=>place.id_google.includes(p.place_id), googlePlaces);//goog_coll.find({place_id: {$in: place.id_google}}).toArray();
             }
             if (place.id_opendata) {
-                opendata = open_coll.find({id: {$in: place.id_opendata}}).toArray();
-            } else {
-                opendata = Promise.resolve([])
+                opendata = R.filter(p=>place.id_opendata.includes(p.id), openPlaces); //open_coll.find({id: {$in: place.id_opendata}}).toArray();
             }
             return Promise.all([
-                facebook
-                , google
-                , opendata
+                Promise.resolve(facebook)
+                , Promise.resolve(google)
+                , Promise.resolve(opendata)
                 , Promise.resolve(place)
             ]).then(([ facebook, _google, _opendata,place])=> {
 
-                var reduced_facebook = facebook.reduce((prev, curr)=> {
+                var reduced_facebook = R.reduce((prev, curr)=> {
                     return Object.assign(prev, curr);
-                }, {});
-                var google = _google.reduce((prev, curr)=> {
+                }, {}, facebook);
+                var google = R.reduce((prev, curr)=> {
                     return Object.assign(prev, curr);
-                }, {});
-                var opendata = _opendata.reduce((prev, curr)=> {
+                }, {}, _google);
+                var opendata = R.reduce((prev, curr)=> {
                     return Object.assign(prev, curr);
-                }, {});
+                }, {}, _opendata);
 
                 var image_url = "";
                 var googleImage = (R.view(R.lensPath(["photos"]), google) || [])[0];
@@ -155,10 +162,10 @@ connection.connect()
                     place_id: R.view(R.lensPath(["place_id"]), google),
                     geo,
 
-                    id_facebook: place.id_facebook,
-                    id_google: place.id_google,
-                    id_opendata: place.id_opendata,
-                    id_imprese: place.id_imprese,
+                    id_facebook: place.id_facebook||[],
+                    id_google: place.id_google||[],
+                    id_opendata: place.id_opendata||[],
+                    id_imprese: place.id_imprese||[],
                     description,
                     bio: R.view(R.lensPath(["bio"]), reduced_facebook),
                     raw__categories,
@@ -178,12 +185,13 @@ connection.connect()
 
                 return result
             })
-        });
+        }, my_new_places);
         return Promise.all(ps);
     })
+    //
     .then(my_new_places=> {
         var myPlaces2Coll = connection.db.collection(Tables.MY_PLACES_2);
-        fs.writeFileSync("my-new-places.json", JSON.stringify(my_new_places));
+        // fs.writeFileSync("my-new-places.json", JSON.stringify(my_new_places));
         return myPlaces2Coll.insertMany(my_new_places);
     })
     .then(scorePlaces)

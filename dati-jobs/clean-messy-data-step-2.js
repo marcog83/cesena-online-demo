@@ -16,10 +16,6 @@ var QUERY_MATCHES = {
                 },
                 {
                     percent_name: {$gt: 0.8},
-                    percent_address_phonetic: 1
-                },
-                {
-                    percent_name: {$gt: 0.8},
                     distance: {$lt: 40}
                 },
                 {
@@ -27,6 +23,17 @@ var QUERY_MATCHES = {
                     percent_address_phonetic: 1,
                     distance: {$lt: 30}
                 },
+                {
+                    percent_name: {$gt: 0.75},
+                    percent_address_phonetic: 1,
+
+                }
+                ,{
+                    percent_name: {$gt: 0.57},
+                    percent_address_phonetic: 1,
+                    percent_address_metric:{$gt:0.54},
+                    distance: 1000000000
+                }
             ]
         }
     ]
@@ -40,19 +47,24 @@ connection.connect()
 
     })
     .then((matches)=> {
-        var coll = connection.db.collection(Tables.FUZZY_MATCHES);
+        // var coll = connection.db.collection(Tables.FUZZY_MATCHES);
         var promises = matches.map(match=> {
-            return coll.find({
-                $and: [
-                    {
+            // var ID_MATCH_QUERY={
+            //     id_p1: match.id_p1
+            // };
+            /**
+             * {
                         $or: [
                             {id_p1: match.id_p1}
-                            // , {id_p2: match.id_p1}
-
                         ]
                     }
+             return coll.find({
+                $and: [
+                    ID_MATCH_QUERY
                     , QUERY_MATCHES]
-            }).toArray().then(response=> {
+            }).toArray()
+             */
+           return Promise.resolve(R.filter(item=>item.id_p1==match.id_p1,matches)).then(response=> {
                 return {
                     id: match.id_p1.toString(),
                     name: match.name_p1,
@@ -126,7 +138,12 @@ connection.connect()
         var fuzzyMatchColl = connection.db.collection(Tables.FUZZY_MATCHES_ONE_TO_MANY);
         return fuzzyMatchColl.insertMany(uniq_matches);
     })
-    .then(_=> connection.db.close())
+    .then(_=> {
+        connection.db.close();
+        process.exit(0);
+    }
+
+)
     .catch(_=> {
         console.log(_);
         connection.db.close();
