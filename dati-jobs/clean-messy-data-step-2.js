@@ -12,7 +12,7 @@ var QUERY_MATCHES = {
             $or: [
                 {percent_name: {$gt: 0.9}},
                 {
-                    distance: {$lt: 30}
+                    distance: {$lt: 20}
                 },
                 {
                     percent_name: {$gt: 0.8},
@@ -24,16 +24,11 @@ var QUERY_MATCHES = {
                     distance: {$lt: 30}
                 },
                 {
-                    percent_name: {$gt: 0.75},
+                    percent_name: {$gt: 0.7},
                     percent_address_phonetic: 1,
 
                 }
-                ,{
-                    percent_name: {$gt: 0.57},
-                    percent_address_phonetic: 1,
-                    percent_address_metric:{$gt:0.54},
-                    distance: 1000000000
-                }
+
             ]
         }
     ]

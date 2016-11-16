@@ -4,24 +4,25 @@ const R = require("ramda");
 const fs = require("fs");
 var clj_fuzzy = require('clj-fuzzy');
 const geolib = require('geolib');
-function _trovaByName(places, {name, id, address,lat,lng}) {
+function _trovaByName(places, {name, id, address, lat, lng}) {
     var xf = R.compose(R.filter(place=> {
         return clj_fuzzy.metrics.dice(name, place.name) > 0.5;
     }), R.map(place=> {
         let name_p1 = name;
         let name_p2 = place.name;
         let percent_name = clj_fuzzy.metrics.dice(name_p1, name_p2);
-        let a1=clj_fuzzy.phonetics.double_metaphone(address)[0];
-        let a2=clj_fuzzy.phonetics.double_metaphone(place.address)[0];
+        let a1 = clj_fuzzy.phonetics.double_metaphone(address)[0];
+        let a2 = clj_fuzzy.phonetics.double_metaphone(place.address)[0];
         let percent_address_phonetic = clj_fuzzy.metrics.dice(a1, a2);
         let percent_address_metric = clj_fuzzy.metrics.dice(address, place.address);
-        let distance=1000000000;
-if(lat && lng && place.lat && place.lng){
-    distance=geolib.getDistance({latitude:lat,longitude:lng},{latitude:place.lat,longitude:place.lng}, 1, 3);
-}
-//         console.log(`${percent_name.toFixed(4)} | ${name_p1} => ${name_p2}
-// ${address} => ${place.address} | ${distance} m | ${percent_address_phonetic.toFixed(4)} | ${percent_address_metric.toFixed(4)}
-// ---------`);
+        let distance = 1000000000;
+        if (lat && lng && place.lat && place.lng) {
+            distance = geolib.getDistance({latitude: lat, longitude: lng}, {
+                latitude: place.lat,
+                longitude: place.lng
+            }, 1, 3);
+        }
+
         return {
             id_p1: id,
             id_p2: place.id,
@@ -39,7 +40,7 @@ if(lat && lng && place.lat && place.lng){
 }
 var trovaByName = R.curryN(2, _trovaByName);
 var guess = R.curryN(2, (config, place)=> {
-    return Object.keys(config).map(key=>config[key](place));
+    return R.map(key=>config[key](place),Object.keys(config));
 });
 var connection = new Connection();
 connection.connect()
@@ -52,26 +53,26 @@ connection.connect()
             name: place.name,
             id: place.id,
             address: `${place.location.street}, ${place.location.zip}, ${place.location.city}`
-            ,lat:place.location.latitude
-            ,lng:place.location.longitude
+            , lat: place.location.latitude
+            , lng: place.location.longitude
         }))), googColl.find().toArray().then(R.map(place=>({
             name: place.name
             , id: place.place_id
-            , address: place.formatted_address||""
-            ,lat:place.geometry.location.lat
-            ,lng:place.geometry.location.lng
+            , address: place.formatted_address || ""
+            , lat: place.geometry.location.lat
+            , lng: place.geometry.location.lng
 
         }))), impreColl.find().toArray().then(R.map(place=>({
             name: place.name
             , id: place._id.toString()
-            , address: place.address||""
+            , address: place.address || ""
         }))), openColl.find().toArray().then(R.map(place=>(
         {
             name: place.name
             , id: place.id
-            , address: place.full_address || place.indirizzo||""
-            ,lat:place.latitudine
-            ,lng:place.longitudine
+            , address: place.full_address || place.indirizzo || ""
+            , lat: place.latitudine
+            , lng: place.longitudine
         })))])
     })
     .then(([fbPlaces,googlePlaces,imprePlaces,openPlaces])=> {
@@ -96,14 +97,24 @@ connection.connect()
         };
 
         //
+        var now=Date.now();
+        console.log("start",now);
         var googleResults = R.compose(R.flatten, R.map(guess(goog_config)))(googlePlaces);
+        var t1=Date.now();
+        console.log("googleResults DONE",(t1-now)/1000," secondi | ",t1);
+        var now=Date.now();
         var fbResults = R.compose(R.flatten, R.map(guess(fb_config)))(fbPlaces);
+        var t1=Date.now();
+        console.log("fbResults DONE",(t1-now)/1000," secondi | ",t1);
+        var now=Date.now();
         var openResults = R.compose(R.flatten, R.map(guess(open_config)))(openPlaces);
-
+        var t1=Date.now();
+        console.log("openResults DONE",(t1-now)/1000," secondi | ",t1);
+        //
         var fuzzyMatchColl = connection.db.collection(Tables.FUZZY_MATCHES);
         return fuzzyMatchColl.insertMany(fbResults.concat(googleResults).concat(openResults));
     })
-    .then(_=>{
+    .then(_=> {
         connection.db.close();
         console.log("DONE");
         process.exit(0);

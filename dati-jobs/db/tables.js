@@ -20,3 +20,4 @@ exports.MOVIES_ORARI  = 'movies-orari';
 exports.MOVIES_ORARI  = 'movies-orari';
 exports.FUZZY_MATCHES = "fuzzy-matches";
 exports.FUZZY_MATCHES_ONE_TO_MANY = "fuzzy-matches-one-to-many";
+exports.RATINGS = "ratings";

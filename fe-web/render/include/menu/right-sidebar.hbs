@@ -1,8 +1,14 @@
-<aside class="right-sidebar">
+<aside class="right-sidebar"  data-mediator="filtra-listing">
+    <h1 class="title">Filtra per categoria: </h1>
+    <select class="filters">
+        {{#each categories}}
+            <option value="/places/{{query_filter}}">
+                {{name}}
+            </option>
+        {{/each}}
+    </select>
     <nav class="common-menu categories">
-        <h1 class="title">CATEGORIA: </h1>
-        <h2><a href="/places/{{main_category.query}}"><p>{{main_category.label}}</p></a></h2>
-        <h3 class="subtitle">filters</h3>
+        <h1 class="title">Categorie correlate: </h1>
         <ul class="menu">
             {{#each categories}}
                 <li class="menu-item {{active}}">

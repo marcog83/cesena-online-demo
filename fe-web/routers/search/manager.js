@@ -1,5 +1,5 @@
-let Connection = require("../dati-jobs/db/db-connection").Connection;
-let Tables = require("../dati-jobs/db/tables");
+let Connection = require("../../../dati-jobs/db/db-connection").Connection;
+let Tables = require("../../../dati-jobs/db/tables");
 let R = require("ramda");
 exports.search = query=> {
     var connection = new Connection();

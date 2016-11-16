@@ -60,10 +60,10 @@ const Categories = {
     agricultura: "Farming/Agriculture|Agricultural Service|Farm",
     frutta_verdura: "Fruit & Vegetable Store",
     museo: "museum|history museum",
-    negozio: "store",
+    negozio: "store|hardware_store|hardware store|",
     event_planner: "event planner",
     ferramenta: "hardware_store|hardware store",
-    "ristorante_text_mex": "Tex-Mex Restaurant",
+    "ristorante_tex_mex": "Tex-Mex Restaurant",
     "ristorante_italiano": "Italian Restaurant",
     "bar_sport": "Sports Bar",
     "fast_food": "Fast Food Restaurant",
@@ -113,7 +113,7 @@ const Categories = {
     picnic: "picnic ground",
     arte_intrattenimento: "arts & entertainment|arts & marketing",
     organizzazione_no_profit: "non-profit organization",
-    architetto: "architect|interior designer"
+    architettura: "architect|interior designer"
 };
 var esclusioni = "professional service|retail and consumer merchandise|amusement|performance venue|organization|non-governmental organization (ngo)|Local Business|point_of_interest|establishment".toLowerCase().split("|");
 var keys = Object.keys(Categories);
@@ -133,9 +133,6 @@ var xf = R.compose(R.filter(cat=> {
     }
 }));
 exports.map = R.compose(R.uniq, R.flatten, R.into([], xf));
-/*function (categories) {
- var results=R.flatten(R.into([],xf,categories));
- return R.uniq(results)
- };*/
+
 exports.Categories = Categories;
 

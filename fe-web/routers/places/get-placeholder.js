@@ -1,4 +1,4 @@
-let rules = require("../dati-jobs/fb/find-categories");
+let rules = require("../../../dati-jobs/fb/find-categories");
 var PLACEHOLDERS = {
     benessere: rules.BENESSERE
     , viaggiare: rules.BUSISNESS

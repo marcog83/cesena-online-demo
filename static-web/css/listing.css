@@ -316,11 +316,19 @@ svg {
   box-sizing: border-box;
   overflow: hidden;
 }
-.right-sidebar .common-menu .title {
+.right-sidebar .title {
   font-size: 12px;
-  margin-bottom: 0;
   text-transform: uppercase;
   line-height: 1;
+  margin-bottom: 10px;
+}
+.right-sidebar .filters {
+  padding: 8px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.right-sidebar .categories {
+  margin-top: 40px;
 }
 .right-sidebar .common-menu h2 {
   text-transform: uppercase;
