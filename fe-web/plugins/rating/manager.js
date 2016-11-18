@@ -1,7 +1,7 @@
-const Connection = require("../../dati-jobs/db/db-connection").Connection;
-const Tables = require("../../dati-jobs/db/tables");
+const Connection = require("../../../dati-jobs/db/db-connection").Connection;
+const Tables = require("../../../dati-jobs/db/tables");
 const R = require("ramda");
-exports.setRate = (user, category, id, value)=> {
+exports.setRate = ({category, id,user,value})=> {
     var connection = new Connection();
     return connection.connect()
         .then(connection.collection.bind(connection, Tables.RATINGS))

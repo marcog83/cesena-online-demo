@@ -5,7 +5,6 @@ const {search}=require("./manager");
 router.post("/", function (req, res) {
     search(req.body.query).then(response=>res.json(response));
     console.log(req.body.query);
-
 });
 
 module.exports = router;
