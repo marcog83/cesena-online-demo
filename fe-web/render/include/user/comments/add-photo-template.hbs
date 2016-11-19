@@ -1,0 +1,17 @@
+<script id="add-photo-template" type="text/x-handlebars-template">
+    {{{{raw-helper}}}}
+        <div class="autocomplete-results">
+            {{#if places}}
+            <ul class="places-results">
+                {{#each places}}
+                <li class="place-results-thumbnail">
+                    <a href="javascript:void(0);"><i class="material-icons">place</i>
+                        <p data-place-id="{{_id}}" data-place-name="{{name}}">{{name}}</p>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+            {{/if}}
+        </div>
+    {{{{/raw-helper}}}}
+</script>

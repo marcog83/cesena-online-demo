@@ -14,6 +14,12 @@
 </head>
 <body>
 <meta data-mediator="service-worker">
+
+<script id="add-comment-template" type="text/html">
+        {{> include/user/comments/add-comment}}
+</script>
+{{> include/search-toolbar/search-template}}
+{{> include/user/comments/add-photo-template}}
 <div class="header-CTR">
     {{> include/menu/topbar}}
 </div>

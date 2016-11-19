@@ -1,32 +1,4 @@
-<script id="search-template" type="text/x-handlebars-template">
-    {{{{raw-helper}}}}
 
-    <div class="autocomplete-results">
-        {{#if places}}
-        <h5 class="label">Luoghi</h5>
-        <ul class="places-results">
-            {{#each places}}
-                <li class="place-results-thumbnail">
-                    <a href="/places/detail/{{_id}}"><p>{{name}}</p></a>
-                </li>
-            {{/each}}
-        </ul>
-        {{/if}}
-        {{#if categories}}
-        <span class="separator"></span>
-        <h5 class="label">Categorie</h5>
-        <ul class="places-results">
-            {{#each categories}}
-                <li class="place-results-thumbnail">
-                    <a href="/places/{{query}}"><p>{{name}}</p></a>
-                </li>
-            {{/each}}
-        </ul>
-        {{/if}}
-
-    </div>
-    {{{{/raw-helper}}}}
-</script>
 <div class="search-toolbar" data-mediator="search-toolbar">
     <input class="js-input search-input" placeholder="cerca...">
     <i class="material-icons">search</i>

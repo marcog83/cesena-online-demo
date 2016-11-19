@@ -14,11 +14,13 @@ define(function () {
             LOGGED_OUT: "LOGGED_OUT"
             , MIXPANEL_LOADED: "MIXPANEL_LOADED"
         }
-        ,PopupEvent:{
-            OPEN:"OPEN"
-            ,CLOSE:"CLOSE"
+        , PopupEvent: {
+            OPEN: "OPEN"
+            , CLOSE: "CLOSE"
         }
 
-
+        , CommentsEvent: {
+            UPDATE_PLACE: "UPDATE_PLACE"
+        }
     };
 });

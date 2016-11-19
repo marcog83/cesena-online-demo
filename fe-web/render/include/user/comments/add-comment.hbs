@@ -1,20 +1,37 @@
-<div class="add-comment-popup">
+<div class="add-comment-popup" data-mediator='add-comment'>
     <div class="comment-CNT">
         <div class="js-text comment-text">
-            <textarea class="comment-textarea"></textarea>
+            <textarea class="comment-textarea" placeholder="a cosa pensi?"></textarea>
         </div>
         <div class="js-image comment-photo hidden">
             <img src="" class="image">
         </div>
     </div>
     <div class="comment-info ">
-        <div class="action-button" data-mediator="add-place-button">
-            <i class="material-icons">place</i>
+        <div  class="add-place" data-mediator="add-place">
+            <div class="js-button action-button">
+                <i class="material-icons">place</i>
+            </div>
+            <label class="place-label js-place-label hidden"></label>
+            <div class="js-place-autocomplete place-autocomplete hidden">
+                <input class="js-input search-input" placeholder="cerca un posto da taggare...">
+
+                <div class="js-autocomplete autocomplete-CTR"></div>
+                <div class="comment-buttons">
+                    <ul>
+                        <li class="comment-button js-annulla-add-place annulla"  >
+                            <p>ANNULLA</p>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
     <div class="comment-buttons">
         <ul>
-            <li class="comment-button">
+            <li class="comment-button annulla" data-mediator="popup-close-button">
                 <p>ANNULLA</p>
             </li>
             <li class="comment-button">
@@ -22,4 +39,5 @@
             </li>
         </ul>
     </div>
+
 </div>

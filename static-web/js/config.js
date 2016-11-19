@@ -8,8 +8,10 @@ require.config({
         ,ramda:"../bower_components/ramda/dist/ramda.min"
         ,qs:"../bower_components/qs/dist/qs.min"
         ,handlebars:"../bower_components/handlebars/handlebars.amd.min"
-        ,robojs:"../bower_components/robojs/dist/robojs.es6.min"
+        ,robojs:"../bower_components/robojs/dist/robojs.es6"
         ,fetch:"../bower_components/fetch/fetch"
+
+        ,"delegate":"../bower_components/delegate/dist/delegate"
     }
     ,shim:{
         perfect_scrollbar:{
@@ -18,6 +20,7 @@ require.config({
         ,fetch:{
             exports:"fetch"
         }
+
 
     }
 });

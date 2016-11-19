@@ -136,8 +136,11 @@ a {
   text-decoration: none;
   color: #333333;
 }
+.hidden {
+  display: none!important;
+}
 .header-CTR {
-  padding: 10px;
+  padding: 10px 16px;
   border-bottom: 1px solid #b7b7b7;
   position: fixed;
   width: 100%;
@@ -230,8 +233,109 @@ a {
 .add-comment {
   margin-right: 20px;
 }
+.comment-CNT {
+  width: 400px;
+}
+.add-comment-popup {
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+.add-comment-popup .comment-textarea {
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  color: gray;
+  border: none;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 20px;
+  padding: 0;
+}
+.add-comment-popup .comment-photo {
+  width: 400px;
+  height: auto;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.add-comment-popup .comment-photo img {
+  max-width: 100%;
+  max-height: 350px;
+}
+.add-comment-popup .comment-buttons {
+  font-size: 0;
+  text-align: right;
+}
+.add-comment-popup .comment-buttons .comment-button {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px;
+  background: silver;
+  color: white;
+  font-size: 15px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.add-comment-popup .comment-buttons .comment-button:last-child {
+  margin-right: 0;
+}
+.add-comment-popup .comment-buttons .comment-button.annulla {
+  background: #ff2424;
+}
+.add-comment-popup .add-place {
+  margin-bottom: 10px;
+}
+.add-comment-popup .add-place .place-label {
+  overflow: hidden;
+  max-width: 356px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.add-comment-popup .place-autocomplete {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.add-comment-popup .place-autocomplete input {
+  padding: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  border: none;
+}
+.add-comment-popup .place-autocomplete .autocomplete-CTR {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  border: none;
+  min-width: 100%;
+}
+.add-comment-popup .place-autocomplete .autocomplete-CTR .place-results-thumbnail p {
+  transition: color 0.2s ease-out;
+  display: inline-block;
+  margin-left: 10px;
+}
+.add-photo input {
+  width: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  opacity: 0;
+  cursor: pointer;
+}
 .user-actions .action {
   display: inline-block;
+  position: relative;
 }
 .user-actions .comment-label {
   color: #bdbdbd;
@@ -244,6 +348,8 @@ a {
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
+  width: 20px;
+  height: 20px;
 }
 .topbar .table-CTR {
   display: table;
@@ -260,6 +366,30 @@ a {
 }
 .topbar .table-cell.user-actions {
   text-align: right;
+}
+.popup-CTR {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+.popup-CTR .fade {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.popup-CTR .popup-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
 .search-toolbar {
   position: relative;
