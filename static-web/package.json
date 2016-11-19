@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@most/create": "^2.0.1"
+    "@most/create": "^2.0.1",
+    "fine-uploader": "^5.11.9"
   }
 }

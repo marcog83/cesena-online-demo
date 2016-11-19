@@ -16,15 +16,15 @@ var QUERY_MATCHES = {
                 },
                 {
                     percent_name: {$gt: 0.8},
-                    distance: {$lt: 40}
+                    distance: {$lt: 30}
                 },
                 {
-                    percent_name: {$gt: 0.55},
+                    percent_name: {$gt: 0.6},
                     percent_address_phonetic: 1,
                     distance: {$lt: 30}
                 },
                 {
-                    percent_name: {$gt: 0.7},
+                    percent_name: {$gt: 0.8},
                     percent_address_phonetic: 1,
 
                 }

@@ -19,9 +19,10 @@ const handlebars = require('./render/handlebars-config');
 const options = {
     key: fs.readFileSync(__dirname + '/server.key'),
     cert:  fs.readFileSync(__dirname + '/server.crt')
-}
+};
 var app = express();
 handlebars(app);
+
 app.use('/static', express.static(__dirname + '/../static-web'));
 
 

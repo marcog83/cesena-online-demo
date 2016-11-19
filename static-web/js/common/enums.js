@@ -14,6 +14,10 @@ define(function () {
             LOGGED_OUT: "LOGGED_OUT"
             , MIXPANEL_LOADED: "MIXPANEL_LOADED"
         }
+        ,PopupEvent:{
+            OPEN:"OPEN"
+            ,CLOSE:"CLOSE"
+        }
 
 
     };
