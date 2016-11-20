@@ -34,7 +34,7 @@ define(function (require) {
 
             };
             img.onerror=function(){
-                img.src ="/fe-web/img/placeholder-normal.jpg";
+                // img.src ="/fe-web/img/placeholder-normal.jpg";
 
                 // TweenMax.to(node,.5,{alpha:1});
             };

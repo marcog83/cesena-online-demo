@@ -17,5 +17,6 @@ define(function (require, exports, module) {
         , "popup-close-button": "modules/popup/popup-close-button"
         , "add-place": "modules/search/add-place"
         , "textarea-autogrow": "modules/comments/textarea-autogrow"
+        , "hamburger-menu": "modules/hamburger-menu/hamburger-menu"
     };
 });

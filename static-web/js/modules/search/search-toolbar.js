@@ -18,7 +18,7 @@ define(function (require) {
         var SEARCH_URL = "/search";
         var input = node.querySelector(".js-input");
         var autocompleteDOM = node.querySelector(".js-autocomplete");
-        most.fromEvent("keypress", node)
+        most.fromEvent("keyup", node)
             .debounce(300)
             .filter(function () {
                 return input.value.length > 2;
@@ -29,7 +29,7 @@ define(function (require) {
             })
             .flatMap(function (query) {
                 return most.of(SEARCH_URL)
-                    .until(most.fromEvent("keypress", input))
+                    .until(most.fromEvent("keyup", input))
                     .flatMap(function (url) {
                         return most.fromPromise(service.post(url, {query: query}));
                     })

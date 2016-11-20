@@ -13,11 +13,23 @@
 }
 .action-button{
   padding: 10px;
-  background: lavender;
+  background: #f1f1f1;
   border-radius: 50%;
   display: inline-block;
   vertical-align:middle;
   cursor: pointer;
   width: 20px;
   height: 20px;
+}
+@media screen and(max-width:767px){
+  .user-actions {
+    .comment-label{
+      display:none;
+    }
+    .user-action{
+      &:first-child{
+        margin-right: 5px;
+      }
+    }
+  }
 }

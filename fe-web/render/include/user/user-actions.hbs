@@ -1,10 +1,16 @@
 
 <div class="user-actions" >
     <label class="comment-label">a cosa stai pensando?</label>
-    <div class="action add-comment action-button" data-mediator="add-comment-input">
+    <div class="action add-comment action-button"
+         {{#if page_id}}data-place-id="{{page_id}}"{{/if}}
+        {{#if name}}data-place-name="{{name}}"{{/if}}
+         data-mediator="add-comment-input">
         <i class="material-icons">comment</i>
     </div>
-    <div class="action add-photo action-button" data-mediator="add-photo-input">
+    <div class="action add-photo action-button"
+        {{#if page_id}}data-place-id="{{page_id}}"{{/if}}
+        {{#if name}}data-place-name="{{name}}"{{/if}}
+         data-mediator="add-photo-input">
         <i class="material-icons">photo_camera</i>
         <input name="file" type="file" class="invisible" accept="image/*"/>
 

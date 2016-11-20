@@ -1,20 +1,41 @@
 @import "user/user-actions/_user-actions";
-.topbar{
-  .table-CTR{
+
+.topbar {
+  .table-CTR {
     display: table;
     width: 100%;
   }
-  .table-cell{
+  .table-cell {
     display: table-cell;
-    &.homepage{
+    &.homepage {
       width: 212px;
     }
-    &.search{
-      margin-left:22px;
+    &.search {
+      margin-left: 22px;
     }
-    &.user-actions{
-      text-align:right;
+    &.user-actions {
+      text-align: right;
       //padding-right: 25px;
+    }
+  }
+}
+
+@media screen and(max-width: 767px) {
+  .topbar {
+    .table-cell {
+      padding: 0 5px;
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+      &.homepage {
+        width: 40px;
+      }
+      &.user-actions {
+        width: 90px;
+      }
     }
   }
 }

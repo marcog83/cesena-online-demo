@@ -22,7 +22,7 @@ define(function (require) {
         var SEARCH_URL = "/search";
         var input = node.querySelector(".js-input");
         var autocompleteDOM = node.querySelector(".js-autocomplete");
-        most.fromEvent("keypress", node)
+        most.fromEvent("keyup", node)
             .debounce(300)
             .filter(function () {
                 return input.value.length > 2;
@@ -34,7 +34,7 @@ define(function (require) {
             .startWith("cesena")
             .flatMap(function (query) {
                 return most.of(SEARCH_URL)
-                    .until(most.fromEvent("keypress", input))
+                    .until(most.fromEvent("keyup", input))
                     .flatMap(function (url) {
                         return most.fromPromise(service.post(url, {query: query}));
                     })
@@ -44,11 +44,23 @@ define(function (require) {
         var placeContainer = node.querySelector(".js-place-autocomplete");
         addPlaceButton.addEventListener("click", function () {
             placeContainer.classList.remove("hidden");
+            node.classList.add("opened");
+            document.querySelector(".add-comment-popup").classList.add("add-place-opened");
         });
+
+        var place=photoModel.getPlace();
+        if(place.name){
+            placeLabel.innerHTML=place.name;
+            placeLabel.classList.remove("hidden");
+
+        }
+
         var delegate = Delegate(placeContainer, "[data-place-id]", 'click', function (e) {
             console.log(e.delegateTarget);
             photoModel.setPlace(e.delegateTarget.dataset.placeId, e.delegateTarget.dataset.placeName);
             placeContainer.classList.add("hidden");
+            node.classList.remove("opened");
+            document.querySelector(".add-comment-popup").classList.remove("add-place-opened");
             placeLabel.classList.remove("hidden");
             dispatcher.dispatchEvent(new rjs.RJSEvent(enums.CommentsEvent.UPDATE_PLACE, photoModel.getPlace()));
             placeLabel.innerHTML = photoModel.getPlace().name;
@@ -57,6 +69,8 @@ define(function (require) {
         annullaAddPlace.addEventListener("click",function(){
             placeContainer.classList.add("hidden");
             placeLabel.classList.add("hidden");
+            node.classList.remove("opened");
+            document.querySelector(".add-comment-popup").classList.remove("add-place-opened");
             photoModel.setPlace(null,null);
             placeLabel.innerHTML = "";
         })
