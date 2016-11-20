@@ -13,7 +13,7 @@
   display: block;
   position: fixed;
   background: rgba(0, 0, 0, 0.33);
-  z-index: 2;
+  z-index: 200;
   top: 0;
   left: 0;
   //pointer-events: none;
@@ -40,16 +40,36 @@
             margin-right: 15px;
           }
         }
+      &.homepage{
+        display:none;
+      }
       }
     }
   }
 }
 @media screen and(max-width:767px){
+
   .left-sidebar-CTR{
     display:none;
+
+    z-index: 300;
     overflow-y: auto;
     &.opened{
       display:block;
+    }
+  }
+  .left-sidebar{
+    padding: 20px 20px;
+    .common-menu {
+
+      .menu {
+        .menu-item {
+
+          &.homepage{
+            display:block;
+          }
+        }
+      }
     }
   }
 }
