@@ -18,5 +18,6 @@ define(function (require, exports, module) {
         , "add-place": "modules/search/add-place"
         , "textarea-autogrow": "modules/comments/textarea-autogrow"
         , "hamburger-menu": "modules/hamburger-menu/hamburger-menu"
+        , "menu-visibility": "modules/menu/topbar-menu-visibility"
     };
 });

@@ -137,7 +137,7 @@ a {
   color: #333333;
 }
 .hidden {
-  display: none!important;
+  display: none !important;
 }
 .header-CTR {
   padding: 10px 16px;
@@ -202,9 +202,19 @@ a {
 @media screen and (max-width: 767px) {
   .header-CTR {
     padding: 10px 12px;
+    transform: translateY(0);
+    transition: transform 0.5s ease-out;
+    will-change: transform;
+  }
+  .header-CTR.closed {
+    transform: translateY(-90px);
+    transition: transform 0.5s ease-in;
+  }
+  .body-CTR {
+    padding-top: 60px;
   }
   .body-CNT {
-    margin: 0!important;
+    margin: 0 !important;
     width: 100%;
   }
   .main-content {
@@ -223,6 +233,17 @@ a {
   height: 100%;
   overflow: hidden;
   background: white;
+  z-index: 2;
+}
+.fade-left-sidebar {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.33);
+  z-index: 2;
+  top: 0;
+  left: 0;
 }
 .left-sidebar {
   width: 220px;
@@ -250,6 +271,7 @@ a {
 @media screen and (max-width: 767px) {
   .left-sidebar-CTR {
     display: none;
+    overflow-y: auto;
   }
   .left-sidebar-CTR.opened {
     display: block;

@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/perfect-scrollbar.min.css"/>
+    <!-- Startup configuration -->
+    <link rel="manifest" href="/static/manifest.json">
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCP7Leoxb6Lqp--LAex1hKfthYQ0yMKrwo">
     </script>
@@ -20,11 +22,13 @@
 </script>
 {{> include/search-toolbar/search-template}}
 {{> include/user/comments/add-photo-template}}
-<div class="header-CTR">
+<div class="header-CTR" data-mediator="menu-visibility">
     {{> include/menu/topbar}}
 </div>
 <div class="body-CTR">
+    <div class="fade-left-sidebar hidden"></div>
     <div class="left-sidebar-CTR"  data-mediator="perfect-scrollbar">
+
         {{> include/menu/left-sidebar}}
     </div>
     <div class="body-CNT">
