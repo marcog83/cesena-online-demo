@@ -16,5 +16,6 @@ define(function (require, exports, module) {
         , "add-comment-input": "modules/comments/add-comment-input"
         , "popup-close-button": "modules/popup/popup-close-button"
         , "add-place": "modules/search/add-place"
+        , "textarea-autogrow": "modules/comments/textarea-autogrow"
     };
 });

@@ -1,7 +1,7 @@
 <div class="add-comment-popup" data-mediator='add-comment'>
     <div class="comment-CNT">
         <div class="js-text comment-text">
-            <textarea class="comment-textarea" placeholder="a cosa pensi?"></textarea>
+            <textarea contenteditable data-mediator="textarea-autogrow" class="comment-textarea js-textarea" placeholder="a cosa pensi?"></textarea>
         </div>
         <div class="js-image comment-photo hidden">
             <img src="" class="image">
@@ -34,7 +34,7 @@
             <li class="comment-button annulla" data-mediator="popup-close-button">
                 <p>ANNULLA</p>
             </li>
-            <li class="comment-button">
+            <li class="comment-button js-submit">
                 <p>PUBBLICA</p>
             </li>
         </ul>

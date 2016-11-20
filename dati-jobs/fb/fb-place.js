@@ -5,7 +5,7 @@
 // Using require() in ES5
 var FB = require('fb');
 // var categories = require('./category-list');
-var instagram = require('../instagram');
+
 var fs = require("fs");
 FB.options({version: 'v2.8'});
 
@@ -58,21 +58,7 @@ function getPlaces() {
     })
 }
 
-function getInstagram(place,i) {
-    return instagram(place.id,i).then(function (photos) {
 
-        return {
-            id_facebook: place.id,
-            instagram_photos: photos
-        };
-    }).catch(function (e) {
-        console.log("getInstagram", e);
-        return {
-            id_facebook: place.id,
-            instagram_photos: []
-        };
-    });
-}
 var since=(new Date().getTime()/1000).toFixed();
 function getPlaceDetails(id, i) {
 
@@ -119,7 +105,7 @@ exports.getPlaces = ()=> getAccessToken().then(getPlaces).then(places=> places.f
 exports.getPlacesDetails = getPlaceDetails;
 exports.getAccessToken = getAccessToken;
 
-exports.getInstagram=places=> Promise.all(places.map(getInstagram));
+// exports.getInstagram=places=> Promise.all(places.map(getInstagram));
 
 exports.getPlaceFromLocation=function(place){
    return getAccessToken().then(function(){

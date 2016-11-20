@@ -204,26 +204,7 @@ function getGoogleDetails() {
                 })
         })
 }
-function updateInstagram() {
-     return readJSONFile(File.INSTAGRAM_PHOTOS_JSON).then(instagram_photos=> {
-        var connection = new Connection();
-        return connection.connect()
-            .then(connection.collection.bind(connection, Tables.INSTAGRAM_PHOTOS))
-            .then(coll=> {
-                return Promise.all(instagram_photos.map(photos=> {
-                   return coll.findOneAndUpdate({id: photos.id}, {$set: photos}, {upsert: true})
 
-                }));
-            }).then(function (response) {
-                connection.db.close();
-                return response;
-            }).catch(e=> {
-                console.log("instagram inseert failed:", e);
-                connection.db.close();
-                return e;
-            })
-    })
-}
 
 
 

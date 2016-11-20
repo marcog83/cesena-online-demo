@@ -8,9 +8,7 @@ define(function (require, exports, module) {
             var template = e.data.template;
             node.querySelector(".popup-CNT").innerHTML = template;
         });
-        node.querySelector(".fade").addEventListener("click",function(){
-            dispatcher.dispatchEvent(new rjs.RJSEvent(enums.PopupEvent.CLOSE))
-        });
+
         dispatcher.addEventListener(enums.PopupEvent.CLOSE, function (e) {
             node.classList.add("hidden");
 

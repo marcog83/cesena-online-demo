@@ -5,6 +5,7 @@ const spdy = require('spdy');
 
 const fs = require('fs');
 
+const comment = require('./routers/comments/comment');
 const places = require('./routers/places/places');
 const search = require("./routers/search/search");
 const events = require("./routers/events/events");
@@ -28,7 +29,7 @@ app.use('/static', express.static(__dirname + '/../static-web'));
 
 //
 app.use(bodyParser.json()); // for parsing application/json
-app.use(bodyParser.urlencoded({extended: true})); // for parsing application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({extended: true, keepExtensions: true  })); // for parsing application/x-www-form-urlencoded
 //
 app.use('/places', places);
 app.use("/search", search);
@@ -37,6 +38,7 @@ app.use("/events", events);
 //
 app.use("/movies", movies);
 //
+comment(app);
 app.use('/', homepage);
 app.use('/',  express.static(__dirname ));
 //

@@ -8,9 +8,10 @@ function mapInstagramPhoto(photo) {
 
     return {
         image: photo.thumbnail_src
+        ,code: photo.code
         , description: textFormatter(photo.caption ||"")
-        , rating: R.view(R.lensPath(["likes", "count"]), photo)
-        , comments: R.view(R.lensPath(["comments", "count"]), photo)
+        , rating: R.view(R.lensPath(["likes", "count"]), photo)||0
+        , comments: R.view(R.lensPath(["comments", "count"]), photo)||0
     }
 }
 
