@@ -214,7 +214,7 @@ a {
     transition: transform 0.5s ease-in;
   }
   .body-CTR {
-    padding-top: 60px;
+    padding-top: 50px;
   }
   .body-CNT {
     margin: 0 !important;
@@ -565,9 +565,21 @@ a {
   min-width: 400px;
   box-sizing: border-box;
 }
+.autocomplete-CTR .fade-autocomplete {
+  display: block;
+  width: 100%;
+  height: calc(100vh + 51px);
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 51px;
+  left: 0;
+  z-index: 0;
+}
 .autocomplete-CTR .autocomplete-results {
   background: white;
   padding: 10px 0;
+  position: relative;
+  z-index: 0;
 }
 .autocomplete-CTR .autocomplete-results .label {
   font-size: 12px;

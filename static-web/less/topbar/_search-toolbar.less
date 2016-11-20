@@ -14,9 +14,21 @@
   border: 1px solid silver;
   min-width: 400px;
   box-sizing: border-box;
+  .fade-autocomplete{
+    display: block;
+    width: 100%;
+    height: ~"calc(100vh + 51px)";
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 51px;
+    left: 0;
+    z-index: 0;;
+  }
   .autocomplete-results{
     background: white;
     padding: 10px 0;
+    position: relative;
+    z-index: 0;
     .label{
       font-size: 12px;
       font-weight: bold;
@@ -67,5 +79,6 @@
     max-height: 100vh;
     overflow-y: auto;
     border: none;
+
   }
 }
