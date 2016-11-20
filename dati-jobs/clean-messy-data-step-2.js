@@ -59,7 +59,7 @@ connection.connect()
                     , QUERY_MATCHES]
             }).toArray()
              */
-           return Promise.resolve(R.filter(item=>item.id_p1==match.id_p1,matches)).then(response=> {
+           return Promise.resolve(R.filter(item=>(item.id_p1==match.id_p1||item.id_p2==match.id_p1),matches)).then(response=> {
                 return {
                     id: match.id_p1.toString(),
                     name: match.name_p1,

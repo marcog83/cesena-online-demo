@@ -33,13 +33,19 @@ function _getInstagram(place,i) {
 var getInstagram=places=> Promise.all(places.map(_getInstagram));
 
 function updateInstagram() {
-    return readJSONFile(File.INSTAGRAM_PHOTOS_JSON).then(instagram_photos=> {
+    return Promise.all([
+        readJSONFile(File.INSTAGRAM_PHOTOS_JSON)
+        // ,readJSONFile(File.INSTAGRAM_PHOTOS_OLD_JSON)
+    ])
+
+        .then(([a])=> {
+            var instagram_photos=a;
         var connection = new Connection();
         return connection.connect()
             .then(connection.collection.bind(connection, Tables.INSTAGRAM_PHOTOS))
             .then(coll=> {
                 return Promise.all(instagram_photos.map(photos=> {
-                    return coll.findOneAndUpdate({id: photos.id}, {$set: photos}, {upsert: true})
+                    return coll.findOneAndUpdate({id_facebook: photos.id_facebook}, {$set: photos}, {upsert: true})
 
                 }));
             }).then(function (response) {
@@ -54,13 +60,15 @@ function updateInstagram() {
 }
 
 
-var connection = new Connection();
-connection.connect()
-    .then(connection.collection.bind(connection, Tables.FACEBOOK_PLACES))
-    .then(coll=>coll.find().toArray())
-    .then(R.tap(_=>connection.db.close()))
+// var connection = new Connection();
+// connection.connect()
+//     .then(connection.collection.bind(connection, Tables.FACEBOOK_PLACES))
+//     .then(coll=>coll.find().toArray())
+//     .then(R.tap(_=>connection.db.close()))
+//
+//     .then(getInstagram)
+//     .then(writeJSONFile(File.INSTAGRAM_PHOTOS_JSON))
+//     .then(updateInstagram)
+//     .catch(R.tap(_=>connection.db.close()));
 
-    .then(getInstagram)
-    .then(writeJSONFile(File.INSTAGRAM_PHOTOS_JSON))
-    .then(updateInstagram)
-    .catch(R.tap(_=>connection.db.close()));
+updateInstagram()

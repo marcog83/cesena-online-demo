@@ -4,7 +4,7 @@ var {getOpenData}=require("./opendata/get-opendata");
 var FB = require("./fb/fb-place");
 var FBHelpers = require("./fb/get-events");
 var google = require("./google-places/google-place");
-var {findSimilarityGoogleFB} = require("./filtra-fb-google");
+// var {findSimilarityGoogleFB} = require("./filtra-fb-google");
 var Connection = require("./db/db-connection").Connection;
 var Tables = require("./db/tables");
 var _ = require('lodash');
@@ -26,15 +26,15 @@ function readJSONFile(filename) {
 function getFacebookDetails({from_file=true}) {
     var promise;
     if (!from_file) {
-        promise = readJSONFile(File.MY_PLACES_JSON)
-            .then(R.filter(place=>place.id_facebook))
+        promise = readJSONFile(File.FB_PLACES_JSON)
+            // .then(R.filter(place=>place.id_facebook))
             .then(places=> {
                 return Promise.all(places
                     .map((place, i)=> {
                         return new Promise((resolve, reject)=> {
                             setTimeout(_=> {
                                 FB.getAccessToken()
-                                    .then(_=> FB.getPlacesDetails(place.id_facebook))
+                                    .then(_=> FB.getPlacesDetails(place.id))
                                     .then(function (resp) {
                                         resolve(resp)
                                     })
@@ -59,7 +59,9 @@ function getFacebookDetails({from_file=true}) {
 
                 .then(connection.collection.bind(connection, Tables.FACEBOOK_PLACES))
 
-                .then(col=> Promise.all(details.map(place=> {
+                .then(col=> Promise.all(details
+                    .filter(place=>Object.keys(place).length)
+                    .map(place=> {
                     return col.findOneAndUpdate({id: place.id}, {$set: place}, {
                         upsert: true,
                         returnNewDocument: true

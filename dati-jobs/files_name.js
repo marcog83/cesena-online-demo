@@ -7,4 +7,5 @@ exports.NEW_PLACES_ADDED_JSON = "new-my-places.json";
 exports.OPEN_DATA_JSON = "opendata-places.json";
 exports.GOOGLE_DETAILS_JSON = "google-details-places.json";
 exports.INSTAGRAM_PHOTOS_JSON = "instagram-photos-slow.json";
+exports.INSTAGRAM_PHOTOS_OLD_JSON = "instagram-photos-slow-1.json";
 exports.PIADINERIE_GOOGLE_OPENDATA_HAND_FILTERED = "piadinerie-google-places-filtrate-mano.json";

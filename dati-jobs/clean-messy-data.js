@@ -6,7 +6,7 @@ var clj_fuzzy = require('clj-fuzzy');
 const geolib = require('geolib');
 function _trovaByName(places, {name, id, address, lat, lng}) {
     var xf = R.compose(R.filter(place=> {
-        return clj_fuzzy.metrics.dice(name, place.name) > 0.5;
+        return clj_fuzzy.metrics.dice(name, place.name) > 0.54;
     }), R.map(place=> {
         let name_p1 = name;
         let name_p2 = place.name;
@@ -22,7 +22,9 @@ function _trovaByName(places, {name, id, address, lat, lng}) {
                 longitude: place.lng
             }, 1, 3);
         }
-
+        console.log(`${percent_name.toFixed(4)} | ${name_p1} => ${name_p2}
+${address} => ${place.address} | ${distance} m | ${percent_address_phonetic.toFixed(4)} | ${percent_address_metric.toFixed(4)}
+---------`);
         return {
             id_p1: id,
             id_p2: place.id,
