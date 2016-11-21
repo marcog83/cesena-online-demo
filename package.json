@@ -28,7 +28,8 @@
     "passport": "^0.3.2",
     "ramda": "^0.22.1",
     "spdy": "^3.4.4",
-    "string-similarity": "^1.1.0"
+    "string-similarity": "^1.1.0",
+    "connect-busboy": "^0.0.2"
   },
   "description": "",
   "engines": {
