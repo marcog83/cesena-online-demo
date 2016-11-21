@@ -547,6 +547,9 @@ a {
 .topbar .table-cell {
   display: table-cell;
 }
+.topbar .table-cell.hamburger {
+  display: none;
+}
 .topbar .table-cell.homepage {
   width: 212px;
 }
@@ -565,6 +568,9 @@ a {
   }
   .topbar .table-cell:last-child {
     padding-right: 0;
+  }
+  .topbar .table-cell.hamburger {
+    display: table-cell;
   }
   .topbar .table-cell.homepage {
     width: 40px;
