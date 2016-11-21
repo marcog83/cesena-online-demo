@@ -1,7 +1,11 @@
 var MongoClient = require('mongodb').MongoClient;
 
-// var url = 'mongodb://localhost:27017/cesena-sociale';
+var args = require("minimist")(process.argv.slice(2));
+
 var url = 'mongodb://marcogobbi:m4rc0g0bb1@ds159527.mlab.com:59527/cesena-sociale';
+if(args.ambiente=="LOCAL"){
+     url = 'mongodb://localhost:27017/cesena-sociale';
+};
 
 
 var Deferred = function () {
