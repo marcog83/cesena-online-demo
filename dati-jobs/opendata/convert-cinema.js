@@ -1,4 +1,4 @@
-let {Converter} = require("csvtojson");
+
 let fs = require("fs");
 let fromCSV = require("./convert-to-json");
 var Connection = require("../db/db-connection").Connection;

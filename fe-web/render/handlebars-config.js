@@ -10,12 +10,12 @@ module.exports=function(app){
     app.engine('.hbs', exphbs({
         defaultLayout: 'layout'
         , extname: '.hbs'
-        , layoutsDir: "render/layout/"
+        , layoutsDir: "fe-web/render/layout/"
         // Uses multiple partials dirs, templates in "shared/templates/" are shared
         // with the client-side of the app (see below).
-        , partialsDir: "render"
+        , partialsDir: "fe-web/render"
     }));
 
-    app.set('views', 'render/body/');
+    app.set('views', 'fe-web/render/body/');
     app.set('view engine', '.hbs');
 };

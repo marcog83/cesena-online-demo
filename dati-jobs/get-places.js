@@ -7,7 +7,7 @@ var google = require("./google-places/google-place");
 // var {findSimilarityGoogleFB} = require("./filtra-fb-google");
 var Connection = require("./db/db-connection").Connection;
 var Tables = require("./db/tables");
-var _ = require('lodash');
+
 var R = require('ramda');
 const File=require("./files_name");
 
