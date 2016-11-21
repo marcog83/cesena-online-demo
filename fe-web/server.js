@@ -20,7 +20,10 @@ const handlebars = require('./render/handlebars-config');
 var app = express();
 handlebars(app);
 
-app.use('/static', express.static(__dirname + '/../static-web'));
+app.use('/static', express.static(__dirname + '/../static-web',{
+    maxAge: '5d'
+    ,etag:"strong"
+}));
 
 
 //
