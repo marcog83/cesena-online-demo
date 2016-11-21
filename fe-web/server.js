@@ -48,8 +48,8 @@ app.use(function(req, res, next) {
     res.setHeader("Service-Worker-Allowed", "/");
     return next();
 });
-spdy .createServer(options, app)
-.listen(app.get('port'), (error) => {
+// spdy .createServer(options, app)
+app.listen(app.get('port'), (error) => {
         if (error) {
             console.error(error);
             return process.exit(1)
