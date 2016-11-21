@@ -3,7 +3,7 @@ const express = require('express');
 const spdy = require('spdy');
 
 
-const fs = require('fs');
+// const fs = require('fs');
 
 const comment = require('./routers/comments/comment');
 const places = require('./routers/places/places');
@@ -17,10 +17,10 @@ const qs = require("qs");
 const bodyParser = require('body-parser');
 const handlebars = require('./render/handlebars-config');
 
-const options = {
-    key: fs.readFileSync(__dirname + '/server.key'),
-    cert:  fs.readFileSync(__dirname + '/server.crt')
-};
+// const options = {
+//     key: fs.readFileSync(__dirname + '/server.key'),
+//     cert:  fs.readFileSync(__dirname + '/server.crt')
+// };
 var app = express();
 handlebars(app);
 
