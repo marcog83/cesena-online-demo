@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "fe-web/server.js",
   "author": "",
-  "license": "mit",
+  "license": "GPL",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marcog83/cesena-online-demo.git"
