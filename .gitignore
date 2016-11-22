@@ -2,3 +2,4 @@
 node_modules
 _*.css
 bower_components
+*.iml

@@ -19,6 +19,13 @@ const qs = require("qs");
 const bodyParser = require('body-parser');
 const handlebars = require('./render/handlebars-config');
 
+function  cacheMiddleware(seconds){
+    return function(req,res,next){
+        res.setHeader("Cache-Control", `public, max-age=${seconds}`);
+        res.setHeader("Service-Worker-Allowed", `/`);
+        next();
+    }
+}
 var app = express();
 
 app.use(minifyHTML({
@@ -34,9 +41,13 @@ app.use(minifyHTML({
     }
 }));
 app.use(compression());
+app.use(cacheMiddleware(432000));
 
 handlebars(app);
-
+app.use('/wireframes', express.static(__dirname + '/../wireframes',{
+    maxAge: '5d'
+    ,etag:"strong"
+}));
 app.use('/static', express.static(__dirname + '/../static-web',{
     maxAge: '5d'
     ,etag:"strong"
