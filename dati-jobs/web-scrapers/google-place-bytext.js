@@ -2,7 +2,7 @@ let fs = require("fs");
 var qs = require("qs");
 var R = require("ramda");
 var https = require("https");
-var stringSimilarity = require('string-similarity');
+
 // var KEY = "AIzaSyCVP_DWJ4x_-HiwGbznZiwsLAphxYUOqZQ";
 var KEY = "AIzaSyA2awqLXHWlJuyI5mLY2du4NcuA7OYgpus";
 // var KEY = "AIzaSyCP7Leoxb6Lqp--LAex1hKfthYQ0yMKrwo";

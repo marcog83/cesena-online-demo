@@ -13,11 +13,13 @@ const homepage = require("./routers/homepage/homepage");
 const movies = require("./routers/movies/movies");
 
 const path = require("path");
+const compression = require("compression");
 const qs = require("qs");
 const bodyParser = require('body-parser');
 const handlebars = require('./render/handlebars-config');
 
 var app = express();
+app.use(compression());
 handlebars(app);
 
 app.use('/static', express.static(__dirname + '/../static-web',{
@@ -39,14 +41,11 @@ app.use("/movies", movies);
 //
 comment(app);
 app.use('/', homepage);
-app.use('/', express.static(__dirname));
+
 //
 const PORT = process.env.PORT || 5000;
 app.set('port', PORT);
-app.use(function (req, res, next) {
-    res.setHeader("Service-Worker-Allowed", "/");
-    return next();
-});
+
 
 var bootstrap = app;
 
@@ -57,7 +56,7 @@ if (args.ambiente == "LOCAL") {
         key: fs.readFileSync(__dirname + '/server.key'),
         cert: fs.readFileSync(__dirname + '/server.crt')
     };
-    bootstrap = spdy.createServer(options, app)
+    // bootstrap = spdy.createServer(options, app)
 }
 
 //
