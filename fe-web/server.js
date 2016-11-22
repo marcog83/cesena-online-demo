@@ -14,12 +14,27 @@ const movies = require("./routers/movies/movies");
 
 const path = require("path");
 const compression = require("compression");
+var minifyHTML = require('express-minify-html');
 const qs = require("qs");
 const bodyParser = require('body-parser');
 const handlebars = require('./render/handlebars-config');
 
 var app = express();
+
+app.use(minifyHTML({
+    override:      true,
+    exception_url: false,
+    htmlMinifier: {
+        removeComments:            true,
+        collapseWhitespace:        true,
+        collapseBooleanAttributes: true,
+        removeAttributeQuotes:     true,
+        removeEmptyAttributes:     false,
+        minifyJS:                  false
+    }
+}));
 app.use(compression());
+
 handlebars(app);
 
 app.use('/static', express.static(__dirname + '/../static-web',{
