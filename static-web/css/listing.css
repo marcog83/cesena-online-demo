@@ -741,6 +741,9 @@ svg {
   box-sizing: border-box;
   overflow: hidden;
 }
+.right-sidebar-CTR .more-categories {
+  display: none;
+}
 .right-sidebar .title {
   font-size: 12px;
   text-transform: uppercase;
@@ -784,7 +787,41 @@ svg {
 }
 @media screen and (max-width: 767px) {
   .right-sidebar-CTR {
-    display: none;
+    background: white;
+    top: inherit;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    padding: 12px;
+    -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+            transform: translateY(0px);
+    transition: height 0.3s ease-out, -webkit-transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, height 0.3s ease-out;
+    transition: transform 0.3s ease-in, height 0.3s ease-out, -webkit-transform 0.3s ease-in;
+    will-change: height, transform;
+  }
+  .right-sidebar-CTR.opened {
+    height: calc(100vh - 50px);
+  }
+  .right-sidebar-CTR.opened.closed {
+    -webkit-transform: translateY(0px) !important;
+        -ms-transform: translateY(0px) !important;
+            transform: translateY(0px) !important;
+  }
+  .right-sidebar-CTR.closed {
+    -webkit-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  .right-sidebar-CTR .more-categories {
+    height: 40px;
+    text-align: center;
+    display: block;
+  }
+  .right-sidebar {
+    height: 100%;
+    overflow-y: auto;
   }
 }
 .place-thumbnail .info-CTR .social-info {

@@ -35,4 +35,5 @@
     , "textarea-autogrow": "modules/comments/textarea-autogrow"
     , "hamburger-menu": "modules/hamburger-menu/hamburger-menu"
     , "menu-visibility": "modules/menu/topbar-menu-visibility"
+    , "right-sidebar": "modules/menu/right-sidebar"
 });

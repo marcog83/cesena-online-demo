@@ -1,3 +1,7 @@
+
+
+var args = require("minimist")(process.argv.slice(2));
+
 const express = require('express');
 
 const spdy = require('spdy');
@@ -18,6 +22,12 @@ var minifyHTML = require('express-minify-html');
 const qs = require("qs");
 const bodyParser = require('body-parser');
 const handlebars = require('./render/handlebars-config');
+if(args.ambiente=="LOCAL"){
+    var cache = require('express-redis-cache')({
+        expire: 60*60*2 //2 ore
+    });
+}
+
 
 function  cacheMiddleware(seconds){
     return function(req,res,next){
@@ -75,7 +85,6 @@ app.set('port', PORT);
 
 var bootstrap = app;
 
-var args = require("minimist")(process.argv.slice(2));
 
 if (args.ambiente == "LOCAL") {
     const options = {

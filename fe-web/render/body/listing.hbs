@@ -3,18 +3,19 @@
     <div class="main-content">
         <section class="section places-del-giorno">
             <h1 class="title">Posti in evidenza</h1>
-        {{#each places}}
-            <div class="inline-block">
-                {{> include/places/place-thumbnail-tpl }}
-            </div>
-        {{/each}}
-            </section>
+            {{#each places}}
+                <div class="inline-block">
+                    {{> include/places/place-thumbnail-tpl }}
+                </div>
+            {{/each}}
+        </section>
     </div>
     {{#if categories}}
-        <div class="right-sidebar-CTR"  data-mediator="perfect-scrollbar">
-        <div class="more-categories" data-mediator="more-categories">
-             <i class="material-icons">more_horiz</i>
-        </div>
+
+        <div class="right-sidebar-CTR" data-mediator="right-sidebar">
+            <div class="more-categories js-more-categories" >
+                <i class="material-icons">more_horiz</i>
+            </div>
             {{> include/menu/right-sidebar}}
         </div>
     {{/if}}
