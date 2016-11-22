@@ -16,6 +16,7 @@ module.exports = {
             ,handlebars:"../bower_components/handlebars/handlebars.amd.min"
             ,robojs:"../bower_components/robojs/dist/robojs.es6"
             ,fetch:"../bower_components/fetch/fetch"
+            ,"intersection-observer":"../node_modules/intersection-observer/intersection-observer"
 
             ,"delegate":"../bower_components/delegate/dist/delegate"
         },

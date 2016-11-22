@@ -1,6 +1,7 @@
 define(function (require, exports, module) {
     'use strict';
     var rjs=require("robojs");
+    require("intersection-observer");
     var definitions=require("./definitions");
     module.exports = function(){
         rjs.bootstrap({definitions:definitions,loader:rjs.AMDScriptLoader})

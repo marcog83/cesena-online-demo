@@ -22,12 +22,13 @@ var minifyHTML = require('express-minify-html');
 const qs = require("qs");
 const bodyParser = require('body-parser');
 const handlebars = require('./render/handlebars-config');
+
 if(args.ambiente=="LOCAL"){
     var cache = require('express-redis-cache')({
         expire: 60*60*2 //2 ore
     });
 }
-
+var app = express();
 
 function  cacheMiddleware(seconds){
     return function(req,res,next){
@@ -36,7 +37,7 @@ function  cacheMiddleware(seconds){
         next();
     }
 }
-var app = express();
+
 
 app.use(minifyHTML({
     override:      true,
@@ -52,6 +53,15 @@ app.use(minifyHTML({
 }));
 app.use(compression());
 app.use(cacheMiddleware(432000));
+//
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({extended: true, keepExtensions: true})); // for parsing application/x-www-form-urlencoded
+//
+
+
+
+
+
 
 handlebars(app);
 app.use('/wireframes', express.static(__dirname + '/../wireframes',{
@@ -62,12 +72,6 @@ app.use('/static', express.static(__dirname + '/../static-web',{
     maxAge: '5d'
     ,etag:"strong"
 }));
-
-
-//
-app.use(bodyParser.json()); // for parsing application/json
-app.use(bodyParser.urlencoded({extended: true, keepExtensions: true})); // for parsing application/x-www-form-urlencoded
-//
 app.use('/places', places);
 app.use("/search", search);
 //
