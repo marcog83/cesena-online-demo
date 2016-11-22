@@ -28,7 +28,7 @@
 // cache, then increment the CACHE_VERSION value. It will kick off the service worker update
 // flow and the old cache(s) will be purged as part of the activate event handler when the
 // updated service worker is activated.
-var CACHE_VERSION = "0.0.3";
+var CACHE_VERSION = "0.0.1";
 var CURRENT_CACHES = {
     prefetch: 'prefetch-cache-v' + CACHE_VERSION,
     contents: "contents-v" + CACHE_VERSION
@@ -96,7 +96,7 @@ self.addEventListener('fetch', function (event) {
 function matchContents(request){
     var in_url=request.url.match(/optimized|\.[js|css|jpg|png|gif|svg|woff2|ttf]/gim);
     var not_in_url=request.url.match(/google|analytics.com/gim)
-    return in_url && not_in_url;
+    return in_url && !not_in_url;
 }
 
 function fetchPromise(cache,event){
