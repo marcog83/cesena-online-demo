@@ -56,7 +56,7 @@ if (args.ambiente == "LOCAL") {
         key: fs.readFileSync(__dirname + '/server.key'),
         cert: fs.readFileSync(__dirname + '/server.crt')
     };
-    // bootstrap = spdy.createServer(options, app)
+    bootstrap = spdy.createServer(options, app)
 }
 
 //
