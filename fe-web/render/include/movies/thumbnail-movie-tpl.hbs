@@ -1,18 +1,27 @@
-<div class="movie-thumbnail">
+<div class="movie-thumbnail" itemscope itemtype="http://schema.org/Movie">
     <figure class="image">
-        <img  src="/static/img/transparent.png" data-mediator="lazy-image" data-img="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{poster_path}}">
+    {{#if imdbRating}}
+     <div class="rating-CTR" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+        <i class="material-icons">star</i>
+        <p itemprop="ratingValue" content="{{imdbRating}}">{{imdbRating}}</p>
+      </div>
+    {{/if}}
+
+    <meta itemprop="image" content="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{poster_path}}">
+        <img  src="/static/img/transparent.png"
+        data-mediator="lazy-image" data-img="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{poster_path}}">
     </figure>
     <div class="info-CTR">
         <div class="info">
             <div class="info-CNT">
-                <h1 class="title">{{title}}</h1>
+                <h1 class="title" itemprop="name">{{title}}</h1>
 
                 <p class="original-title">{{original_title}}</p>
 
                 <p class="general-info">
                     <span>{{Rated}}</span>
-                    <span>{{Runtime}}</span>
-                    <span>{{Genre}}</span>
+                    <span itemprop="duration" content="{{Runtime}}">{{Runtime}}</span>
+                    <span itemprop="genre" >{{Genre}}</span>
                 </p>
 
                 <p class="description">{{overview}}</p>
