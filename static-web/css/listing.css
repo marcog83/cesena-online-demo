@@ -856,6 +856,7 @@ svg {
   font-size: 18px;
   text-transform: uppercase;
   font-weight: bold;
+  word-break: break-word;
 }
 .place-thumbnail .description {
   font-size: 14px;
@@ -864,14 +865,17 @@ svg {
   overflow: hidden;
   line-height: 1.4;
   transition: color 0.2s ease-out;
+  word-break: break-word;
 }
 .place-thumbnail .address {
   font-size: 14px;
+  word-break: break-word;
 }
 .place-thumbnail .place-name {
   margin-top: 12px;
   color: #7679c6;
   transition: color 0.2s ease-out;
+  word-break: break-word;
 }
 .info-CTR .social-info {
   padding-top: 10px;

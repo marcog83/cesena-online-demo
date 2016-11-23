@@ -767,6 +767,7 @@ svg {
   max-width: 440px;
   margin-left: 2.3%;
   height: 278px;
+  word-break: break-word;
 }
 .movie-thumbnail .info-CTR .info {
   display: -webkit-flex;
