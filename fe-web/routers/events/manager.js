@@ -9,23 +9,28 @@ let urlRegex = require("url-regex");
 var normalizeUrl = require('normalize-url');
 
 
-
-
-
 var getEvents = function ({start_time, end_time, limit}) {
     var start_timestamp = start_time.getTime();
+    if (end_time) {
+        var end_timestamp = end_time.getTime();
+    }
+
     var mapEvent = function (start_time, end_time) {
         return R.compose(
-                _event=> {
-
-                return Object.assign({image: R.view(R.lensPath(['cover', 'source']), _event)}, _event)
-            }
-            , R.set(R.lensProp('start_time'), start_time)
+            R.set(R.lensProp('start_time'), start_time)
             , R.set(R.lensProp('end_time'), end_time)
         );
     };
     var filterDate = R.compose(
-        (eventTimestamp)=>eventTimestamp >= start_timestamp
+        (eventTimestamp)=> {
+            var bigger_than = eventTimestamp >= start_timestamp;
+            var lesser_than = true;
+            if (end_timestamp) {
+                lesser_than = eventTimestamp <= end_timestamp;
+            }
+
+            return bigger_than && lesser_than;
+        }
         , (event)=>new Date(event.start_time).getTime()
     );
     var reducer = R.compose(
@@ -34,22 +39,40 @@ var getEvents = function ({start_time, end_time, limit}) {
             return event.start_time.getTime()
         })
         , R.map(event=> {
-            return mapEvent(new Date(event.start_time), event.end_time?new Date(event.end_time):new Date(event.start_time))(event);
+            return mapEvent(new Date(event.start_time), event.end_time ? new Date(event.end_time) : new Date(event.start_time))(event);
         })
         , R.filter(filterDate)
     );
+
+
     return ([my_places,my_events])=> {
-        var newEvents = reducer(my_events);
-        newEvents = newEvents.map(event=> {
-            var place_id = (event.owner && event.owner.id) || event.place && event.place.id || event.place;
-           // var place_id = event.place.id || event.place;
-            var my_place = R.find(place=>place.id_facebook == place_id, my_places);
+        var findEvents = R.compose(
+            R.filter(event=> {
+                return (event.owner._id && event.place._id);
+            })
+            , R.map(event=> {
+                    var place_id = event.place.id;
+                    var owner_id = event.owner.id;
 
-            var place = formatEventPlace(my_place, event);
-            return Object.assign(event, {place});
+                    var place = R.find(place=>place.id_facebook.includes(place_id), my_places) || {};
+                    var owner = R.find(place=>place.id_facebook.includes(owner_id), my_places) || {};
+                    if (!place._id && owner._id) {
+                        place = owner;
+                    } else if (!owner._id && place._id) {
+                        owner = place;
+                    }
 
-        });
-        return newEvents;
+
+                    return Object.assign(event, {
+                        image: R.view(R.lensPath(['cover', 'source']), event)
+
+                        , owner
+                        , place
+                    })
+
+                }
+            ));
+        return findEvents(reducer(my_events));
     }
 };
 
@@ -71,31 +94,23 @@ exports.eventi = ({start_time, end_time, limit})=> {
         .then(R.tap(_=>connection.db.close()))
         .catch(R.tap(_=>connection.db.close()));
 };
-exports.eventiByPlace = ({start_time, end_time, limit,id_place})=> {
+exports.eventiByPlace = ({start_time, end_time, limit, id_place})=> {
     var connection = new Connection();
 
     return connection.connect()
-        //.then(connection.collection.bind(connection, Tables.MY_EVENTS))
+    //.then(connection.collection.bind(connection, Tables.MY_EVENTS))
         .then(db=> {
             var myPlaces = db.collection(Tables.MY_PLACES_2);
             var myEvents = db.collection(Tables.MY_EVENTS);
             return myPlaces.findOne({_id: ObjectId(id_place)}).then(my_place=> {
-                return myEvents.find({
-                    $or: [
-                        {
-                            $and: [
-                                {"place.id": {$exists: true}}
-                                , {"place.id": my_place.id_facebook}
-                            ]
-                        }
-                        , {
-                            $and: [
-                                {"place.id": {$exists: false}}
-                                , {place: my_place.id_facebook}
-                            ]
-                        }
-                    ]
-                }).toArray()
+                return myEvents.find(
+                    {
+                        $or: [
+                            {"owner.id": {$in: my_place.id_facebook}}
+                            , {"place.id": {$in: my_place.id_facebook}}
+                        ]
+                    }
+                ).toArray()
                     .then(my_events=> {
                         return [[my_place], my_events]
                     })
@@ -103,12 +118,9 @@ exports.eventiByPlace = ({start_time, end_time, limit,id_place})=> {
 
         })
         .then(getEvents({start_time, end_time, limit}))
-        .then(R.tap(_=>connection.db.close()));
+        .then(R.tap(_=>connection.db.close()))
+        .catch(R.tap(_=>connection.db.close()));
 };
-
-
-
-
 
 
 function formatDescription(description = "") {
@@ -117,27 +129,6 @@ function formatDescription(description = "") {
         return prev.replace(curr, `<a href='${link}'>${curr}</a>`)
     }, description.replace(/\n/gi, "<br>"));
 }
-var formatEventPlace = R.curryN(2, function (my_place, event) {
-    var place = event.place;
-    if (R.is(String, event.place)&&my_place) {
-        place = {
-            name: my_place.name,
-            location: {
-                latitude: my_place.geo.lat
-                , longitude: my_place.geo.lng
-            },
-            id: my_place.id_facebook
-
-        }
-    }
-    if(my_place){
-        place.name = my_place.name;
-        place._id = my_place._id;
-    }
-
-    return place;
-});
-
 
 
 exports.findEventById = id=> {
@@ -147,16 +138,27 @@ exports.findEventById = id=> {
         .then(coll=> coll.findOne({_id: ObjectId(id)}))
         .then(event=> {
             var myPlaceColl = connection.db.collection(Tables.MY_PLACES_2);
-            var id = event.place.id || event.place;
-            return myPlaceColl.findOne({id_facebook: id}).then(my_place=> {
+            var id_owner = event.owner.id;
+            var id_place = event.place.id;
+            return Promise.all([
+                myPlaceColl.findOne({id_facebook: id_owner}),
+                myPlaceColl.findOne({id_facebook: id_place})
+            ]).then(([owner,place])=> {
                 var description = formatDescription(event.description);
-                var place = formatEventPlace(my_place, event)
-
-                return Object.assign({image: R.view(R.lensPath(['cover', 'source']), event)}, event, {
+                if (!place && owner) {
+                    place = owner;
+                } else if (!owner && place) {
+                    owner = place;
+                }
+                return Object.assign({
+                    image: R.view(R.lensPath(['cover', 'source']), event)
+                }, event, {
                     description
+                    , owner
                     , place
                 })
             });
+
 
         })
         .then(R.tap(_=>connection.db.close()))

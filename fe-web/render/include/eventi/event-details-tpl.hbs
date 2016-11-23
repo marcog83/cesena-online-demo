@@ -1,15 +1,16 @@
 <div class="event-details">
-    <div class="event-details__image"  data-mediator="lazy-background" data-img="{{image}}">
+    <div class="event-details__image" data-mediator="lazy-background" data-img="{{image}}">
 
     </div>
     <div class="main-content">
         <h1 class="event-details__name">{{name}}</h1>
 
         <div itemprop="sponsor" itemscope itemtype="http://schema.org/Place">
-            <a href="/places/detail/{{place._id}}" class="place" itemprop="url">
-                <p class="event-details__place-name" itemprop="name">{{place.name}}</p>
+            <a href="/places/detail/{{owner._id}}" class="place" itemprop="url">
+                <p class="event-details__sponsor-name" itemprop="name">{{owner.name}}</p>
             </a>
         </div>
+
         <div class="event-details__info-CNT">
             <div class="event-details__event-date">
                 {{#if start_time}}
@@ -25,14 +26,7 @@
                     </p>
                 {{/if}}
             </div>
-            <div class="event-details__address" itemprop="location" itemscope itemtype="http://schema.org/Place">
-                <meta itemprop="name" content="{{place.name}}"/>
-                <p itemprop="address">{{place.location.street}}</p>
-        <span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
-            <meta itemprop="latitude" content="{{place.location.latitude}}"/>
-            <meta itemprop="longitude" content="{{place.location.longitude}}"/>
-        </span>
-            </div>
+
             {{#if ticket_uri}}
                 <div class="event-details__tickets">
                     <a href="{{ticket_uri}}" target="_blank">
@@ -43,8 +37,26 @@
                     </a>
                 </div>
             {{/if}}
-        </div>
 
+        </div>
+        {{#if place}}
+        <div class="event-details__address" itemprop="location" itemscope itemtype="http://schema.org/Place">
+            <h3 class="event-details__place-label">L'evento si svolge:</h3>
+            <a href="/places/detail/{{place._id}}" class="place" itemprop="url">
+                <p class="event-details__place-name" itemprop="name">{{place.name}}</p>
+                <p class="event-details__place-address" itemprop="address">{{place.address}}</p>
+                <span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+                 <meta itemprop="latitude" content="{{place.geo.lat}}"/>
+                 <meta itemprop="longitude" content="{{place.geo.lng}}"/>
+                </span>
+
+            </a> {{#if place.geo.lat}}
+            <div class="map-CTR">
+                <div id="map" class="map" data-mediator="map" data-lng="{{place.geo.lng}}" data-lat="{{place.geo.lat}}"></div>
+            </div>
+        {{/if}}
+        </div>
+        {{/if}}
 
         <p class="event-details__description" itemprop="description">{{{description}}}</p>
     </div>

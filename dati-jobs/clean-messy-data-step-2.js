@@ -12,11 +12,11 @@ var QUERY_MATCHES = {
             $or: [
                 {percent_name: {$gt: 0.9}},
                 {
-                    distance: {$lt: 20}
+                    distance: {$lt: 10}
                 },
                 {
                     percent_name: {$gt: 0.8},
-                    distance: {$lt: 30}
+                    distance: {$lt: 35}
                 },
                 {
                     percent_name: {$gt: 0.6},

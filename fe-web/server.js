@@ -22,13 +22,15 @@ var minifyHTML = require('express-minify-html');
 const qs = require("qs");
 const bodyParser = require('body-parser');
 const handlebars = require('./render/handlebars-config');
+var app = express();
 
 if(args.ambiente=="LOCAL"){
-    var cache = require('express-redis-cache')({
-        expire: 60*60*2 //2 ore
-    });
+    // var cache = require('express-redis-cache')({
+    //     expire: 60*60*2 //2 ore
+    // });
+     // app.use(cache.route());
 }
-var app = express();
+
 
 function  cacheMiddleware(seconds){
     return function(req,res,next){

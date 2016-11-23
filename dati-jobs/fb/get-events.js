@@ -3,7 +3,12 @@ var R = require('ramda');
 function getEvent(place, i) {
     return (place.events && place.events.data || []).map(event=> {
         return Object.assign({}, event, {
-            place: (event.place && event.place.id ) || place.id
+            owner:  R.view(R.lensPath(["owner", "id"]), event) ? event.owner : {name: place.name, id: place.id}
+            , place: R.view(R.lensPath(["place", "id"]), event) ? event.place : {
+                name: place.name,
+                location: place.location,
+                id: place.id_facebook
+            }
             , __provider: "facebook"
 
         })

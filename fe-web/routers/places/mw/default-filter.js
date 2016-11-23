@@ -7,8 +7,12 @@ const enums = require("../../../common/enums");
 
 module.exports = function render(req, res, next) {
     var id = req.params.id;
+    var start_time = new Date();
+    start_time.setHours(0,0,0,0);
+
+
     return Promise.all([
-            eventiByPlace({start_time: new Date(), limit: 3, id_place: id})
+            eventiByPlace({start_time, limit: 3, id_place: id})
             , photosById(id)
             , findById(id)
         ])

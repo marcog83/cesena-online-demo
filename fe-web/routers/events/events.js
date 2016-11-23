@@ -6,10 +6,13 @@ const {findMyPlaceByFacebookId}=require("../places/manager");
 const enums=require("../../common/enums");
 // define the detail route
 router.get("/", function (req, res) {
-    var d = new Date();
-    d.setDate(d.getDate() - 5);
-    Promise.all([eventi({start_time: new Date(), limit: 3}), eventi({
-        start_time: d, limit: 3 * 30
+    var start_time = new Date();
+    start_time.setHours(0,0,0,0);
+    var end_time= new Date();
+    end_time.setDate(end_time.getDate()+1);
+    end_time.setHours(0,0,0,0);
+    Promise.all([eventi({start_time,end_time, limit: 3}), eventi({
+        start_time, limit: 3 * 30
     })]).then(([oggiEventi,altriEventi])=> {
         res.render(enums.EVENTS_LISTING, {
             helpers: {
@@ -26,10 +29,8 @@ router.get("/", function (req, res) {
 router.get("/:id",function (req, res) {
     var id = req.params.id;
     findEventById(id).then(eventDetail=> {
-        return findMyPlaceByFacebookId((eventDetail.owner && eventDetail.owner.id) || eventDetail.place)
-            .then(my_place=> {
-            return eventiByPlace({start_time: new Date(), limit: 3, id_place: my_place._id})
-        }).then(eventiCorrelati=> {
+        return eventiByPlace({start_time: new Date(), limit: 3, id_place: eventDetail.owner._id})
+            .then(eventiCorrelati=> {
             return [eventDetail, eventiCorrelati]
         })
     }).then(([eventDetail,eventiCorrelati])=> {

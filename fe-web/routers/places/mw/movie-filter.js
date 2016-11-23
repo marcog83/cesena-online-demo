@@ -29,8 +29,11 @@ module.exports = function render(req, res, next) {
     return match(id).then(response=> {
         if (!response)next();
         else {
+            var start_time = new Date();
+            start_time.setHours(0,0,0,0);
+
             return Promise.all([
-                eventiByPlace({start_time: new Date(), limit: 3, id_place: id})
+                eventiByPlace({start_time, limit: 3, id_place: id})
                 , photosById(id)
                 , findById(id)
             ]).then(([eventiEvidenza,photos,detail])=> {

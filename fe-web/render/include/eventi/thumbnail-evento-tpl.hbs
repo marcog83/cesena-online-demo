@@ -7,8 +7,8 @@
     </a>
 
     <div itemprop="sponsor" itemscope itemtype="http://schema.org/Place">
-        <a href="/places/detail/{{place._id}}" class="place" itemprop="url">
-            <p class="event-thumbnail__place-name" itemprop="name">{{place.name}}</p>
+        <a href="/places/detail/{{owner._id}}" class="place" itemprop="url">
+            <p class="event-thumbnail__place-name" itemprop="name">{{owner.name}}</p>
         </a>
     </div>
     <div class="event-thumbnail__info-CNT">
@@ -26,14 +26,18 @@
 
             {{/if}}
         </div>
+        {{#if place}}
         <div class="event-thumbnail__address" itemprop="location" itemscope itemtype="http://schema.org/Place">
             <meta itemprop="name" content="{{place.name}}"/>
-            <p itemprop="address">{{place.address}}</p>
-        <span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
-            <meta itemprop="latitude" content="{{place.location.latitude}}"/>
-            <meta itemprop="longitude" content="{{place.location.longitude}}"/>
-        </span>
+            <meta itemprop="address" content="{{place.address}}"/>
+            {{#if place.geo}}
+            <span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+                <meta itemprop="latitude" content="{{place.geo.lat}}"/>
+                <meta itemprop="longitude" content="{{place.geo.lng}}"/>
+            </span>
+            {{/if}}
         </div>
+        {{/if}}
     </div>
     <p class="event-thumbnail__description" itemprop="description">{{description}}</p>
 </div>
