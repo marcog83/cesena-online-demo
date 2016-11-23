@@ -18,24 +18,30 @@
     </div>
     <div class="social-info">
         <ul>
+        {{#if rating}}
             <li class="social-item">
-                <div class="social">
+                <div class="social" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                     <i class="material-icons">star</i>
-                    <span class="count">{{rating}}</span>
+                    <span class="count" itemprop="ratingValue">{{rating}}</span>
                 </div>
             </li>
+            {{/if}}
+            {{#if comment_count}}
             <li class="social-item">
                 <div class="social">
                    <i class="material-icons">comment</i>
-                    <span class="count">7</span>
+                    <span class="count">{{comment_count}}</span>
                 </div>
             </li>
+            {{/if}}
+             {{#if photo_count}}
             <li class="social-item">
                 <div class="social">
                     <i class="material-icons">collections</i>
-                    <span class="count">7</span>
+                    <span class="count">{{photo_count}}</span>
                 </div>
             </li>
+            {{/if}}
         </ul>
     </div>
 </div>

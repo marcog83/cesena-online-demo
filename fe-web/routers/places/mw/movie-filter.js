@@ -35,77 +35,89 @@ module.exports = function render(req, res, next) {
                 , findById(id)
             ]).then(([eventiEvidenza,photos,detail])=> {
 
+                    var photo_count = photos.length;
+                    var comment_count = 0;
+                    var events_count = eventiEvidenza.length;
+                    return geMoviesById(detail.id_facebook).then(movies=> {
+                        var day_num = new Date().getDay();
 
-                return geMoviesById(detail.id_facebook).then(movies=> {
-                    var day_num = new Date().getDay();
-
-                    var moviesOggi = movies
-                        .filter(movie=> {
-                            var day = movie.days_list[day_num];
-                            return day.fascie && day.fascie.length;
-                        });
+                        var moviesOggi = movies
+                            .filter(movie=> {
+                                var day = movie.days_list[day_num];
+                                return day.fascie && day.fascie.length;
+                            });
 
 //
-                    var fascie = R.compose(
-                        R.uniq,
-                        R.flatten
-                        , R.map(movie=> {
+                        var fascie = R.compose(
+                            R.uniq,
+                            R.flatten
+                            , R.map(movie=> {
+                                var day = movie.days_list[day_num];
+                                return day.fascie
+                            })
+                        )(moviesOggi);
+                        //
+                        var moviesPerFascie = moviesOggi.map(movie=> {
                             var day = movie.days_list[day_num];
-                            return day.fascie
-                        })
-                    )(moviesOggi);
-                    //
-                    var moviesPerFascie = moviesOggi.map(movie=> {
-                        var day = movie.days_list[day_num];
-                        var fascie = day.fascie.join(",");
-                        return Object.assign({fascie}, movie);
-                    });
+                            var fascie = day.fascie.join(",");
+                            return Object.assign({fascie}, movie);
+                        });
 
-                    var week_movies = [];
-                    var week_days = [];
+                        var week_movies = [];
+                        var week_days = [];
 
-                    for (var i = 0; i < 7; i++) {
-                        week_days = movies
-                            .map(movie=> {
-                                var day = movie.days_list[i];
-                                var date = new Date(day.day);
-                                return {
-                                    date
-                                    , timestamp: date
-                                }
-                            });
-                        week_movies = movies
-                            .map(movie=> {
-                                var day = movie.days_list[i];
+                        for (var i = 0; i < 7; i++) {
+                            week_days = movies
+                                .map(movie=> {
+                                    var day = movie.days_list[i];
+                                    var date = new Date(day.day);
+                                    return {
+                                        date
+                                        , timestamp: date
+                                    }
+                                });
+                            week_movies = movies
+                                .map(movie=> {
+                                    var day = movie.days_list[i];
 
-                                var hasFascie = day.fascie && day.fascie.length;
-                                if (hasFascie) {
-                                    var timestamp = new Date(day.day).getTime();
-                                    var currentFascie = day.fascie;
-                                    return Object.assign({timestamp, currentFascie}, movie);
-                                }
-                            });
+                                    var hasFascie = day.fascie && day.fascie.length;
+                                    if (hasFascie) {
+                                        var timestamp = new Date(day.day).getTime();
+                                        var currentFascie = day.fascie;
+                                        return Object.assign({timestamp, currentFascie}, movie);
+                                    }
+                                });
 
-                    }
-
-
-                    return {
-                        eventiEvidenza, photos, detail, cinema: {
-                            fascie,
-                            moviesPerFascie
-                            , week_days
-                            , week_movies
                         }
-                    }
+
+
+                        return {
+                            comment_count,
+                            photo_count,
+                            events_count,
+                            eventiEvidenza, photos, detail, cinema: {
+                                fascie,
+                                moviesPerFascie
+                                , week_days
+                                , week_movies
+                            }
+                        }
+                    })
+
+
                 })
-
-
-            })
-                .then(({eventiEvidenza, photos, detail, cinema})=> {
+                .then(({
+                    comment_count,
+                    photo_count,
+                    events_count, eventiEvidenza, photos, detail, cinema
+                })=> {
                     res.render(enums.PLACE_MOVIE_DETAIL, Object.assign({
                         helpers: {
                             stylesheet: enums.getStylesheet(enums.PLACE_MOVIE_DETAIL)
-                        }
+                        },
+                        comment_count,
+                        photo_count,
+                        events_count
                         , eventiEvidenza
                         , photos
                         , page_id: id
