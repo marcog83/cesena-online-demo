@@ -21,17 +21,21 @@ var getDetails = function (omdbColl, moviedbColl, my_places) {
                 } else {
                     moviedb = Promise.resolve({})
                 }
-                var myPlace = my_places.findOne({id_facebook: movie.place.id_facebook});
 
+                var cinemas =movie.cinemas.map(cinema=>{
+                    return my_places.findOne({id_facebook: cinema.place.id_facebook}).then(place=>{
+                        return {
+                            days_list:cinema.days_list
+                            ,place
+                        }
+                    })
+                });
 
                 return Promise.all([
-                    omdb, moviedb, myPlace
-                ]).then(([omdb,moviedb,place])=> {
-                    movie.cinemas = (movie.cinemas ||[]).map(cinema=> {
-                        if (place)
-                            cinema.place._id = place._id;
-                        return cinema//Object.assign(cinema,{place})
-                    });
+                    omdb, moviedb, Promise.all(cinemas)
+                ]).then(([omdb,moviedb,cinemas])=> {
+                    movie.cinemas = cinemas;
+
                     return Object.assign(omdb, moviedb, movie);
                 })
             });
@@ -59,7 +63,7 @@ exports.getMovies = ()=> {
                                 , days_list: m.days_list
                             }
                         });
-                        return Object.assign({cinemas}, group[0]);
+                        return Object.assign({cinemas}, {themoviedb:group[0].themoviedb ,omdbID:group[0].omdbID});
                     });
                     return grouped
 
