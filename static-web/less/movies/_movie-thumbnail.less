@@ -38,12 +38,14 @@
 
       }
       .cinema {
-
         display: inline-block;
         vertical-align: top;
         margin-right: 20px;
         p {
           font-size: 14px;
+        }
+        a{
+          color:#7679c6;
         }
         li {
           font-size: 14px;
@@ -74,6 +76,63 @@
     .info-CTR {
       display: block;
       margin: 20px 0;
+    }
+  }
+}
+@media screen and(max-width:767px){
+  .thumbnail-movie-CTR {
+    margin-bottom: 50px;
+    padding-bottom: 0;
+    border-bottom: 1px solid silver;
+  }
+  .movie-thumbnail {
+    position: relative;
+    .image {
+      display: block;
+
+      width: 40%;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    .info-CTR {
+      display: block;
+      width: 100%;
+      margin: 20px 0;
+      height: auto;
+      .info{
+        height: auto;
+        display: block;
+      }
+      .title {
+        position: absolute;
+        top: 0;
+        width: 58%;
+        left: 42%;
+      }
+      .original-title {
+        position: absolute;
+        top: 17px;
+        left: 42%;
+        width: 58%;
+      }
+      .general-info{
+        position: absolute;
+        top: 40px;
+        left: 42%;
+        width: 58%;
+      }
+      .description{
+        margin: 0 0 20px;
+      }
+      .cinemas-CTR {
+        .cinema {
+          display: block;
+          vertical-align: top;
+          margin: 5px 0 20px;
+        }
+      }
     }
   }
 }

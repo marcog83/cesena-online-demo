@@ -210,6 +210,8 @@ a {
   display: flex;
   padding-top: 40px;
   position: relative;
+  max-width: 1600px;
+  margin: auto;
 }
 .body-CNT {
   -webkit-flex-grow: 1;

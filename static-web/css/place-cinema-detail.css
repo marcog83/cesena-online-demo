@@ -210,6 +210,8 @@ a {
   display: flex;
   padding-top: 40px;
   position: relative;
+  max-width: 1600px;
+  margin: auto;
 }
 .body-CNT {
   -webkit-flex-grow: 1;
@@ -1028,6 +1030,9 @@ svg {
 .movie-thumbnail .info-CTR .cinemas-CTR .cinema p {
   font-size: 14px;
 }
+.movie-thumbnail .info-CTR .cinemas-CTR .cinema a {
+  color: #7679c6;
+}
 .movie-thumbnail .info-CTR .cinemas-CTR .cinema li {
   font-size: 14px;
   display: inline-block;
@@ -1051,6 +1056,60 @@ svg {
 .vertical .movie-thumbnail .info-CTR {
   display: block;
   margin: 20px 0;
+}
+@media screen and (max-width: 767px) {
+  .thumbnail-movie-CTR {
+    margin-bottom: 50px;
+    padding-bottom: 0;
+    border-bottom: 1px solid silver;
+  }
+  .movie-thumbnail {
+    position: relative;
+  }
+  .movie-thumbnail .image {
+    display: block;
+    width: 40%;
+  }
+  .movie-thumbnail .image img {
+    width: 100%;
+    height: auto;
+  }
+  .movie-thumbnail .info-CTR {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    height: auto;
+  }
+  .movie-thumbnail .info-CTR .info {
+    height: auto;
+    display: block;
+  }
+  .movie-thumbnail .info-CTR .title {
+    position: absolute;
+    top: 0;
+    width: 58%;
+    left: 42%;
+  }
+  .movie-thumbnail .info-CTR .original-title {
+    position: absolute;
+    top: 17px;
+    left: 42%;
+    width: 58%;
+  }
+  .movie-thumbnail .info-CTR .general-info {
+    position: absolute;
+    top: 40px;
+    left: 42%;
+    width: 58%;
+  }
+  .movie-thumbnail .info-CTR .description {
+    margin: 0 0 20px;
+  }
+  .movie-thumbnail .info-CTR .cinemas-CTR .cinema {
+    display: block;
+    vertical-align: top;
+    margin: 5px 0 20px;
+  }
 }
 .place-cinema-detail .place-details {
   position: relative;
