@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+ 
+
+<url>
+  <loc>https://cesena-online.herokuapp.com/</loc>
+  <changefreq>never</changefreq>
+  <priority>1.00</priority>
+</url>
+ 
+<url>
+  <loc>https://cesena-online.herokuapp.com/events</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cesena-online.herokuapp.com/movies</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cesena-online.herokuapp.com/places/cinema</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cesena-online.herokuapp.com/places/musica</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cesena-online.herokuapp.com/places/sports</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cesena-online.herokuapp.com/places/cibo</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cesena-online.herokuapp.com/places/bar</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cesena-online.herokuapp.com/places/medicina</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cesena-online.herokuapp.com/places/benessere</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cesena-online.herokuapp.com/places/negozio</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cesena-online.herokuapp.com/places/scuola</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cesena-online.herokuapp.com/places/tech</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cesena-online.herokuapp.com/places/architettura</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cesena-online.herokuapp.com/places/viaggio</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cesena-online.herokuapp.com/places/agricultura</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cesena-online.herokuapp.com/places/luogo_interesse</loc>
+  <changefreq>never</changefreq>
+  <priority>0.80</priority>
+</url>
+
+</urlset>
