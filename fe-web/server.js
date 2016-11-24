@@ -66,7 +66,7 @@ app.use(bodyParser.urlencoded({extended: true, keepExtensions: true})); // for p
 
 
 handlebars(app);
-app.use("/google2b3a4456558dadd3.html", express.static(__dirname + 'google2b3a4456558dadd3.html'));
+app.use("/google2b3a4456558dadd3.html", express.static(__dirname + '/google2b3a4456558dadd3.html'));
 app.use('/wireframes', express.static(__dirname + '/../wireframes',{
     maxAge: '5d'
     ,etag:"strong"
