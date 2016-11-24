@@ -2,7 +2,7 @@
  * Created by mgobbi on 24/11/2016.
  */
 const R=require("ramda");
-exports.getSeoMeta = (params)=> {
+exports.getSeoMeta = (params={})=> {
     var defaultMeta={
         title: "Cesena Online"
         , url: "https://cesena-online.herokuapp.com"
