@@ -1,3 +1,4 @@
+{{#if seo}}
 <title>{{seo.title}}</title>
 <!-- -->
 <meta name="description" content="{{seo.description}}"/>
@@ -7,7 +8,7 @@
 <meta property="og:type" content="website"/>
 <meta property="og:description" content="{{seo.description}}">
 <meta property="og:image" content="{{seo.image}}" />
-
+{{/if}}
 <!-- MANIFEST -->
 <link rel="manifest" href="/static/manifest.json">
 <link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.ico"/>
