@@ -50,14 +50,11 @@ app.use(bodyParser.urlencoded({extended: true, keepExtensions: true})); // for p
 //
 
 
-
-
-
-
 handlebars(app);
 app.use("/google2b3a4456558dadd3.html", express.static(__dirname + '/google2b3a4456558dadd3.html'));
-app.use("/sitemap.xml", function(req, res) {
+app.use("/sitemap.xml", function(req, res,next) {
     res.header('Content-Type', 'application/xml');
+    next();
 
 }, express.static(__dirname + '/sitemap.xml'));
 app.use('/wireframes', express.static(__dirname + '/../wireframes',{

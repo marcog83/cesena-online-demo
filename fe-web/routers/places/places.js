@@ -7,7 +7,7 @@ const enums = require("../../common/enums");
 const R = require("ramda");
 const defaultFilter = require("./mw/default-filter");
 const movieFilter = require("./mw/movie-filter");
-
+const Seo = require('../../plugins/seo/seo-meta');
 router.get('/:id', function (req, res) {
     var id = decodeURIComponent(req.params.id);
     var filters = [];
@@ -19,7 +19,12 @@ router.get('/:id', function (req, res) {
         }
     }
     Promise.all([findByChannel(id, {filters, limit: 500})]).then(([places])=> {
+        var seo = Seo.getSeoMeta({
+            title: "Cesena Online :: " + id
+            , url: `/places/${id}`
+        });
         res.render(enums.PLACES_LISTING, {
+            seo,
             helpers: {
                 stylesheet: enums.getStylesheet(enums.PLACES_LISTING)
             }, places, main_category: {
