@@ -25,10 +25,10 @@ const handlebars = require('./render/handlebars-config');
 var app = express();
 
 if(args.ambiente=="LOCAL"){
-    // var cache = require('express-redis-cache')({
-    //     expire: 60*60*2 //2 ore
-    // });
-     // app.use(cache.route());
+    var cache = require('express-redis-cache')({
+        expire: 60*60*2 //2 ore
+    });
+     app.use(cache.route());
 }
 
 
@@ -66,6 +66,7 @@ app.use(bodyParser.urlencoded({extended: true, keepExtensions: true})); // for p
 
 
 handlebars(app);
+app.use("/google2b3a4456558dadd3.html", express.static(__dirname + 'google2b3a4456558dadd3.html'));
 app.use('/wireframes', express.static(__dirname + '/../wireframes',{
     maxAge: '5d'
     ,etag:"strong"
