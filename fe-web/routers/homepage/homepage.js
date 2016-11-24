@@ -3,7 +3,7 @@ const express = require('express');
 const {findByChannel}=require("../places/manager");
 const {eventi}=require("../events/manager");
 const {photosHighlight}=require("../photos/manager");
-
+const Seo = require('../../plugins/seo/seo-meta');
 const intl = require('../../intl/intl');
 const router = express.Router();
 // define the detail route
@@ -22,7 +22,9 @@ router.get('/', function (req, res) {
         limit: 3 * 3,
         filters: []
     }), photosHighlight({limit: 3 * 3})]).then(([eventiEvidenza,placesEvidenza,photos])=> {
+        var seo=Seo.getSeoMeta();
         res.render(enums.HOMEPAGE, {
+            seo,
             helpers: {
                 stylesheet: enums.getStylesheet(enums.HOMEPAGE)
             }, oggiCinema: [], eventiEvidenza, placesEvidenza, photos, data: {intl: intl}

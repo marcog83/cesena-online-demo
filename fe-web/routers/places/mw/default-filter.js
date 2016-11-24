@@ -4,7 +4,7 @@ const {photosById}=require("../../photos/manager");
 const {findById}=require("../manager");
 const intl = require('../../../intl/intl');
 const enums = require("../../../common/enums");
-
+const Seo = require('../../../plugins/seo/seo-meta');
 module.exports = function render(req, res, next) {
     var id = req.params.id;
     var start_time = new Date();
@@ -21,6 +21,14 @@ module.exports = function render(req, res, next) {
             var photo_count = photos.length;
             var comment_count = 0;
             var events_count = eventiEvidenza.length;
+            //
+            var seo=Seo.getSeoMeta({
+                title:"Cesena Online :: "+detail.name
+                ,url:`/places/detail/${id}`
+                ,image:detail.image
+                ,description:detail.raw_description
+            });
+            //
             res.render(enums.PLACE_DETAIL, Object.assign({
                 helpers: {
                     stylesheet: enums.getStylesheet(enums.PLACE_DETAIL)
@@ -30,7 +38,7 @@ module.exports = function render(req, res, next) {
                 , page_id: id
                 , data: {intl: intl}
 
-            }, detail, {events_count,photo_count, comment_count}));
+            }, detail, {events_count,photo_count, comment_count,seo}));
         }).catch(e=> {
             console.error(e);
             res.status(404)        // HTTP status 404: NotFound

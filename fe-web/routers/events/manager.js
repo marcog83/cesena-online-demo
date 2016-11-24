@@ -154,6 +154,7 @@ exports.findEventById = id=> {
                     image: R.view(R.lensPath(['cover', 'source']), event)
                 }, event, {
                     description
+                    ,raw_description:event.description
                     , owner
                     , place
                 })

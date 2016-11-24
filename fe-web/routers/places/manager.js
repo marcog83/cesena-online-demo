@@ -36,7 +36,8 @@ function eliminaEccezioni(id) {
 function mapDetailPlace(my_place) {
 
     return Object.assign({},my_place,{
-        description: formatDescription(my_place.description || "")
+        raw_description:my_place.description || ""
+        ,description: formatDescription(my_place.description || "")
         ,image:my_place.image||getPlaceholder(my_place)
     })
 }

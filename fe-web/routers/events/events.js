@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const intl = require('../../intl/intl');
+const Seo = require('../../plugins/seo/seo-meta');
 const {findEventById,eventiByPlace,eventi}=require("./manager");
 const {findMyPlaceByFacebookId}=require("../places/manager");
 const enums=require("../../common/enums");
@@ -14,10 +15,14 @@ router.get("/", function (req, res) {
     Promise.all([eventi({start_time,end_time, limit: 3}), eventi({
         start_time, limit: 3 * 30
     })]).then(([oggiEventi,altriEventi])=> {
+        var seo=Seo.getSeoMeta({
+            title:"Cesena Online :: Eventi"
+            ,url:"/events"
+        });
         res.render(enums.EVENTS_LISTING, {
             helpers: {
                 stylesheet: enums.getStylesheet(enums.EVENTS_LISTING)
-            }, oggiEventi, altriEventi, data: {intl: intl}
+            },seo, oggiEventi, altriEventi, data: {intl: intl}
         });
     }).catch(e=> {
         console.error(e);
@@ -34,7 +39,14 @@ router.get("/:id",function (req, res) {
             return [eventDetail, eventiCorrelati]
         })
     }).then(([eventDetail,eventiCorrelati])=> {
+        var seo=Seo.getSeoMeta({
+            title:"Cesena Online :: Eventi - "+eventDetail.name
+            ,url:`/events/${id}`
+            ,image:eventDetail.image
+            ,description:eventDetail.raw_description
+        });
         res.render(enums.EVENT_DETAIL, Object.assign({
+            seo,
             helpers: {
                 stylesheet: enums.getStylesheet(enums.EVENT_DETAIL)
             }, data: {intl: intl}, eventiCorrelati

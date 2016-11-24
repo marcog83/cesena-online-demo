@@ -7,7 +7,7 @@ const Tables = require("../../../../dati-jobs/db/tables");
 const R = require("ramda");
 const intl = require('../../../intl/intl');
 const enums = require("../../../common/enums");
-
+const Seo = require('../../../plugins/seo/seo-meta');
 function match(id) {
     var connection = new Connection();
     return connection.connect()
@@ -37,6 +37,15 @@ module.exports = function render(req, res, next) {
                 , photosById(id)
                 , findById(id)
             ]).then(([eventiEvidenza,photos,detail])=> {
+
+                    //
+                    var seo=Seo.getSeoMeta({
+                        title:"Cesena Online :: "+detail.name
+                        ,url:`/places/detail/${id}`
+                        ,image:detail.image
+                        ,description:detail.raw_description
+                    });
+                    //
 
                     var photo_count = photos.length;
                     var comment_count = 0;
@@ -95,6 +104,7 @@ module.exports = function render(req, res, next) {
 
 
                         return {
+                            seo,
                             comment_count,
                             photo_count,
                             events_count,
@@ -110,6 +120,7 @@ module.exports = function render(req, res, next) {
 
                 })
                 .then(({
+                    seo,
                     comment_count,
                     photo_count,
                     events_count, eventiEvidenza, photos, detail, cinema
@@ -118,6 +129,7 @@ module.exports = function render(req, res, next) {
                         helpers: {
                             stylesheet: enums.getStylesheet(enums.PLACE_MOVIE_DETAIL)
                         },
+                        seo,
                         comment_count,
                         photo_count,
                         events_count
