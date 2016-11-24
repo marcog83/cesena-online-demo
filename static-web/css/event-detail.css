@@ -493,7 +493,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .add-comment {
-    margin-right: 8px;
+    margin-right: 3px;
   }
   .comment-CNT {
     width: 100%;
