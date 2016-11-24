@@ -19,7 +19,7 @@
     "connect-busboy": "^0.0.2",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
-    "express-minify-html": "^0.9.0",
+
     "express-redis-cache": "^0.5.0",
     "get-urls": "^5.0.1",
     "handlebars": "^4.0.5",
@@ -35,15 +35,16 @@
     "node": "6.2.0"
   },
   "devDependencies": {
-    "fs-promise": "^0.5.0",
-    "fb": "^1.0.2",
-    "instagram-node": "^0.5.8",
-    "spdy": "^3.4.4",
-    "csvtojson": "^1.0.2",
     "clj-fuzzy": "^0.3.3",
+    "csvtojson": "^1.0.2",
+    "fb": "^1.0.2",
+    "fs-promise": "^0.5.0",
     "geolib": "^2.0.22",
-    "x-ray": "^2.3.1",
+    "instagram-node": "^0.5.8",
+    "mongodb": "^2.2.9",
     "ramda": "^0.22.1",
-    "mongodb": "^2.2.9"
+    "sitemap-generator": "^5.0.0",
+    "spdy": "^3.4.4",
+    "x-ray": "^2.3.1"
   }
 }

@@ -18,7 +18,7 @@ const movies = require("./routers/movies/movies");
 
 const path = require("path");
 const compression = require("compression");
-var minifyHTML = require('express-minify-html');
+
 const qs = require("qs");
 const bodyParser = require('body-parser');
 const handlebars = require('./render/handlebars-config');
@@ -41,18 +41,7 @@ function  cacheMiddleware(seconds){
 }
 
 
-app.use(minifyHTML({
-    override:      true,
-    exception_url: false,
-    htmlMinifier: {
-        removeComments:            true,
-        collapseWhitespace:        true,
-        collapseBooleanAttributes: true,
-        removeAttributeQuotes:     true,
-        removeEmptyAttributes:     false,
-        minifyJS:                  false
-    }
-}));
+
 app.use(compression());
 app.use(cacheMiddleware(432000));
 //
@@ -67,7 +56,10 @@ app.use(bodyParser.urlencoded({extended: true, keepExtensions: true})); // for p
 
 handlebars(app);
 app.use("/google2b3a4456558dadd3.html", express.static(__dirname + '/google2b3a4456558dadd3.html'));
-app.use("/sitemap.xml", express.static(__dirname + '/sitemap.xml'));
+app.use("/sitemap.xml", function(req, res) {
+    res.header('Content-Type', 'application/xml');
+
+}, express.static(__dirname + '/sitemap.xml'));
 app.use('/wireframes', express.static(__dirname + '/../wireframes',{
     maxAge: '5d'
     ,etag:"strong"
