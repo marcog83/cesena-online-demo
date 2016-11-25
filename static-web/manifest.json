@@ -2,13 +2,9 @@
   "lang": "it",
   "dir": "ltr",
   "name": "Cesena Online",
-  "description": "The ultimate futuristic racing game from the future!",
-  "short_name": "Cèsena",
+  "description": "Cesena-online raccoglie  da internet tutte le informazioni che trova a proposito di Cesena,  mostrandole in una maniera organica, per mettere in luce ciò che succede sul territorio e dare una visione a 360 gradi della città, viva e piena di realtà da scoprire.",
+  "short_name": "Cesena online",
   "icons": [{
-    "src": "icon/lowres.webp",
-    "sizes": "64x64",
-    "type": "image/webp"
-  },{
     "src": "icon/lowres.png",
     "sizes": "64x64"
   }, {
@@ -19,15 +15,7 @@
   "start_url": "/",
   "display": "fullscreen",
   "orientation": "landscape",
-  "theme_color": "aliceblue",
-  "background_color": "red",
-  "screenshots": [{
-    "src": "screenshots/in-game-1x.jpg",
-    "sizes": "640x480",
-    "type": "image/jpeg"
-  },{
-    "src": "screenshots/in-game-2x.jpg",
-    "sizes": "1280x920",
-    "type": "image/jpeg"
-  }]
+  "theme_color": "silver",
+  "background_color": "silver"
+
 }
