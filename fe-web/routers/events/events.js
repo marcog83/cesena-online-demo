@@ -22,8 +22,8 @@ router.get("/", function (req, res) {
         });
         //
         if(oggiEventi){
-            var idsOggi=oggiEventi.map(R.prop("_id"));
-            altriEventi=R.filter(evento=>!idsOggi.includes(evento._id),altriEventi);
+            var idsOggi=oggiEventi.map(evento=>evento._id.toString());
+            altriEventi=R.filter(evento=>!idsOggi.includes(evento._id.toString()),altriEventi);
         }
 
 
