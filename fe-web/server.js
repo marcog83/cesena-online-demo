@@ -35,7 +35,7 @@ if(args.ambiente=="LOCAL"){
 function  cacheMiddleware(seconds){
     return function(req,res,next){
         var date=new Date();
-        date.setDate(date.getDate()+1);
+        // date.setDate(date.getDate()+1);
         date.setHours(0,0,0,0);
         res.setHeader("Cache-Control", `public, must-revalidate, max-age=${seconds}`);
         res.setHeader("Service-Worker-Allowed", `/`);

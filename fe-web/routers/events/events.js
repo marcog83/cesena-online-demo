@@ -1,4 +1,5 @@
 var express = require('express');
+var R = require('ramda');
 var router = express.Router();
 const intl = require('../../intl/intl');
 const Seo = require('../../plugins/seo/seo-meta');
@@ -19,6 +20,13 @@ router.get("/", function (req, res) {
             title:"Cesena Online :: Eventi"
             ,url:"/events"
         });
+        //
+        if(oggiEventi){
+            var idsOggi=oggiEventi.map(R.prop("_id"));
+            altriEventi=R.filter(evento=>idsOggi.includes(evento._id),altriEventi);
+        }
+
+
         res.render(enums.EVENTS_LISTING, {
             helpers: {
                 stylesheet: enums.getStylesheet(enums.EVENTS_LISTING)
