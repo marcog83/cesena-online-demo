@@ -5,10 +5,10 @@
   "description": "Cesena-online raccoglie  da internet tutte le informazioni che trova a proposito di Cesena,  mostrandole in una maniera organica, per mettere in luce ciò che succede sul territorio e dare una visione a 360 gradi della città, viva e piena di realtà da scoprire.",
   "short_name": "Cesena online",
   "icons": [{
-    "src": "icon/lowres.png",
+    "src": "/static/img/icon/lowres.png",
     "sizes": "64x64"
   }, {
-    "src": "icon/hd_hi",
+    "src": "/static/img/icon/hd_hi",
     "sizes": "128x128"
   }],
   "scope": "/",
