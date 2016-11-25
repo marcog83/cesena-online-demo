@@ -43,7 +43,7 @@ function  cacheMiddleware(seconds){
 
 
 app.use(compression());
-app.use(cacheMiddleware(432000));
+app.use(cacheMiddleware(36000));
 //
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({extended: true, keepExtensions: true})); // for parsing application/x-www-form-urlencoded
