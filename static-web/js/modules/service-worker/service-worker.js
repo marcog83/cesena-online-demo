@@ -95,7 +95,7 @@ self.addEventListener('fetch', function (event) {
 
 function matchContents(request){
     var in_url=request.url.match(/optimized|\.[js|css|jpg|png|gif|svg|woff2|ttf]/gim);
-    var not_in_url=request.url.match(/google|analytics.com/gim)
+    var not_in_url=request.url.match(/google|events|movies|analytics.com/gim);
     return in_url && !not_in_url;
 }
 
