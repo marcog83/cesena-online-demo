@@ -47,12 +47,16 @@ router.get("/:id",function (req, res) {
             return [eventDetail, eventiCorrelati]
         })
     }).then(([eventDetail,eventiCorrelati])=> {
+
+        eventiCorrelati=R.filter(evento=>evento._id.toString()!=eventDetail._id.toString(),eventiCorrelati);
+
         var seo=Seo.getSeoMeta({
             title:"Cesena Online :: Eventi - "+eventDetail.name
             ,url:`/events/${id}`
             ,image:eventDetail.image
             ,description:eventDetail.raw_description
         });
+
         res.render(enums.EVENT_DETAIL, Object.assign({
             seo,
             helpers: {

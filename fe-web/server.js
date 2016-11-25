@@ -22,20 +22,30 @@ const compression = require("compression");
 const qs = require("qs");
 const bodyParser = require('body-parser');
 const handlebars = require('./render/handlebars-config');
+const Redis= require('express-redis-cache');
 var app = express();
-
+var cache;
 if(args.ambiente=="LOCAL"){
-    var cache = require('express-redis-cache')({
+    cache =Redis({
         expire: 60*60*2 //2 ore
     });
-     app.use(cache.route());
-}
 
+}else{
+    var host="pub-redis-12051.eu-central-1-1.1.ec2.redislabs.com";
+    var port=12051;
+    cache =Redis({
+        host
+        , port
+        // , auth_pass: "m4rc0g0bb1"
+        ,expire: 60*60*2 //2 ore
+    });
+}
+app.use(cache.route());
 
 function  cacheMiddleware(seconds){
     return function(req,res,next){
         var date=new Date();
-        // date.setDate(date.getDate()+1);
+        date.setDate(date.getDate()+1);
         date.setHours(0,0,0,0);
         res.setHeader("Cache-Control", `public, must-revalidate, max-age=${seconds}`);
         res.setHeader("Service-Worker-Allowed", `/`);
@@ -47,7 +57,7 @@ function  cacheMiddleware(seconds){
 
 
 app.use(compression());
-app.use(cacheMiddleware(36000));
+app.use(cacheMiddleware(3600));
 //
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({extended: true, keepExtensions: true})); // for parsing application/x-www-form-urlencoded
