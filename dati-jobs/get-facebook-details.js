@@ -44,43 +44,43 @@ function getFacebookDetails({from_file=true}) {
         promise = Promise.resolve(File.FACEBOOK_DETAILS_JSON);
     }
 
-    return promise.then(readJSONFile)
-        .then(details=> {
-            var connection = new Connection();
-            return connection.connect()
-
-                .then(connection.collection.bind(connection, Tables.FACEBOOK_PLACES))
-
-                .then(col=> Promise.all(details
-                    .filter(place=>Object.keys(place).length)
-                    .map(place=> {
-                        return col.findOneAndUpdate({id: place.id}, {$set: place}, {
-                            upsert: true,
-                            returnNewDocument: true
-                        }).then(function (r) {
-
-                            if (!r.lastErrorObject.updatedExisting) {
-                                return place;
-                            } else {
-                                return null;
-                            }
-
-
-                        }).catch(R.tap(e=> console.log("update failed:", e)))
-
-                    })))
-                .then(function (response) {
-                    console.log(response.length);
-                    connection.db.close();
-                    return response;
-                }).catch(e=> {
-                    console.log("fb details inseert failed:", e);
-                    connection.db.close();
-
-                    return e;
-                })
-        })
+    // return promise.then(readJSONFile)
+    //     .then(details=> {
+    //         var connection = new Connection();
+    //         return connection.connect()
+    //
+    //             .then(connection.collection.bind(connection, Tables.FACEBOOK_PLACES))
+    //
+    //             .then(col=> Promise.all(details
+    //                 .filter(place=>Object.keys(place).length)
+    //                 .map(place=> {
+    //                     return col.findOneAndUpdate({id: place.id}, {$set: place}, {
+    //                         upsert: true,
+    //                         returnNewDocument: true
+    //                     }).then(function (r) {
+    //
+    //                         if (!r.lastErrorObject.updatedExisting) {
+    //                             return place;
+    //                         } else {
+    //                             return null;
+    //                         }
+    //
+    //
+    //                     }).catch(R.tap(e=> console.log("update failed:", e)))
+    //
+    //                 })))
+    //             .then(function (response) {
+    //                 console.log(response.length);
+    //                 connection.db.close();
+    //                 return response;
+    //             }).catch(e=> {
+    //                 console.log("fb details inseert failed:", e);
+    //                 connection.db.close();
+    //
+    //                 return e;
+    //             })
+    //     })
 
 }
 
-getFacebookDetails({from_file:true});
+getFacebookDetails({from_file:false});
