@@ -31,8 +31,8 @@ if(args.ambiente=="LOCAL"){
     });
 
 }else{
-    var host="pub-redis-12051.eu-central-1-1.1.ec2.redislabs.com";
-    var port=12051;
+    var host="pub-redis-10220.eu-west-1-2.2.ec2.garantiadata.com";
+    var port=10220;
     cache =Redis({
         host
         , port
