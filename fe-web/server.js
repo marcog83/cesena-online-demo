@@ -24,23 +24,26 @@ const bodyParser = require('body-parser');
 const handlebars = require('./render/handlebars-config');
 const Redis= require('express-redis-cache');
 var app = express();
-// var cache;
-// if(args.ambiente=="LOCAL"){
-//     cache =Redis({
-//         expire: 60*60*2 //2 ore
-//     });
-//
-// }else{
-//     var host="pub-redis-10220.eu-west-1-2.2.ec2.garantiadata.com";
-//     var port=10220;
-//     cache =Redis({
-//         host
-//         , port
-//         // , auth_pass: "m4rc0g0bb1"
-//         ,expire: 60*60*2 //2 ore
-//     });
-// }
-// app.use(cache.route());
+var cache;
+if(args.ambiente=="LOCAL"){
+  //  var host="pub-redis-10220.eu-west-1-2.2.ec2.garantiadata.com";
+  //  var port=10220;
+    cache =Redis({
+
+        expire: 60*60*2 //2 ore
+    });
+
+}else{
+    var host="pub-redis-10220.eu-west-1-2.2.ec2.garantiadata.com";
+    var port=10220;
+    cache =Redis({
+        host
+        , port
+        , auth_pass: "D3y5blZ7JD4luLfV"
+        ,expire: 60*60*2 //2 ore
+    });
+}
+app.use(cache.route());
 
 function  cacheMiddleware(seconds){
     return function(req,res,next){
