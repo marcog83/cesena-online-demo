@@ -6,7 +6,7 @@ var clj_fuzzy = require('clj-fuzzy');
 const geolib = require('geolib');
 function _trovaByName(places, {name, id, address, lat, lng}) {
     var xf = R.compose(R.filter(place=> {
-        return clj_fuzzy.metrics.dice(name, place.name) > 0.54;
+        return clj_fuzzy.metrics.dice(name, place.name) > 0.55;
     }), R.map(place=> {
         let name_p1 = name;
         let name_p2 = place.name;

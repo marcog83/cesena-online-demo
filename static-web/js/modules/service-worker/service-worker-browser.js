@@ -9,7 +9,7 @@ define(function (require) {
             var url_sw="/static/js/modules/service-worker/service-worker.js";//;cf.provide(cf.Type.CONFIGURATION).SERVICE_WORKER_URL;
             navigator.serviceWorker.register(url_sw,{ scope: '/' })
                 .then(function(registration){
-                    registration.update();
+                    registration.unregister();
                 })
                 .catch(function(a) {console.log(a)});
             navigator.serviceWorker.ready

@@ -10,7 +10,7 @@ var KEY = "AIzaSyA2awqLXHWlJuyI5mLY2du4NcuA7OYgpus";
 const geolib = require('geolib');
 
 function getCategories(facebook, google, opendata) {
-    var fb = (R.view(R.lensPath(["category_list"]), facebook) || []).map(cat=>cat.name);
+    var fb = (R.view(R.lensPath(["category_list"]), facebook) || []).map(cat=>cat.name.replace(/\//gim,"_"));
     var goog = (R.view(R.lensPath(["types"]), google) || []);
     var open = (R.view(R.lensPath(["tags"]), opendata) || []);
     return (fb.concat(goog).concat(open));
@@ -196,7 +196,18 @@ connection.connect()
         },my_new_places);
         var myPlaces2Coll = connection.db.collection(Tables.MY_PLACES_2);
         // fs.writeFileSync("my-new-places.json", JSON.stringify(my_new_places));
-        return myPlaces2Coll.insertMany(my_new_places);
+        return Promise.all(my_new_places.map(match=>{
+            return myPlaces2Coll.findOneAndUpdate({
+                $or:[
+                    {id_facebook:match.id_facebook},
+                    {id_google:match.id_google},
+                    {id_opendata:match.id_opendata}
+                ]
+            },{$set:match},{upsert:true}).then(_=>{
+                console.log("update")
+            });
+        }));
+
     })
     .then(scorePlaces)
     .then(_=> {

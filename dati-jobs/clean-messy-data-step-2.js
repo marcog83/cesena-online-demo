@@ -131,7 +131,10 @@ connection.connect()
 
 
         var fuzzyMatchColl = connection.db.collection(Tables.FUZZY_MATCHES_ONE_TO_MANY);
-        return fuzzyMatchColl.insertMany(uniq_matches);
+        return fuzzyMatchColl.drop().then(_=>{
+            return fuzzyMatchColl.insertMany(uniq_matches);
+        })
+
     })
     .then(_=> {
         connection.db.close();
