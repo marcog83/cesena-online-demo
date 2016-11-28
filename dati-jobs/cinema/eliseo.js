@@ -3,54 +3,50 @@ var qs = require("qs");
 var Xray = require('x-ray');
 var x = Xray();
 var normalize = require("./normalize-movies");
-var base = "#main   tr:nth-child(2) > td > table   tr > td > table   tr > td:nth-child(1) > table   tr > td > table "
-// var moviesOggi="#main > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td:nth-child(1) > table > tbody > tr > td > table > tbody  tr > td:nth-child(2) > table > tbody > tr >td:first-child >a"
-var moviesOggi = "tr > td:nth-child(2) > table  tr >td:first-child >a"
-var orari = "tr > td[align=right]";
 
-var url = 'http://www.cinemaeliseo.it';
+
+var url = 'http://www.cinemaeliseo.it/home.php?a=1';
 function getMovies() {
     return new Promise((res, rej)=> {
 
-        x(url, base + moviesOggi, [{title: "", detail: "@href"}])(function (err, movies) {
+        x(url, "body", {
+            movies:x("#tabs_i2-pane1 > div",[{
+                title:"a strong"
+                ,detail:"a@href"
+                , fascie:["tr:nth-child(2) td:nth-child(3) strong"]
+                ,prenota:"tr:nth-child(2)  a:nth-of-type(1)@href"
+            }])
+            ,day:"#tabs_i2-pane1 > h4"
+
+
+
+        })(function (err, movies) {
             res(movies)
         });
     })
 }
 
-function getOrari() {
-    return new Promise((res, rej)=> {
 
-        x(url, base + orari, [{orari: ""}])(function (err, response) {
-            res(response)
-        });
-    })
-}
-Promise.all([
-    getMovies()
-    , getOrari()
-]).then(([movies,orari])=> {
-    return movies.map((movie, i)=> {
-        return Object.assign(movie, orari[i], qs.parse(movie.detail.split("?")[1]));
-    })
-})
-
-    .then(response=> {
-        var oreRegEXP = /([01]\d|2[0-3])[:|.]?[0-5]\d/gi;
-        var a=new Date();
-        return response.map(movie=> {
+getMovies().then(movies=> {
+        return movies.movies.map((movie, i)=> {
+            var a = new Date();
             var days_list = [
                 {
                     day: Date.UTC(a.getFullYear(), a.getMonth(), a.getDate())
-                    , fascie: (movie.orari.match(oreRegEXP) || []).map(a=>a.replace(".", ":"))
+                    , fascie: movie.fascie.map(a=>a.replace(".", ":"))
                 }
             ];
-            return Object.assign({days_list}, movie)
+            delete movie.fascie
+            return Object.assign(movie,
+                {days_list},
+                qs.parse(movie.detail.split("?")[1]));
         })
     })
-    .then(response=>{
-        var a=new Date();
-        normalize.normalize(Date.UTC(a.getFullYear(), a.getMonth(), a.getDate())+"__eliseo-movies.json")(response);
+
+
+    .then(response=> {
+
+        normalize.normalize("eliseo-movies.json")(response);
     });
 
 

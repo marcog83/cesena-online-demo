@@ -1,0 +1,204 @@
+[
+  {
+    "omdb": {
+      "Response": "False",
+      "Error": "Movie not found!"
+    },
+    "details": {
+      "poster_path": "/bTr9ErptBbbdFF1yz7SbI2tGLcu.jpg",
+      "adult": false,
+      "overview": "Dopo il successo di “Io Che Amo Solo Te” tornano le emozioni, le risate e le furie dei personaggi creati da Luca Bianchini, che troveremo ancora insieme per “La cena di Natale”.  Nella splendida Polignano a Mare imbiancata della neve, saranno ancora più agitati del solito: tra isterismi, introvabili capitoni, test di gravidanza, ansiolitici, ascensori bloccati, anelli scomparsi, ritrovamenti e colpi di scena, ne succederanno di tutti i colori.",
+      "release_date": "2016-11-24",
+      "genre_ids": [],
+      "id": 419502,
+      "original_title": "La cena di Natale",
+      "original_language": "it",
+      "title": "La cena di Natale",
+      "backdrop_path": "/5xfeSSaAfVCT6nudyizjxsLGBrl.jpg",
+      "popularity": 2.38276,
+      "vote_count": 0,
+      "video": false,
+      "vote_average": 0
+    },
+    "title": "LA CENA DI NATALE",
+    "detail": "http://www.cinemaeliseo.it/schedafilm.php?id=1892",
+    "prenota": "http://www.crea.webtic.it/Default.aspx?sc=5139",
+    "days_list": [
+      {
+        "day": 1480291200000,
+        "fascie": [
+          "20:30"
+        ]
+      }
+    ],
+    "id": "1892"
+  },
+  {
+    "omdb": {
+      "Title": "Fantastic Beasts and Where to Find Them",
+      "Year": "2016",
+      "Rated": "PG-13",
+      "Released": "18 Nov 2016",
+      "Runtime": "133 min",
+      "Genre": "Adventure, Family, Fantasy",
+      "Director": "David Yates",
+      "Writer": "J.K. Rowling",
+      "Actors": "Eddie Redmayne, Sam Redford, Scott Goldman, Tim Bentinck",
+      "Plot": "Holding a mysterious leather suitcase in his hand, Newt Scamander, a young activist wizard from England, visits New York while he is on his way to Arizona. Inside his expanding suitcase hides a wide array of diverse, magical creatures that exist among us, ranging from tiny, twig-like ones, to majestic and humongous ones. It is the middle of the 20s and times are troubled since the already fragile equilibrium of secrecy between the unseen world of wizards and the ordinary or \"No-Maj\" people that the MACUSA Congress struggles to maintain, is at risk of being unsettled. In the meantime, the voices against wizardry keep growing with daily protests led by Mary Lou Barebone and fuelled by the increasing disasters ascribed to a dark wizard, Gellert Grindelwald. At the same time, by a twist of fate, Newt's precious suitcase will be switched with the identical one of an aspiring No-Maj baker, Jacob Kowalski, while demoted Auror, Tina Goldstein, arrests Newt for being an unregistered wizard. To make matters worse, with the suitcase in the wrong hands, several creatures manage to escape to unknown directions. Before long, this situation will catch Senior Auror Percival Graves' attention who will target both Tina and Newt amid panic caused by an invisible, devastating and utterly unpredictable menace that still wreaks havoc in New York's 5th Avenue. Is there a hidden agenda behind Graves' intentions and ultimately, what will happen to the remaining magical creatures still loose in the streets?",
+      "Language": "English",
+      "Country": "UK, USA",
+      "Awards": "1 nomination.",
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMxOTM1OTI4MV5BMl5BanBnXkFtZTgwODE5OTYxMDI@._V1_SX300.jpg",
+      "Metascore": "66",
+      "imdbRating": "7.9",
+      "imdbVotes": "75,816",
+      "imdbID": "tt3183660",
+      "Type": "movie",
+      "Response": "True"
+    },
+    "details": {
+      "poster_path": "/yIMLpRbfChWDInRzphFwe1iEDhz.jpg",
+      "adult": false,
+      "overview": "“Animali Fantastici e dove trovarli” inizia nel 1926 con Newt Scamander che ha appena terminato un viaggio in giro per il mondo per cercare e documentare una straordinaria gamma di creature magiche. Arrivato a New York per una breve pausa, pensa che tutto stia andando per il verso giusto…se non fosse per un No-Maj (termine americano per Babbano) di nome Jacob, una valigetta lasciata nel posto sbagliato, e per la fuga di alcuni degli Animali Fantastici di Newt, che potrebbero causare molti problemi sia nel mondo magico che in quello babbano.",
+      "release_date": "2016-11-16",
+      "genre_ids": [
+        10751,
+        12,
+        14
+      ],
+      "id": 259316,
+      "original_title": "Fantastic Beasts and Where to Find Them",
+      "original_language": "en",
+      "title": "Animali fantastici e dove trovarli",
+      "backdrop_path": "/6I2tPx6KIiBB4TWFiWwNUzrbxUn.jpg",
+      "popularity": 69.552406,
+      "vote_count": 575,
+      "video": false,
+      "vote_average": 7.2
+    },
+    "title": "ANIMALI FANTASTICI E DOVE TROVARLI",
+    "detail": "http://www.cinemaeliseo.it/schedafilm.php?id=1849",
+    "prenota": "http://www.crea.webtic.it/Default.aspx?sc=5139",
+    "days_list": [
+      {
+        "day": 1480291200000,
+        "fascie": [
+          "20:30"
+        ]
+      }
+    ],
+    "id": "1849"
+  },
+  {
+    "omdb": {
+      "Title": "Snowden",
+      "Year": "2016",
+      "Rated": "R",
+      "Released": "16 Sep 2016",
+      "Runtime": "134 min",
+      "Genre": "Biography, Drama, Thriller",
+      "Director": "Oliver Stone",
+      "Writer": "Kieran Fitzgerald (screenplay), Oliver Stone (screenplay), Anatoly Kucherena (book), Luke Harding (book)",
+      "Actors": "Melissa Leo, Zachary Quinto, Joseph Gordon-Levitt, Jaymes Butler",
+      "Plot": "SNOWDEN stars Joseph Gordon-Levitt and is written and directed by Oliver Stone. The script is based on the books The Snowden Files: The Inside Story of the World's Most Wanted Man by Luke Harding and Time of the Octopus by Anatoly Kucherena.",
+      "Language": "English",
+      "Country": "France, Germany, USA",
+      "Awards": "1 nomination.",
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg2MzYzNzgzOF5BMl5BanBnXkFtZTgwOTg4NzQ4OTE@._V1_SX300.jpg",
+      "Metascore": "58",
+      "imdbRating": "7.4",
+      "imdbVotes": "13,128",
+      "imdbID": "tt3774114",
+      "Type": "movie",
+      "Response": "True"
+    },
+    "details": {
+      "poster_path": "/z1tB3vh3FfALkHZxCPGUVyLdcRu.jpg",
+      "adult": false,
+      "overview": "Nel 2013 Edward Snowden (Joseph Gordon-Levitt) lascia con discrezione il suo impiego alla National Security Agency e vola ad Hong Kong per incontrare i giornalisti Glenn Greenwald e Ewen MacAskill e la regista Laura Poitras allo scopo di rivelare i giganteschi programmi di sorveglianza informatica elaborati dal governo degli Stati Uniti. Consulente esperto di informatica, legato da un impegno di massima segretezza, Ed ha scoperto che una montagna virtuale di dati viene registrata tracciando ogni forma di comunicazione digitale, non solo relativa a governi stranieri e a potenziali gruppi di terroristi, ma anche a quella di normali cittadini americani. Disilluso rispetto al suo lavoro nel mondo dell’intelligence, Snowden raccoglie meticolosamente centinaia di migliaia di documenti segreti per dimostrare la portata della violazione dei diritti in atto. Lasciando la donna che ama, Lindsay Mills, Ed trova il coraggio di agire spinto dai principi in cui crede.",
+      "release_date": "2016-09-15",
+      "genre_ids": [
+        18,
+        53
+      ],
+      "id": 302401,
+      "original_title": "Snowden",
+      "original_language": "en",
+      "title": "Snowden",
+      "backdrop_path": "/qzGFm7uF1HExPUAcAPwC3Hzk5WR.jpg",
+      "popularity": 9.417747,
+      "vote_count": 183,
+      "video": false,
+      "vote_average": 6.6
+    },
+    "title": "SNOWDEN",
+    "detail": "http://www.cinemaeliseo.it/schedafilm.php?id=1893",
+    "prenota": "http://www.crea.webtic.it/Default.aspx?sc=5139",
+    "days_list": [
+      {
+        "day": 1480291200000,
+        "fascie": [
+          "22:30"
+        ]
+      }
+    ],
+    "id": "1893"
+  },
+  {
+    "omdb": {
+      "Title": "One Piece Film Gold",
+      "Year": "2016",
+      "Rated": "N/A",
+      "Released": "23 Jul 2016",
+      "Runtime": "120 min",
+      "Genre": "Animation, Action, Adventure",
+      "Director": "Hiroaki Miyamoto",
+      "Writer": "Tsutomu Kuroiwa, Eiichiro Oda (manga)",
+      "Actors": "Hikari Mitsushima, Mayumi Tanaka, Ikue Ôtani, Kappei Yamaguchi",
+      "Plot": "The Straw Hat Pirates are taking on Gild Tesoro, one of the richest men in the world.",
+      "Language": "Japanese",
+      "Country": "Japan",
+      "Awards": "N/A",
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzBiMTlhNTAtNDc4Yi00M2FiLWE3ODMtNzgwNWI3ZGFhYjNkXkEyXkFqcGdeQXVyMjQ5NjMxNDA@._V1_SX300.jpg",
+      "Metascore": "N/A",
+      "imdbRating": "8.1",
+      "imdbVotes": "806",
+      "imdbID": "tt5251328",
+      "Type": "movie",
+      "Response": "True"
+    },
+    "details": {
+      "poster_path": "/lev2WqY1yrBVFxHXYsbBmytMTUh.jpg",
+      "adult": false,
+      "overview": "",
+      "release_date": "2016-07-23",
+      "genre_ids": [
+        28,
+        16,
+        12
+      ],
+      "id": 374205,
+      "original_title": "ワンピース　フィルム GOLD",
+      "original_language": "ja",
+      "title": "ワンピース　フィルム GOLD",
+      "backdrop_path": "/347LgrLg6tRS15ok71S7An53jHL.jpg",
+      "popularity": 2.330261,
+      "vote_count": 6,
+      "video": false,
+      "vote_average": 6.7
+    },
+    "title": "ONE PIECE GOLD",
+    "detail": "http://www.cinemaeliseo.it/schedafilm.php?id=1895",
+    "prenota": "http://www.crea.webtic.it/Default.aspx?sc=5139",
+    "days_list": [
+      {
+        "day": 1480291200000,
+        "fascie": [
+          "20:30",
+          "22:40"
+        ]
+      }
+    ],
+    "id": "1895"
+  }
+]

@@ -26,17 +26,11 @@ Promise.all([
     getmovies("alladin-movies.json",{id_opendata:"cinema_1"}),
     getmovies("astra-movies.json",{id_opendata:"cinema_3"}),
     getmovies("sanbiagio-movies.json",{id_opendata:"cinema_6"}),
-    getmovies("victor-movies.json",{id_opendata:"cinema_7"})
+    getmovies("victor-movies.json",{id_opendata:"cinema_7"}),
+    getmovies("eliseo-movies.json",{id_opendata:"cinema_5"})
 
 
-    // , fs.readFile("1476748800000__eliseo-movies.json").then(JSON.parse).then(movies=>movies.map(movie=>Object.assign({
-    //     place: {
-    //         cinema: "eliseo",
-    //         id_facebook: "126950057343635",
-    //         id_google: "ChIJY843LMmkLBMRLhgczK8eEuA",
-    //         id_opendata: "movie_5"
-    //     }
-    // }, movie)))
+    
 
 
 ]).then(response=> {
