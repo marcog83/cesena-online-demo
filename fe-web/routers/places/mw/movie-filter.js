@@ -30,7 +30,7 @@ module.exports = function render(req, res, next) {
         if (!response)next();
         else {
             var start_time = new Date();
-            start_time.setHours(0,0,0,0);
+            start_time.setHours(0, 0, 0, 0);
 
             return Promise.all([
                 eventiByPlace({start_time, limit: 3, id_place: id})
@@ -38,87 +38,86 @@ module.exports = function render(req, res, next) {
                 , findById(id)
             ]).then(([eventiEvidenza,photos,detail])=> {
 
-                    //
-                    var seo=Seo.getSeoMeta({
-                        title:"Cesena Online :: "+detail.name
-                        ,url:`/places/detail/${id}`
-                        ,image:detail.image
-                        ,description:detail.raw_description
-                    });
-                    //
+                //
+                var seo = Seo.getSeoMeta({
+                    title: "Cesena Online :: " + detail.name
+                    , url: `/places/detail/${id}`
+                    , image: detail.image
+                    , description: detail.raw_description
+                });
+                //
 
-                    var photo_count = photos.length;
-                    var comment_count = 0;
-                    var events_count = eventiEvidenza.length;
-                    return geMoviesById(detail.id_facebook).then(movies=> {
-                        var day_num = new Date().getDay();
-
-                        var moviesOggi = movies
-                            .filter(movie=> {
-                                var day = movie.days_list[day_num];
-                                return day.fascie && day.fascie.length;
-                            });
-
-//
-                        var fascie = R.compose(
-                            R.uniq,
-                            R.flatten
-                            , R.map(movie=> {
-                                var day = movie.days_list[day_num];
-                                return day.fascie
-                            })
-                        )(moviesOggi);
-                        //
-                        var moviesPerFascie = moviesOggi.map(movie=> {
+                var photo_count = photos.length;
+                var comment_count = 0;
+                var events_count = eventiEvidenza.length;
+                return geMoviesById(detail.id_opendata).then(movies=> {
+                    var day_num = new Date().getDay();
+                    movies=movies||[];
+                    var moviesOggi = movies.filter(movie=> {
                             var day = movie.days_list[day_num];
-                            var fascie = day.fascie.join(",");
-                            return Object.assign({fascie}, movie);
+                            return day.fascie && day.fascie.length;
                         });
 
-                        var week_movies = [];
-                        var week_days = [];
+//
+                    var fascie = R.compose(
+                        R.uniq,
+                        R.flatten
+                        , R.map(movie=> {
+                            var day = movie.days_list[day_num];
+                            return day.fascie
+                        })
+                    )(moviesOggi);
+                    //
+                    var moviesPerFascie = moviesOggi.map(movie=> {
+                        var day = movie.days_list[day_num];
+                        var fascie = day.fascie.join(",");
+                        return Object.assign({fascie}, movie);
+                    });
 
-                        for (var i = 0; i < 7; i++) {
-                            week_days = movies
-                                .map(movie=> {
-                                    var day = movie.days_list[i];
-                                    var date = new Date(day.day);
-                                    return {
-                                        date
-                                        , timestamp: date
-                                    }
-                                });
-                            week_movies = movies
-                                .map(movie=> {
-                                    var day = movie.days_list[i];
+                    var week_movies = [];
+                    var week_days = [];
 
-                                    var hasFascie = day.fascie && day.fascie.length;
-                                    if (hasFascie) {
-                                        var timestamp = new Date(day.day).getTime();
-                                        var currentFascie = day.fascie;
-                                        return Object.assign({timestamp, currentFascie}, movie);
-                                    }
-                                });
+                    for (var i = 0; i < 7; i++) {
+                        week_days = movies
+                            .map(movie=> {
+                                var day = movie.days_list[i];
+                                var date = new Date(day.day);
+                                return {
+                                    date
+                                    , timestamp: date
+                                }
+                            });
+                        week_movies = movies
+                            .map(movie=> {
+                                var day = movie.days_list[i];
 
+                                var hasFascie = day.fascie && day.fascie.length;
+                                if (hasFascie) {
+                                    var timestamp = new Date(day.day).getTime();
+                                    var currentFascie = day.fascie;
+                                    return Object.assign({timestamp, currentFascie}, movie);
+                                }
+                            });
+
+                    }
+
+
+                    return {
+                        seo,
+                        comment_count,
+                        photo_count,
+                        events_count,
+                        eventiEvidenza, photos, detail, cinema: {
+                            fascie,
+                            moviesPerFascie
+                            , week_days
+                            , week_movies
                         }
-
-
-                        return {
-                            seo,
-                            comment_count,
-                            photo_count,
-                            events_count,
-                            eventiEvidenza, photos, detail, cinema: {
-                                fascie,
-                                moviesPerFascie
-                                , week_days
-                                , week_movies
-                            }
-                        }
-                    })
-
-
+                    }
                 })
+
+
+            })
                 .then(({
                     seo,
                     comment_count,

@@ -40,8 +40,14 @@ getMovies()
 
         return response.map(movie=> {
             var day = movie.orari.day.split(" ");
-            var month = mesiENG[day[1].match(monthReg)[0].toLowerCase()];
-            day = new Date(`${day[0]} ${month} ${day[2]}`);
+            if(day.length==3){
+                var month = mesiENG[day[1].match(monthReg)[0].toLowerCase()];
+                day = new Date(`${day[0]} ${month} ${day[2]}`);
+            }else{
+                var month = mesiENG[day[2].match(monthReg)[0].toLowerCase()];
+                day = new Date(`${day[1]} ${month} ${day[3]}`);
+            }
+
             var days_list = [
                 {
                     day: Date.UTC(day.getFullYear(), day.getMonth(), day.getDate())
@@ -51,4 +57,5 @@ getMovies()
             return Object.assign({days_list}, movie)
         })
     })
-    .then(normalize.normalize("victor-movies.json"));
+    .then(normalize.normalize("victor-movies.json"))
+    .catch(e=>console.log(e))

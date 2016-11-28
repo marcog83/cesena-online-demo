@@ -96,4 +96,5 @@ getMovies()
             return Object.assign({days_list}, movie)
         })
     })
-    .then(normalize.normalize("sanbiagio-movies.json"));
+    .then(normalize.normalize("sanbiagio-movies.json"))
+.catch(e=>console.log(e))

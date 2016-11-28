@@ -1,15 +1,17 @@
 <div class="movie-thumbnail" itemscope itemtype="http://schema.org/Movie">
     <figure class="image">
-    {{#if imdbRating}}
-     <div class="rating-CTR" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-        <i class="material-icons">star</i>
-        <p itemprop="ratingValue" content="{{imdbRating}}">{{imdbRating}}</p>
-      </div>
-    {{/if}}
+        {{#if rate}}
+            <div class="rating-CTR" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                <i class="material-icons">star</i>
+                <meta itemprop="ratingCount" content="{{ratingCount }}">
+                <meta itemprop="bestRating" content="10">
+                <p itemprop="ratingValue" content="{{rate}}">{{rate}}</p>
+            </div>
+        {{/if}}
 
-    <meta itemprop="image" content="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{poster_path}}">
-        <img  src="/static/img/transparent.png"
-        data-mediator="lazy-image" data-img="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{poster_path}}">
+        <meta itemprop="image" content="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{poster_path}}">
+        <img src="/static/img/transparent.png"
+             data-mediator="lazy-image" data-img="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{poster_path}}">
     </figure>
     <div class="info-CTR">
         <div class="info">
@@ -21,37 +23,35 @@
                 <p class="general-info">
                     <span>{{Rated}}</span>
                     <span itemprop="duration" content="{{Runtime}}">{{Runtime}}</span>
-                    <span itemprop="genre" >{{Genre}}</span>
+                    <span itemprop="genre">{{Genre}}</span>
                 </p>
 
                 <p class="description">{{overview}}</p>
             </div>
 
-{{#if cinemas}}
-            <div class="cinemas-CTR">
-                <p class="label">cinema</p>
-                <ul>
-                    {{#each cinemas}}
-                        <li class="cinema">
-                            <a href="/places/detail/{{place._id}}">
-                                <p>{{place.name}}</p>
-                            </a>
-                            <ul>
-                                {{#each days_list.0.fascie}}
-                                    <li>{{.}}</li>
-                                {{/each}}
+            {{#if cinemas}}
+                <div class="cinemas-CTR">
+                    <p class="label">cinema</p>
+                    <ul>
+                        {{#each cinemas}}
+                            <li class="cinema">
+                                <a href="/places/detail/{{place._id}}">
+                                    <p>{{place.name}}</p>
+                                </a>
+                                <ul>
+                                    {{#each days_list.0.fascie}}
+                                        <li>{{.}}</li>
+                                    {{/each}}
 
-                            </ul>
-                        </li>
-                    {{/each}}
-                </ul>
-            </div>
-{{/if}}
+                                </ul>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            {{/if}}
         </div>
 
     </div>
-
-
 
 
 </div>

@@ -1,48 +1,44 @@
-var fs = require("fs-promise");
+var fs = require("fs");
 var R = require("ramda");
 var Connection = require("../db/db-connection").Connection;
 var Tables = require("../db/tables");
+
+
+function getmovies(url,query){
+    var movies=JSON.parse(fs.readFileSync(url));
+    var connection=new Connection();
+    return connection.connect()
+        .then(connection.collection.bind(connection,Tables.MY_PLACES_2))
+        .then(coll=>{
+            return coll.findOne(query)
+                .then(place=>{
+                    return R.map(movie=>{
+                        return Object.assign({place},movie);
+                    },movies);
+                })
+        })
+        .then(R.tap(_=>connection.db.close()))
+        .catch(R.tap(_=>connection.db.close()))
+}
+
+
 Promise.all([
-    fs.readFile("alladin-movies.json").then(JSON.parse).then(movies=>movies.map(movie=>Object.assign({
-        place: {
-            cinema: "alladin",
-            id_facebook: "172415072783776",
-            id_google: "ChIJGTTbnB67LBMRuXPQl2R5tiY",
-            id_opendata: "movie_1"
-        }
-    }, movie)))
-    , fs.readFile("astra-movies.json").then(JSON.parse).then(movies=>movies.map(movie=>Object.assign({
-        place: {
-            cinema: "astra",
-            id_facebook: "126324547429982",
-            id_google: "ChIJXWimnbekLBMRWaKYdcbbNTQ",
-            id_opendata: "movie_3"
-        }
-    }, movie)))
-    , fs.readFile("1476748800000__eliseo-movies.json").then(JSON.parse).then(movies=>movies.map(movie=>Object.assign({
-        place: {
-            cinema: "eliseo",
-            id_facebook: "126950057343635",
-            id_google: "ChIJY843LMmkLBMRLhgczK8eEuA",
-            id_opendata: "movie_5"
-        }
-    }, movie)))
-    , fs.readFile("sanbiagio-movies.json").then(JSON.parse).then(movies=>movies.map(movie=>Object.assign({
-        place: {
-            cinema: "sanbiagio",
-            id_facebook: "1409690455948545",
-            id_google: "ChIJp9IKdMmkLBMR13R5akN-gBw",
-            id_opendata: "movie_6"
-        }
-    }, movie)))
-    , fs.readFile("victor-movies.json").then(JSON.parse).then(movies=>movies.map(movie=>Object.assign({
-        place: {
-            cinema: "victor",
-            id_facebook: "401279759926657",
-            id_google: "ChIJWY4nC5ejLBMRHgSA8nRvr2w",
-            id_opendata: "movie_7"
-        }
-    }, movie)))
+    getmovies("alladin-movies.json",{id_opendata:"cinema_1"}),
+    getmovies("astra-movies.json",{id_opendata:"cinema_3"}),
+    getmovies("sanbiagio-movies.json",{id_opendata:"cinema_6"}),
+    getmovies("victor-movies.json",{id_opendata:"cinema_7"})
+
+
+    // , fs.readFile("1476748800000__eliseo-movies.json").then(JSON.parse).then(movies=>movies.map(movie=>Object.assign({
+    //     place: {
+    //         cinema: "eliseo",
+    //         id_facebook: "126950057343635",
+    //         id_google: "ChIJY843LMmkLBMRLhgczK8eEuA",
+    //         id_opendata: "movie_5"
+    //     }
+    // }, movie)))
+
+
 ]).then(response=> {
     response = R.flatten(response);
 
@@ -65,7 +61,8 @@ Promise.all([
                 });
             return Promise.all(promises1.concat(promises2))
                 .then(_=>response);
-        });
+        }).catch(R.tap(_=>connection.db.close()))
+        .then(R.tap(_=>connection.db.close()))
 
 })
     .then(response=> {
@@ -91,6 +88,8 @@ Promise.all([
                 });
                 return Promise.all(promises);
             })
+            .catch(R.tap(_=>connection.db.close()))
+            .then(R.tap(_=>connection.db.close()))
 
     })
     .then(_=> {

@@ -1,33 +1,38 @@
 let Connection = require("../../../dati-jobs/db/db-connection").Connection;
 let Tables = require("../../../dati-jobs/db/tables");
 let R = require("ramda");
-
+var findOne = function (haystack, arr) {
+    return arr.some(function (v) {
+        return haystack.indexOf(v) >= 0;
+    });
+};
 var getDetails = function (omdbColl, moviedbColl, my_places) {
     return movies=> {
+        movies = movies || [];
         var _movies = movies
             .filter(movie=> {
-                return movie.themoviedb || movie.omdbID
+                return movie.id_themoviedb || movie.id_imdb
             })
             .map(movie=> {
                 var omdb;
-                if (movie.omdbID) {
-                    omdb = omdbColl.findOne({imdbID: movie.omdbID});
+                if (movie.id_imdb) {
+                    omdb = omdbColl.findOne({imdbID: movie.id_imdb});
                 } else {
                     omdb = Promise.resolve({});
                 }
                 var moviedb;
-                if (movie.themoviedb) {
-                    moviedb = moviedbColl.findOne({id: movie.themoviedb});
+                if (movie.id_themoviedb) {
+                    moviedb = moviedbColl.findOne({id: movie.id_themoviedb});
                 } else {
                     moviedb = Promise.resolve({})
                 }
 
-                var cinemas = movie.cinemas.map(cinema=> {
-                    var place=R.find(place=>
-                        place.id_facebook.includes(cinema.place.id_facebook) ,my_places);
+                var cinemas = (movie.cinemas || []).map(cinema=> {
+                    var place = R.find(place=>
+                        findOne(place.id_opendata, cinema.place.id_opendata), my_places);
                     return {
                         place
-                        ,days_list: cinema.days_list
+                        , days_list: cinema.days_list
                     };
 
                 });
@@ -35,9 +40,21 @@ var getDetails = function (omdbColl, moviedbColl, my_places) {
                 return Promise.all([
                     omdb, moviedb, Promise.resolve(cinemas)
                 ]).then(([omdb,moviedb,cinemas])=> {
+                    var ratingCount  = "N/A";
+                    var rate = "N/A";
+                    if (omdb && omdb.imdbVotes != "N/A") {
+                        ratingCount  = omdb.imdbVotes;
+                        rate = omdb.imdbRating;
+                    } else if (moviedb && moviedb.vote_count) {
+                        ratingCount  = moviedb.vote_count;
+                        rate = moviedb.vote_average;
+                    }
 
-
-                    return Object.assign(omdb, moviedb, movie,{cinemas});
+                    return Object.assign(omdb, moviedb, movie, {
+                        cinemas
+                        , ratingCount
+                        , rate
+                    });
                 })
             });
         return Promise.all(_movies);
@@ -57,7 +74,7 @@ exports.getMovies = ()=> {
                     return movieColl.find({}).toArray()
                         .then(movies=> {
                             var groups = R.groupBy(movie=> {
-                                return movie.themoviedb || movie.id;
+                                return movie.id_themoviedb || movie.id;
                             }, movies);
                             var grouped = Object.keys(groups).map(key=> {
                                 var group = groups[key];
@@ -68,8 +85,8 @@ exports.getMovies = ()=> {
                                     }
                                 });
                                 return Object.assign({cinemas}, {
-                                    themoviedb: group[0].themoviedb,
-                                    omdbID: group[0].omdbID
+                                    id_themoviedb: group[0].id_themoviedb,
+                                    id_imdb: group[0].id_imdb
                                 });
                             });
                             return grouped
@@ -84,7 +101,7 @@ exports.getMovies = ()=> {
         .catch(R.tap(_=>connection.db.close()))
 };
 
-exports.geMoviesById = id_facebook=> {
+exports.geMoviesById = id_opendata=> {
     var connection = new Connection();
     return connection.connect()
         .then(db=> {
@@ -92,7 +109,7 @@ exports.geMoviesById = id_facebook=> {
             var omdbColl = db.collection(Tables.OMDB_MOVIE);
             var moviedbColl = db.collection(Tables.THEMOVIEDB_MOVIE);
             var my_places = db.collection(Tables.MY_PLACES_2);
-            return movieColl.find({"place.id_facebook": id_facebook}).toArray()
+            return movieColl.find({"place.id_opendata": id_opendata}).toArray()
                 .then(getDetails(omdbColl, moviedbColl, my_places))
                 .then(R.tap(_=>connection.db.close()))
                 .catch(R.tap(_=>connection.db.close()))
