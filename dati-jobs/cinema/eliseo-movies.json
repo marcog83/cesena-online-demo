@@ -18,7 +18,8 @@
       "popularity": 2.38276,
       "vote_count": 0,
       "video": false,
-      "vote_average": 0
+      "vote_average": 0,
+      "generi": []
     },
     "title": "LA CENA DI NATALE",
     "detail": "http://www.cinemaeliseo.it/schedafilm.php?id=1892",
@@ -74,7 +75,12 @@
       "popularity": 69.552406,
       "vote_count": 575,
       "video": false,
-      "vote_average": 7.2
+      "vote_average": 7.2,
+      "generi": [
+        "Famiglia",
+        "Avventura",
+        "Fantasy"
+      ]
     },
     "title": "ANIMALI FANTASTICI E DOVE TROVARLI",
     "detail": "http://www.cinemaeliseo.it/schedafilm.php?id=1849",
@@ -129,7 +135,11 @@
       "popularity": 9.417747,
       "vote_count": 183,
       "video": false,
-      "vote_average": 6.6
+      "vote_average": 6.6,
+      "generi": [
+        "Dramma",
+        "Thriller"
+      ]
     },
     "title": "SNOWDEN",
     "detail": "http://www.cinemaeliseo.it/schedafilm.php?id=1893",
@@ -185,7 +195,12 @@
       "popularity": 2.330261,
       "vote_count": 6,
       "video": false,
-      "vote_average": 6.7
+      "vote_average": 6.7,
+      "generi": [
+        "Azione",
+        "Animazione",
+        "Avventura"
+      ]
     },
     "title": "ONE PIECE GOLD",
     "detail": "http://www.cinemaeliseo.it/schedafilm.php?id=1895",

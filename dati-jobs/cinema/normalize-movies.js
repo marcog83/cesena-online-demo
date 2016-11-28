@@ -1,21 +1,25 @@
 var themoviedb = require("./themoviedb");
 var omdb = require("./omdb");
 var fs = require("fs");
-
+var R = require("ramda");
+var generi=require("./genere");
 exports.normalize = (filename)=> {
 
     return function (movies) {
         return Promise.resolve(movies)
             .then(response=> {
 
-                 
 
                 return Promise.all(response.map((movie, i)=> {
                     return new Promise((resolve, reject)=> {
                         setTimeout(_=> {
                             themoviedb.getMovie(movie.title).then(details=> {
-                                resolve(Object.assign({details}, movie))
-                            })
+                                    details.generi = details.genre_ids.map(id=> {
+                                        return R.compose(R.prop("name")
+                                            ,R.find(genere=>parseInt(genere.id) == parseInt(id)))(generi)
+                                    });
+                                    resolve(Object.assign({details}, movie))
+                                })
                                 .catch(reject)
 
 
