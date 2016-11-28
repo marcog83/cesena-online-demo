@@ -52,11 +52,11 @@ module.exports = function render(req, res, next) {
                 var events_count = eventiEvidenza.length;
                 return geMoviesById(detail.id_opendata).then(movies=> {
                     var day_num = new Date().getDay();
-                    movies=movies||[];
+                    movies = movies || [];
                     var moviesOggi = movies.filter(movie=> {
-                            var day = movie.days_list[day_num];
-                            return day.fascie && day.fascie.length;
-                        });
+                        var day = movie.days_list[day_num];
+                        return day && day.fascie && day.fascie.length;
+                    });
 
 //
                     var fascie = R.compose(
@@ -78,29 +78,41 @@ module.exports = function render(req, res, next) {
                     var week_days = [];
 
                     for (var i = 0; i < 7; i++) {
-                        week_days = movies
-                            .map(movie=> {
-                                var day = movie.days_list[i];
+                        var movie = movies
+                            .filter(movie=> {
+                                return movie.days_list[i];
+                            })[0];
+                        if (movie) {
+                            var day = movie.days_list[i];
+                            if (!day.day) {
+                                week_days[i] = week_movies[i] = undefined;
+                            } else {
                                 var date = new Date(day.day);
-                                return {
+                                week_days[i] = {
                                     date
                                     , timestamp: date
-                                }
-                            });
-                        week_movies = movies
-                            .map(movie=> {
-                                var day = movie.days_list[i];
-
-                                var hasFascie = day.fascie && day.fascie.length;
+                                };
+                                var hasFascie = day && day.fascie && day.fascie.length;
                                 if (hasFascie) {
                                     var timestamp = new Date(day.day).getTime();
                                     var currentFascie = day.fascie;
-                                    return Object.assign({timestamp, currentFascie}, movie);
+                                    week_movies[i] = Object.assign({timestamp, currentFascie}, movie);
+                                } else {
+                                    week_movies[i] = undefined;
                                 }
-                            });
+                            }
+
+                        } else {
+                            week_days[i] = undefined;
+                            week_movies[i] = undefined;
+                        }
+
+
+
 
                     }
-
+                    week_days= week_days.filter(_=>_);
+                    week_movies= week_movies.filter(_=>_);
 
                     return {
                         seo,

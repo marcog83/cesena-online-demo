@@ -1,7 +1,7 @@
 <div class="place-thumbnail" itemscope itemtype="http://schema.org/Place">
-    <a href="/places/detail/{{_id}}" itemprop="url">
+    <a href="{{seo_url}}" rel="noopener" itemprop="url">
         <div class="image" data-mediator="lazy-background" data-img="{{image}}">
-            <meta itemprop="photo" content="{{image}}"/>
+            <meta itemprop="image" content="{{image}}"/>
         </div>
         {{> include/places/place-info }}
     </a>

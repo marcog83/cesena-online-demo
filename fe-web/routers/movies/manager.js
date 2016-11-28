@@ -1,5 +1,6 @@
 let Connection = require("../../../dati-jobs/db/db-connection").Connection;
 let Tables = require("../../../dati-jobs/db/tables");
+let SeoUrl = require("../../plugins/seo/seo-url");
 let R = require("ramda");
 var findOne = function (haystack, arr) {
     return arr.some(function (v) {
@@ -30,6 +31,10 @@ var getDetails = function (omdbColl, moviedbColl, my_places) {
                 var cinemas = (movie.cinemas || []).map(cinema=> {
                     var place = R.find(place=>
                         findOne(place.id_opendata, cinema.place.id_opendata), my_places);
+                    if(place){
+                        place.seo_url=`/${SeoUrl.createURL(place.name)}`;
+                    }
+
                     return {
                         place
                         , days_list: cinema.days_list

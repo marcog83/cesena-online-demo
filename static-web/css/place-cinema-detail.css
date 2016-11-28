@@ -1185,6 +1185,9 @@ svg {
 .place-cinema-detail .tabs {
   margin-top: 40px;
 }
+.place-cinema-detail .fascie-settimana {
+  display: none;
+}
 .place-cinema-detail .movies {
   font-size: 0;
 }

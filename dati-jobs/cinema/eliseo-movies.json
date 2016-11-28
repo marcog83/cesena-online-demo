@@ -26,10 +26,34 @@
     "prenota": "http://www.crea.webtic.it/Default.aspx?sc=5139",
     "days_list": [
       {
+        "day": 1480204800000,
+        "fascie": []
+      },
+      {
         "day": 1480291200000,
         "fascie": [
           "20:30"
         ]
+      },
+      {
+        "day": 1480204800000,
+        "fascie": []
+      },
+      {
+        "day": 1480118400000,
+        "fascie": []
+      },
+      {
+        "day": 1480032000000,
+        "fascie": []
+      },
+      {
+        "day": 1479945600000,
+        "fascie": []
+      },
+      {
+        "day": 1479859200000,
+        "fascie": []
       }
     ],
     "id": "1892"
@@ -73,7 +97,7 @@
       "title": "Animali fantastici e dove trovarli",
       "backdrop_path": "/6I2tPx6KIiBB4TWFiWwNUzrbxUn.jpg",
       "popularity": 69.552406,
-      "vote_count": 575,
+      "vote_count": 659,
       "video": false,
       "vote_average": 7.2,
       "generi": [
@@ -87,10 +111,34 @@
     "prenota": "http://www.crea.webtic.it/Default.aspx?sc=5139",
     "days_list": [
       {
+        "day": 1480204800000,
+        "fascie": []
+      },
+      {
         "day": 1480291200000,
         "fascie": [
           "20:30"
         ]
+      },
+      {
+        "day": 1480204800000,
+        "fascie": []
+      },
+      {
+        "day": 1480118400000,
+        "fascie": []
+      },
+      {
+        "day": 1480032000000,
+        "fascie": []
+      },
+      {
+        "day": 1479945600000,
+        "fascie": []
+      },
+      {
+        "day": 1479859200000,
+        "fascie": []
       }
     ],
     "id": "1849"
@@ -133,7 +181,7 @@
       "title": "Snowden",
       "backdrop_path": "/qzGFm7uF1HExPUAcAPwC3Hzk5WR.jpg",
       "popularity": 9.417747,
-      "vote_count": 183,
+      "vote_count": 185,
       "video": false,
       "vote_average": 6.6,
       "generi": [
@@ -146,10 +194,34 @@
     "prenota": "http://www.crea.webtic.it/Default.aspx?sc=5139",
     "days_list": [
       {
+        "day": 1480204800000,
+        "fascie": []
+      },
+      {
         "day": 1480291200000,
         "fascie": [
           "22:30"
         ]
+      },
+      {
+        "day": 1480204800000,
+        "fascie": []
+      },
+      {
+        "day": 1480118400000,
+        "fascie": []
+      },
+      {
+        "day": 1480032000000,
+        "fascie": []
+      },
+      {
+        "day": 1479945600000,
+        "fascie": []
+      },
+      {
+        "day": 1479859200000,
+        "fascie": []
       }
     ],
     "id": "1893"
@@ -207,11 +279,35 @@
     "prenota": "http://www.crea.webtic.it/Default.aspx?sc=5139",
     "days_list": [
       {
+        "day": 1480204800000,
+        "fascie": []
+      },
+      {
         "day": 1480291200000,
         "fascie": [
           "20:30",
           "22:40"
         ]
+      },
+      {
+        "day": 1480204800000,
+        "fascie": []
+      },
+      {
+        "day": 1480118400000,
+        "fascie": []
+      },
+      {
+        "day": 1480032000000,
+        "fascie": []
+      },
+      {
+        "day": 1479945600000,
+        "fascie": []
+      },
+      {
+        "day": 1479859200000,
+        "fascie": []
       }
     ],
     "id": "1895"

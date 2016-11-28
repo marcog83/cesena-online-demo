@@ -1,5 +1,6 @@
 let Connection = require("../../../dati-jobs/db/db-connection").Connection;
 let Tables = require("../../../dati-jobs/db/tables");
+let SeoUrl = require("../../plugins/seo/seo-url");
 
 let R = require("ramda");
 let getPlaceholder = require("./get-placeholder");
@@ -27,30 +28,30 @@ function eliminaEccezioni(id) {
         , "movie-theater": noop
         , sports: noop
     };
-    var fn=eccezioni[id]||noop;
+    var fn = eccezioni[id] || noop;
     return R.filter(fn)
 }
 
 
-
 function mapDetailPlace(my_place) {
 
-    return Object.assign({},my_place,{
-        raw_description:my_place.description || ""
-        ,description: formatDescription(my_place.description || "")
-        ,image:my_place.image||getPlaceholder(my_place)
+    return Object.assign({}, my_place, {
+        raw_description: my_place.description || ""
+        , description: formatDescription(my_place.description || "")
+        , image: my_place.image || getPlaceholder(my_place)
+        , seo_url: `/${SeoUrl.createURL(my_place.name)}`
     })
 }
-exports.findByChannel = function (id, options = {limit: 12,filters:[]}) {
+exports.findByChannel = function (id, options = {limit: 12, filters: []}) {
     var connection = new Connection();
 
     return connection.connect()
         .then(db=> {
             var my_places = db.collection(Tables.MY_PLACES_2);
 
-            var _regexp=new RegExp(id,"gi");
-            return my_places.find({category_list:{$all: options.filters.concat([_regexp])} })
-                .sort({score:-1})
+            var _regexp = new RegExp(id, "gi");
+            return my_places.find({category_list: {$all: options.filters.concat([_regexp])}})
+                .sort({score: -1})
                 .limit(options.limit)
                 .toArray()
                 .then(eliminaEccezioni(id))
@@ -59,11 +60,6 @@ exports.findByChannel = function (id, options = {limit: 12,filters:[]}) {
         .then(R.map(mapDetailPlace))
         .catch(R.tap(_=>connection.db.close()))
 };
-
-
-
-
-
 
 
 exports.findById = id=> {

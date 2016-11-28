@@ -1,5 +1,6 @@
 let Connection = require("../../../dati-jobs/db/db-connection").Connection;
 let Tables = require("../../../dati-jobs/db/tables");
+let SeoUrl = require("../../plugins/seo/seo-url");
 
 let R = require("ramda");
 let ObjectId = require('mongodb').ObjectId;
@@ -61,11 +62,13 @@ var getEvents = function ({start_time, end_time, limit}) {
                     } else if (!owner._id && place._id) {
                         owner = place;
                     }
-
+                    place.seo_url = `/${SeoUrl.createURL(place.name)}`;
+                    owner.seo_url = `/${SeoUrl.createURL(owner.name)}`;
+                    var seo_url = `/${SeoUrl.createURL(event.name)}`;
 
                     return Object.assign(event, {
                         image: R.view(R.lensPath(['cover', 'source']), event)
-
+                        , seo_url
                         , owner
                         , place
                     })
@@ -154,7 +157,7 @@ exports.findEventById = id=> {
                     image: R.view(R.lensPath(['cover', 'source']), event)
                 }, event, {
                     description
-                    ,raw_description:event.description
+                    , raw_description: event.description
                     , owner
                     , place
                 })

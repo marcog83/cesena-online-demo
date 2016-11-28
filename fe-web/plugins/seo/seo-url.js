@@ -1,7 +1,7 @@
 /**
  * Created by mgobbi on 28/11/2016.
  */
-const {getSlug}=require("speakingurl");
+const getSlug = require("speakingurl");
 const Connection = require("../../../dati-jobs/db/db-connection").Connection;
 const Tables = require("../../../dati-jobs/db/tables");
 const R = require("ramda");
@@ -10,11 +10,11 @@ exports.createURL = name=> {
         lang: "it"
     });
 };
-exports.save = (name, original_id)=> {
+exports.save = (name, original_url)=> {
     var connection = new Connection();
     return connection.connect()
         .then(connection.collection.bind(connection, Tables.SEO_URLS))
-        .then(coll=> coll.insertOne({name, original_id}))
+        .then(coll=> coll.findOneAndUpdate({name}, {$set: {name, original_url}}, {upsert: true}))
         .then(R.tap(_=>connection.db.close()))
         .catch(R.tap(_=>connection.db.close()))
 };
@@ -31,8 +31,9 @@ exports.middleware = (req, res, next)=> {
     var name = req.params.id;
     return getURL(name).then(seoItem=> {
         if (seoItem) {
-            req.params.id = seoItem.original_id;
+            req.url = seoItem.original_url;
         }
-        next("route");
+        next();
+
     });
 };

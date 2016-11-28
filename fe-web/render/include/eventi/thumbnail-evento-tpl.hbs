@@ -1,5 +1,5 @@
 <div class="event-thumbnail" itemscope itemtype="http://schema.org/Event">
-    <a href="/events/{{_id}}" itemprop="url">
+    <a href="{{seo_url}}" itemprop="url">
         <div class="event-thumbnail__image"  data-mediator="lazy-background" data-img="{{image}}">
             <meta content="{{image}}" itemprop="image"/>
         </div>
@@ -7,7 +7,7 @@
     </a>
 
     <div itemprop="sponsor" itemscope itemtype="http://schema.org/Place">
-        <a href="/places/detail/{{owner._id}}" class="place" itemprop="url">
+        <a href="{{owner.seo_url}}" class="place" itemprop="url">
             <p class="event-thumbnail__place-name" itemprop="name">{{owner.name}}</p>
         </a>
     </div>

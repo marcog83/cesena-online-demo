@@ -15,7 +15,7 @@ const search = require("./routers/search/search");
 const events = require("./routers/events/events");
 const homepage = require("./routers/homepage/homepage");
 const movies = require("./routers/movies/movies");
-
+const SeoUrl = require('./plugins/seo/seo-url');
 const path = require("path");
 const compression = require("compression");
 
@@ -24,27 +24,26 @@ const bodyParser = require('body-parser');
 const handlebars = require('./render/handlebars-config');
 const Redis= require('express-redis-cache');
 var app = express();
-// var cache;
-// if(args.ambiente=="LOCAL"){
-//   //  var host="pub-redis-10220.eu-west-1-2.2.ec2.garantiadata.com";
-//   //  var port=10220;
-//     cache =Redis({
-//
-//         expire: 60*60*2 //2 ore
-//     });
-//
-// }else{
-//     var host="pub-redis-10220.eu-west-1-2.2.ec2.garantiadata.com";
-//     var port=10220;
-//     cache =Redis({
-//         host
-//         , port
-//         , auth_pass: "D3y5blZ7JD4luLfV"
-//         ,expire: 60*60*2 //2 ore
-//     });
-// }
-// app.use(cache.route());
+var cache;
+if(args.ambiente=="LOCAL"){
 
+    cache =Redis({
+
+        expire: 60*60*2 //2 ore
+    });
+
+}else{
+    var host="pub-redis-10220.eu-west-1-2.2.ec2.garantiadata.com";
+    var port=10220;
+    cache =Redis({
+        host
+        , port
+        , auth_pass: "D3y5blZ7JD4luLfV"
+        ,expire: 60*60*2 //2 ore
+    });
+}
+// app.use(cache.route());
+app.get("/:id",SeoUrl.middleware);
 function  cacheMiddleware(seconds){
     return function(req,res,next){
         var date=new Date();
