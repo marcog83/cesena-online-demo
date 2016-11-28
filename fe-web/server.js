@@ -73,6 +73,11 @@ app.use("/sitemap.xml", function(req, res,next) {
     next();
 
 }, express.static(__dirname + '/sitemap.xml'));
+app.use("/sitemap-seo.xml", function(req, res,next) {
+    res.header('Content-Type', 'application/xml');
+    next();
+
+}, express.static(__dirname + '/sitemap-seo.xml'));
 app.use('/wireframes', express.static(__dirname + '/../wireframes',{
     maxAge: '5d'
     ,etag:"strong"
