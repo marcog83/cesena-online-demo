@@ -153,6 +153,9 @@ exports.findEventById = id=> {
                 } else if (!owner && place) {
                     owner = place;
                 }
+                place.seo_url = `/${SeoUrl.createURL(place.name)}`;
+                owner.seo_url = `/${SeoUrl.createURL(owner.name)}`;
+
                 return Object.assign({
                     image: R.view(R.lensPath(['cover', 'source']), event)
                 }, event, {

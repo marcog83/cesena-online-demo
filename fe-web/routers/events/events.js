@@ -3,6 +3,7 @@ var R = require('ramda');
 var router = express.Router();
 const intl = require('../../intl/intl');
 const Seo = require('../../plugins/seo/seo-meta');
+const SeoUrl = require('../../plugins/seo/seo-url');
 const {findEventById,eventiByPlace,eventi}=require("./manager");
 const {findMyPlaceByFacebookId}=require("../places/manager");
 const enums=require("../../common/enums");
@@ -52,7 +53,7 @@ router.get("/:id",function (req, res) {
 
         var seo=Seo.getSeoMeta({
             title:"Cesena Online :: Eventi - "+eventDetail.name
-            ,url:`/events/${id}`
+            ,url:`/${SeoUrl.createURL(eventDetail.name)}`
             ,image:eventDetail.image
             ,description:eventDetail.raw_description
         });
