@@ -183,7 +183,7 @@ connection.connect()
                     , otherPhotos
                     ,permanently_closed: R.view(R.lensPath(["permanently_closed"]), google)
                 };
-
+                
                 return result
             })
         }, my_new_places);

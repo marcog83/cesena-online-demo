@@ -129,7 +129,7 @@ var xf = R.compose(R.filter(cat=> {
     if (newCats.length) {
         return newCats
     } else {
-        return [cat]
+        return [cat.replace(/\//gim,"_")]
     }
 }));
 exports.map = R.compose(R.uniq, R.flatten, R.into([], xf));

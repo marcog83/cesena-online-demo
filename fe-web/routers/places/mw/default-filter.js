@@ -5,6 +5,7 @@ const {findById}=require("../manager");
 const intl = require('../../../intl/intl');
 const enums = require("../../../common/enums");
 const Seo = require('../../../plugins/seo/seo-meta');
+const SeoUrl = require('../../../plugins/seo/seo-url');
 module.exports = function render(req, res, next) {
     var id = req.params.id;
     var start_time = new Date();
@@ -24,7 +25,7 @@ module.exports = function render(req, res, next) {
             //
             var seo=Seo.getSeoMeta({
                 title:"Cesena Online :: "+detail.name
-                ,url:`/places/detail/${id}`
+                ,url:`/${SeoUrl.createURL(detail.name)}`
                 ,image:detail.image
                 ,description:detail.raw_description
             });

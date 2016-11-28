@@ -22,6 +22,7 @@ exports.FUZZY_MATCHES = "fuzzy-matches";
 exports.FUZZY_MATCHES_ONE_TO_MANY = "fuzzy-matches-one-to-many";
 exports.RATINGS = "ratings";
 exports.MY_IMAGES_COMMENTS = "MY_IMAGES_COMMENTS";
+exports.SEO_URLS = "SEO_URLS";
 
 
 
