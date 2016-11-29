@@ -33,12 +33,11 @@ if(args.ambiente=="LOCAL"){
     });
 
 }else{
-    var host="pub-redis-10220.eu-west-1-2.2.ec2.garantiadata.com";
+    // var host="pub-redis-10220.eu-west-1-2.2.ec2.garantiadata.com";
+    var redis = require('redis');
     var port=10220;
     cache =Redis({
-        host
-        , port
-        , auth_pass: "D3y5blZ7JD4luLfV"
+       client:redis.createClient(process.env.REDISCLOUD_URL, {no_ready_check: true})
         ,expire: 60*60*2 //2 ore
     });
 }
