@@ -71,7 +71,7 @@ exports.eventiByPlace = ({start_time, end_time, limit, id_place})=> {
             var myEvents = db.collection(Tables.MY_EVENTS);
             return myPlaces.findOne({_id: ObjectId(id_place)}).then(my_place=> {
                 var time_query = {start_time: {$gte: start_time.getTime()}};
-                if (time_query) {
+                if (end_time) {
                     time_query.end_time = {$lte: end_time.getTime()};
                 }
 
