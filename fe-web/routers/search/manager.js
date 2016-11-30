@@ -1,5 +1,6 @@
 let Connection = require("../../../dati-jobs/db/db-connection").Connection;
 let Tables = require("../../../dati-jobs/db/tables");
+const SeoUrl = require("../../plugins/seo/seo-url");
 let R = require("ramda");
 exports.search = query=> {
     var connection = new Connection();
@@ -8,14 +9,15 @@ exports.search = query=> {
         .then(coll=> {
             var regex = new RegExp(query, "gi");
             return Promise.all([
-                coll.find({name: regex}, {name: 1, _id: 1}).sort({score:-1}).limit(3).toArray()
-                , coll.find({category_list: regex}, {category_list: 1}).sort({score:-1}).limit(3).toArray()
+                coll.find({name: regex}, {name: 1, _id: 1}).sort({score: -1}).limit(3).toArray()
+                , coll.find({category_list: regex}, {category_list: 1}).sort({score: -1}).limit(3).toArray()
                     .then(R.compose(R.map(cat=> {
                         return {
-                            name: cat
+                            seo_url: "/" + SeoUrl.createURL(cat)
+                            , name: cat
                             , query: cat
                         }
-                    }), R.uniq,R.filter(cat=>cat.match(regex)), R.flatten, R.map(R.prop("category_list"))))
+                    }), R.uniq, R.filter(cat=>cat.match(regex)), R.flatten, R.map(R.prop("category_list"))))
 
             ])
         })
