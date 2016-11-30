@@ -10,6 +10,8 @@ exports.search = query=> {
             var regex = new RegExp(query, "gi");
             return Promise.all([
                 coll.find({name: regex}, {name: 1, _id: 1}).sort({score: -1}).limit(3).toArray()
+                    .then(R.map(place=>Object.assign({seo_url:"/" + SeoUrl.createURL(place.name)},place)))
+
                 , coll.find({category_list: regex}, {category_list: 1}).sort({score: -1}).limit(3).toArray()
                     .then(R.compose(R.map(cat=> {
                         return {
