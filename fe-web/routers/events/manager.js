@@ -141,17 +141,19 @@ exports.findEventById = id=> {
         .then(coll=> coll.findOne({_id: ObjectId(id)}))
         .then(event=> {
             var myPlaceColl = connection.db.collection(Tables.MY_PLACES_2);
-            var id_owner = event.owner.id;
-            var id_place = event.place.id;
+            var id_owner = event.owner && event.owner.id;
+            var id_place = event.place && event.place.id;
             return Promise.all([
-                myPlaceColl.findOne({id_facebook: id_owner}),
-                myPlaceColl.findOne({id_facebook: id_place})
+                id_owner ? myPlaceColl.findOne({id_facebook: id_owner}) : Promise.resolve(null),
+                id_place ? myPlaceColl.findOne({id_facebook: id_place}) : Promise.resolve(null)
             ]).then(([owner,place])=> {
                 var description = formatDescription(event.description);
                 if (!place && owner) {
                     place = owner;
                 } else if (!owner && place) {
                     owner = place;
+                } else if (!place && !owner) {
+                    place = owner = {};
                 }
                 place.seo_url = `/${SeoUrl.createURL(place.name)}`;
                 owner.seo_url = `/${SeoUrl.createURL(owner.name)}`;
