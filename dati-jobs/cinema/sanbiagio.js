@@ -45,10 +45,10 @@ getMovies()
                 return Object.assign(movie, {
                     id: movie.detail.split("/").slice(-1)[0]
                     , sala: curr.sala
-                    , orari: (movie.orari
-                        .split(/\t\t\t\t|\n\t\t\t\t/g)[3]
-                        .split(/orari:/g)[1]
-                        .split(/L|M|M|G|V|S|D/g)
+                    , orari: ((movie.orari
+                            .split(/\t\t\t\t|\n\t\t\t\t/g)[3]
+                            .split(/orari:/g)[1] || ""
+                    ).split(/L|M|M|G|V|S|D/g)
                         .filter(day=>day.trim().length) || [])
                         .map(day=>day
                             .replace(/unedì/g, "lunedì")
@@ -97,4 +97,4 @@ getMovies()
         })
     })
     .then(normalize.normalize("sanbiagio-movies.json"))
-.catch(e=>console.log(e))
+    .catch(e=>console.log(e))

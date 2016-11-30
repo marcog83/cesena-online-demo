@@ -1,15 +1,21 @@
 var R = require('ramda');
-
+function utcTimestamp(date) {
+    return Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(),
+        date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds(),
+        date.getUTCMilliseconds());
+}
 function getEvent(place, i) {
     return (place.events && place.events.data || []).map(event=> {
         return Object.assign({}, event, {
-            owner:  R.view(R.lensPath(["owner", "id"]), event) ? event.owner : {name: place.name, id: place.id}
+            owner: R.view(R.lensPath(["owner", "id"]), event) ? event.owner : {name: place.name, id: place.id}
             , place: R.view(R.lensPath(["place", "id"]), event) ? event.place : {
                 name: place.name,
                 location: place.location,
                 id: place.id_facebook
             }
             , __provider: "facebook"
+            , start_time: utcTimestamp(new Date(event.start_time))
+            , end_time: utcTimestamp(new Date(event.end_time))
 
         })
     })

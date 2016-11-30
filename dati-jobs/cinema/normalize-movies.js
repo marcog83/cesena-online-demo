@@ -14,10 +14,13 @@ exports.normalize = (filename)=> {
                     return new Promise((resolve, reject)=> {
                         setTimeout(_=> {
                             themoviedb.getMovie(movie.title).then(details=> {
-                                    details.generi = details.genre_ids.map(id=> {
+                                if(details ){
+                                    details.generi = (details.genre_ids || []).map(id=> {
                                         return R.compose(R.prop("name")
                                             ,R.find(genere=>parseInt(genere.id) == parseInt(id)))(generi)
                                     });
+                                }
+
                                     resolve(Object.assign({details}, movie))
                                 })
                                 .catch(reject)

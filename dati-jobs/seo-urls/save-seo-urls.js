@@ -23,7 +23,7 @@ function getEvents() {
     return eventsConnection.connect()
         .then(eventsConnection.collection.bind(eventsConnection, Tables.MY_EVENTS))
         .then(coll=> {
-            return coll.find({}).toArray()
+            return coll.find().toArray()
         })
         .then(places=> {
             return Promise.all(places.map(place=> {
@@ -37,7 +37,7 @@ function getEvents() {
 
 Promise.all([
     getEvents()
-    , getPlaces()
+    // , getPlaces()
 ]).then(_=> {
     var seoConnection = new Connection();
     seoConnection.connect()
