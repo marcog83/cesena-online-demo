@@ -63,7 +63,7 @@ function getImprese(url, i = 0) {
                 }
 
             });
-        }, 1000 * i);
+        }, 100 * i);
 
     })
 }
