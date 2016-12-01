@@ -13,7 +13,9 @@
             {{#each categories}}
                 <li class="menu-item {{active}}">
                     <a href="/places/{{query}}">
-                        <p><span>{{name}}</span></p>
+                        <!--<p><span>{{name}}</span></p>-->
+                        <p><span>{{formatMessage (intlGet name) }}
+                        </span></p>
                     </a>
                 </li>
             {{/each}}
