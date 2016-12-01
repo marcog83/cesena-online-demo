@@ -59,13 +59,13 @@ function send(id, cb) {
 
 //
 
-module.exports = function (facebook_places_id,i) {
+module.exports = function ({place_id,i}) {
 
     return new Promise(function (resolve, reject) {
         setTimeout(function(){
-            api.location_search({facebook_places_id: facebook_places_id}, function (err, result, remaining, limit) {
+            api.location_search({facebook_places_id: place_id}, function (err, result, remaining, limit) {
                 if (err) {
-                    reject(!err ? 'error occurred' : err.message);
+                    resolve([]);
                     return;
                 }
                 if (!result[0]) {
@@ -73,7 +73,7 @@ module.exports = function (facebook_places_id,i) {
                     return;
                 }
                 var place = result[0].id;
-                console.log(i,":",place);
+
                 //https://www.instagram.com/explore/locations/345031147/?__a=1
                 send(place, function (err, result, remaining, limit) {
                     if (err) {
@@ -87,7 +87,7 @@ module.exports = function (facebook_places_id,i) {
                 });
 
             });
-        },10000*i)
+        },5000*i)
     });
 
 };

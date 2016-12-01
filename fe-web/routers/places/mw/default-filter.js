@@ -13,7 +13,7 @@ module.exports = function render(req, res, next) {
 
 
     return Promise.all([
-            eventiByPlace({start_time, limit: 3, id_place: id})
+            eventiByPlace({start_time, limit: 3*4, id_place: id})
             , photosById(id)
             , findById(id)
         ])

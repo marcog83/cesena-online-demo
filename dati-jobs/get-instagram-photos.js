@@ -6,7 +6,7 @@ var fs = require("fs-promise");
 
 var instagram = require('./instagram');
 function writeJSONFile(filename) {
-    return function ( places) {
+    return function (places) {
         return fs.writeFile(filename, JSON.stringify(places)).then(_=>filename);
     }
 }
@@ -14,9 +14,9 @@ function readJSONFile(filename) {
     return Promise.resolve(JSON.parse(fs.readFileSync(filename)));
 }
 
-function _getInstagram(place,i) {
-    return instagram(place.id,i).then(function (photos) {
-
+function _getInstagram(place, i) {
+    return instagram({place_id: place.id, i}).then(function (photos) {
+        console.log(i, ":", place.name, "=>", photos.length);
         return {
             id_facebook: place.id,
             instagram_photos: photos
@@ -30,10 +30,10 @@ function _getInstagram(place,i) {
     });
 }
 
-var getInstagram=places=> Promise.all(places.map(_getInstagram));
+var getInstagram = places=> Promise.all(places.map(_getInstagram));
 
 function updateInstagram() {
-    return  readJSONFile(File.INSTAGRAM_PHOTOS_JSON).then(instagram_photos=> {
+    return readJSONFile(File.INSTAGRAM_PHOTOS_JSON).then(instagram_photos=> {
 
         var connection = new Connection();
         return connection.connect()
