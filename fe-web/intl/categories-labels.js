@@ -164,8 +164,49 @@ var cibo = {
     "event": "Evento",
     "museo": "Museo",
     "posti_storici": "Posti Storici"
+    ,
+    "child protective service": "child protective service"
+    ,
+    "climbing": "climbing",
 
-};
+
+    "arti_marziali": "arti_marziali",
+    "bingo hall": "bingo hall",
+    "club_sportivo": "club_sportivo",
+    "community organization": "community organization",
+    "event venue": "event venue",
+    "lottery retailer": "lottery retailer",
+    "occupational therapist": "occupational therapist",
+    "personal_trainer": "personal_trainer",
+    "piscina": "piscina",
+    "stadio": "stadio",
+    "tennis": "tennis",
+    "yoga_pilates": "yoga_pilates",
+    //
+    "church": "church",
+    "collectibles store": "collectibles store",
+    "cultural gifts store": "cultural gifts store",
+    "fumetteria": "fumetteria",
+    //
+    "assicurazioni": "assicurazioni",
+    "avvocato": "avvocato",
+    "banca": "banca",
+    "bank/financial institution": "bank/financial institution",
+    "big box retailer": "big box retailer",
+    "estate planning": "estate planning",
+    "financial aid": "financial aid",
+    "financial service": "financial service",
+    "gas_station": "gas_station",
+    "insurance company": "insurance company",
+    "passport & visa service": "passport & visa service",
+    "post office": "post office",
+    "post_office": "post_office",
+    "real_estate": "real_estate",
+    "refrigeration": "refrigeration",
+    "tech": "tech",
+    "wholesale & supply store": "wholesale & supply store",
+    //
+}
 
 
 module.exports = cibo;
