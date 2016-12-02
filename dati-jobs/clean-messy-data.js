@@ -4,6 +4,14 @@ const R = require("ramda");
 const fs = require("fs");
 var clj_fuzzy = require('clj-fuzzy');
 const geolib = require('geolib');
+
+var double_metaphone=R.memoize(clj_fuzzy.phonetics.double_metaphone);
+var dice=R.memoize(clj_fuzzy.metrics.dice);
+// This opens up the writeable stream to `output`
+var logger = fs.createWriteStream('log.txt', {
+    flags: 'a' // 'a' means appending (old data will be preserved)
+})
+
 function _trovaByName(places, {name, id, address, lat, lng}) {
     var xf = R.compose(R.filter(place=> {
         return clj_fuzzy.metrics.dice(name, place.name) > 0.55;
@@ -11,20 +19,26 @@ function _trovaByName(places, {name, id, address, lat, lng}) {
         let name_p1 = name;
         let name_p2 = place.name;
         let percent_name = clj_fuzzy.metrics.dice(name_p1, name_p2);
-        let a1 = clj_fuzzy.phonetics.double_metaphone(address)[0];
-        let a2 = clj_fuzzy.phonetics.double_metaphone(place.address)[0];
+        let a1 = double_metaphone(address)[0];
+        let a2 = double_metaphone(place.address)[0];
         let percent_address_phonetic = clj_fuzzy.metrics.dice(a1, a2);
-        let percent_address_metric = clj_fuzzy.metrics.dice(address, place.address);
-        let distance = 1000000000;
+          let distance = 1000000000;
         if (lat && lng && place.lat && place.lng) {
             distance = geolib.getDistance({latitude: lat, longitude: lng}, {
                 latitude: place.lat,
                 longitude: place.lng
             }, 1, 3);
         }
-        console.log(`${percent_name.toFixed(4)} | ${name_p1} => ${name_p2}
-${address} => ${place.address} | ${distance} m | ${percent_address_phonetic.toFixed(4)} | ${percent_address_metric.toFixed(4)}
----------`);
+        var log=`${percent_name.toFixed(4)} | ${name_p1} => ${name_p2}
+${address} => ${place.address} | ${distance} m | ${percent_address_phonetic.toFixed(4)} 
+---------\n`;
+        try{
+            console.log(log);
+            logger.write(log);
+        }catch (e){
+console.log(e);
+        }
+
         return {
             id_p1: id,
             id_p2: place.id,
@@ -34,7 +48,6 @@ ${address} => ${place.address} | ${distance} m | ${percent_address_phonetic.toFi
             address_p2: place.address,
             percent_name,
             percent_address_phonetic,
-            percent_address_metric,
             distance
         }
     }));
@@ -46,6 +59,11 @@ var guess = R.curryN(2, (config, place)=> {
 });
 var connection = new Connection();
 connection.connect()
+    // .then(db=>{
+    //     return db.collection(Tables.FUZZY_MATCHES).drop().then(_=>{
+    //         return db;
+    //     })
+    // })
     .then(db=> {
         var fbColl = db.collection(Tables.FACEBOOK_PLACES);
         var googColl = db.collection(Tables.GOOGLE_PLACES);
@@ -99,30 +117,27 @@ connection.connect()
         };
 
         //
-        var now=Date.now();
-        console.log("start",now);
+
         var googleResults = R.compose(R.flatten, R.map(guess(goog_config)))(googlePlaces);
-        var t1=Date.now();
-        console.log("googleResults DONE",(t1-now)/1000," secondi | ",t1);
-        var now=Date.now();
+
         var fbResults = R.compose(R.flatten, R.map(guess(fb_config)))(fbPlaces);
-        var t1=Date.now();
-        console.log("fbResults DONE",(t1-now)/1000," secondi | ",t1);
-        var now=Date.now();
+
         var openResults = R.compose(R.flatten, R.map(guess(open_config)))(openPlaces);
-        var t1=Date.now();
-        console.log("openResults DONE",(t1-now)/1000," secondi | ",t1);
+
+
         //
         var fuzzyMatchColl = connection.db.collection(Tables.FUZZY_MATCHES);
         return fuzzyMatchColl.insertMany(fbResults.concat(googleResults).concat(openResults));
     })
     .then(_=> {
         connection.db.close();
+        logger.end(); // close string
         console.log("DONE");
         process.exit(0);
     })
     .catch(_=> {
         console.log(_);
+        logger.end(); // close string
         connection.db.close();
         process.exit(1);
     });
