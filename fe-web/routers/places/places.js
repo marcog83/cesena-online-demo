@@ -23,18 +23,21 @@ router.get('/:id', function (req, res) {
             title: "Cesena Online :: " + id
             , url: `/places/${id}`
         });
-        var categories=getCategories(id, filters, places);
-        console.log(JSON.stringify(categories.reduce((p,c)=>{
-            p[c.name]=c.name;
+        var categories = getCategories(id, filters, places);
+        var cat_helper = categories.reduce((p, c)=> {
+            p[c.name] = c.name;
             return p;
-        },{})));
+        }, {});
+
+        console.log(JSON.stringify(cat_helper));
+        var data_intl = {intl: Object.assign(cat_helper, intl)};
         res.render(enums.PLACES_LISTING, {
             seo,
             helpers: {
                 stylesheet: enums.getStylesheet(enums.PLACES_LISTING)
             }, places, main_category: {
                 query: encodeURIComponent(id), label: id
-            }, categories , data: {intl: intl}
+            }, categories, data: data_intl
         });
     }).catch(e=> {
         console.error(e);

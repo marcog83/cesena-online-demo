@@ -41,7 +41,7 @@ if(args.ambiente=="LOCAL"){
         ,expire: 60*60*2 //2 ore
     });
 }
-app.use(/^(?!.*search).*$/,cache.route());
+// app.use(/^(?!.*search).*$/,cache.route());
 app.get("/:id",SeoUrl.middleware);
 function  cacheMiddleware(seconds){
     return function(req,res,next){

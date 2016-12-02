@@ -205,7 +205,42 @@ var cibo = {
     "refrigeration": "refrigeration",
     "tech": "tech",
     "wholesale & supply store": "wholesale & supply store",
+    "produzione_musicale": "produzione_musicale",
+
     //
+    "audiovisual equipment": "audiovisual equipment",
+    "just for fun": "just for fun",
+    "neighborhood": "neighborhood",
+    "rental shop": "rental shop",
+    //
+    "congregational church": "congregational church",
+    "place_of_worship": "place_of_worship",
+    "religious organization": "religious organization",
+    //
+    "art gallery": "art gallery",
+    "home improvement": "home improvement",
+    //
+    "real estate developer": "real estate developer",
+    //
+    "automation service": "automation service",
+    "environmental consultant": "environmental consultant",
+    "funeral_home": "funeral_home",
+    "home security": "home security",
+    //
+    "apartment & condo building": "apartment & condo building",
+    //
+    "heating, ventilating & air conditioning": "heating, ventilating & air conditioning",
+    "plumber": "plumber",
+    //
+    "car rental": "car rental",
+    //
+    "adoption service": "adoption service",
+    "animal shelter": "animal shelter",
+    "charity organization": "charity organization",
+    //
+    "printing service": "printing service",
+
+
 }
 
 
