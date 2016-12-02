@@ -10,13 +10,13 @@ var KEY = "AIzaSyA2awqLXHWlJuyI5mLY2du4NcuA7OYgpus";
 const geolib = require('geolib');
 
 function getCategories(facebook, google, opendata) {
-    var fb = (R.view(R.lensPath(["category_list"]), facebook) || []).map(cat=>cat.name.replace(/\//gim,"_"));
-    var goog = (R.view(R.lensPath(["types"]), google) || []);
-    var open = (R.view(R.lensPath(["tags"]), opendata) || []);
+    var fb = R.pathOr([], ["category_list"], facebook).map(cat=>cat.name.replace(/\//gim, "_"));
+    var goog = R.pathOr([], ["types"], google);
+    var open = R.pathOr([], ["tags"], opendata);
     return (fb.concat(goog).concat(open));
 }
 function getOtherPhotos(detail) {
-    return (R.view(R.lensPath(["photos"]), detail) || []).map(googleImage=> {
+    return R.pathOr([], ["photos"], detail).map(googleImage=> {
         var image_url = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=${googleImage.width}&maxheight=${googleImage.height}&photoreference=${googleImage.photo_reference}&key=${KEY}`.trim();
         return {
             image: image_url
@@ -122,22 +122,22 @@ connection.connect()
                 }, {}, _opendata);
 
                 var image_url = "";
-                var googleImage = (R.view(R.lensPath(["photos"]), google) || [])[0];
+                var googleImage = R.pathOr([], ["photos"], google)[0];
                 var otherPhotos = getOtherPhotos(google);
                 if (googleImage) {
                     image_url = "";//`https://maps.googleapis.com/maps/api/place/photo?maxwidth=${googleImage.width}&maxheight=${googleImage.height}&photoreference=${googleImage.photo_reference}&key=${KEY}`.trim()
                 }
                 var geo = {
-                    lng: R.view(R.lensPath(["geometry", "location", "lng"]), google)
-                    || R.view(R.lensPath(["location", "longitude"]), reduced_facebook)
-                    || R.view(R.lensPath(["longitudine"]), opendata)
-                    , lat: R.view(R.lensPath(["geometry", "location", "lat"]), google)
-                    || R.view(R.lensPath(["location", "latitude"]), reduced_facebook)
-                    || R.view(R.lensPath(["latitudine"]), opendata)
+                    lng: R.path(["geometry", "location", "lng"], google)
+                    || R.path(["location", "longitude"], reduced_facebook)
+                    || R.path(["longitudine"], opendata)
+                    , lat: R.path(["geometry", "location", "lat"], google)
+                    || R.path(["location", "latitude"], reduced_facebook)
+                    || R.path(["latitudine"], opendata)
                 };
-                var description = R.view(R.lensPath(["description"]), reduced_facebook)
-                    || R.view(R.lensPath(["description"]), google)
-                    || R.view(R.lensPath(["description"]), opendata)
+                var description = R.path(["description"], reduced_facebook)
+                    || R.path(["description"], google)
+                    || R.path(["description"], opendata)
                     || "";
 
 
@@ -145,45 +145,45 @@ connection.connect()
                 var raw__categories = getCategories(reduced_facebook, google, opendata);
 
                 var result = {
-                    address: R.view(R.lensPath(["formatted_address"]), google)
-                    || R.view(R.lensPath(["location", "street"]), reduced_facebook)
-                    || R.view(R.lensPath(["full_address"]), opendata)
-                    || R.view(R.lensPath(["indirizzo"]), opendata),
-                    name: R.view(R.lensPath(["name"]), google)
-                    || R.view(R.lensPath(["name"]), reduced_facebook)
-                    || R.view(R.lensPath(["name"]), opendata),
-                    openingHours: R.view(R.lensPath(["opening_hours", "weekday_text"]), google)
-                    || hoursHelper.fbHours(R.view(R.lensPath(["hours"]), reduced_facebook)),
-                    rating: R.view(R.lensPath(["rating"]), google),
-                    telephone: R.view(R.lensPath(["international_phone_number"]), google)
-                    || R.view(R.lensPath(["telefono"]), opendata),
-                    image: R.view(R.lensPath(["cover", "source"]), reduced_facebook)
+                    address: R.path(["formatted_address"], google)
+                    || R.path(["location", "street"], reduced_facebook)
+                    || R.path(["full_address"], opendata)
+                    || R.path(["indirizzo"], opendata),
+                    name: R.path(["name"], google)
+                    || R.path(["name"], reduced_facebook)
+                    || R.path(["name"], opendata),
+                    openingHours: R.path(["opening_hours", "weekday_text"], google)
+                    || hoursHelper.fbHours(R.path(["hours"], reduced_facebook)),
+                    rating: R.path(["rating"], google),
+                    telephone: R.path(["international_phone_number"], google)
+                    || R.path(['telefono'], opendata),
+                    image: R.path(["cover", "source"], reduced_facebook)
                     || image_url || "",
-                    place_id: R.view(R.lensPath(["place_id"]), google),
+                    place_id: R.path(['place_id'], google),
                     geo,
 
-                    id_facebook: place.id_facebook||[],
-                    id_google: place.id_google||[],
-                    id_opendata: place.id_opendata||[],
-                    id_imprese: place.id_imprese||[],
+                    id_facebook: R.pathOr([], place.id_facebook),
+                    id_google: R.pathOr([], place.id_google),
+                    id_opendata: R.pathOr([], place.id_opendata),
+                    id_imprese: R.pathOr([], place.id_imprese),
                     description,
-                    bio: R.view(R.lensPath(["bio"]), reduced_facebook),
+                    bio: R.path(['bio'], reduced_facebook),
                     raw__categories,
                     category_list: Categories.map(raw__categories),
-                    mission: R.view(R.lensPath(["mission"]), reduced_facebook),
-                    general_info: R.view(R.lensPath(["general_info"]), reduced_facebook),
-                    website: R.view(R.lensPath(["website"]), google)
-                    || R.view(R.lensPath(["website"]), reduced_facebook)
-                    || R.view(R.lensPath(["sito_web"]), opendata),
-                    mapUrl: R.view(R.lensPath(["url"]), google),
-                    email: (R.view(R.lensPath(["emails"]), reduced_facebook) || [])[0]
-                    || R.view(R.lensPath(["email"]), google)
-                    || R.view(R.lensPath(["email"]), opendata),
+                    mission: R.path(['mission'], reduced_facebook),
+                    general_info: R.path(['general_info'], reduced_facebook),
+                    website: R.path(['website'], google)
+                    || R.path(['website'], reduced_facebook)
+                    || R.path(['sito_web'], opendata),
+                    mapUrl: R.path(['url'], google),
+                    email: (R.path(['emails'], reduced_facebook) || [])[0]
+                    || R.path(['email'], google)
+                    || R.path(['email'], opendata),
                     facebook_page: reduced_facebook && reduced_facebook.id && `https://www.facebook.com/${reduced_facebook.id}`
                     , otherPhotos
-                    ,permanently_closed: R.view(R.lensPath(["permanently_closed"]), google)
+                    , permanently_closed: R.path(['permanently_closed'], google)
                 };
-                
+
                 return result
             })
         }, my_new_places);
@@ -191,19 +191,19 @@ connection.connect()
     })
     //
     .then(my_new_places=> {
-        my_new_places=R.filter(place=>{
+        my_new_places = R.filter(place=> {
             return !place.permanently_closed
-        },my_new_places);
+        }, my_new_places);
         var myPlaces2Coll = connection.db.collection(Tables.MY_PLACES_2);
         // fs.writeFileSync("my-new-places.json", JSON.stringify(my_new_places));
-        return Promise.all(my_new_places.map(match=>{
+        return Promise.all(my_new_places.map(match=> {
             return myPlaces2Coll.findOneAndUpdate({
-                $or:[
-                    {id_facebook:match.id_facebook},
-                    {id_google:match.id_google},
-                    {id_opendata:match.id_opendata}
+                $or: [
+                    {id_facebook: match.id_facebook},
+                    {id_google: match.id_google},
+                    {id_opendata: match.id_opendata}
                 ]
-            },{$set:match},{upsert:true}).then(_=>{
+            }, {$set: match}, {upsert: true}).then(_=> {
                 console.log("update")
             });
         }));

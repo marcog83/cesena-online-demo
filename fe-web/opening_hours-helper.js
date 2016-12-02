@@ -3,7 +3,7 @@ let Handlebars = require("handlebars");
 
 exports.fbHours = hours=> {
     if (!hours)return [];
-    var names = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+    var names = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
     var days = ["mon", "tue", "wed","thu",  "fri", "sat", "sun"].map((day,i)=> {
         var key1o = day + "_1_open";
         var key1c = day + "_1_close";

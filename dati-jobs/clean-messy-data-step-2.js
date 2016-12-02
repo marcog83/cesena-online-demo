@@ -33,7 +33,7 @@ var QUERY_MATCHES = {
         }
     ]
 
-}
+};
 
 connection.connect()
     .then(db=> {

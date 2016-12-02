@@ -25,23 +25,23 @@ const handlebars = require('./render/handlebars-config');
 const Redis= require('express-redis-cache');
 var app = express();
 var cache;
-// if(args.ambiente=="LOCAL"){
-//
-//     cache =Redis({
-//
-//         expire: 60*60*2 //2 ore
-//     });
-//
-// }else{
-//
-//     var redis = require('redis');
-//     var port=10220;
-//     cache =Redis({
-//        client:redis.createClient(process.env.REDISCLOUD_URL, {no_ready_check: true})
-//         ,expire: 60*60*2 //2 ore
-//     });
-// }
-// app.use(/^(?!.*search).*$/,cache.route());
+if(args.ambiente=="LOCAL"){
+
+    cache =Redis({
+
+        expire: 60*60*2 //2 ore
+    });
+
+}else{
+
+    var redis = require('redis');
+    var port=10220;
+    cache =Redis({
+       client:redis.createClient(process.env.REDISCLOUD_URL, {no_ready_check: true})
+        ,expire: 60*60*2 //2 ore
+    });
+}
+app.use(/^(?!.*search).*$/,cache.route());
 app.get("/:id",SeoUrl.middleware);
 function  cacheMiddleware(seconds){
     return function(req,res,next){

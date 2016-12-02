@@ -5,8 +5,8 @@ const fs = require("fs");
 var clj_fuzzy = require('clj-fuzzy');
 const geolib = require('geolib');
 
-var double_metaphone=R.memoize(clj_fuzzy.phonetics.double_metaphone);
-var dice=R.memoize(clj_fuzzy.metrics.dice);
+var double_metaphone = R.memoize(clj_fuzzy.phonetics.double_metaphone);
+var dice = R.memoize(clj_fuzzy.metrics.dice);
 // This opens up the writeable stream to `output`
 var logger = fs.createWriteStream('log.txt', {
     flags: 'a' // 'a' means appending (old data will be preserved)
@@ -22,21 +22,21 @@ function _trovaByName(places, {name, id, address, lat, lng}) {
         let a1 = double_metaphone(address)[0];
         let a2 = double_metaphone(place.address)[0];
         let percent_address_phonetic = clj_fuzzy.metrics.dice(a1, a2);
-          let distance = 1000000000;
+        let distance = 1000000000;
         if (lat && lng && place.lat && place.lng) {
             distance = geolib.getDistance({latitude: lat, longitude: lng}, {
                 latitude: place.lat,
                 longitude: place.lng
             }, 1, 3);
         }
-        var log=`${percent_name.toFixed(4)} | ${name_p1} => ${name_p2}
+        var log = `${percent_name.toFixed(4)} | ${name_p1} => ${name_p2}
 ${address} => ${place.address} | ${distance} m | ${percent_address_phonetic.toFixed(4)} 
 ---------\n`;
-        try{
+        try {
             console.log(log);
             logger.write(log);
-        }catch (e){
-console.log(e);
+        } catch (e) {
+            console.log(e);
         }
 
         return {
@@ -55,7 +55,7 @@ console.log(e);
 }
 var trovaByName = R.curryN(2, _trovaByName);
 var guess = R.curryN(2, (config, place)=> {
-    return R.map(key=>config[key](place),Object.keys(config));
+    return R.map(key=>config[key](place), Object.keys(config));
 });
 var connection = new Connection();
 connection.connect()
