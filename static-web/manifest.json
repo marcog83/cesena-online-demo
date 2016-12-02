@@ -1,22 +1,36 @@
 {
-  "lang": "it",
-  "dir": "ltr",
+  "versione": "0.0.1",
   "name": "Cesena Online",
   "description": "Cesena Online raccoglie  da internet tutte le informazioni che trova a proposito di Cesena,  mostrandole in una maniera organica, per mettere in luce ciò che succede sul territorio e dare una visione a 360 gradi della città, viva e piena di realtà da scoprire.",
   "short_name": "Cesena Online",
-  "icons": [{
-    "src": "https://cesena-online.herokuapp.com/static/img/icon/favico.png",
-    "sizes": "170x168"
-  }],
+  "icons": [
+    {
+      "src": "/static/img/touch-icon-iphone.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/touch-icon-ipad.png",
+      "sizes": "76x76"
+    },
+    {
+      "src": "/static/img/touch-icon-iphone-retina.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/touch-icon-ipad-retina.png",
+      "sizes": "152x152"
+    }
+  ],
   "scope": "/",
   "start_url": "/",
   "display": "fullscreen",
   "orientation": "landscape",
   "theme_color": "silver",
   "background_color": "silver",
-  "homepage_url":"https://cesena-online.herokuapp.com/",
+  "homepage_url": "https://cesena-online.herokuapp.com/",
   "background": {
-
     "persistent": false
   }
 }
