@@ -29,7 +29,7 @@ router.get('/:id', function (req, res) {
             return p;
         }, {});
 
-        console.log(JSON.stringify(cat_helper));
+        // console.log(JSON.stringify(cat_helper));
         var data_intl = {intl: Object.assign(cat_helper, intl)};
         res.render(enums.PLACES_LISTING, {
             seo,
