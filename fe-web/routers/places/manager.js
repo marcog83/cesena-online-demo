@@ -48,9 +48,14 @@ exports.findByChannel = function (id, options = {limit: 12, filters: []}) {
     return connection.connect()
         .then(db=> {
             var my_places = db.collection(Tables.MY_PLACES_2);
+            var query = {};
+            if (id) {
+                var _regexp = new RegExp(id, "gi");
+                query = {category_list: {$all: options.filters.concat([_regexp])}};
+            }
 
-            var _regexp = new RegExp(id, "gi");
-            return my_places.find({category_list: {$all: options.filters.concat([_regexp])}})
+
+            return my_places.find(query)
                 .sort({score: -1})
                 .limit(options.limit)
                 .toArray()

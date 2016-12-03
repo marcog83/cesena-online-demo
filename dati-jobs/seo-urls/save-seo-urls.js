@@ -37,7 +37,7 @@ function getEvents() {
 
 Promise.all([
     getEvents()
-    // , getPlaces()
+     , getPlaces()
 ]).then(_=> {
     var seoConnection = new Connection();
     seoConnection.connect()
@@ -61,6 +61,7 @@ Promise.all([
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">`).concat("</urlset>");
             fs.writeFileSync("sitemap-seo.xml", xml);
+            process.exit(0)
         })
 
 });

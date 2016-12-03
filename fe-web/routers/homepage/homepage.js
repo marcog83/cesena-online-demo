@@ -18,7 +18,7 @@ router.get('/', function (req, res) {
 
     Promise.all([eventi({
         start_time,end_time, limit: 3
-    }), findByChannel("bar", {
+    }), findByChannel("", {
         limit: 3 * 3,
         filters: []
     }), photosHighlight({limit: 3 * 3})]).then(([eventiEvidenza,placesEvidenza,photos])=> {

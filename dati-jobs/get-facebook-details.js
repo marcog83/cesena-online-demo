@@ -15,12 +15,19 @@ function writeJSONFile(filename) {
 function readJSONFile(filename) {
     return Promise.resolve(JSON.parse(fs.readFileSync(filename)));
 }
+function getPlaces(){
+    var connection=new Connection();
+    return connection.connect()
+        .then(connection.collection.bind(connection,Tables.FACEBOOK_PLACES))
+        .then(coll=>{
+            return coll.find().toArray()
+        })
+}
 function getFacebookDetails(params) {
     var {from_file = "true", only_file = "true"} = params;
     var promise;
     if (from_file==="false") {
-        promise = readJSONFile(File.FB_PLACES_JSON)
-
+        promise = getPlaces()
             .then(places=> {
                 return Promise.all(places
                     .map((place, i)=> {

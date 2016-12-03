@@ -28,7 +28,7 @@ function httpCall(options, i) {
                     if (obj.status == "OVER_QUERY_LIMIT") {
                         OVER_QUERY_LIMIT = true;
                     }
-                    console.log(i, ": length", obj.results.length);
+
                     resolve(obj);
                 });
             });
@@ -61,6 +61,7 @@ var getPlace = (place, i)=> {
     };
 
     return httpCall(options, i).then(google=> {
+        console.log(place.name, "=>", R.pathOr(0, ["results", "length"], google));
         return {
             google
             , place
@@ -72,8 +73,8 @@ var getPlace = (place, i)=> {
 
 //Promise.resolve(JSON.parse(fs.readFileSync("imprese.json")))
 Promise.resolve(JSON.parse(fs.readFileSync("imprese-google-2.json")))
-    //.then(R.map(place=>place.imprese))
-    //.then(R.flatten)
+//.then(R.map(place=>place.imprese))
+//.then(R.flatten)
     .then(places=> {
         var i = 0;
         var results = [];
@@ -81,15 +82,15 @@ Promise.resolve(JSON.parse(fs.readFileSync("imprese-google-2.json")))
 
             return prev.then(result=> {
                 results.push(result);
-                var promise ;
-                if(OVER_QUERY_LIMIT){
-                    console.log("over_query_limit",place.place.name);
-                    promise=  Promise.resolve(place);
-                }else{
-                    if(place.google.results && place.google.status!="OVER_QUERY_LIMIT"){
-                        console.log("ha risultati",place.place.name);
+                var promise;
+                if (OVER_QUERY_LIMIT) {
+                    console.log("over_query_limit", place.place.name);
+                    promise = Promise.resolve(place);
+                } else {
+                    if (place.google.results && place.google.status != "OVER_QUERY_LIMIT") {
+                        console.log("ha risultati", place.place.name);
                         promise = Promise.resolve(place);
-                    }else{
+                    } else {
                         promise = getPlace(place.place, 1);
                     }
 
