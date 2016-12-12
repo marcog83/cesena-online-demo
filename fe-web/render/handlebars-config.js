@@ -5,6 +5,10 @@ HandlebarsIntl.registerWith(Handlebars);
 Handlebars.registerHelper('raw-helper', function (options) {
     return options.fn();
 });
+Handlebars.registerHelper('formatISODate', function (date,options) {
+    date = new Date(date);
+    return date.toISOString();
+});
 module.exports=function(app){
     // Register `hbs` as our view engine using its bound `engine()` function.
     app.engine('.hbs', exphbs({

@@ -71,6 +71,7 @@ function getPlaceDetails(id, i) {
                 ,"website"
                 ,"emails"
                 ,"hours"
+                ,"rating_count"
                 ,"company_overview"
                 ,"category"
                 ,"location"

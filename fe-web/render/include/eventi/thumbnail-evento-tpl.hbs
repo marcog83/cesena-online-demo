@@ -14,13 +14,13 @@
     <div class="event-thumbnail__info-CNT">
         <div class="event-thumbnail__event-date">
             {{#if start_time}}
-                <p class="start-date" itemprop="startDate" content="{{start_time}}">
+                <p class="start-date" itemprop="startDate" content="{{formatISODate start_time}}">
                     <i class="material-icons event-icon">event</i>
                     <span>{{formatDate start_time "short"}}</span>
                 </p>
             {{/if}}
             {{#if end_time}}
-            <p class="end-date" itemprop="endDate" content="{{end_time}}">
+            <p class="end-date" itemprop="endDate" content="{{formatISODate end_time}}">
                 <i class="material-icons event-icon">event</i>
                 <span>{{formatDate end_time "short"}}</span>
 

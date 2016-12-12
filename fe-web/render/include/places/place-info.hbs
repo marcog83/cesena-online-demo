@@ -20,10 +20,12 @@
         <ul>
         {{#if rating}}
             <li class="social-item">
-                <div class="social" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                <div class="social">
+                <!--<div class="social" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">-->
                     <i class="material-icons">star</i>
-                    <meta itemprop="bestRating" content="5">
+                    <!--<meta itemprop="bestRating" content="5">-->
                     <span class="count" itemprop="ratingValue">{{rating}}</span>
+                    <!--<span class="count" itemprop="ratingCount"></span>-->
                 </div>
             </li>
             {{/if}}

@@ -4,7 +4,9 @@ const intl = Object.assign({
     "formats": {
         "date": {
             "short": {
-                "day": "numeric", "month": "long", "year": "numeric"
+                "day": "numeric"
+                , "month": "long"
+                , "year": "numeric"
             }
         }
     }
