@@ -39,10 +39,19 @@ function updateInstagram() {
         return connection.connect()
             .then(connection.collection.bind(connection, Tables.INSTAGRAM_PHOTOS))
             .then(coll=> {
-                return Promise.all(instagram_photos.map(photos=> {
-                    return coll.findOneAndUpdate({id_facebook: photos.id_facebook}, {$set: photos}, {upsert: true})
+                var promises = R.compose(
+                        R.map(photo=> {
+                            return coll.findOneAndUpdate({id: photo.id}, {$set: photo}, {upsert: true})
+                        })
+                        , R.flatten
+                        , R.map(item=> {
+                            return item.instagram_photos.map(photo=> {
+                                return Object.assign({id_facebook: item.id_facebook}, photo)
+                            })
+                        })
+                    )(instagram_photos);
 
-                }));
+                return Promise.all(promises);
             }).then(function (response) {
                 connection.db.close();
                 return response;
@@ -53,16 +62,17 @@ function updateInstagram() {
             })
     })
 }
+updateInstagram();
 
-
-var connection = new Connection();
-connection.connect()
-    .then(connection.collection.bind(connection, Tables.FACEBOOK_PLACES))
-    .then(coll=>coll.find().toArray())
-    .then(R.tap(_=>connection.db.close()))
-
-    .then(getInstagram)
-    .then(writeJSONFile(File.INSTAGRAM_PHOTOS_JSON))
-    .then(updateInstagram)
-    .catch(R.tap(_=>connection.db.close()));
+// var connection = new Connection();
+// connection.connect()
+//     .then(connection.collection.bind(connection, Tables.FACEBOOK_PLACES))
+//     .then(coll=>coll.find().toArray())
+//     .then(R.tap(_=>connection.db.close()))
+//
+//     .then(getInstagram)
+//     .then(writeJSONFile(File.INSTAGRAM_PHOTOS_JSON))
+//     .then(updateInstagram)
+//     .then(R.tap(_=>connection.db.close()))
+//     .catch(R.tap(_=>connection.db.close()));
 

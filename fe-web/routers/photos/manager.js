@@ -8,10 +8,10 @@ function mapInstagramPhoto(photo) {
 
     return {
         image: photo.thumbnail_src
-        ,code: photo.code
-        , description: textFormatter(photo.caption ||"")
-        , rating: R.view(R.lensPath(["likes", "count"]), photo)||0
-        , comments: R.view(R.lensPath(["comments", "count"]), photo)||0
+        , code: photo.code
+        , description: textFormatter(photo.caption || "")
+        , rating: R.view(R.lensPath(["likes", "count"]), photo) || 0
+        , comments: R.view(R.lensPath(["comments", "count"]), photo) || 0
     }
 }
 
@@ -25,8 +25,9 @@ exports.photosById = id=> {
         .then(my_place=> {
             if (!my_place.id_facebook || !my_place.id_facebook.length)return {};
             var coll = connection.db.collection(Tables.INSTAGRAM_PHOTOS);
-            return coll.findOne({id_facebook: {$in:my_place.id_facebook}})
-                .then(instagram=>instagram.instagram_photos);
+            return coll.find({id_facebook: {$in: my_place.id_facebook}})
+                .sort({date: -1})
+                .toArray()
         })
         .then(R.map(mapInstagramPhoto))
 
@@ -36,15 +37,13 @@ exports.photosById = id=> {
 
         .catch(R.tap(_=>connection.db.close()))
 };
-exports.photosHighlight = ({limit=3})=> {
+exports.photosHighlight = ({limit = 3})=> {
     var connection = new Connection();
     return connection.connect()
         .then(connection.collection.bind(connection, Tables.INSTAGRAM_PHOTOS))
         .then(coll=> {
-            return coll.find({'instagram_photos.0': {$exists: true}}, {limit}).toArray()
-                .then(R.flatten)
-                .then(R.map(instagram=>instagram.instagram_photos.slice(0, 1)))
-                .then(R.flatten)
+            return coll.find().sort({date: -1}).limit(limit).toArray()
+
 
         })
         .then(R.map(mapInstagramPhoto))
