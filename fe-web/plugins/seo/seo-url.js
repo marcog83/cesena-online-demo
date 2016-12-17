@@ -10,13 +10,10 @@ exports.createURL = name=> {
         lang: "it"
     });
 };
-exports.save = (name, original_url)=> {
-    var connection = new Connection();
-    return connection.connect()
-        .then(connection.collection.bind(connection, Tables.SEO_URLS))
-        .then(coll=> coll.findOneAndUpdate({name}, {$set: {name, original_url}}, {upsert: true}))
-        .then(R.tap(_=>connection.db.close()))
-        .catch(R.tap(_=>connection.db.close()))
+exports.save = (collection,name, original_url)=> {
+
+    return collection.findOneAndUpdate({name}, {$set: {name, original_url}}, {upsert: true})
+
 };
 var getURL = name=> {
     var connection = new Connection();

@@ -23,6 +23,8 @@ exports.FUZZY_MATCHES_ONE_TO_MANY = "fuzzy-matches-one-to-many";
 exports.RATINGS = "ratings";
 exports.MY_IMAGES_COMMENTS = "MY_IMAGES_COMMENTS";
 exports.SEO_URLS = "SEO_URLS";
+exports.FUZZY_MATCHES_FB = "FUZZY_MATCHES_FB";
+exports.FUZZY_MATCHES_FB_ONE_TO_MANY = "FUZZY_MATCHES_FB_ONE_TO_MANY";
 
 
 

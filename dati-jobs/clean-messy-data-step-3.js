@@ -2,6 +2,7 @@ const Connection = require("./db/db-connection").Connection;
 const Tables = require("./db/tables");
 const R = require("ramda");
 const fs = require("fs");
+const _ = require("lodash");
 
 const scorePlaces = require('./score-places').scorePlaces;
 const hoursHelper = require("../fe-web/opening_hours-helper");
@@ -27,17 +28,47 @@ function getOtherPhotos(detail) {
     })
 }
 
+
+function groupFBPlaces(fbColl, fbFuzzyColl) {
+
+    return Promise.all([
+        fbColl.find().toArray()
+        , fbFuzzyColl.find().toArray()
+    ]).then(([fbPlaces,fbFuzzy])=> {
+        var map_places = R.map(place=>({name: place.name, id: place.id}));
+        var filtered = fbFuzzy.map(place=> {
+            var reduced = place.id_facebook.reduce((prev, curr)=> {
+                return _.defaults(prev, R.find(f=>f.id == curr, fbPlaces))
+            }, {id: place.id_facebook});
+            return reduced;
+        });
+        var ids = R.flatten(fbFuzzy.map(p=>p.id_facebook));
+        var new_fb_places = fbPlaces.filter(place=> {
+            var has_fuzzy = ids.includes(place.id);
+            return !has_fuzzy;
+        }).map(p=> {
+            p.id = [p.id];
+            return p;
+        });
+        return map_places(new_fb_places.concat(filtered));
+    });
+
+
+}
+
 var connection = new Connection();
+
 
 connection.connect()
     .then(db=> {
         var fbColl = db.collection(Tables.FACEBOOK_PLACES);
+        var fbFuzzyColl = db.collection(Tables.FUZZY_MATCHES_FB_ONE_TO_MANY);
         var googColl = db.collection(Tables.GOOGLE_PLACES);
         var openColl = db.collection(Tables.OPENDATA_PLACES);
         var fuzzyColl = db.collection(Tables.FUZZY_MATCHES_ONE_TO_MANY);
 
         return Promise.all([
-            fbColl.find().toArray().then(R.map(place=>({name: place.name, id: place.id})))
+            groupFBPlaces(fbColl, fbFuzzyColl)
             , googColl.find().toArray().then(R.map(place=>({name: place.name, id: place.place_id})))
             , openColl.find().toArray().then(R.map(place=>({name: place.name, id: place.id})))
             , fuzzyColl.find().toArray()
@@ -55,10 +86,10 @@ connection.connect()
             };
         })(googlePlaces);
         var fbResults = R.map(place=> {
-            var fuzzy = R.find(f=>f.id_facebook.includes(place.id), fuzzyPlaces);
+            var fuzzy = R.find(f=>R.defaultTo([], R.intersection(f.id_facebook, place.id)).length, fuzzyPlaces);
             if (fuzzy)return fuzzy;
             else return {
-                id_facebook: [place.id]
+                id_facebook: place.id
             };
         })(fbPlaces);
         var openResults = R.map(place=> {
@@ -95,7 +126,9 @@ connection.connect()
             var opendata = [];
 
             if (place.id_facebook) {
-                facebook = R.filter(p=>place.id_facebook.includes(p.id), fbPlaces);
+                //
+               // facebook = R.filter(p=>place.id_facebook.includes(p.id), fbPlaces);
+                facebook = R.filter(p=>R.defaultTo([], R.intersection(place.id_facebook, p.id)).length, fbPlaces);
                 //fb_coll.find({id: {$in: place.id_facebook}}).toArray()
             }
             if (place.id_google) {
@@ -162,10 +195,10 @@ connection.connect()
                     place_id: R.path(['place_id'], google),
                     geo,
 
-                    id_facebook: R.pathOr([], place.id_facebook),
-                    id_google: R.pathOr([], place.id_google),
-                    id_opendata: R.pathOr([], place.id_opendata),
-                    id_imprese: R.pathOr([], place.id_imprese),
+                    id_facebook: R.defaultTo([], place.id_facebook),
+                    id_google: R.defaultTo([], place.id_google),
+                    id_opendata: R.defaultTo([], place.id_opendata),
+                    id_imprese: R.defaultTo([], place.id_imprese),
                     description,
                     bio: R.path(['bio'], reduced_facebook),
                     raw__categories,
@@ -196,17 +229,18 @@ connection.connect()
         }, my_new_places);
         var myPlaces2Coll = connection.db.collection(Tables.MY_PLACES_2);
         // fs.writeFileSync("my-new-places.json", JSON.stringify(my_new_places));
-        return Promise.all(my_new_places.map(match=> {
-            return myPlaces2Coll.findOneAndUpdate({
-                $or: [
-                    {id_facebook: match.id_facebook},
-                    {id_google: match.id_google},
-                    {id_opendata: match.id_opendata}
-                ]
-            }, {$set: match}, {upsert: true}).then(_=> {
-                console.log("update")
-            });
-        }));
+        return myPlaces2Coll.insertMany(my_new_places);
+        // return Promise.all(my_new_places.map(match=> {
+        //     return myPlaces2Coll.findOneAndUpdate({
+        //         $or: [
+        //             {id_facebook: match.id_facebook},
+        //             {id_google: match.id_google},
+        //             {id_opendata: match.id_opendata}
+        //         ]
+        //     }, {$set: match}, {upsert: true}).then(_=> {
+        //         console.log("update")
+        //     });
+        // }));
 
     })
     .then(scorePlaces)

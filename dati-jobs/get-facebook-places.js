@@ -1,10 +1,6 @@
 var fs = require("fs-promise");
-var {getOpenData}=require("./opendata/get-opendata");
-//var {getPlaces, getPlacesDetails, getInstagram, getAccessToken}=require("./fb/fb-place");
-var FB = require("./fb/fb-place");
 
-var google = require("./google-places/google-place");
-// var {findSimilarityGoogleFB} = require("./filtra-fb-google");
+var FB = require("./fb/fb-place");
 var Connection = require("./db/db-connection").Connection;
 var Tables = require("./db/tables");
 
@@ -30,44 +26,7 @@ function readJSONFile(filename) {
 
 
 
-function getGoogleDetails() {
-    return readJSONFile(File.MY_PLACES_JSON)
-        .then(R.filter(place=>place.id_google))
 
-        .then(google.getDetails)
-        .then(R.filter(R.identity))
-        .then(writeJSONFile(File.GOOGLE_DETAILS_JSON))
-        .then(readJSONFile)
-        .then(details=> {
-            var connection = new Connection();
-            connection.connect()
-                .then(_=>Tables.GOOGLE_PLACES)
-                .then(connection.collection.bind(connection))
-                .then(col=> {
-
-                    return Promise.all(details.map(place=> {
-                        return col.findOneAndUpdate({place_id: place.place_id}, {$set: place}, {upsert: true});
-
-                    }));
-
-
-                })
-                .then(function (response) {
-                    response = response.filter(item=> {
-                        return !item.lastErrorObject.updatedExisting
-                    })
-                    console.log(response.length);
-                    connection.db.close();
-                    return response;
-                    //process.exit(0);
-                }).catch(e=> {
-                    console.log("fb details inseert failed:", e);
-                    connection.db.close();
-                    //process.exit(1);
-                    return e;
-                })
-        })
-}
 
 
 
