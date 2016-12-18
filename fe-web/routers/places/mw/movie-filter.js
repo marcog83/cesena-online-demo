@@ -29,7 +29,7 @@ module.exports = function render(req, res, next) {
     return match(id).then(response=> {
         if (!response)next();
         else {
-            var start_time = new Date();
+            var start_time = new Date(Date.UTC());
             start_time.setHours(0, 0, 0, 0);
 
             return Promise.all([
@@ -51,7 +51,7 @@ module.exports = function render(req, res, next) {
                 var comment_count = 0;
                 var events_count = eventiEvidenza.length;
                 return geMoviesById(detail.id_opendata).then(movies=> {
-                    var day_num = new Date().getDay();
+                    var day_num = new Date(Date.UTC()).getDay();
                     movies = movies || [];
                     var moviesOggi = movies.filter(movie=> {
                         var day = movie.days_list[day_num];
