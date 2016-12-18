@@ -29,7 +29,7 @@ if(args.ambiente=="LOCAL"){
 
     cache =Redis({
 
-        expire: 60*60*2 //2 ore
+        expire: 60*60*8 //2 ore
     });
 
 }else{
@@ -38,7 +38,7 @@ if(args.ambiente=="LOCAL"){
     var port=10220;
     cache =Redis({
        client:redis.createClient(process.env.REDISCLOUD_URL, {no_ready_check: true})
-        ,expire: 60*60*24 //2 ore
+        ,expire: 60*60*8 //2 ore
     });
 }
 app.use(/^(?!.*search).*$/,cache.route());
