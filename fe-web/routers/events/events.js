@@ -9,9 +9,9 @@ const {findMyPlaceByFacebookId}=require("../places/manager");
 const enums=require("../../common/enums");
 // define the detail route
 router.get("/", function (req, res) {
-    var start_time = new Date(Date.UTC());
+    var start_time = new Date();
     start_time.setHours(0,0,0,0);
-    var end_time= new Date(Date.UTC());
+    var end_time= new Date();
     end_time.setDate(end_time.getDate()+1);
     end_time.setHours(0,0,0,0);
     Promise.all([eventi({start_time,end_time, limit: 3}), eventi({

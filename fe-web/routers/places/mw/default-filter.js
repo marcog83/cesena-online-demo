@@ -8,7 +8,7 @@ const Seo = require('../../../plugins/seo/seo-meta');
 const SeoUrl = require('../../../plugins/seo/seo-url');
 module.exports = function render(req, res, next) {
     var id = req.params.id;
-    var start_time = new Date(Date.UTC());
+    var start_time = new Date();
     start_time.setHours(0,0,0,0);
 
 
