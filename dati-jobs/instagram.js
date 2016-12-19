@@ -65,6 +65,7 @@ module.exports = function ({place_id,i}) {
         setTimeout(function(){
             api.location_search({facebook_places_id: place_id}, function (err, result, remaining, limit) {
                 if (err) {
+                //    console.log(err);
                     resolve([]);
                     return;
                 }
@@ -74,20 +75,23 @@ module.exports = function ({place_id,i}) {
                 }
                 var place = result[0].id;
 
-                //https://www.instagram.com/explore/locations/345031147/?__a=1
-                send(place, function (err, result, remaining, limit) {
-                    if (err) {
-                        resolve([]);
-                    } else {
-                        var photos =(result.location && result.location.media && result.location.media.nodes) || [];
-                        resolve(photos);
-                    }
+              setTimeout(_=>{
+                  //https://www.instagram.com/explore/locations/345031147/?__a=1
+                  send(place, function (err, result, remaining, limit) {
+                      if (err) {
+                        //  console.log(err);
+                          resolve([]);
+                      } else {
+                          var photos =(result.location && result.location.media && result.location.media.nodes) || [];
+                          resolve(photos);
+                      }
 
-                    //console.log(err, result, remaining, limit);
-                });
+                      //console.log(err, result, remaining, limit);
+                  });
+              },2000)
 
             });
-        },5000*i)
+        },6000*i)
     });
 
 };

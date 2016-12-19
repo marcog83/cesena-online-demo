@@ -1,14 +1,14 @@
 let Connection = require("../../../dati-jobs/db/db-connection").Connection;
 let Tables = require("../../../dati-jobs/db/tables");
 let SeoUrl = require("../../plugins/seo/seo-url");
-
+const normalizeUrl = require('normalize-url');
 let R = require("ramda");
 let getPlaceholder = require("./get-placeholder");
 let ObjectId = require('mongodb').ObjectId;
 
 let urlRegex = require("url-regex");
 
-var normalizeUrl = require('normalize-url');
+
 function eliminaEccezioni(id) {
     var noop = _=>R.identity;
     var eccezioni = {
@@ -35,11 +35,15 @@ function eliminaEccezioni(id) {
 
 function mapDetailPlace(my_place) {
 
+    var website=(my_place.website|| "").match(/not-applicable/gim)?"":my_place.website;
+
     return Object.assign({}, my_place, {
         raw_description: my_place.description || ""
         , description: formatDescription(my_place.description || "")
         , image: my_place.image || getPlaceholder(my_place)
         , seo_url: `/${SeoUrl.createURL(my_place.name)}`
+        ,website:website && normalizeUrl(website, {normalizeProtocol: true,stripWWW: false})
+
     })
 }
 exports.findByChannel = function (id, options = {limit: 12, filters: []}) {
@@ -95,7 +99,7 @@ exports.findMyPlaceByFacebookId = id_facebook=> {
 
 function formatDescription(description = "") {
     return (description.match(urlRegex()) || []).reduce((prev, curr)=> {
-        var link = normalizeUrl(curr);
+        var link = normalizeUrl(curr, {normalizeProtocol: true,stripWWW: false});
         return prev.replace(curr, `<a href='${link}'>${curr}</a>`)
     }, description.replace(/\n/gi, "<br>"));
 }

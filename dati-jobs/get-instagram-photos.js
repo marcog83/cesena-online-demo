@@ -62,17 +62,17 @@ function updateInstagram() {
             })
     })
 }
-updateInstagram();
+// updateInstagram();
 
-// var connection = new Connection();
-// connection.connect()
-//     .then(connection.collection.bind(connection, Tables.FACEBOOK_PLACES))
-//     .then(coll=>coll.find().toArray())
-//     .then(R.tap(_=>connection.db.close()))
-//
-//     .then(getInstagram)
-//     .then(writeJSONFile(File.INSTAGRAM_PHOTOS_JSON))
-//     .then(updateInstagram)
-//     .then(R.tap(_=>connection.db.close()))
-//     .catch(R.tap(_=>connection.db.close()));
+var connection = new Connection();
+connection.connect()
+    .then(connection.collection.bind(connection, Tables.FACEBOOK_PLACES))
+    .then(coll=>coll.find().toArray())
+    .then(R.tap(_=>connection.db.close()))
+
+    .then(getInstagram)
+    .then(writeJSONFile(File.INSTAGRAM_PHOTOS_JSON))
+    .then(updateInstagram)
+    .then(R.tap(_=>connection.db.close()))
+    .catch(R.tap(_=>connection.db.close()));
 

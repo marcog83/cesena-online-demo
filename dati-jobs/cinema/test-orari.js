@@ -39,7 +39,7 @@ function getAlladinOrari(films) {
             var festivi = "";
             var sabato = "";
             var feriali = "";
-            if (FerialiIndex != -1) {
+            if (FestiviIndex != -1) {
                 festivi = periodi_orari.slice(FestiviIndex);
 
             }

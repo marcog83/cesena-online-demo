@@ -234,13 +234,10 @@ a {
   margin-right: 0;
 }
 .inline-block.vertical {
-  width: 23.2%;
+  width: 22%;
 }
 .inline-block.vertical:nth-of-type(3n) {
   margin-right: 2.3%;
-}
-.inline-block.vertical:nth-of-type(4n) {
-  margin-right: 0;
 }
 .main {
   box-sizing: border-box;
@@ -1099,6 +1096,8 @@ svg {
 .vertical .movie-thumbnail .info-CTR {
   display: block;
   margin: 20px 0;
+  height: 14em;
+  overflow: hidden;
 }
 @media screen and (max-width: 767px) {
   .thumbnail-movie-CTR {
@@ -1153,6 +1152,9 @@ svg {
     vertical-align: top;
     margin: 5px 0 20px;
   }
+  .vertical .movie-thumbnail {
+    width: 100%;
+  }
 }
 .place-cinema-detail .place-details {
   position: relative;
@@ -1204,6 +1206,7 @@ svg {
   display: inline-block;
   vertical-align: top;
   padding: 10px 20px 10px 0;
+  cursor: pointer;
 }
 .place-cinema-detail .fascie li {
   display: inline-block;

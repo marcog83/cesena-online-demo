@@ -1,25 +1,26 @@
 <div class="cinema-detail">
 <div class="main-content">
+{{#if cinema.fascie}}
 
-    <div class="fascie">
+    <div class="fascie" data-mediator="movie-programmazione-oggi">
         <h1 class="title">oggi in programmazione</h1>
         <ul class="orari">
             {{#each cinema.fascie}}
-                <li class="orario">
+                <li class="orario js-orario" data-fascia="{{.}}">
                     {{.}}
                 </li>
             {{/each}}
         </ul>
         <div class="movies">
-
             {{#each cinema.moviesPerFascie}}
-                <div class="inline-block vertical" data-fascie="{{fascie}}">
+                <div class="inline-block vertical js-movie" data-fascie="{{fascie}}">
                     {{> include/movies/thumbnail-movie-tpl }}
                 </div>
             {{/each}}
         </div>
     </div>
 
+{{/if}}
     <div class="fascie-settimana">
         <h1 class="title">questa settimana in programmazione</h1>
         <ul class="orari">

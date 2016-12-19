@@ -2,7 +2,7 @@ var themoviedb = require("./themoviedb");
 var omdb = require("./omdb");
 var fs = require("fs");
 var R = require("ramda");
-var generi=require("./genere");
+var generi = require("./genere");
 exports.normalize = (filename)=> {
 
     return function (movies) {
@@ -14,15 +14,15 @@ exports.normalize = (filename)=> {
                     return new Promise((resolve, reject)=> {
                         setTimeout(_=> {
                             themoviedb.getMovie(movie.title).then(details=> {
-                                if(details ){
+                                if (details) {
                                     details.generi = (details.genre_ids || []).map(id=> {
                                         return R.compose(R.prop("name")
-                                            ,R.find(genere=>parseInt(genere.id) == parseInt(id)))(generi)
+                                            , R.find(genere=>parseInt(genere.id) == parseInt(id)))(generi)
                                     });
                                 }
 
-                                    resolve(Object.assign({details}, movie))
-                                })
+                                resolve(Object.assign({details}, movie))
+                            })
                                 .catch(reject)
 
 
@@ -50,6 +50,15 @@ exports.normalize = (filename)=> {
                             }, 1000 * i)
                         })
                     }))
+            })
+            .then(response=> {
+                return response.map(movie=> {
+                    movie.days_list.forEach(dlist=> {
+                        var utc1 = Date.UTC(dlist.day.getFullYear(), dlist.day.getMonth(), dlist.day.getDate());
+                        dlist.day = utc1;
+                    });
+                    return movie
+                })
             })
             .then(response=> {
                 fs.writeFileSync(filename, JSON.stringify(response));

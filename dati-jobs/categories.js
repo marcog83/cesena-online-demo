@@ -12,7 +12,7 @@ const Categories = {
     vegetariano: "Vegetarian & Vegan Restaurant|Health Food Restaurant",
     bar: "Wine Bar|Cafe|Gastropub|bar|Bar|Sports Bar|Pub|Smoothie & Juice Bar|Dive Bar|cafe|Coffee Shop|Social Club|Bar & Grill|Night Club|Internet Cafe|Cupcake Shop|Lounge",
     benessere: "Spas/Beauty/Personal Care|spa|beauty_salon|Cosmetics & Beauty Supply|Beauty Salon|Health Spa|Aesthetics|Health/Beauty|Hair & Beauty Supply|Hair Removal|Plastic Surgery|Nutritionist|Hair Salon|Barber Shop",
-    tech: "Web Design|Internet|Web|Advertising Agency|Advertising|Marketing Consultant",
+    tech: "Web Designer|Web Design|Internet|Web|Advertising Agency|Advertising|Marketing Consultant",
     parrucchiera: "hair_care|hairpieces & extensions",
     accessori: "accessories store",
     farmacia: "pharmacy|pharmacy/drugstore",

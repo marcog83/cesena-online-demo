@@ -30,9 +30,10 @@ var getDetails = function (omdbColl, moviedbColl, my_places) {
 
                 var cinemas = (movie.cinemas || []).map(cinema=> {
                     var place = R.find(place=>
-                        findOne(place.id_opendata, cinema.place.id_opendata), my_places);
-                    if(place){
-                        place.seo_url=`/${SeoUrl.createURL(place.name)}`;
+                        R.intersection(place.id_opendata, cinema.id_opendata).length > 0
+                        , my_places);
+                    if (place) {
+                        place.seo_url = `/${SeoUrl.createURL(place.name)}`;
                     }
 
                     return {
@@ -45,13 +46,13 @@ var getDetails = function (omdbColl, moviedbColl, my_places) {
                 return Promise.all([
                     omdb, moviedb, Promise.resolve(cinemas)
                 ]).then(([omdb,moviedb,cinemas])=> {
-                    var ratingCount  = "N/A";
+                    var ratingCount = "N/A";
                     var rate = "N/A";
                     if (omdb && omdb.imdbVotes != "N/A") {
-                        ratingCount  = omdb.imdbVotes;
+                        ratingCount = omdb.imdbVotes;
                         rate = omdb.imdbRating;
                     } else if (moviedb && moviedb.vote_count) {
-                        ratingCount  = moviedb.vote_count;
+                        ratingCount = moviedb.vote_count;
                         rate = moviedb.vote_average;
                     }
 
@@ -106,7 +107,7 @@ exports.getMovies = ()=> {
         .catch(R.tap(_=>connection.db.close()))
 };
 
-exports.geMoviesById = id_opendata=> {
+exports.geMoviesById = (id_opendata,start_time)=> {
     var connection = new Connection();
     return connection.connect()
         .then(db=> {
@@ -114,7 +115,10 @@ exports.geMoviesById = id_opendata=> {
             var omdbColl = db.collection(Tables.OMDB_MOVIE);
             var moviedbColl = db.collection(Tables.THEMOVIEDB_MOVIE);
             var my_places = db.collection(Tables.MY_PLACES_2);
-            return movieColl.find({"place.id_opendata": id_opendata}).toArray()
+            return movieColl.find({
+                "place.id_opendata": id_opendata,
+                "days_list": {$elemMatch: {day: {$gte:start_time.getTime()}}}
+            }).toArray()
                 .then(getDetails(omdbColl, moviedbColl, my_places))
                 .then(R.tap(_=>connection.db.close()))
                 .catch(R.tap(_=>connection.db.close()))
