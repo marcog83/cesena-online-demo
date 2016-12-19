@@ -1,0 +1,27 @@
+{
+     
+    "address" : 1,
+    "name" : 1,
+    "openingHours" : 2,
+    "rating" : 2,
+    "telephone" : 1,
+    "image" : 2,
+    "place_id" : 2,
+    "geo" : 2,
+    "id_facebook" : 2,
+    "id_google" : 2,
+    "id_opendata" : 1,
+	"id_impresa" : 1,
+    "description" : 2,
+    "bio" : 2,
+    "category_list" : 1,
+    "mission" : 2,
+    "general_info" : 2,
+    "website" : 1,
+    "mapUrl" : 2,
+    "email" : 1,
+    "facebook_page" : 2,
+    "otherPhotos" : 2+.1*length,
+	"photos":3+.4*length
+	
+}

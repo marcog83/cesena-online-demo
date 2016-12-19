@@ -1,0 +1,57 @@
+Internet è grandioso, permette di avere una panoramica del mondo in maniera globale.
+Poi girare il mondo senza preoccuparti delle strade da fare o quale ristorante scegliere.
+C'è un'applicazione per tutto.
+
+Le persone hanno le loro attività e fanno il loro lavoro. Hanno anche il desiderio di essere scoperte
+dagli altri. Ognuno ha i propri canali per farlo, dal passaparola al sito al volantino.
+Aggiungere un ulteriore canale nel 2016 è fuori tempo, 
+nel senso che, nessuno si metterebbe a fare la propria scheda su un portale nuovo, 
+quando ci sono già facebook, instagram e tanti altri.
+e chi non lo ha fatto su questi canali così forti, non dedicherà tempo ad uno nuovo.
+
+Da qui l'idea di invertire il processo.
+Non è più il luogo/attività che si promuove per l'ennesima volta, ma è la piattaforma che cerca tutte le attività
+ presenti sul territorio da varie fonti (facebook, google, instagram, opendata) e raccoglie tutte le informazioni sparse su questi canali
+per poi mostrarle all'utente. 
+
+In questo modo il luogo/attività continua ad utilizzare i canali al quale è affezionato, ma allo stesso tempo
+viene promosso anche sulla piattaforma. 
+Allo stesso tempo la piattaforma aggrega informazioni che normalmente non sarebbero collegate,
+come per esempio le foto scattate in quel luogo, i posts correlati, se è possibile fare un'ordine a domicilio,
+ una prenotazione, comprare online ecc.
+In questo modo possono essere messi in luce anche posti che altrimenti rimarrebbero oscurati e mescolati 
+nel calderone di una ricerca su google.
+
+Questo concetto di aggregare da varie fonti può essere applicata anche a dei temi più generali come il fitness.
+Scoprire quindi quali sono i percorsi dove andare a correre o in bicicletta, vedere tutte le aree verdi del comune o le piste ciclabili fatte
+o in progetto. 
+Quali sono i trasporti pubblici e che percorsi fanno?
+
+Per non parlare degli eventi in corso, cosa c'è al cinema o teatro.
+
+
+
+
+creare un'area riservata dove il proprietario del posto gestisce la propria scheda
+ - aggiorna la scheda e anche i social.
+ - crea eventi e li pubblica su facebook
+ - carica foto e le pubblica su fb o instagram
+ - ordini online con justeat ???
+ - creare promozioni.
+ - accedere alle statistiche per vedere quante persone sono andate fisicamente nel posto. (con i beacons)
+
+creare un utente con la propria scheda
+
+ - in base alle pagine viste proprogli una scelta
+ - gestione dei preferiti e delle notifiche su eventi nuovi dei posti selezionati.
+ - inserimento di un posto o un evento trovato in giro. ( dal cartellone per strada alla lettura di un articolo su internet)???
+
+
+Con i beacons nei posti, analizzare i percorsi fatti dagli utenti . dal posto A, al posto B ecc...
+Favorire i risultati delle ricerche in base a queste analisi, alle visualizzazioni fatte ecc...
+
+creazione di minisiti dedicati per degli eventi
+ - cibo di strada con tutta la mappa interattiva di dove sono i posti e cosa propongono.
+    - tracciamento degli utenti da una banchetta ad un'altra.
+
+analytics sugli utenti

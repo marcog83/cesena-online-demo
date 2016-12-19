@@ -1,0 +1,23 @@
+mongodump --db cesena-sociale --out C:\workspaces\MongoDB\bkps\20161217
+mongorestore -h ds159527.mlab.com:59527 -d cesena-sociale -u marcogobbi -p m4rc0g0bb1 C:\workspaces\MongoDB\bkps\20161217\cesena-sociale
+//
+//fuzzy-matches import per poi fare step_2 e step_3
+mongodump --db=cesena-sociale --collection=fuzzy-matches --out=C:\workspaces\MongoDB\bkps\20161127
+mongorestore -h ds159527.mlab.com:59527 -d cesena-sociale -u marcogobbi -p m4rc0g0bb1 --collection=fuzzy-matches C:\workspaces\MongoDB\bkps\20161127\cesena-sociale\fuzzy-matches.bson
+
+//import facebook places
+mongodump --db=cesena-sociale --collection=facebook-places --out=C:\workspaces\MongoDB\bkps\20161127
+mongorestore -h ds159527.mlab.com:59527 -d cesena-sociale -u marcogobbi -p m4rc0g0bb1 --collection=facebook-places C:\workspaces\MongoDB\bkps\20161127\cesena-sociale\facebook-places.bson
+//import my places 2
+mongodump --db=cesena-sociale --collection=my-places-2 --out=C:\workspaces\MongoDB\bkps\20161127
+mongorestore -h ds159527.mlab.com:59527 -d cesena-sociale -u marcogobbi -p m4rc0g0bb1 --collection=my-places-2 C:\workspaces\MongoDB\bkps\20161127\cesena-sociale\my-places-2.bson
+//my-events
+mongodump --db=cesena-sociale --collection=my-events --out=C:\workspaces\MongoDB\bkps\20161127
+mongorestore -h ds159527.mlab.com:59527 -d cesena-sociale -u marcogobbi -p m4rc0g0bb1 --collection=my-events C:\workspaces\MongoDB\bkps\20161127\cesena-sociale\my-events.bson
+//instagram-photos
+mongodump --db=cesena-sociale --collection=instagram-photos --out=C:\workspaces\MongoDB\bkps\20161130
+mongorestore -h ds159527.mlab.com:59527 -d cesena-sociale -u marcogobbi -p m4rc0g0bb1 --collection=instagram-photos C:\workspaces\MongoDB\bkps\20161130\cesena-sociale\instagram-photos.bson
+
+//import seo-urls
+mongodump --db=cesena-sociale --collection=SEO_URLS --out=C:\workspaces\MongoDB\bkps\20161208
+mongorestore -h ds159527.mlab.com:59527 -d cesena-sociale -u marcogobbi -p m4rc0g0bb1 --collection=SEO_URLS C:\workspaces\MongoDB\bkps\20161208\cesena-sociale\SEO_URLS.bson
