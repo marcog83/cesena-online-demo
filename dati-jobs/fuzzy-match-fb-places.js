@@ -15,13 +15,14 @@ function _trovaByName(places, {name, id, address, lat, lng}) {
     var results = [], length = places.length;
     for (var i = 0; i < length; i++) {
         var place = places[i];
-        var percent_name = clj_fuzzy.metrics.dice(name, place.name);
-        if (id != place.id && percent_name > 0.5) {
-            let name_p1 = name;
-            let name_p2 = place.name;
-            let percent_name = clj_fuzzy.metrics.dice(name_p1, name_p2);
-            let a1 = double_metaphone(address)[0];
-            let a2 = double_metaphone(place.address)[0];
+        let name_p1 = name.replace(/cesena/gim,"");
+        let name_p2 = place.name.replace(/cesena/gim,"");
+        let percent_name = clj_fuzzy.metrics.dice(name_p1, name_p2);
+
+        if (id != place.id && (percent_name > 0.8 )) {
+
+            let a1 = double_metaphone(address)[1];
+            let a2 = double_metaphone(place.address)[1];
             let percent_address_phonetic = clj_fuzzy.metrics.dice(a1, a2);
             let distance = 1000000000;
             if (lat && lng && place.lat && place.lng) {
@@ -89,7 +90,9 @@ connection.connect()
         };
         var fbResults = R.compose(R.flatten, R.map(guess(fb_config)))(fbPlaces.slice(0, length));
         var fuzzyMatchColl = connection.db.collection(Tables.FUZZY_MATCHES_FB);
-        return fuzzyMatchColl.insertMany(fbResults);
+        return fuzzyMatchColl.drop().then(_=>{
+            return fuzzyMatchColl.insertMany(fbResults)
+        });
     })
     .then(_=> {
         connection.db.close();

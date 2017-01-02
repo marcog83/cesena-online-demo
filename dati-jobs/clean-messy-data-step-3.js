@@ -229,7 +229,7 @@ connection.connect()
         }, my_new_places);
         var myPlaces2Coll = connection.db.collection(Tables.MY_PLACES_2);
         // fs.writeFileSync("my-new-places.json", JSON.stringify(my_new_places));
-        return myPlaces2Coll.insertMany(my_new_places);
+        return myPlaces2Coll.drop().then(_=>myPlaces2Coll.insertMany(my_new_places));
         // return Promise.all(my_new_places.map(match=> {
         //     return myPlaces2Coll.findOneAndUpdate({
         //         $or: [

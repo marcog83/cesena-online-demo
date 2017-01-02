@@ -11,6 +11,7 @@ exports.GOOGLE_PLACES = 'google-places';
 exports.MY_EVENTS = 'my-events';
 exports.MY_PHOTOS = 'my-photos';
 exports.MY_POSTS = 'my-posts';
+exports.MY_FB_PHOTOS = 'my-fb-photos';
 exports.MY_EVENTS_RELATIONS = 'my-events-relations';
 exports.MY_PHOTOS_RELATIONS = 'my-photos-relations';
 exports.MY_POSTS_RELATIONS  = 'my-posts-relations';

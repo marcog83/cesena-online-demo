@@ -7891,3 +7891,258 @@ via strinati, 47521, Cesena => undefined, undefined, Cesena | 13.961 m | 0.0000
 0.5714 | Orocarni Gastronomia => Gastronomia Baldazzi
 via strinati, 47521, Cesena => Corso Sozzi 50, 47521, Cesena | 247.225 m | 0.0000 
 ---------
+0.5882 | Cesena => Pull Love Cesena
+undefined, undefined, Cesena => corso G. Sozzi, nr 46, 47522, Cesena | 586.548 m | 0.0000 
+---------
+0.0000 | Cesena => Hoop
+undefined, undefined, Cesena => Via Cairoli, 35, 47521, Cesena | 10.855 m | 0.0000 
+---------
+0.8333 | Cesena => cdcesena
+undefined, undefined, Cesena => Viale Europa, 47521, Cesena | 698.783 m | 0.0000 
+---------
+0.8333 | Cesena => cdcesena
+undefined, undefined, Cesena => Viale Europa, 47521, Cesena | 698.783 m | 0.0000 
+---------
+0.8333 | Cesena => cdcesena
+undefined, undefined, Cesena => Viale Europa, 47521, Cesena | 698.783 m | 0.0000 
+---------
+0.9375 |  Stadio Dino Manuzzi => Stadio Dino Manuzzi ()
+undefined, 47521, Cesena => Via dello Stadio, 47521, Cesena | 2048.05 m | 0.0000 
+---------
+1.0000 |  Stadio Dino Manuzzi => Stadio Dino Manuzzi 
+undefined, 47521, Cesena => Via dello Stadio 124, 47521, Cesena | 2077.268 m | 0.0000 
+---------
+0.8649 | Tamoil 2733 - Benzina,carburanti E Lubrificanti => Tamoil 3672 - Benzina,carburanti E Lubrificanti
+S.s. 71 Bis-loc.calabrina, 47023, Cesena => V. Romea 863, 47023, Cesena | 4371.036 m | 0.0000 
+---------
+0.8421 | Hippie Chic => Hippie Chic Box
+Via Antonio Gramsci 37/C, undefined, Milano Marittima => Via Fantaguzzi 33, undefined, Cesena | 3244.512 m | 0.6667 
+---------
+0.8276 | Stadio Manuzzi  => Stadio Dino Manuzzi ()
+undefined, 47521, Cesena => Via dello Stadio, 47521, Cesena | 23.245 m | 0.0000 
+---------
+0.8333 | Stadio Manuzzi  =>  Stadio Maluzzi
+undefined, 47521, Cesena => undefined, undefined, Cesena | 682.46 m | 1.0000 
+---------
+0.8889 | Stadio Manuzzi  => Stadio Dino Manuzzi 
+undefined, 47521, Cesena => Via dello Stadio 124, 47521, Cesena | 38.404 m | 0.0000 
+---------
+0.9032 | Ospedale M Bufalini  => Ospedale M. Bufalini 
+Viale Giovanni Ghirotti, 286, 47521, Cesena => undefined, undefined, undefined | 1719.64 m | 0.0000 
+---------
+1.0000 | CrossFit  => CrossFit 
+Via Venezia, 21, 47521, Cesena => Piazzale Enrico Berlinguer, 50, 47521, Cesena | 1354.78 m | 0.0000 
+---------
+1.0000 | Badboystattoooo => Bad Boys Tattoo
+Via Vincenzo Angeli 27, undefined, Cesena => via Vincenzo Angeli 27, 47042, Cesena | 1.892 m | 1.0000 
+---------
+0.9143 | IPS Versari/Macrelli => IPS Versari Macrelli
+Piazzale Cino Macrelli 11, 47521, Cesena => undefined, 47521, Cesena | 127.332 m | 0.0000 
+---------
+1.0000 | Piazza del Popolo => Piazza del Popolo
+Piazza del popolo, 47521, Cesena => Piazza del Popolo, 47521, Cesena | 0 m | 1.0000 
+---------
+0.8293 | Clinica Privata San Lorenzino => Clinica San Lorenzino 
+Via natale dell'amore, 47521, Cesena => undefined, 47521, Cesena | 28.585 m | 0.3333 
+---------
+1.0000 | Stazione di  => Stazione di 
+Piazza Giorgio Sanguinetti, 212, 47521, Cesena => Piazza Giorgio Sanguinetti, 212, 47521, Cesena | 0 m | 1.0000 
+---------
+1.0000 | Duomo di  => Duomo di 
+undefined, 47521, Cesena => undefined, 47521, Cesena | 0 m | 1.0000 
+---------
+1.0000 | La Pasticceria Moderna => Lapasticceria Moderna
+Via santa rita da cascia 44, 47521, Cesena => santa rita da cascia, 47521, Cesena | 38.074 m | 0.6667 
+---------
+1.0000 | Teatro Bonci =>  Teatro Bonci
+Piazza Mario Guidazzi, 8, 47521, Cesena => undefined, 47521, Cesena | 1159.956 m | 0.0000 
+---------
+0.9524 | Teatro Bonci => Teatro Bonci,
+Piazza Mario Guidazzi, 8, 47521, Cesena => undefined, 47521, Cesena | 180.253 m | 0.0000 
+---------
+0.8919 | Tamoil 2802 - Benzina,carburanti E Lubrificanti => Tamoil 3672 - Benzina,carburanti E Lubrificanti
+S.s.304 Km 11.45-ponte Pietra, 47023, Cesena => V. Romea 863, 47023, Cesena | 5617.855 m | 0.0000 
+---------
+0.8571 |  Fitness =>  in Fitness
+via Dandini 7, 47521, Cesena => Cesena centro, 47023, Cesena | 3921.45 m | 0.0000 
+---------
+1.0000 | Biblioteca Malatestiana => Biblioteca Malatestiana
+p. Bufalini 1, 47521, Cesena => p. Bufalini 1, 47521, Cesena | 0 m | 1.0000 
+---------
+1.0000 | Biblioteca Malatestiana => Biblioteca Malatestiana
+p. Bufalini 1, 47521, Cesena => p. Bufalini 1, 47521, Cesena | 0 m | 1.0000 
+---------
+1.0000 | Re Di Pane => Re Di Pane 
+undefined, 5, Cesena => Corte Dandini 5, 47521, Cesena | 16.707 m | 0.0000 
+---------
+1.0000 | Basilica Del Monte  => Basilica Del Monte
+Via Del Monte, 47521, Cesena => undefined, 47521, Cesena | 1077.434 m | 0.0000 
+---------
+1.0000 | Piccolo Bar => Piccolo Bar
+Piazza del Popolo 43, 47521, Cesena => undefined, 47521, Cesena | 34.985 m | 0.0000 
+---------
+0.8696 | TRE PAPI, 3 PAPI - Ristorante Pizzeria => Ristorante Pizzeria Tre Papi
+Piazza del Popolo, 36, 47521, Cesena => undefined, undefined, Cesena | 164.09 m | 0.0000 
+---------
+0.8525 | Ospedale Maurizio Bufalini Reparto Pediatria => Ospedale Bufalini Reparto Pediatria
+undefined, 47521, Cesena => undefined, undefined, Cesena | 1579.923 m | 1.0000 
+---------
+0.8571 | Parco  => Arco
+Mura Federico Comandini, 47521, Cesena => Viale Carducci 21, 47521, Cesena | 459.686 m | 0.0000 
+---------
+1.0000 | InBalance => InBalance
+via Mario Angeloni 320, 47521, Cesena => Viale Mario Angeloni 320, 47521, Cesena | 0 m | 0.3333 
+---------
+0.8462 | Cafè Centrale  => Bar Caffè Centrale
+Corso Mazzini, 56, 47521, Cesena => Piazza Duomo, 47521, Cesena | 4.411 m | 0.0000 
+---------
+0.9630 | Piazza Almerici => Piazza Almerici. 
+undefined, 47521, Cesena => undefined, undefined, Cesena | 709.337 m | 1.0000 
+---------
+1.0000 | Fabbri Boutiques => Fabbri Boutiques
+centro commerciale Montefiore, 47521, Cesena => via Carbonari 1, 47521, Cesena | 2044.116 m | 0.0000 
+---------
+1.0000 | CAFÈ Costês => Cafè Costês
+Via Europa, 592, 47521, Cesena => Via Europa, 592, 47521, Cesena | 23.183 m | 1.0000 
+---------
+1.0000 | Centro  =>  Centro
+undefined, 47521, Cesena => undefined, 47521, Cesena | 480.758 m | 1.0000 
+---------
+1.0000 | Anseme Spa => Anseme Spa
+Via cipro 60, 47521, Cesena => Via Cipro, 60, 47521, Cesena | 0 m | 1.0000 
+---------
+0.8235 | E L E M E N T S => elements srl
+Sobborgo Federico Comandini, 57/59, undefined, Cesena => undefined, undefined, undefined | 482.414 m | 0.0000 
+---------
+1.0000 | Pizzeria Barriera => Pizzeria Barriera
+Via Mura Barriera Ponente n7, 47521, Cesena => Via Mura Barriera Ponente, 7, 47521, Cesena | 186.996 m | 1.0000 
+---------
+0.8519 | Caffetteria Marinella Pasticceria Olivi => Caffetteria Pasticceria Olivi
+Viale Oberdan, 370, 47521, Cesena => undefined, 47521, Cesena | 12.64 m | 0.0000 
+---------
+0.8333 | Via Strinati  & Co. => Via Strinati
+via strinati, 47521, Cesena => undefined, undefined, Cesena | 13.961 m | 0.0000 
+---------
+0.9375 |  Stadio Dino Manuzzi => Stadio Dino Manuzzi ()
+undefined, 47521, Cesena => Via dello Stadio, 47521, Cesena | 2048.05 m | 0.0000 
+---------
+1.0000 |  Stadio Dino Manuzzi => Stadio Dino Manuzzi 
+undefined, 47521, Cesena => Via dello Stadio 124, 47521, Cesena | 2077.268 m | 0.0000 
+---------
+0.8649 | Tamoil 2733 - Benzina,carburanti E Lubrificanti => Tamoil 3672 - Benzina,carburanti E Lubrificanti
+S.s. 71 Bis-loc.calabrina, 47023, Cesena => V. Romea 863, 47023, Cesena | 4371.036 m | 0.0000 
+---------
+0.8421 | Hippie Chic => Hippie Chic Box
+Via Antonio Gramsci 37/C, undefined, Milano Marittima => Via Fantaguzzi 33, undefined, Cesena | 3244.512 m | 0.6667 
+---------
+0.8276 | Stadio Manuzzi  => Stadio Dino Manuzzi ()
+undefined, 47521, Cesena => Via dello Stadio, 47521, Cesena | 23.245 m | 0.0000 
+---------
+0.8333 | Stadio Manuzzi  =>  Stadio Maluzzi
+undefined, 47521, Cesena => undefined, undefined, Cesena | 682.46 m | 1.0000 
+---------
+0.8889 | Stadio Manuzzi  => Stadio Dino Manuzzi 
+undefined, 47521, Cesena => Via dello Stadio 124, 47521, Cesena | 38.404 m | 0.0000 
+---------
+0.9333 | Orogel Stadium Dino Manuzzi => Orogel Stadium-Dino Manuzzi
+Via dello Stadio, 120, 47521, Cesena => Via dello Stadio, 47521, Cesena | 165.334 m | 1.0000 
+---------
+0.9032 | Ospedale M Bufalini  => Ospedale M. Bufalini 
+Viale Giovanni Ghirotti, 286, 47521, Cesena => undefined, undefined, undefined | 1719.64 m | 0.0000 
+---------
+1.0000 | CrossFit  => CrossFit 
+Via Venezia, 21, 47521, Cesena => Piazzale Enrico Berlinguer, 50, 47521, Cesena | 1354.78 m | 0.0000 
+---------
+1.0000 | Badboystattoooo => Bad Boys Tattoo
+Via Vincenzo Angeli 27, undefined, Cesena => via Vincenzo Angeli 27, 47042, Cesena | 1.892 m | 1.0000 
+---------
+0.9143 | IPS Versari/Macrelli => IPS Versari Macrelli
+Piazzale Cino Macrelli 11, 47521, Cesena => undefined, 47521, Cesena | 127.332 m | 0.0000 
+---------
+1.0000 | Piazza del Popolo => Piazza del Popolo
+Piazza del popolo, 47521, Cesena => Piazza del Popolo, 47521, Cesena | 0 m | 1.0000 
+---------
+0.8293 | Clinica Privata San Lorenzino => Clinica San Lorenzino 
+Via natale dell'amore, 47521, Cesena => undefined, 47521, Cesena | 28.585 m | 0.3333 
+---------
+1.0000 | Stazione di  => Stazione di 
+Piazza Giorgio Sanguinetti, 212, 47521, Cesena => Piazza Giorgio Sanguinetti, 212, 47521, Cesena | 0 m | 1.0000 
+---------
+1.0000 | Duomo di  => Duomo di 
+undefined, 47521, Cesena => undefined, 47521, Cesena | 0 m | 1.0000 
+---------
+1.0000 | La Pasticceria Moderna => Lapasticceria Moderna
+Via santa rita da cascia 44, 47521, Cesena => santa rita da cascia, 47521, Cesena | 38.074 m | 0.6667 
+---------
+1.0000 | Teatro Bonci =>  Teatro Bonci
+Piazza Mario Guidazzi, 8, 47521, Cesena => undefined, 47521, Cesena | 1159.956 m | 0.0000 
+---------
+0.9524 | Teatro Bonci => Teatro Bonci,
+Piazza Mario Guidazzi, 8, 47521, Cesena => undefined, 47521, Cesena | 180.253 m | 0.0000 
+---------
+0.8919 | Tamoil 2802 - Benzina,carburanti E Lubrificanti => Tamoil 3672 - Benzina,carburanti E Lubrificanti
+S.s.304 Km 11.45-ponte Pietra, 47023, Cesena => V. Romea 863, 47023, Cesena | 5617.855 m | 0.0000 
+---------
+0.8571 |  Fitness =>  in Fitness
+via Dandini 7, 47521, Cesena => Cesena centro, 47023, Cesena | 3921.45 m | 0.0000 
+---------
+1.0000 | Biblioteca Malatestiana => Biblioteca Malatestiana
+p. Bufalini 1, 47521, Cesena => p. Bufalini 1, 47521, Cesena | 0 m | 1.0000 
+---------
+1.0000 | Biblioteca Malatestiana => Biblioteca Malatestiana
+p. Bufalini 1, 47521, Cesena => p. Bufalini 1, 47521, Cesena | 0 m | 1.0000 
+---------
+1.0000 | Re Di Pane => Re Di Pane 
+undefined, 5, Cesena => Corte Dandini 5, 47521, Cesena | 16.707 m | 0.0000 
+---------
+1.0000 | Basilica Del Monte  => Basilica Del Monte
+Via Del Monte, 47521, Cesena => undefined, 47521, Cesena | 1077.434 m | 0.0000 
+---------
+1.0000 | Piccolo Bar => Piccolo Bar
+Piazza del Popolo 43, 47521, Cesena => undefined, 47521, Cesena | 34.985 m | 0.0000 
+---------
+0.8696 | TRE PAPI, 3 PAPI - Ristorante Pizzeria => Ristorante Pizzeria Tre Papi
+Piazza del Popolo, 36, 47521, Cesena => undefined, undefined, Cesena | 164.09 m | 0.0000 
+---------
+0.8525 | Ospedale Maurizio Bufalini Reparto Pediatria => Ospedale Bufalini Reparto Pediatria
+undefined, 47521, Cesena => undefined, undefined, Cesena | 1579.923 m | 1.0000 
+---------
+0.8571 | Parco  => Arco
+Mura Federico Comandini, 47521, Cesena => Viale Carducci 21, 47521, Cesena | 459.686 m | 0.0000 
+---------
+1.0000 | InBalance => InBalance
+via Mario Angeloni 320, 47521, Cesena => Viale Mario Angeloni 320, 47521, Cesena | 0 m | 0.3333 
+---------
+0.8462 | Cafè Centrale  => Bar Caffè Centrale
+Corso Mazzini, 56, 47521, Cesena => Piazza Duomo, 47521, Cesena | 4.411 m | 0.0000 
+---------
+0.9630 | Piazza Almerici => Piazza Almerici. 
+undefined, 47521, Cesena => undefined, undefined, Cesena | 709.337 m | 1.0000 
+---------
+1.0000 | Fabbri Boutiques => Fabbri Boutiques
+centro commerciale Montefiore, 47521, Cesena => via Carbonari 1, 47521, Cesena | 2044.116 m | 0.0000 
+---------
+1.0000 | CAFÈ Costês => Cafè Costês
+Via Europa, 592, 47521, Cesena => Via Europa, 592, 47521, Cesena | 23.183 m | 1.0000 
+---------
+1.0000 | Centro  =>  Centro
+undefined, 47521, Cesena => undefined, 47521, Cesena | 480.758 m | 1.0000 
+---------
+1.0000 | Anseme Spa => Anseme Spa
+Via cipro 60, 47521, Cesena => Via Cipro, 60, 47521, Cesena | 0 m | 1.0000 
+---------
+0.8235 | E L E M E N T S => elements srl
+Sobborgo Federico Comandini, 57/59, undefined, Cesena => undefined, undefined, undefined | 482.414 m | 0.0000 
+---------
+1.0000 | Pizzeria Barriera => Pizzeria Barriera
+Via Mura Barriera Ponente n7, 47521, Cesena => Via Mura Barriera Ponente, 7, 47521, Cesena | 186.996 m | 1.0000 
+---------
+0.8077 | MDS Olivi Pasticceria Caffetteria Bar => Caffetteria Pasticceria Olivi
+Via Madonna dello Schioppo 73, 47521, Cesena => undefined, 47521, Cesena | 1416.162 m | 0.0000 
+---------
+0.8519 | Caffetteria Marinella Pasticceria Olivi => Caffetteria Pasticceria Olivi
+Viale Oberdan, 370, 47521, Cesena => undefined, 47521, Cesena | 12.64 m | 0.0000 
+---------
+0.8333 | Via Strinati  & Co. => Via Strinati
+via strinati, 47521, Cesena => undefined, undefined, Cesena | 13.961 m | 0.0000 
+---------

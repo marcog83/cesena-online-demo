@@ -54,7 +54,8 @@ exports.normalize = (filename)=> {
             .then(response=> {
                 return response.map(movie=> {
                     movie.days_list.forEach(dlist=> {
-                        var utc1 = Date.UTC(dlist.day.getFullYear(), dlist.day.getMonth(), dlist.day.getDate());
+                        var day=new Date(dlist.day);
+                        var utc1 = Date.UTC(day.getFullYear(), day.getMonth(), day.getDate());
                         dlist.day = utc1;
                     });
                     return movie
