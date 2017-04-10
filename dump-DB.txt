@@ -21,3 +21,6 @@ mongorestore -h ds159527.mlab.com:59527 -d cesena-sociale -u marcogobbi -p m4rc0
 //import seo-urls
 mongodump --db=cesena-sociale --collection=SEO_URLS --out=C:\workspaces\MongoDB\bkps\20161208
 mongorestore -h ds159527.mlab.com:59527 -d cesena-sociale -u marcogobbi -p m4rc0g0bb1 --collection=SEO_URLS C:\workspaces\MongoDB\bkps\20161208\cesena-sociale\SEO_URLS.bson
+
+mongodump --host ds159527.mlab.com:59527 --db cesena-sociale --username marcogobbi --password m4rc0g0bb1 --out C:\workspaces\20170406\
+mongorestore -h 127.0.0.1:27017 -d cesena-sociale C:\workspaces\20170406\cesena-sociale
