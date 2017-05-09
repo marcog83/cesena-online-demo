@@ -4,7 +4,7 @@ var args = require("minimist")(process.argv.slice(2));
 
 const express = require('express');
 
-const spdy = require('spdy');
+// const spdy = require('spdy');
 
 
 const fs = require('fs');
@@ -103,13 +103,13 @@ app.set('port', PORT);
 var bootstrap = app;
 
 
-if (args.ambiente == "LOCAL") {
-    const options = {
-        key: fs.readFileSync(__dirname + '/server.key'),
-        cert: fs.readFileSync(__dirname + '/server.crt')
-    };
-    bootstrap = spdy.createServer(options, app)
-}
+// if (args.ambiente == "LOCAL") {
+//     const options = {
+//         key: fs.readFileSync(__dirname + '/server.key'),
+//         cert: fs.readFileSync(__dirname + '/server.crt')
+//     };
+//     bootstrap = spdy.createServer(options, app)
+// }
 
 //
 
